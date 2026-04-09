@@ -1,176 +1,119 @@
-# Qualitative Analysis of Robotic Signal Components using Inductive Logic Programming
+# xArm Branch – Qualitative Analysis of Robotic Signal Components using ILP
 
 ## Overview
 
-This repository contains the implementation, datasets, and research material for the project:
+This branch contains the **manipulator-specific implementation** of the project:
 
 **"Qualitative Analysis of Robotic Signal Components using Inductive Logic Programming (ILP)"**
 
-The project investigates how raw numerical signals from robotic systems (sensors and actuators) can be transformed into qualitative, symbolic representations and used to learn interpretable models using ILP.
+The focus of this branch is on analyzing **xArm robotic arm signals** during task execution and extracting **qualitative patterns** that can be represented symbolically and learned using ILP.
 
 ---
 
-## Motivation
+## Objective
 
-Modern robotic systems generate large volumes of numerical data from sensors and actuators. While data-driven approaches (e.g., deep learning) can model such data effectively, they often lack interpretability.
+The goal of this branch is to:
 
-Inductive Logic Programming (ILP) provides a symbolic and explainable alternative by learning human-readable rules from:
-- Background knowledge
-- Positive examples
-- Negative examples
-
-This project aims to bridge the gap between **low-level numeric signals** and **high-level symbolic reasoning** in robotics.
-
----
-
-## Objectives
-
-The main objectives of this project are:
-
-- Convert robotic time-series signals into qualitative representations
-- Extract meaningful signal characteristics (e.g., increasing, decreasing, constant)
-- Represent processed signals as logical facts
-- Use ILP to induce interpretable rules for robot actions
-- Analyze differences in signal patterns across robotic platforms
+- Process raw actuator and joint signals from the xArm robot
+- Segment robot actions (e.g., pick, place, lift)
+- Extract qualitative signal characteristics
+- Convert processed data into logical facts
+- Learn interpretable symbolic rules using ILP
 
 ---
 
-## Project Scope
+## Robot Platform
 
-This repository is structured to support experiments across different robotic platforms:
-
-### Platforms Covered
-- **Manipulator Robot (xArm)**
-  - Pick-and-place tasks
-  - Joint states (position, velocity, effort)
-
-- **Mobile Robot**
-  - Navigation behaviors (forward, backward, turning, wall-following)
-  - Sensor-actuator interactions
+- **Robot:** UFactory xArm (e.g., xArm6 / xArm7)
+- **Type:** Industrial manipulator
+- **Use case:** Pick-and-place tasks
 
 ---
 
-## Branches
+## Data Sources
 
-This repository is organized into multiple branches:
+The data used in this branch is typically obtained from:
 
-- **main**  
-  Contains:
-  - Project documentation
-  - Literature review
-  - Methodology
-  - Shared code and utilities
+- ROS 2 bag files
+- Joint state topics (`/joint_states`)
+- End-effector state
+- Gripper state (if available)
 
-- **xarm**  
-  Contains:
-  - Manipulator-specific experiments
-  - Joint signal processing
-  - ILP models for pick-and-place tasks
+### Signals analyzed:
+- Joint positions
+- Joint velocities
+- Joint efforts (torques)
+- End-effector trajectory
+- Gripper open/close state
 
-- **mobile**  
-  Contains:
-  - Mobile robot datasets
-  - Navigation behavior analysis
-  - ILP models for motion and sensor interaction
+---
+
+## Actions Considered
+
+The manipulator actions are segmented into meaningful phases:
+
+- `approach` – moving towards object
+- `pick` – grasping object
+- `lift` – lifting object
+- `move` – transporting object
+- `place` – releasing object
+- `retract` – moving away
+- `idle` – no motion
 
 ---
 
 ## Methodology
 
-The project follows a structured pipeline:
+### 1. Data Preprocessing
+- Extract signals from ROS 2 bag files
+- Remove noise and idle regions
+- Normalize and synchronize signals
 
-1. **Data Collection**
-   - Record robot actions (ROS bags / logs)
+### 2. Action Segmentation
+- Divide continuous data into action windows
+- Label each segment with corresponding action
 
-2. **Preprocessing**
-   - Clean and segment signals into action windows
+### 3. Feature Extraction
+Convert numeric signals into qualitative features:
 
-3. **Feature Extraction**
-   - Identify qualitative characteristics:
-     - Increasing / decreasing trends
-     - Constant signals
-     - Oscillations
-     - Peaks / transitions
+- `increasing(signal)`
+- `decreasing(signal)`
+- `constant(signal)`
+- `peak(signal)`
+- `oscillating(signal)`
 
-4. **Logical Representation**
-   - Convert processed signals into logic facts
-
-5. **ILP Learning**
-   - Provide:
-     - Background knowledge
-     - Positive examples
-     - Negative examples
-   - Learn symbolic hypotheses
-
-6. **Evaluation**
-   - Analyze interpretability and correctness of learned rules
-
----
-
-## Example Use Case
-
-Example qualitative rule for a mobile robot action:
+### 4. Logical Fact Generation
+Example:
 
 ```prolog
-move_forward :-
-    increasing(velocity_left),
-    increasing(velocity_right),
-    constant(gyro_z).
+increasing(joint2_velocity, t1).
+constant(joint3_position, t1).
 ```
 
-This represents a human-readable explanation of the robot's behavior.
+### 5. ILP Learning
 
----
+Using:
 
-## Technologies Used
+- Background knowledge
+- Positive examples (correct actions)
+- Negative examples (incorrect or different actions)
 
-- Python (NumPy, Pandas, Matplotlib)
-- ROS 2 (for data collection)
-- Inductive Logic Programming tools (e.g., Aleph, Progol, Popper)
-- Signal processing techniques (FFT, segmentation, smoothing)
+Generate hypotheses such as:
 
----
-
-## Research Context
-
-This work is part of a broader research direction focusing on:
-
-- Explainable Artificial Intelligence (XAI) in robotics
-- Symbolic learning for robot behavior understanding
-- Integration of data-driven and logic-based methods
-- Potential applications in fault detection and diagnosis
-
----
-
-## Setup
-
-```bash
-git clone https://github.com/<your-username>/qualitative-analysis-robotic-signal-components-ilp.git
-cd qualitative-analysis-robotic-signal-components-ilp
-pip install -r requirements.txt
+```prolog
+pick :-
+    increasing(joint2_velocity),
+    peak(joint3_effort),
+    constant(gripper_position).
 ```
 
 ---
 
-## Future Work
+## Notes
 
-- Integration with fault detection and diagnosis systems
-- Hybrid models combining ILP and statistical methods
-- Real-time symbolic reasoning
-- Multi-robot system extensions
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-## Authors
-
-- Alisha Syed Karimulla
-- Trushar Ghanekar
-
-**MSc Autonomous Systems**  
-Hochschule Bonn-Rhein-Sieg (H-BRS)
+- This branch is platform-specific and focuses only on the xArm robot.
+- Shared concepts, theory, and general methodology are documented in the main branch.
+- This implementation can later be extended to:
+  - Fault detection
+  - Action verification
+  - Skill learning
