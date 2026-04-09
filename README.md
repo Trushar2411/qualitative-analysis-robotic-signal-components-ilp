@@ -1,4 +1,4 @@
-# xArm Branch – Qualitative Analysis of Robotic Signal Components using ILP
+# xArm Branch - Qualitative Analysis of Robotic Signal Components using ILP
 
 ## Overview
 
@@ -48,17 +48,33 @@ The data used in this branch is typically obtained from:
 
 ---
 
+## Repository Layout
+
+```text
+.
+|-- data/
+|   |-- raw/rosbags/
+|   `-- processed/csv/
+|-- outputs/
+|   `-- plots/
+`-- scripts/
+    |-- preprocessing/
+    `-- analysis/
+```
+
+---
+
 ## Actions Considered
 
 The manipulator actions are segmented into meaningful phases:
 
-- `approach` – moving towards object
-- `pick` – grasping object
-- `lift` – lifting object
-- `move` – transporting object
-- `place` – releasing object
-- `retract` – moving away
-- `idle` – no motion
+- `approach` - moving towards object
+- `pick` - grasping object
+- `lift` - lifting object
+- `move` - transporting object
+- `place` - releasing object
+- `retract` - moving away
+- `idle` - no motion
 
 ---
 
