@@ -1,0 +1,33 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ROS/colcon generated directories
+build/
+install/
+log/
+
+# Generated analysis artifacts
+outputs/
+data/processed/csv/*.csv
+
+# Raw rosbag/database files are large generated inputs.
+data/raw/rosbags/
+*.db3
+*.mcap
+*.bag
+
+# Local editor and OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -98,6 +98,21 @@ Convert numeric signals into qualitative features:
 - `peak(signal)`
 - `oscillating(signal)`
 
+Current joint-2 analysis scripts focus on time-domain sliding windows:
+
+```bash
+python3 scripts/preprocessing/filter_joint_states_wide_csv.py
+python3 scripts/analysis/plot_joint2_effort_energy.py
+python3 scripts/analysis/qualitative_joint2_effort_analysis.py
+```
+
+Generated files:
+
+- `data/processed/csv/joint2_position_energy.csv`
+- `data/processed/csv/joint2_position_qualitative.csv`
+- `outputs/plots/joint2_position_energy_sliding_window.png`
+- `outputs/plots/joint2_position_qualitative_labels.png`
+
 ### 4. Logical Fact Generation
 Example:
 

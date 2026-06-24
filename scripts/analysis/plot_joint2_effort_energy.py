@@ -1,69 +1,118 @@
 from pathlib import Path
+import os
+import warnings
 
+os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
+warnings.filterwarnings("ignore", message="Unable to import Axes3D.*")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INPUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint_states_filtered_wide.csv"
-COL = "left_arm_joint2_eff"
+OUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint2_position_energy.csv"
+OUT_PLOT = REPO_ROOT / "outputs" / "plots" / "joint2_position_energy_sliding_window.png"
+COL = "joint2_pos"
+WINDOW_SIZE = 20
+STEP = 5
 
-# --- Load ---
-df = pd.read_csv(INPUT_CSV)
 
-if "t_sec" not in df.columns:
-    if "timestamp" not in df.columns:
-        raise ValueError("CSV must contain either 't_sec' or 'timestamp'.")
-    t0 = df["timestamp"].iloc[0]
-    df["t_sec"] = (df["timestamp"] - t0) * 1e-9
+def load_signal(input_csv: Path = INPUT_CSV, col: str = COL) -> pd.DataFrame:
+    df = pd.read_csv(input_csv)
 
-if COL not in df.columns:
-    raise ValueError(
-        f"Column '{COL}' not found. Available columns include: "
-        f"{', '.join([c for c in df.columns if 'left_arm_joint2' in c][:20])} ..."
+    if "t_sec" not in df.columns:
+        if "timestamp" not in df.columns:
+            raise ValueError("CSV must contain either 't_sec' or 'timestamp'.")
+        df = df.sort_values("timestamp").reset_index(drop=True)
+        t0 = df["timestamp"].iloc[0]
+        df["t_sec"] = (df["timestamp"] - t0) * 1e-9
+
+    if col not in df.columns:
+        available = ", ".join([c for c in df.columns if "joint2" in c][:20])
+        raise ValueError(f"Column '{col}' not found. Available joint2 columns: {available}")
+
+    signal = df[["t_sec", col]].dropna().sort_values("t_sec").reset_index(drop=True)
+    signal = signal[np.isfinite(signal["t_sec"]) & np.isfinite(signal[col])]
+    if len(signal) < WINDOW_SIZE:
+        raise ValueError(f"Need at least {WINDOW_SIZE} valid samples for sliding energy.")
+    return signal
+
+
+def compute_sliding_energy(signal: pd.DataFrame, col: str = COL) -> pd.DataFrame:
+    t = signal["t_sec"].to_numpy()
+    x = signal[col].to_numpy()
+    rows = []
+
+    for start in range(0, len(x) - WINDOW_SIZE + 1, STEP):
+        end = start + WINDOW_SIZE
+        x_win = x[start:end]
+        t_win = t[start:end]
+        centered = x_win - np.mean(x_win)
+
+        rows.append(
+            {
+                "window_id": len(rows),
+                "start_time_sec": float(t_win[0]),
+                "end_time_sec": float(t_win[-1]),
+                "center_time_sec": float(np.mean(t_win)),
+                "mean_position": float(np.mean(x_win)),
+                "range_position": float(np.max(x_win) - np.min(x_win)),
+                "energy": float(np.sum(centered**2)),
+            }
+        )
+
+    energy_df = pd.DataFrame(rows)
+    q1 = energy_df["energy"].quantile(0.33)
+    q2 = energy_df["energy"].quantile(0.66)
+    energy_df["energy_label"] = np.select(
+        [energy_df["energy"] < q1, energy_df["energy"] < q2],
+        ["low_energy", "medium_energy"],
+        default="high_energy",
     )
+    return energy_df
 
-df = df.dropna(subset=["t_sec", COL]).sort_values("t_sec").reset_index(drop=True)
 
-t = df["t_sec"].to_numpy()
-x = df[COL].to_numpy()
+def save_plot(signal: pd.DataFrame, energy_df: pd.DataFrame, out_plot: Path = OUT_PLOT) -> None:
+    out_plot.parent.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(2, 1, figsize=(12, 6), sharex=False)
 
-# --- Sliding window energy ---
-window_size = 20   # number of samples
-step = 5           # shift between windows
+    axes[0].plot(signal["t_sec"], signal[COL], label=COL)
+    axes[0].set_xlabel("Time [s]")
+    axes[0].set_ylabel("Position [rad]")
+    axes[0].set_title("Joint 2 Position")
+    axes[0].grid(True, alpha=0.3)
+    axes[0].legend()
 
-energy_times = []
-energy_vals = []
+    axes[1].plot(
+        energy_df["center_time_sec"],
+        energy_df["energy"],
+        marker="o",
+        linewidth=1.5,
+        label="Sliding energy",
+    )
+    axes[1].set_xlabel("Time [s]")
+    axes[1].set_ylabel("Centered energy")
+    axes[1].set_title("Sliding Window Energy")
+    axes[1].grid(True, alpha=0.3)
+    axes[1].legend()
 
-for start in range(0, len(x) - window_size + 1, step):
-    end = start + window_size
-    x_win = x[start:end]
-    t_win = t[start:end]
+    fig.tight_layout()
+    fig.savefig(out_plot, dpi=160)
+    plt.close(fig)
 
-    energy = np.sum(x_win ** 2)
-    energy_vals.append(energy)
-    energy_times.append(np.mean(t_win))
 
-energy_times = np.array(energy_times)
-energy_vals = np.array(energy_vals)
+def main() -> None:
+    signal = load_signal()
+    energy_df = compute_sliding_energy(signal)
 
-# --- Plot ---
-plt.figure(figsize=(12, 6))
+    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+    energy_df.to_csv(OUT_CSV, index=False)
+    save_plot(signal, energy_df)
 
-plt.subplot(2, 1, 1)
-plt.plot(t, x, label=COL)
-plt.xlabel("Time (s)")
-plt.ylabel("Signal")
-plt.title(f"{COL} and Sliding Window Energy")
-plt.grid(True, alpha=0.3)
-plt.legend()
+    print(f"Valid samples: {len(signal)}")
+    print(f"Saved sliding energy CSV: {OUT_CSV}")
+    print(f"Saved sliding energy plot: {OUT_PLOT}")
 
-plt.subplot(2, 1, 2)
-plt.plot(energy_times, energy_vals, marker="o", label="Energy")
-plt.xlabel("Time (s)")
-plt.ylabel("Energy")
-plt.grid(True, alpha=0.3)
-plt.legend()
 
-plt.tight_layout()
-plt.show()
+if __name__ == "__main__":
+    main()

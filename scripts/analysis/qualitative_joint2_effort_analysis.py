@@ -1,103 +1,219 @@
 from pathlib import Path
+import os
+import warnings
+
+os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib")
+warnings.filterwarnings("ignore", message="Unable to import Axes3D.*")
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
 INPUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint_states_filtered_wide.csv"
-COL = "left_arm_joint2_eff"
+OUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint2_position_pla_labels.csv"
+OUT_PLOT = REPO_ROOT / "outputs" / "plots" / "joint2_position_pla_labels.png"
 
-# --- Load ---
-df = pd.read_csv(INPUT_CSV)
+COL = "joint2_pos"
 
-# Ensure we have a time column
-if "t_sec" not in df.columns:
-    if "timestamp" not in df.columns:
-        raise ValueError("CSV must contain either 't_sec' or 'timestamp'.")
-    t0 = df["timestamp"].iloc[0]
-    df["t_sec"] = (df["timestamp"] - t0) * 1e-9
+WINDOW_SIZE = 20
+STEP = 20
 
-if COL not in df.columns:
-    raise ValueError(
-        f"Column '{COL}' not found. Available columns include: "
-        f"{', '.join([c for c in df.columns if 'left_arm_joint2' in c][:20])} ..."
+DIRECTION_THRESHOLD = 0.02
+PLA_SEGMENTS = 4
+
+
+def load_signal(input_csv: Path = INPUT_CSV, col: str = COL) -> pd.DataFrame:
+    df = pd.read_csv(input_csv)
+
+    if "t_sec" not in df.columns:
+        if "timestamp" not in df.columns:
+            raise ValueError("CSV must contain either 't_sec' or 'timestamp'.")
+
+        df = df.sort_values("timestamp").reset_index(drop=True)
+        t0 = df["timestamp"].iloc[0]
+        df["t_sec"] = (df["timestamp"] - t0) * 1e-9
+
+    if col not in df.columns:
+        available = ", ".join([c for c in df.columns if c.endswith("_pos")])
+        raise ValueError(
+            f"Column '{col}' not found. Available position columns: {available}"
+        )
+
+    signal = df[["t_sec", col]].dropna().sort_values("t_sec").reset_index(drop=True)
+    signal = signal[np.isfinite(signal["t_sec"]) & np.isfinite(signal[col])]
+
+    if len(signal) < WINDOW_SIZE:
+        raise ValueError(f"Need at least {WINDOW_SIZE} valid samples.")
+
+    return signal
+
+
+def direction_label(slope: float) -> str:
+    if slope > DIRECTION_THRESHOLD:
+        return "ramp_up"
+    if slope < -DIRECTION_THRESHOLD:
+        return "ramp_down"
+    return "constant"
+
+
+def build_pla_segments(signal: pd.DataFrame, col: str = COL) -> pd.DataFrame:
+    t = signal["t_sec"].to_numpy()
+    x = signal[col].to_numpy()
+
+    rows = []
+    segment_id = 0
+
+    for start in range(0, len(x) - WINDOW_SIZE + 1, STEP):
+        end = start + WINDOW_SIZE
+
+        t_win = t[start:end]
+        x_win = x[start:end]
+
+        segment_indices = np.array_split(np.arange(len(x_win)), PLA_SEGMENTS)
+
+        for idx in segment_indices:
+            if len(idx) < 2:
+                continue
+
+            t_seg = t_win[idx]
+            x_seg = x_win[idx]
+
+            slope, intercept = np.polyfit(t_seg, x_seg, 1)
+            label = direction_label(float(slope))
+
+            rows.append(
+                {
+                    "segment_id": segment_id,
+                    "joint": "joint2",
+                    "start_time_sec": float(t_seg[0]),
+                    "end_time_sec": float(t_seg[-1]),
+                    "duration_sec": float(t_seg[-1] - t_seg[0]),
+                    "label": label,
+                    "slope": float(slope),
+                    "start_pos": float(x_seg[0]),
+                    "end_pos": float(x_seg[-1]),
+                }
+            )
+
+            segment_id += 1
+
+    return pd.DataFrame(rows)
+
+
+def merge_same_labels(pla_df: pd.DataFrame) -> pd.DataFrame:
+    if pla_df.empty:
+        return pla_df
+
+    merged_rows = []
+    current = pla_df.iloc[0].to_dict()
+
+    for _, row in pla_df.iloc[1:].iterrows():
+        row = row.to_dict()
+
+        if row["label"] == current["label"]:
+            current["end_time_sec"] = row["end_time_sec"]
+            current["duration_sec"] = current["end_time_sec"] - current["start_time_sec"]
+            current["end_pos"] = row["end_pos"]
+            current["slope"] = (current["end_pos"] - current["start_pos"]) / max(
+                current["duration_sec"], 1e-9
+            )
+        else:
+            merged_rows.append(current)
+            current = row
+
+    merged_rows.append(current)
+
+    merged_df = pd.DataFrame(merged_rows)
+    merged_df["segment_id"] = range(len(merged_df))
+
+    return merged_df
+
+
+def save_plot(
+    signal: pd.DataFrame,
+    pla_df: pd.DataFrame,
+    out_plot: Path = OUT_PLOT,
+) -> None:
+    out_plot.parent.mkdir(parents=True, exist_ok=True)
+
+    t = signal["t_sec"].to_numpy()
+    x = signal[COL].to_numpy()
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+
+    ax.plot(
+        t,
+        x,
+        color="lightgray",
+        linewidth=1.5,
+        label="Original Position",
     )
 
-# Clean and sort
-df = df.dropna(subset=["t_sec", COL]).sort_values("t_sec").reset_index(drop=True)
+    added_labels = set()
 
-t = df["t_sec"].to_numpy()
-x = df[COL].to_numpy()
+    for _, row in pla_df.iterrows():
+        mask = (t >= row["start_time_sec"]) & (t <= row["end_time_sec"])
+        t_seg = t[mask]
+        x_seg = x[mask]
 
-# Optional: use magnitude instead of signed torque for easier interpretation
-USE_ABSOLUTE_EFFORT = False
-x_plot = np.abs(x) if USE_ABSOLUTE_EFFORT else x
+        if len(t_seg) < 2:
+            continue
 
-# --- Sliding window energy ---
-window_size = 20   # number of samples per window
-step = 5           # shift between windows
+        slope, intercept = np.polyfit(t_seg, x_seg, 1)
+        y_seg = slope * t_seg + intercept
 
-energy_times = []
-energy_vals = []
+        if row["label"] == "ramp_up":
+            color = "green"
+            legend_label = "Ramp Up"
+        elif row["label"] == "ramp_down":
+            color = "red"
+            legend_label = "Ramp Down"
+        else:
+            color = "blue"
+            legend_label = "Constant"
 
-for start in range(0, len(x) - window_size + 1, step):
-    end = start + window_size
-    x_win = x[start:end]
-    t_win = t[start:end]
+        ax.plot(
+            t_seg,
+            y_seg,
+            color=color,
+            linewidth=2.5,
+            label=legend_label if legend_label not in added_labels else None,
+        )
 
-    # Standard energy over the window
-    energy = np.sum(x_win ** 2)
+        added_labels.add(legend_label)
 
-    energy_vals.append(energy)
-    energy_times.append(np.mean(t_win))
+    ax.set_title(f"P: {COL}")
+    ax.set_xlabel("Time (s)")
+    ax.set_ylabel("Joint Position")
+    ax.grid(True, alpha=0.3)
+    ax.legend()
 
-energy_times = np.array(energy_times)
-energy_vals = np.array(energy_vals)
+    fig.tight_layout()
+    fig.savefig(out_plot, dpi=160)
+    plt.close(fig)
 
-# Optional qualitative labels for energy
-q1 = np.quantile(energy_vals, 0.33)
-q2 = np.quantile(energy_vals, 0.66)
 
-energy_labels = []
-for e in energy_vals:
-    if e < q1:
-        energy_labels.append("low")
-    elif e < q2:
-        energy_labels.append("medium")
-    else:
-        energy_labels.append("high")
+def main() -> None:
+    signal = load_signal()
 
-# --- Plot ---
-plt.figure(figsize=(12, 7))
+    pla_df = build_pla_segments(signal)
+    pla_df = merge_same_labels(pla_df)
 
-# Top plot: effort / torque over time
-plt.subplot(2, 1, 1)
-plt.plot(t, x_plot, linewidth=1.8, label="Joint 2 Effort")
-plt.xlabel("Time (s)")
-plt.ylabel("Joint Effort (Nm)" if not USE_ABSOLUTE_EFFORT else "|Joint Effort| (Nm)")
-plt.title("Joint 2 Effort Over Time")
-plt.grid(True, alpha=0.3)
-plt.legend()
+    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+    pla_df.to_csv(OUT_CSV, index=False)
 
-# Bottom plot: sliding window energy
-plt.subplot(2, 1, 2)
-plt.plot(energy_times, energy_vals, marker="o", linewidth=1.8, label="Effort Energy")
-plt.xlabel("Time (s)")
-plt.ylabel("Energy (Nm²)")
-plt.title("Sliding Window Effort Energy")
-plt.grid(True, alpha=0.3)
-plt.legend()
+    save_plot(signal, pla_df)
 
-plt.tight_layout()
-plt.show()
+    print(f"Valid samples: {len(signal)}")
+    print(f"Saved PLA CSV: {OUT_CSV}")
+    print(f"Saved PLA plot: {OUT_PLOT}")
 
-# --- Print energy summary ---
-print("\nSliding-window energy summary:")
-print(f"Minimum energy: {energy_vals.min():.3f}")
-print(f"Maximum energy: {energy_vals.max():.3f}")
-print(f"Mean energy:    {energy_vals.mean():.3f}")
+    print("\nPLA label timing:")
+    print(pla_df[["start_time_sec", "end_time_sec", "duration_sec", "label"]])
 
-print("\nWindow-wise qualitative energy labels:")
-for tm, e, lab in zip(energy_times, energy_vals, energy_labels):
-    print(f"time={tm:.2f} s, energy={e:.3f}, label={lab}")
+
+if __name__ == "__main__":
+    main()

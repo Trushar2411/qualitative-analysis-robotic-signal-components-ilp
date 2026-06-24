@@ -5,7 +5,7 @@ from rosbags.highlevel import AnyReader
 from rosbags.typesys import Stores, get_typestore
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-BAG_PATH = REPO_ROOT / "data" / "raw" / "rosbags" / "rosbag2_2026_02_21-13_05_45"
+BAG_PATH = REPO_ROOT / "data" / "raw" / "rosbags" / "pick_place_dataset_20260624_131235_0.db3"
 OUTPUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint_states_filtered_wide.csv"
 
 typestore = get_typestore(Stores.ROS2_HUMBLE)
@@ -34,7 +34,17 @@ with AnyReader([BAG_PATH], default_typestore=typestore) as reader:
 
         rows.append(row)
 
-df = pd.DataFrame(rows).sort_values("timestamp")
+df = pd.DataFrame(rows)
+if df.empty:
+    raise ValueError(f"No usable /joint_states messages found in {BAG_PATH}")
+
+# Re-aggregate by timestamp in case multiple partial joint-state messages share a time.
+df = (
+    df.groupby("timestamp", as_index=False)
+    .first()
+    .sort_values("timestamp")
+    .reset_index(drop=True)
+)
 t0 = df["timestamp"].iloc[0]
 df["t_sec"] = (df["timestamp"] - t0) * 1e-9
 
