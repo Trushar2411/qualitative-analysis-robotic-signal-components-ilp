@@ -16,9 +16,7 @@ build/
 install/
 log/
 
-# Generated analysis artifacts
-outputs/
-data/processed/csv/*.csv
+
 
 # Raw rosbag/database files are large generated inputs.
 data/raw/rosbags/
