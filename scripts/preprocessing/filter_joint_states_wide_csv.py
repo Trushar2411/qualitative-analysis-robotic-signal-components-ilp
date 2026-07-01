@@ -5,7 +5,7 @@ from rosbags.highlevel import AnyReader
 from rosbags.typesys import Stores, get_typestore
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-BAG_PATH = REPO_ROOT / "data" / "raw" / "rosbags" / "pick_place_dataset_20260624_131235_0.db3"
+BAG_PATH = REPO_ROOT / "pick_place_recordings" / "pick_place_20260701_143554" / "rosbag" / "rosbag_0.db3"
 OUTPUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint_states_filtered_wide.csv"
 
 typestore = get_typestore(Stores.ROS2_HUMBLE)

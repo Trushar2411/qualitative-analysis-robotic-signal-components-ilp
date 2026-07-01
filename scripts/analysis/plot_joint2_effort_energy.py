@@ -10,9 +10,9 @@ import pandas as pd
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INPUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint_states_filtered_wide.csv"
-OUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint2_position_energy.csv"
-OUT_PLOT = REPO_ROOT / "outputs" / "plots" / "joint2_position_energy_sliding_window.png"
-COL = "joint2_pos"
+OUT_CSV = REPO_ROOT / "data" / "processed" / "csv" / "joint3_efforts_energy.csv"
+OUT_PLOT = REPO_ROOT / "outputs" / "plots" / "joint3_efforts_energy_sliding_window.png"
+COL = "joint3_eff"
 WINDOW_SIZE = 20
 STEP = 5
 
@@ -28,8 +28,8 @@ def load_signal(input_csv: Path = INPUT_CSV, col: str = COL) -> pd.DataFrame:
         df["t_sec"] = (df["timestamp"] - t0) * 1e-9
 
     if col not in df.columns:
-        available = ", ".join([c for c in df.columns if "joint2" in c][:20])
-        raise ValueError(f"Column '{col}' not found. Available joint2 columns: {available}")
+        available = ", ".join([c for c in df.columns if "joint3" in c][:20])
+        raise ValueError(f"Column '{col}' not found. Available joint3 columns: {available}")
 
     signal = df[["t_sec", col]].dropna().sort_values("t_sec").reset_index(drop=True)
     signal = signal[np.isfinite(signal["t_sec"]) & np.isfinite(signal[col])]
@@ -55,8 +55,8 @@ def compute_sliding_energy(signal: pd.DataFrame, col: str = COL) -> pd.DataFrame
                 "start_time_sec": float(t_win[0]),
                 "end_time_sec": float(t_win[-1]),
                 "center_time_sec": float(np.mean(t_win)),
-                "mean_position": float(np.mean(x_win)),
-                "range_position": float(np.max(x_win) - np.min(x_win)),
+                "mean_efforts": float(np.mean(x_win)),
+                "range_efforts": float(np.max(x_win) - np.min(x_win)),
                 "energy": float(np.sum(centered**2)),
             }
         )
@@ -78,8 +78,8 @@ def save_plot(signal: pd.DataFrame, energy_df: pd.DataFrame, out_plot: Path = OU
 
     axes[0].plot(signal["t_sec"], signal[COL], label=COL)
     axes[0].set_xlabel("Time [s]")
-    axes[0].set_ylabel("Position [rad]")
-    axes[0].set_title("Joint 2 Position")
+    axes[0].set_ylabel("efforts [rad]")
+    axes[0].set_title("Joint 3 efforts")
     axes[0].grid(True, alpha=0.3)
     axes[0].legend()
 

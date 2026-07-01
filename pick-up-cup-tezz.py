@@ -21,7 +21,7 @@ from rosidl_runtime_py.utilities import get_message
 ROBOT_IP = "192.168.1.204"
 
 # ROS topic to record
-TOPICS_TO_RECORD = ["/joint_states"]
+TOPICS_TO_RECORD = ["/xarm/joint_states"]
 
 # Output folder
 BASE_OUTPUT_DIR = Path("pick_place_recordings")
@@ -224,7 +224,7 @@ class Jessie:
             for topic_id, timestamp, data in cursor.fetchall():
                 topic_name = topic_info[topic_id]["name"]
 
-                if topic_name != "/joint_states":
+                if topic_name != "/xarm/joint_states":
                     continue
 
                 msg_type = topic_info[topic_id]["msg_class"]

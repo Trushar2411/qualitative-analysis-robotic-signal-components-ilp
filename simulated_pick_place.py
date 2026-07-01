@@ -42,12 +42,8 @@ class JessieSim(Node):
         )
 
         self.arm_joint_names = [
-            "joint1",
-            "joint2",
-            "joint3",
-            "joint4",
-            "joint5",
-            "joint6"
+            "joint1", "joint2", "joint3",
+            "joint4", "joint5", "joint6"
         ]
 
         self.gripper_joint_names = ["drive_joint"]
@@ -106,11 +102,7 @@ class JessieSim(Node):
         self.get_logger().info("Simulated pick and place finished")
 
 
-def start_rosbag():
-    dataset_dir = os.path.expanduser("~/xarm_datasets")
-    os.makedirs(dataset_dir, exist_ok=True)
-
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+def start_rosbag(dataset_dir, timestamp):
     bag_name = os.path.join(dataset_dir, f"pick_place_dataset_{timestamp}")
 
     topics = [
@@ -143,15 +135,69 @@ def stop_rosbag(process):
     print("Rosbag saved")
 
 
+def start_screen_record(dataset_dir, timestamp):
+    video_file = os.path.join(dataset_dir, f"gazebo_recording_{timestamp}.mp4")
+
+    display = os.environ.get("DISPLAY", ":0.0")
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-video_size", "1920x1080",
+        "-framerate", "30",
+        "-f", "x11grab",
+        "-i", display,
+        "-c:v", "libx264",
+        "-preset", "ultrafast",
+        "-pix_fmt", "yuv420p",
+        video_file
+    ]
+
+    print(f"Starting screen recording: {video_file}")
+
+    process = subprocess.Popen(
+        cmd,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        preexec_fn=os.setsid
+    )
+
+    time.sleep(2)
+    return process, video_file
+
+
+def stop_screen_record(process):
+    print("Stopping screen recording")
+
+    try:
+        process.stdin.write(b"q")
+        process.stdin.flush()
+        process.wait(timeout=5)
+    except Exception:
+        os.killpg(os.getpgid(process.pid), signal.SIGINT)
+        process.wait()
+
+    print("Screen recording saved")
+
+
 def main():
+    dataset_dir = os.path.expanduser("~/xarm_datasets")
+    os.makedirs(dataset_dir, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
     rclpy.init()
     node = JessieSim()
 
     bag_process = None
+    screen_process = None
     bag_name = None
+    video_file = None
 
     try:
-        bag_process, bag_name = start_rosbag()
+        screen_process, video_file = start_screen_record(dataset_dir, timestamp)
+        bag_process, bag_name = start_rosbag(dataset_dir, timestamp)
 
         node.pick_and_place()
 
@@ -159,11 +205,17 @@ def main():
         if bag_process is not None:
             stop_rosbag(bag_process)
 
+        if screen_process is not None:
+            stop_screen_record(screen_process)
+
         node.destroy_node()
         rclpy.shutdown()
 
         if bag_name is not None:
             print(f"Dataset saved at: {bag_name}")
+
+        if video_file is not None:
+            print(f"Screen recording saved at: {video_file}")
 
 
 if __name__ == "__main__":
