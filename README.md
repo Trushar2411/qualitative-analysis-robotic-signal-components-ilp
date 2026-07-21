@@ -1,150 +1,307 @@
-# xArm Branch - Qualitative Analysis of Robotic Signal Components using ILP
+# xArm Pick-and-Place Signal Analysis for Popper ILP
 
 ## Overview
 
-This branch contains the **manipulator-specific implementation** of the project:
+This branch contains the xArm-specific workflow for collecting, processing, and
+analyzing robotic pick-and-place signals before using them for rule learning in
+Popper.
 
-**"Qualitative Analysis of Robotic Signal Components using Inductive Logic Programming (ILP)"**
+The current branch is organized around repeated robot runs. Each run is recorded
+as raw data, converted into per-joint processed CSV files, and then analyzed with
+two qualitative signal methods:
 
-The focus of this branch is on analyzing **xArm robotic arm signals** during task execution and extracting **qualitative patterns** that can be represented symbolically and learned using ILP.
+- **PLA**: Piecewise Linear Approximation on joint velocity.
+- **SWEE**: Sliding Window Effort Energy on joint effort.
 
----
-
-## Objective
-
-The goal of this branch is to:
-
-- Process raw actuator and joint signals from the xArm robot
-- Segment robot actions (e.g., pick, place, lift)
-- Extract qualitative signal characteristics
-- Convert processed data into logical facts
-- Learn interpretable symbolic rules using ILP
-
----
+The raw data, processed data, and analysis results are intended to become the
+input evidence for building logical facts, background knowledge, positive
+examples, and negative examples for Popper.
 
 ## Robot Platform
 
-- **Robot:** UFactory xArm (e.g., xArm6 / xArm7)
-- **Type:** Industrial manipulator
-- **Use case:** Pick-and-place tasks
-
----
-
-## Data Sources
-
-The data used in this branch is typically obtained from:
-
-- ROS 2 bag files
-- Joint state topics (`/joint_states`)
-- End-effector state
-- Gripper state (if available)
-
-### Signals analyzed:
-- Joint positions
-- Joint velocities
-- Joint efforts (torques)
-- End-effector trajectory
-- Gripper open/close state
-
----
+- **Robot:** UFactory xArm, currently using xArm joint-state data.
+- **Task:** Pick-and-place.
+- **Main ROS topic:** `/xarm/joint_states`
+- **Signals used:** joint position, joint velocity, joint effort, and phase
+  labels.
 
 ## Repository Layout
 
 ```text
 .
-|-- data/
-|   |-- raw/rosbags/
-|   `-- processed/csv/
+|-- Raw data/
+|   `-- pick_place_YYYYMMDD_HHMMSS/
+|       |-- rosbag/
+|       |   `-- metadata.yaml
+|       `-- csv/
+|           |-- full_motion_joint_states.csv
+|           |-- phase_timestamps.csv
+|           |-- home_joint_states.csv
+|           |-- gripper_opening_joint_states.csv
+|           |-- pick_joint_states.csv
+|           |-- gripper_closing_joint_states.csv
+|           |-- lift_joint_states.csv
+|           |-- place_joint_states.csv
+|           |-- retract_joint_states.csv
+|           `-- return_home_joint_states.csv
+|-- Processed data/
+|   `-- pick_place_YYYYMMDD_HHMMSS_processed_YYYYMMDD_HHMMSS/
+|       |-- joint_1.csv
+|       |-- joint_2.csv
+|       |-- joint_3.csv
+|       |-- joint_4.csv
+|       |-- joint_5.csv
+|       `-- joint_6.csv
 |-- outputs/
-|   `-- plots/
+|   |-- README.md
+|   |-- PLA/
+|   |   `-- <processed_run_name>_PLA_YYYYMMDD_HHMMSS/
+|   |       |-- csv/
+|   |       `-- plots/
+|   `-- SWEE/
+|       `-- <processed_run_name>_SWEE_YYYYMMDD_HHMMSS/
+|           |-- csv/
+|           `-- plots/
 `-- scripts/
+    |-- data_collection/
+    |   |-- real_robot_pick_and_place_recorder.py
+    |   `-- simulated_pick_and_place_recorder.py
     |-- preprocessing/
+    |   `-- create_joint_processed_data.py
     `-- analysis/
+        |-- piecewise_linear_approximation_velocity.py
+        `-- sliding_window_effort_energy.py
 ```
 
----
+## Workflow
 
-## Actions Considered
+### 1. Collect Raw Robot Data
 
-The manipulator actions are segmented into meaningful phases:
-
-- `approach` - moving towards object
-- `pick` - grasping object
-- `lift` - lifting object
-- `move` - transporting object
-- `place` - releasing object
-- `retract` - moving away
-- `idle` - no motion
-
----
-
-## Methodology
-
-### 1. Data Preprocessing
-- Extract signals from ROS 2 bag files
-- Remove noise and idle regions
-- Normalize and synchronize signals
-
-### 2. Action Segmentation
-- Divide continuous data into action windows
-- Label each segment with corresponding action
-
-### 3. Feature Extraction
-Convert numeric signals into qualitative features:
-
-- `increasing(signal)`
-- `decreasing(signal)`
-- `constant(signal)`
-- `peak(signal)`
-- `oscillating(signal)`
-
-Current joint-2 analysis scripts focus on time-domain sliding windows:
+Run the real robot recorder:
 
 ```bash
-python3 scripts/preprocessing/filter_joint_states_wide_csv.py
-python3 scripts/analysis/plot_joint2_effort_energy.py
-python3 scripts/analysis/qualitative_joint2_effort_analysis.py
+python3 scripts/data_collection/real_robot_pick_and_place_recorder.py
 ```
 
-Generated files:
+The script creates a new timestamped folder in `Raw data/` for each run:
 
-- `data/processed/csv/joint2_position_energy.csv`
-- `data/processed/csv/joint2_position_qualitative.csv`
-- `outputs/plots/joint2_position_energy_sliding_window.png`
-- `outputs/plots/joint2_position_qualitative_labels.png`
+```text
+Raw data/pick_place_YYYYMMDD_HHMMSS/
+```
 
-### 4. Logical Fact Generation
-Example:
+Inside each raw run, the recorder stores the ROS bag output in `rosbag/` and
+CSV data in `csv/`.
+
+The main CSV is:
+
+```text
+Raw data/<run>/csv/full_motion_joint_states.csv
+```
+
+This file contains the complete timeline for all six joints:
+
+```text
+bag_time_ns
+bag_time_sec
+header_stamp_sec
+joint1_position, joint1_velocity, joint1_effort
+...
+joint6_position, joint6_velocity, joint6_effort
+phase
+```
+
+The recorder also creates phase-specific CSV files. The current phases are:
+
+- `home`
+- `gripper_opening`
+- `pick`
+- `gripper_closing`
+- `lift`
+- `place`
+- `retract`
+- `return_home`
+
+There should be no `unlabelled` phase rows in new recordings.
+
+### 2. Create Processed Per-Joint Data
+
+Run preprocessing on the latest raw run:
+
+```bash
+python3 scripts/preprocessing/create_joint_processed_data.py
+```
+
+Or process a specific raw run:
+
+```bash
+python3 scripts/preprocessing/create_joint_processed_data.py --raw-run "Raw data/pick_place_YYYYMMDD_HHMMSS"
+```
+
+This creates a new timestamped folder in `Processed data/`:
+
+```text
+Processed data/<raw_run_name>_processed_YYYYMMDD_HHMMSS/
+```
+
+The preprocessing step splits the full raw motion CSV into six files:
+
+```text
+joint_1.csv
+joint_2.csv
+joint_3.csv
+joint_4.csv
+joint_5.csv
+joint_6.csv
+```
+
+Each processed joint CSV contains the full action timeline for one joint:
+
+```text
+joint,bag_time_ns,bag_time_sec,header_stamp_sec,position,velocity,effort,phase
+```
+
+This structure makes it easier to compare how each joint behaves across the same
+task phases and across multiple robot runs.
+
+### 3. Run PLA on Joint Velocity
+
+Run:
+
+```bash
+python3 scripts/analysis/piecewise_linear_approximation_velocity.py
+```
+
+By default, this uses the latest folder in `Processed data/`. It reads every
+`joint_*.csv` file, analyzes the `velocity` column, and writes outputs to:
+
+```text
+outputs/PLA/<processed_run_name>_PLA_YYYYMMDD_HHMMSS/
+|-- csv/
+`-- plots/
+```
+
+For each joint, PLA creates:
+
+```text
+csv/joint_1_PLA.csv
+plots/joint_1_PLA.png
+```
+
+PLA converts numeric velocity behavior into qualitative labels:
+
+- `ramp_up`: velocity is increasing.
+- `ramp_down`: velocity is decreasing.
+- `constant`: velocity is approximately stable.
+
+These labels can later become symbolic predicates for Popper, for example:
 
 ```prolog
-increasing(joint2_velocity, t1).
-constant(joint3_position, t1).
+velocity_trend(run1, joint2, pick, ramp_up).
+velocity_trend(run1, joint5, retract, constant).
 ```
 
-### 5. ILP Learning
+### 4. Run SWEE on Joint Effort
 
-Using:
+Run:
 
-- Background knowledge
-- Positive examples (correct actions)
-- Negative examples (incorrect or different actions)
+```bash
+python3 scripts/analysis/sliding_window_effort_energy.py
+```
 
-Generate hypotheses such as:
+By default, this also uses the latest folder in `Processed data/`. It reads every
+`joint_*.csv` file, analyzes the `effort` column, and writes outputs to:
+
+```text
+outputs/SWEE/<processed_run_name>_SWEE_YYYYMMDD_HHMMSS/
+|-- csv/
+`-- plots/
+```
+
+For each joint, SWEE creates:
+
+```text
+csv/joint_1_SWEE.csv
+plots/joint_1_SWEE.png
+```
+
+SWEE converts effort variation into energy labels:
+
+- `low_energy`
+- `medium_energy`
+- `high_energy`
+
+These labels can later become symbolic predicates for Popper, for example:
 
 ```prolog
-pick :-
-    increasing(joint2_velocity),
-    peak(joint3_effort),
-    constant(gripper_position).
+effort_energy(run1, joint2, pick, high_energy).
+effort_energy(run1, joint1, home, low_energy).
 ```
 
----
+## How This Supports Popper
+
+Popper learns logic programs from examples and background knowledge. This branch
+is preparing the robot signal data needed for that process.
+
+The intended path is:
+
+```text
+Raw data
+  -> Processed data
+  -> PLA and SWEE analysis outputs
+  -> logical facts and examples
+  -> Popper rule learning
+```
+
+Across multiple robot runs, the same pipeline can generate repeated evidence for
+how each joint behaves during each phase of the task. The analysis CSVs can be
+converted into Popper facts such as:
+
+```prolog
+phase(run1, pick).
+joint(run1, joint2).
+velocity_trend(run1, joint2, pick, ramp_up).
+effort_energy(run1, joint2, pick, high_energy).
+```
+
+Positive and negative examples can then be defined for target concepts such as:
+
+```prolog
+successful_pick(run1).
+stable_lift(run1).
+high_effort_place(run1).
+```
+
+Popper can use those examples and the generated signal facts to learn symbolic
+rules that describe the robot behavior, such as which velocity trends and effort
+energy patterns are associated with a successful action phase.
+
+## Current Scripts
+
+Data collection:
+
+```bash
+python3 scripts/data_collection/real_robot_pick_and_place_recorder.py
+python3 scripts/data_collection/simulated_pick_and_place_recorder.py
+```
+
+Preprocessing:
+
+```bash
+python3 scripts/preprocessing/create_joint_processed_data.py
+```
+
+Analysis:
+
+```bash
+python3 scripts/analysis/piecewise_linear_approximation_velocity.py
+python3 scripts/analysis/sliding_window_effort_energy.py
+```
 
 ## Notes
 
-- This branch is platform-specific and focuses only on the xArm robot.
-- Shared concepts, theory, and general methodology are documented in the main branch.
-- This implementation can later be extended to:
-  - Fault detection
-  - Action verification
-  - Skill learning
+- Each robot run should remain timestamped so raw, processed, and analyzed data
+  can be traced back to the same experiment.
+- The raw CSVs preserve the full multi-joint signal.
+- The processed CSVs separate the signal into one file per joint.
+- The analysis outputs convert numeric signals into qualitative labels that are
+  easier to transform into Popper facts.
