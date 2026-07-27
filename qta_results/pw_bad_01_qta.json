@@ -1,0 +1,176 @@
+{
+  "run_id": "pw_bad_01",
+  "scenario": "plain_wall_bad",
+  "example_type": "negative",
+  "file": "pw_bad_01_plain_wall_bad.csv",
+  "windows": {
+    "approaching_wall": {
+      "lidar_left": {
+        "shape": "is_oscillating",
+        "mean": 1.2186,
+        "std": 0.38,
+        "n_rows": 239
+      },
+      "lidar_right": {
+        "shape": "is_oscillating",
+        "mean": 3.9622,
+        "std": 9.1072,
+        "n_rows": 239
+      },
+      "lidar_front": {
+        "shape": "is_oscillating",
+        "mean": 11.627,
+        "std": 21.4237,
+        "n_rows": 239
+      },
+      "lidar_front_right": {
+        "shape": "is_oscillating",
+        "mean": 12.2213,
+        "std": 22.5056,
+        "n_rows": 239
+      },
+      "imu_angular_z": {
+        "shape": "is_oscillating",
+        "mean": 0.1426,
+        "std": 0.3094,
+        "n_rows": 239
+      },
+      "imu_accel_x": {
+        "shape": "is_zero",
+        "mean": -0.0157,
+        "std": 0.1747,
+        "n_rows": 239
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.3006,
+        "std": 0.4199,
+        "n_rows": 239
+      },
+      "odom_linear_x": {
+        "shape": "is_zero",
+        "mean": 0.0086,
+        "std": 0.003,
+        "n_rows": 239
+      },
+      "odom_angular_z": {
+        "shape": "is_oscillating",
+        "mean": 0.044,
+        "std": 0.0114,
+        "n_rows": 239
+      }
+    },
+    "searching_wall": {
+      "lidar_left": {
+        "shape": "is_oscillating",
+        "mean": 9.3044,
+        "std": 15.0781,
+        "n_rows": 467
+      },
+      "lidar_right": {
+        "shape": "is_oscillating",
+        "mean": 8.1889,
+        "std": 17.2734,
+        "n_rows": 467
+      },
+      "lidar_front": {
+        "shape": "is_oscillating",
+        "mean": 4.2242,
+        "std": 11.0232,
+        "n_rows": 467
+      },
+      "lidar_front_right": {
+        "shape": "is_oscillating",
+        "mean": 7.7134,
+        "std": 18.0865,
+        "n_rows": 467
+      },
+      "imu_angular_z": {
+        "shape": "is_oscillating",
+        "mean": 0.2,
+        "std": 0.1892,
+        "n_rows": 467
+      },
+      "imu_accel_x": {
+        "shape": "is_oscillating",
+        "mean": -0.0329,
+        "std": 0.1217,
+        "n_rows": 467
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.3552,
+        "std": 0.3241,
+        "n_rows": 467
+      },
+      "odom_linear_x": {
+        "shape": "is_zero",
+        "mean": 0.0005,
+        "std": 0.0016,
+        "n_rows": 467
+      },
+      "odom_angular_z": {
+        "shape": "is_oscillating",
+        "mean": 0.0302,
+        "std": 0.0051,
+        "n_rows": 467
+      }
+    },
+    "wall_following": {
+      "lidar_left": {
+        "shape": "is_constant",
+        "mean": 0.4924,
+        "std": 0.0397,
+        "n_rows": 280
+      },
+      "lidar_right": {
+        "shape": "is_oscillating",
+        "mean": 2.4467,
+        "std": 0.6498,
+        "n_rows": 280
+      },
+      "lidar_front": {
+        "shape": "is_oscillating",
+        "mean": 29.3616,
+        "std": 29.8923,
+        "n_rows": 280
+      },
+      "lidar_front_right": {
+        "shape": "is_oscillating",
+        "mean": 2.9462,
+        "std": 0.8908,
+        "n_rows": 280
+      },
+      "imu_angular_z": {
+        "shape": "is_zero",
+        "mean": -0.0111,
+        "std": 0.0548,
+        "n_rows": 280
+      },
+      "imu_accel_x": {
+        "shape": "is_oscillating",
+        "mean": -0.0628,
+        "std": 0.1276,
+        "n_rows": 280
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.4095,
+        "std": 0.2785,
+        "n_rows": 280
+      },
+      "odom_linear_x": {
+        "shape": "is_zero",
+        "mean": 0.01,
+        "std": 0.0013,
+        "n_rows": 280
+      },
+      "odom_angular_z": {
+        "shape": "is_zero",
+        "mean": -0.0008,
+        "std": 0.0051,
+        "n_rows": 280
+      }
+    }
+  }
+}

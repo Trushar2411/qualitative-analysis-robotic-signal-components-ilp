@@ -1,0 +1,617 @@
+[
+  {
+    "run_id": "pw_good_01",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_13-52-05.csv",
+    "useful_sensors": [
+      "odom_linear_x",
+      "imu_accel_x",
+      "imu_accel_y",
+      "lidar_front_right",
+      "lidar_front",
+      "pos_x",
+      "lidar_right",
+      "imu_angular_z",
+      "pos_y",
+      "lidar_left"
+    ],
+    "total_rows": 495,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_02",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-02-30.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "odom_linear_x",
+      "lidar_front_right",
+      "imu_accel_y",
+      "pos_x",
+      "lidar_right",
+      "lidar_left",
+      "pos_y",
+      "lidar_front"
+    ],
+    "total_rows": 439,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_03",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-04-55.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "pos_x",
+      "imu_accel_y",
+      "lidar_right",
+      "pos_y",
+      "lidar_left",
+      "lidar_front_right",
+      "lidar_front"
+    ],
+    "total_rows": 557,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_04",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-06-45.csv",
+    "useful_sensors": [
+      "imu_accel_x",
+      "imu_angular_z",
+      "pos_x",
+      "odom_linear_x",
+      "imu_accel_y",
+      "lidar_front_right",
+      "lidar_front",
+      "lidar_right",
+      "lidar_left",
+      "pos_y"
+    ],
+    "total_rows": 494,
+    "action_labels": [
+      "idle",
+      "approaching_wall",
+      "wall_following"
+    ]
+  },
+  {
+    "run_id": "pw_good_05",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-08-22.csv",
+    "useful_sensors": [
+      "odom_linear_x",
+      "lidar_front_right",
+      "pos_x",
+      "imu_accel_x",
+      "imu_angular_z",
+      "imu_accel_y",
+      "lidar_right",
+      "lidar_left",
+      "pos_y",
+      "lidar_front"
+    ],
+    "total_rows": 698,
+    "action_labels": [
+      "idle",
+      "approaching_wall",
+      "wall_following"
+    ]
+  },
+  {
+    "run_id": "pw_good_06",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-10-18.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "lidar_front_right",
+      "odom_linear_x",
+      "pos_x",
+      "imu_accel_y",
+      "lidar_right",
+      "lidar_left",
+      "pos_y"
+    ],
+    "total_rows": 501,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_07",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-11-55.csv",
+    "useful_sensors": [
+      "lidar_front",
+      "odom_linear_x",
+      "lidar_front_right",
+      "imu_angular_z",
+      "imu_accel_y",
+      "imu_accel_x",
+      "pos_x",
+      "lidar_right",
+      "lidar_left"
+    ],
+    "total_rows": 510,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_08",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-13-37.csv",
+    "useful_sensors": [
+      "imu_accel_x",
+      "imu_angular_z",
+      "lidar_front_right",
+      "imu_accel_y",
+      "pos_x",
+      "lidar_left",
+      "lidar_front",
+      "lidar_right",
+      "pos_y"
+    ],
+    "total_rows": 541,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_09",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-15-50.csv",
+    "useful_sensors": [
+      "imu_accel_x",
+      "imu_angular_z",
+      "odom_linear_x",
+      "imu_accel_y",
+      "lidar_front_right",
+      "lidar_right",
+      "pos_x",
+      "lidar_left"
+    ],
+    "total_rows": 537,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_good_10",
+    "scenario": "plain_wall_good",
+    "original_file": "wall_data_2026-07-04_14-28-30.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "imu_accel_y",
+      "odom_linear_x",
+      "lidar_front_right",
+      "pos_x",
+      "lidar_front",
+      "lidar_left",
+      "lidar_right",
+      "pos_y"
+    ],
+    "total_rows": 483,
+    "action_labels": [
+      "idle",
+      "searching_wall",
+      "approaching_wall",
+      "wall_following"
+    ]
+  },
+  {
+    "run_id": "pw_bad_01",
+    "scenario": "plain_wall_bad",
+    "original_file": "wall_data_2026-07-04_13-24-30.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "lidar_front",
+      "lidar_front_right",
+      "imu_accel_y",
+      "lidar_left",
+      "lidar_right",
+      "cmd_angular_z",
+      "odom_angular_z",
+      "pos_y",
+      "pos_x",
+      "odom_linear_x"
+    ],
+    "total_rows": 986,
+    "action_labels": [
+      "approaching_wall",
+      "searching_wall",
+      "wall_following"
+    ]
+  },
+  {
+    "run_id": "pw_bad_02",
+    "scenario": "plain_wall_bad",
+    "original_file": "wall_data_2026-07-04_14-32-58.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "imu_accel_y"
+    ],
+    "total_rows": 580,
+    "action_labels": [
+      "idle",
+      "wall_following"
+    ]
+  },
+  {
+    "run_id": "pw_bad_03",
+    "scenario": "plain_wall_bad",
+    "original_file": "wall_data_2026-07-04_14-43-56.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "lidar_front",
+      "imu_accel_y",
+      "lidar_left",
+      "pos_y",
+      "pos_x",
+      "lidar_front_right",
+      "lidar_right",
+      "odom_linear_x"
+    ],
+    "total_rows": 502,
+    "action_labels": [
+      "wall_following_fail",
+      "wall_following",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pw_bad_04",
+    "scenario": "plain_wall_bad",
+    "original_file": "wall_data_2026-07-04_14-45-40.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "imu_accel_y",
+      "lidar_front",
+      "odom_linear_x",
+      "lidar_left",
+      "pos_y",
+      "pos_x",
+      "lidar_front_right",
+      "lidar_right"
+    ],
+    "total_rows": 650,
+    "action_labels": [
+      "idle",
+      "wall_following_fail",
+      "wall_following",
+      "approaching_wall"
+    ]
+  },
+  {
+    "run_id": "pw_bad_05",
+    "scenario": "plain_wall_bad",
+    "original_file": "wall_data_2026-07-04_14-47-20.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "lidar_front",
+      "imu_accel_y",
+      "lidar_left",
+      "odom_linear_x",
+      "lidar_front_right",
+      "pos_y",
+      "lidar_right",
+      "pos_x",
+      "odom_angular_z"
+    ],
+    "total_rows": 526,
+    "action_labels": [
+      "wall_following_fail",
+      "wall_following",
+      "approaching_wall",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pill_good_01",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_11-44-35.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "imu_accel_y",
+      "odom_angular_z",
+      "lidar_front",
+      "lidar_front_right",
+      "lidar_left",
+      "lidar_right",
+      "distance_travelled",
+      "cmd_linear_x",
+      "pos_x"
+    ],
+    "total_rows": 810,
+    "action_labels": [
+      "idle",
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired"
+    ]
+  },
+  {
+    "run_id": "pill_good_02",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_11-53-16.csv",
+    "useful_sensors": [
+      "imu_accel_y",
+      "imu_accel_x",
+      "imu_angular_z",
+      "odom_angular_z",
+      "lidar_left",
+      "lidar_front",
+      "lidar_right",
+      "distance_travelled",
+      "cmd_linear_x",
+      "lidar_front_right",
+      "pos_x"
+    ],
+    "total_rows": 804,
+    "action_labels": [
+      "idle",
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired"
+    ]
+  },
+  {
+    "run_id": "pill_good_03",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_11-56-46.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "imu_accel_y",
+      "odom_angular_z",
+      "lidar_left",
+      "lidar_right",
+      "lidar_front",
+      "distance_travelled",
+      "cmd_linear_x",
+      "lidar_front_right",
+      "pos_x"
+    ],
+    "total_rows": 816,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pill_good_04",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_11-58-40.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "odom_angular_z",
+      "imu_accel_x",
+      "imu_accel_y",
+      "lidar_front",
+      "lidar_left",
+      "lidar_front_right",
+      "distance_travelled",
+      "cmd_linear_x",
+      "lidar_right",
+      "pos_x"
+    ],
+    "total_rows": 796,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pill_good_05",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_12-04-08.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "odom_angular_z",
+      "lidar_front",
+      "imu_accel_y",
+      "lidar_left",
+      "lidar_right",
+      "distance_travelled",
+      "cmd_linear_x",
+      "lidar_front_right",
+      "pos_x"
+    ],
+    "total_rows": 794,
+    "action_labels": [
+      "idle",
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired"
+    ]
+  },
+  {
+    "run_id": "pill_good_06",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_12-07-16.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_y",
+      "imu_accel_x",
+      "odom_angular_z",
+      "lidar_front",
+      "lidar_left",
+      "lidar_right",
+      "distance_travelled",
+      "cmd_linear_x",
+      "lidar_front_right",
+      "pos_x",
+      "pos_y"
+    ],
+    "total_rows": 814,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pill_good_07",
+    "scenario": "pillar_wall_good",
+    "original_file": "pillar_data_2026-07-09_12-09-18.csv",
+    "useful_sensors": [
+      "imu_angular_z",
+      "imu_accel_x",
+      "odom_angular_z",
+      "imu_accel_y",
+      "lidar_front",
+      "lidar_left",
+      "lidar_front_right",
+      "lidar_right",
+      "cmd_linear_x",
+      "distance_travelled",
+      "pos_x",
+      "pos_y"
+    ],
+    "total_rows": 821,
+    "action_labels": [
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired",
+      "idle"
+    ]
+  },
+  {
+    "run_id": "pill_bad_01",
+    "scenario": "pillar_wall_bad",
+    "original_file": "pillar_data_2026-07-09_12-17-49.csv",
+    "useful_sensors": [
+      "imu_accel_x",
+      "imu_angular_z",
+      "odom_angular_z",
+      "imu_accel_y",
+      "lidar_front",
+      "lidar_front_right",
+      "lidar_left",
+      "distance_travelled",
+      "lidar_right",
+      "cmd_linear_x",
+      "odom_linear_x",
+      "pos_y",
+      "pos_x"
+    ],
+    "total_rows": 804,
+    "action_labels": [
+      "idle",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired",
+      "approaching_wall",
+      "wall_following"
+    ]
+  },
+  {
+    "run_id": "pill_bad_02",
+    "scenario": "pillar_wall_bad",
+    "original_file": "pillar_data_2026-07-09_12-28-34.csv",
+    "useful_sensors": [
+      "imu_accel_x",
+      "imu_accel_y",
+      "lidar_left",
+      "imu_angular_z",
+      "lidar_front_right",
+      "lidar_right",
+      "odom_linear_x",
+      "lidar_front",
+      "odom_angular_z",
+      "cmd_linear_x",
+      "distance_travelled",
+      "pos_x",
+      "pos_y"
+    ],
+    "total_rows": 367,
+    "action_labels": [
+      "idle",
+      "searching_wall",
+      "approaching_wall",
+      "obstacle_detected",
+      "obstacle_avoidance"
+    ]
+  },
+  {
+    "run_id": "pill_bad_03",
+    "scenario": "pillar_wall_bad",
+    "original_file": "pillar_data_2026-07-09_12-31-57.csv",
+    "useful_sensors": [
+      "imu_accel_x",
+      "imu_angular_z",
+      "imu_accel_y",
+      "odom_angular_z",
+      "lidar_front",
+      "lidar_front_right",
+      "lidar_left",
+      "lidar_right",
+      "cmd_linear_x",
+      "odom_linear_x",
+      "distance_travelled",
+      "pos_x",
+      "pos_y"
+    ],
+    "total_rows": 793,
+    "action_labels": [
+      "idle",
+      "approaching_wall",
+      "wall_following",
+      "obstacle_detected",
+      "obstacle_avoidance",
+      "wall_reacquired",
+      "wall_following_fail"
+    ]
+  }
+]

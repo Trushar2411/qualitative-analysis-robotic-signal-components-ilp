@@ -1,0 +1,48 @@
+{
+  "run_id": "pw_bad_02",
+  "scenario": "plain_wall_bad",
+  "example_type": "negative",
+  "file": "pw_bad_02_plain_wall_bad.csv",
+  "windows": {
+    "idle": {
+      "imu_angular_z": {
+        "shape": "is_zero",
+        "mean": 0.0063,
+        "std": 0.0401,
+        "n_rows": 165
+      },
+      "imu_accel_x": {
+        "shape": "is_oscillating",
+        "mean": -0.0804,
+        "std": 0.1148,
+        "n_rows": 165
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.4485,
+        "std": 0.2157,
+        "n_rows": 165
+      }
+    },
+    "wall_following": {
+      "imu_angular_z": {
+        "shape": "is_decreasing",
+        "mean": 0.0206,
+        "std": 0.1623,
+        "n_rows": 415
+      },
+      "imu_accel_x": {
+        "shape": "is_oscillating",
+        "mean": -0.0673,
+        "std": 0.1383,
+        "n_rows": 415
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.4871,
+        "std": 0.3006,
+        "n_rows": 415
+      }
+    }
+  }
+}

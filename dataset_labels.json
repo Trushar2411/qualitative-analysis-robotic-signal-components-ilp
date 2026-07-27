@@ -1,0 +1,35 @@
+{
+  "plain_wall_good": [
+    "wall_data_2026-07-04_13-52-05.csv",
+    "wall_data_2026-07-04_14-02-30.csv",
+    "wall_data_2026-07-04_14-04-55.csv",
+    "wall_data_2026-07-04_14-06-45.csv",
+    "wall_data_2026-07-04_14-08-22.csv",
+    "wall_data_2026-07-04_14-10-18.csv",
+    "wall_data_2026-07-04_14-11-55.csv",
+    "wall_data_2026-07-04_14-13-37.csv",
+    "wall_data_2026-07-04_14-15-50.csv",
+    "wall_data_2026-07-04_14-28-30.csv",
+    "wall_data_2026-07-04_14-32-58.csv"
+  ],
+  "plain_wall_bad": [
+    "wall_data_2026-07-04_13-24-30.csv",
+    "wall_data_2026-07-04_14-43-56.csv",
+    "wall_data_2026-07-04_14-45-40.csv",
+    "wall_data_2026-07-04_14-47-20.csv"
+  ],
+  "pillar_wall_good": [
+    "pillar_data_2026-07-09_11-44-35.csv",
+    "pillar_data_2026-07-09_11-53-16.csv",
+    "pillar_data_2026-07-09_11-56-46.csv",
+    "pillar_data_2026-07-09_11-58-40.csv",
+    "pillar_data_2026-07-09_12-04-08.csv",
+    "pillar_data_2026-07-09_12-07-16.csv",
+    "pillar_data_2026-07-09_12-09-18.csv"
+  ],
+  "pillar_wall_bad": [
+    "pillar_data_2026-07-09_12-17-49.csv",
+    "pillar_data_2026-07-09_12-28-34.csv",
+    "pillar_data_2026-07-09_12-31-57.csv"
+  ]
+}

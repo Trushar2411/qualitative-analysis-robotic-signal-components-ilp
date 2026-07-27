@@ -1,0 +1,158 @@
+{
+  "run_id": "pw_good_07",
+  "scenario": "plain_wall_good",
+  "example_type": "positive",
+  "file": "pw_good_07_plain_wall_good.csv",
+  "windows": {
+    "approaching_wall": {
+      "lidar_left": {
+        "shape": "is_decreasing",
+        "mean": 0.9058,
+        "std": 0.2621,
+        "n_rows": 26
+      },
+      "lidar_right": {
+        "shape": "is_increasing",
+        "mean": 1.4573,
+        "std": 0.3642,
+        "n_rows": 26
+      },
+      "lidar_front": {
+        "shape": "is_oscillating",
+        "mean": 63.0125,
+        "std": 12.6025,
+        "n_rows": 26
+      },
+      "lidar_front_right": {
+        "shape": "is_increasing",
+        "mean": 13.6275,
+        "std": 22.2009,
+        "n_rows": 26
+      },
+      "imu_angular_z": {
+        "shape": "is_decreasing",
+        "mean": 0.2302,
+        "std": 0.5591,
+        "n_rows": 26
+      },
+      "imu_accel_x": {
+        "shape": "is_decreasing",
+        "mean": 0.1404,
+        "std": 0.338,
+        "n_rows": 26
+      },
+      "imu_accel_y": {
+        "shape": "is_increasing",
+        "mean": 0.4005,
+        "std": 0.699,
+        "n_rows": 26
+      },
+      "odom_linear_x": {
+        "shape": "is_zero",
+        "mean": 0.0105,
+        "std": 0.0041,
+        "n_rows": 26
+      }
+    },
+    "wall_following": {
+      "lidar_left": {
+        "shape": "is_constant",
+        "mean": 0.4973,
+        "std": 0.0192,
+        "n_rows": 391
+      },
+      "lidar_right": {
+        "shape": "is_oscillating",
+        "mean": 2.5008,
+        "std": 0.6279,
+        "n_rows": 391
+      },
+      "lidar_front": {
+        "shape": "is_oscillating",
+        "mean": 7.3215,
+        "std": 7.3229,
+        "n_rows": 391
+      },
+      "lidar_front_right": {
+        "shape": "is_oscillating",
+        "mean": 6.9586,
+        "std": 15.3505,
+        "n_rows": 391
+      },
+      "imu_angular_z": {
+        "shape": "is_zero",
+        "mean": -0.0075,
+        "std": 0.0936,
+        "n_rows": 391
+      },
+      "imu_accel_x": {
+        "shape": "is_oscillating",
+        "mean": -0.073,
+        "std": 0.1341,
+        "n_rows": 391
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.437,
+        "std": 0.3162,
+        "n_rows": 391
+      },
+      "odom_linear_x": {
+        "shape": "is_zero",
+        "mean": 0.0101,
+        "std": 0.0015,
+        "n_rows": 391
+      }
+    },
+    "idle": {
+      "lidar_left": {
+        "shape": "is_constant",
+        "mean": 0.4894,
+        "std": 0.0048,
+        "n_rows": 93
+      },
+      "lidar_right": {
+        "shape": "is_constant",
+        "mean": 1.773,
+        "std": 0.0061,
+        "n_rows": 93
+      },
+      "lidar_front": {
+        "shape": "is_constant",
+        "mean": 5.0032,
+        "std": 0.0053,
+        "n_rows": 93
+      },
+      "lidar_front_right": {
+        "shape": "is_constant",
+        "mean": 2.8749,
+        "std": 0.007,
+        "n_rows": 93
+      },
+      "imu_angular_z": {
+        "shape": "is_zero",
+        "mean": 0.0085,
+        "std": 0.0503,
+        "n_rows": 93
+      },
+      "imu_accel_x": {
+        "shape": "is_oscillating",
+        "mean": -0.0893,
+        "std": 0.1389,
+        "n_rows": 93
+      },
+      "imu_accel_y": {
+        "shape": "is_oscillating",
+        "mean": 0.4539,
+        "std": 0.2535,
+        "n_rows": 93
+      },
+      "odom_linear_x": {
+        "shape": "is_zero",
+        "mean": 0.0001,
+        "std": 0.0011,
+        "n_rows": 93
+      }
+    }
+  }
+}
