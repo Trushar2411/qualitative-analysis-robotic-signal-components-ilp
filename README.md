@@ -52,32 +52,19 @@ This branch contains the implementation for the **Kelo Robile mobile robot** com
 ---
 
 ## Repository Structure
-robile branch/
-├── src/
-│ ├── robile_wall_follower/ ← Plain wall package
-│ │ ├── wall_follower_node.py ← P-controller
-│ │ ├── data_logger_node.py ← CSV recorder
-│ │ ├── launch/
-│ │ │ └── wall_follower.launch.py
-│ │ └── signal_processing/
-│ │ ├── visualizer.py ← Raw signal plots
-│ │ ├── signal_processor.py ← Event detection
-│ │ ├── qta_visualizer.py ← QTA visualization
-│ │ └── prolog_generator.py ← ILP facts (WIP)
-│ │
-│ └── robile_pillar_follower/ ← Pillar wall package
-│ ├── pillar_follower_node.py ← State machine controller
-│ ├── data_logger_node.py ← CSV recorder
-│ └── launch/
-│ └── pillar_follower.launch.py
-│
-├── data/ ← Plain wall CSV files
-├── data_pillar/ ← Pillar wall CSV files
-├── data_cleaned/ ← Event-detected CSV files
-├── plots/ ← Raw signal visualizations
-├── plots_qta/ ← QTA visualizations
-├── qta_results/ ← QTA JSON outputs
-└── dataset_labels.json ← Good/bad classification
+
+| Folder/File | Description |
+|-------------|-------------|
+| `src/robile_wall_follower/` | Plain wall ROS 2 package |
+| `src/robile_pillar_follower/` | Pillar wall ROS 2 package |
+| `data/` | Plain wall CSV files (15 runs) |
+| `data_pillar/` | Pillar wall CSV files (10 runs) |
+| `data_cleaned/` | Event-detected clean CSV files |
+| `plots/` | Raw signal visualizations |
+| `plots_qta/` | QTA visualization graphs |
+| `qta_results/` | QTA JSON output files |
+| `dataset_labels.json` | Good/bad run classification |
+| `README.md` | This file |
 ---
 
 ## Dataset
