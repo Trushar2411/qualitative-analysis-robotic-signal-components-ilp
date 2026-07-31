@@ -28,9 +28,9 @@ BASE_OUTPUT_DIR = Path("Raw data")
 
 # Joint positions
 HOME_POSITION = [0, -53.6, 4.3, 0, 49.4, 0]
-PICK_POSITION = [0, 33, -40, 0, -80, 0]
+PICK_POSITION = [0, 39, -45, 0, -80, 0]
 LIFT_POSITION = [-22, 25, -72, 0, -45, 0]
-PLACE_POSITION = [-21, 45, -67, 0, -67, 0]
+PLACE_POSITION = [-21, 48, -67, 0, -67, 0]
 RETRACT_POSITION = [-21, 16, -67, 0, -42, 0]
 
 # Gripper positions
