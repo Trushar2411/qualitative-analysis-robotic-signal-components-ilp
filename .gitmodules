@@ -1,0 +1,3 @@
+[submodule "Popper"]
+	path = Popper
+	url = https://github.com/logic-and-learning-lab/Popper.git
