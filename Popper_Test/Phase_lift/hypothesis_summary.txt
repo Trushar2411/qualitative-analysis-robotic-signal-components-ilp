@@ -1,0 +1,70 @@
+========================================
+RUN 1
+========================================
+0.6s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+0.6s phase_lift(V0):- j3_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 2
+========================================
+0.5s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+0.5s phase_lift(V0):- j2_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 3
+========================================
+0.6s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+0.6s phase_lift(V0):- j2_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 4
+========================================
+0.6s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+0.6s phase_lift(V0):- j3_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 5
+========================================
+0.5s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+0.5s phase_lift(V0):- j2_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 6
+========================================
+0.6s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+0.6s phase_lift(V0):- j1_eff_increases(V0),j2_pos_constant(V0).
+
+========================================
+RUN 7
+========================================
+0.5s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+0.5s phase_lift(V0):- j2_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 8
+========================================
+0.5s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+0.5s phase_lift(V0):- j2_pos_constant(V0),j1_eff_increases(V0).
+
+========================================
+RUN 9
+========================================
+0.6s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+0.6s phase_lift(V0):- j1_eff_increases(V0),j3_pos_constant(V0).
+
+========================================
+RUN 10
+========================================
+0.6s Precision:1.00 Recall:0.77 TP:10 FN:3 TN:134 FP:0 Size:5
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+0.6s phase_lift(V0):- j3_pos_constant(V0),j1_eff_increases(V0).
+

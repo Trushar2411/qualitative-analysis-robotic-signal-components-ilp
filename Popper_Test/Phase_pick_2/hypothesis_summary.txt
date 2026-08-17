@@ -1,0 +1,60 @@
+========================================
+RUN 1
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+========================================
+RUN 2
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j5_pos_decreases(V0),j3_pos_decreases(V0).
+
+========================================
+RUN 3
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j3_pos_decreases(V0),j2_pos_increases(V0).
+
+========================================
+RUN 4
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j3_pos_decreases(V0),j2_pos_increases(V0).
+
+========================================
+RUN 5
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j3_pos_decreases(V0),j5_pos_decreases(V0).
+
+========================================
+RUN 6
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+========================================
+RUN 7
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j3_pos_decreases(V0),j1_pos_constant(V0).
+
+========================================
+RUN 8
+========================================
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+========================================
+RUN 9
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j1_pos_constant(V0),j3_pos_decreases(V0).
+
+========================================
+RUN 10
+========================================
+0.4s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.4s phase_pick(V0):- j3_pos_decreases(V0),j1_pos_constant(V0).
+

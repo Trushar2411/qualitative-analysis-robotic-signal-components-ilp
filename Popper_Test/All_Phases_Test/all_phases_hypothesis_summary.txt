@@ -1,0 +1,307 @@
+==================================================
+PHASE: home
+==================================================
+RUN 1
+
+RUN 2
+
+RUN 3
+
+RUN 4
+
+RUN 5
+
+RUN 6
+
+RUN 7
+
+RUN 8
+
+RUN 9
+
+RUN 10
+
+==================================================
+PHASE: gripper_opening
+==================================================
+RUN 1
+
+RUN 2
+
+RUN 3
+
+RUN 4
+
+RUN 5
+
+RUN 6
+
+RUN 7
+
+RUN 8
+
+RUN 9
+
+RUN 10
+
+==================================================
+PHASE: pick
+==================================================
+RUN 1
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j3_pos_decreases(V0),j2_pos_increases(V0).
+
+RUN 2
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j3_pos_decreases(V0),j1_pos_constant(V0).
+
+RUN 3
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+RUN 4
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j3_pos_decreases(V0),j1_pos_constant(V0).
+
+RUN 5
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j1_pos_constant(V0),j3_pos_decreases(V0).
+
+RUN 6
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+RUN 7
+0.6s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.6s phase_pick(V0):- j3_pos_decreases(V0),j5_pos_decreases(V0).
+
+RUN 8
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+RUN 9
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j3_pos_decreases(V0),j2_pos_increases(V0).
+
+RUN 10
+0.5s Precision:1.00 Recall:1.00 TP:32 FN:0 TN:115 FP:0 Size:3 MDL:3
+0.5s phase_pick(V0):- j2_pos_increases(V0),j3_pos_decreases(V0).
+
+==================================================
+PHASE: pick_delay
+==================================================
+RUN 1
+
+RUN 2
+
+RUN 3
+
+RUN 4
+
+RUN 5
+
+RUN 6
+
+RUN 7
+
+RUN 8
+
+RUN 9
+
+RUN 10
+
+==================================================
+PHASE: gripper_closing
+==================================================
+RUN 1
+
+RUN 2
+
+RUN 3
+
+RUN 4
+
+RUN 5
+
+RUN 6
+
+RUN 7
+
+RUN 8
+
+RUN 9
+
+RUN 10
+
+==================================================
+PHASE: lift
+==================================================
+RUN 1
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 2
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 3
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 4
+0.6s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.6s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 5
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 6
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 7
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 8
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 9
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+RUN 10
+0.5s Precision:1.00 Recall:0.69 TP:9 FN:4 TN:134 FP:0 Size:2 MDL:6
+0.5s phase_lift(V0):- j1_pos_decreases(V0).
+
+==================================================
+PHASE: place
+==================================================
+RUN 1
+0.5s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.5s phase_place(V0):- j2_pos_increases(V0),j3_pos_increases(V0).
+
+RUN 2
+0.5s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.5s phase_place(V0):- j3_pos_increases(V0),j5_pos_decreases(V0).
+
+RUN 3
+0.5s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.5s phase_place(V0):- j3_pos_increases(V0),j5_pos_decreases(V0).
+
+RUN 4
+0.6s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.6s phase_place(V0):- j3_pos_increases(V0),j5_pos_decreases(V0).
+
+RUN 5
+0.5s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.5s phase_place(V0):- j3_pos_increases(V0),j2_pos_increases(V0).
+
+RUN 6
+0.6s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.6s phase_place(V0):- j3_pos_increases(V0),j5_pos_decreases(V0).
+
+RUN 7
+0.6s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.6s phase_place(V0):- j2_pos_increases(V0),j3_pos_increases(V0).
+
+RUN 8
+0.6s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.6s phase_place(V0):- j3_pos_increases(V0),j2_pos_increases(V0).
+
+RUN 9
+0.5s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.5s phase_place(V0):- j2_pos_increases(V0),j3_pos_increases(V0).
+
+RUN 10
+0.6s Precision:1.00 Recall:0.60 TP:6 FN:4 TN:137 FP:0 Size:3 MDL:7
+0.6s phase_place(V0):- j3_pos_increases(V0),j2_pos_increases(V0).
+
+==================================================
+PHASE: retract
+==================================================
+RUN 1
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j3_pos_constant(V0),j2_pos_decreases(V0).
+
+RUN 2
+0.6s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.6s phase_retract(V0):- j2_pos_decreases(V0),j3_pos_constant(V0).
+
+RUN 3
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j3_pos_constant(V0),j2_pos_decreases(V0).
+
+RUN 4
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j3_pos_constant(V0),j5_pos_increases(V0).
+
+RUN 5
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j5_pos_increases(V0),j3_pos_constant(V0).
+
+RUN 6
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j2_pos_decreases(V0),j3_pos_constant(V0).
+
+RUN 7
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j3_pos_constant(V0),j5_pos_increases(V0).
+
+RUN 8
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j3_pos_constant(V0),j5_pos_increases(V0).
+
+RUN 9
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j2_pos_decreases(V0),j3_pos_constant(V0).
+
+RUN 10
+0.5s Precision:1.00 Recall:0.67 TP:8 FN:4 TN:135 FP:0 Size:3 MDL:7
+0.5s phase_retract(V0):- j5_pos_increases(V0),j3_pos_constant(V0).
+
+==================================================
+PHASE: return_home
+==================================================
+RUN 1
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j1_pos_increases(V0).
+
+RUN 2
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j2_pos_decreases(V0),j1_pos_increases(V0).
+
+RUN 3
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j1_pos_increases(V0).
+
+RUN 4
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j2_pos_decreases(V0),j1_pos_increases(V0).
+
+RUN 5
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j3_pos_increases(V0).
+
+RUN 6
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j2_pos_decreases(V0),j1_pos_increases(V0).
+
+RUN 7
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j1_pos_increases(V0).
+
+RUN 8
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j1_pos_increases(V0).
+
+RUN 9
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j1_pos_increases(V0).
+
+RUN 10
+0.6s Precision:1.00 Recall:0.82 TP:23 FN:5 TN:119 FP:0 Size:3 MDL:8
+0.6s phase_return_home(V0):- j5_pos_increases(V0),j1_pos_increases(V0).
+
