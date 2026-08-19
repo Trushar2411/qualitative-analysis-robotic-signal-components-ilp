@@ -1,4 +1,4 @@
-# Single Popper project: 18 signals × 3 relations
+# Single Popper Project: 18 Signals x 3 Relations
 
 This project uses all six joints and all three signal classes:
 
@@ -21,7 +21,7 @@ signal_change(Signal, Time, Relation).
 Examples are generated automatically from adjacent raw CSV rows. No action,
 phase, fault, pick, or place labels are used.
 
-## Expected learned program
+## Expected Learned Program
 
 ```prolog
 signal_change(S,T,R):-
@@ -37,16 +37,16 @@ signal_change(S,T,R):-
     relation_unchanged(R).
 ```
 
-## Data counts
+## Data Counts
 
-- rows: 157
-- adjacent pairs per signal: 156
-- signals: 18
-- positive examples: 2808
-- negative examples: 5616
-- increases: 453
-- decreases: 392
-- unchanged: 1963
+- Rows: 157
+- Adjacent pairs per signal: 156
+- Signals: 18
+- Positive examples: 2808
+- Negative examples: 5616
+- Increases: 453
+- Decreases: 392
+- Unchanged: 1963
 
 ## Run
 

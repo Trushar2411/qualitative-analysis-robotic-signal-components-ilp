@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 from datetime import datetime
 from pathlib import Path
 
@@ -109,12 +110,35 @@ def create_processed_run(
     return output_dir
 
 
-def main() -> None:
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Split a raw full-motion pick-and-place CSV into one processed "
+            "CSV per xArm joint."
+        )
+    )
+    parser.add_argument(
+        "--raw-run",
+        type=Path,
+        default=None,
+        help=(
+            "Path to a raw run folder. Defaults to "
+            f"Raw data/{RAW_RUN_NAME}."
+        ),
+    )
+    return parser.parse_args()
 
-    raw_run_dir = (
-        RAW_DATA_DIR
-        / RAW_RUN_NAME
-    ).resolve()
+
+def main() -> None:
+    args = parse_args()
+
+    if args.raw_run is not None:
+        raw_run_dir = args.raw_run.expanduser().resolve()
+    else:
+        raw_run_dir = (
+            RAW_DATA_DIR
+            / RAW_RUN_NAME
+        ).resolve()
 
     if not raw_run_dir.exists():
         raise FileNotFoundError(

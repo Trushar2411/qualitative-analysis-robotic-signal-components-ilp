@@ -29,8 +29,10 @@ examples, and negative examples for Popper.
 
 ```text
 .
+|-- README.md
 |-- Raw data/
-|   `-- pick_place_YYYYMMDD_HHMMSS/
+|   |-- README.md
+|   `-- pick_place_<Object|No_object>_<N>/
 |       |-- rosbag/
 |       |   `-- metadata.yaml
 |       `-- csv/
@@ -45,7 +47,8 @@ examples, and negative examples for Popper.
 |           |-- retract_joint_states.csv
 |           `-- return_home_joint_states.csv
 |-- Processed data/
-|   `-- pick_place_YYYYMMDD_HHMMSS_processed_YYYYMMDD_HHMMSS/
+|   |-- README.md
+|   `-- pick_place_<Object|No_object>_<N>_processed_YYYYMMDD_HHMMSS/
 |       |-- joint_1.csv
 |       |-- joint_2.csv
 |       |-- joint_3.csv
@@ -58,11 +61,25 @@ examples, and negative examples for Popper.
 |   |   `-- <processed_run_name>_PLA_YYYYMMDD_HHMMSS/
 |   |       |-- csv/
 |   |       `-- plots/
+|   |-- PLA_position/
+|   |   `-- <processed_run_name>_PLA_position_YYYYMMDD_HHMMSS/
+|   |       |-- csv/
+|   |       `-- plots/
 |   `-- SWEE/
 |       `-- <processed_run_name>_SWEE_YYYYMMDD_HHMMSS/
 |           |-- csv/
 |           `-- plots/
+|-- Popper_Test/
+|   |-- README.md
+|   |-- All_Phases_Test/
+|   |-- Full_18_signals/
+|   |-- Phase_lift/
+|   |-- Phase_pick/
+|   `-- Phase_pick_2/
+|-- Popper/
+|   `-- README.md
 `-- scripts/
+    |-- README.md
     |-- data_collection/
     |   |-- real_robot_pick_and_place_recorder.py
     |   `-- simulated_pick_and_place_recorder.py
@@ -70,6 +87,7 @@ examples, and negative examples for Popper.
     |   `-- create_joint_processed_data.py
     `-- analysis/
         |-- piecewise_linear_approximation_velocity.py
+        |-- pla_joint_position.py
         `-- sliding_window_effort_energy.py
 ```
 
@@ -125,7 +143,7 @@ There should be no `unlabelled` phase rows in new recordings.
 
 ### 2. Create Processed Per-Joint Data
 
-Run preprocessing on the latest raw run:
+Run preprocessing on the default raw run configured in the script:
 
 ```bash
 python3 scripts/preprocessing/create_joint_processed_data.py
@@ -237,6 +255,29 @@ effort_energy(run1, joint2, pick, high_energy).
 effort_energy(run1, joint1, home, low_energy).
 ```
 
+### 5. Run PLA on Joint Position
+
+Run:
+
+```bash
+python3 scripts/analysis/pla_joint_position.py
+```
+
+By default, this processes every valid folder in `Processed data/`. To process a
+single run, pass:
+
+```bash
+python3 scripts/analysis/pla_joint_position.py --processed-run "Processed data/<processed_run_name>"
+```
+
+Position PLA writes outputs to:
+
+```text
+outputs/PLA_position/<processed_run_name>_PLA_position_YYYYMMDD_HHMMSS/
+|-- csv/
+`-- plots/
+```
+
 ## How This Supports Popper
 
 Popper learns logic programs from examples and background knowledge. This branch
@@ -247,7 +288,7 @@ The intended path is:
 ```text
 Raw data
   -> Processed data
-  -> PLA and SWEE analysis outputs
+  -> PLA, PLA_position, and SWEE analysis outputs
   -> logical facts and examples
   -> Popper rule learning
 ```
@@ -294,6 +335,7 @@ Analysis:
 
 ```bash
 python3 scripts/analysis/piecewise_linear_approximation_velocity.py
+python3 scripts/analysis/pla_joint_position.py
 python3 scripts/analysis/sliding_window_effort_energy.py
 ```
 

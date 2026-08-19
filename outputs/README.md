@@ -25,6 +25,23 @@ outputs/
 |           |-- joint_4_PLA.png
 |           |-- joint_5_PLA.png
 |           `-- joint_6_PLA.png
+|-- PLA_position/
+|   `-- <processed_run_name>_PLA_position_YYYYMMDD_HHMMSS/
+|       |-- csv/
+|       |   |-- joint1_position_PLA.csv
+|       |   |-- joint2_position_PLA.csv
+|       |   |-- joint3_position_PLA.csv
+|       |   |-- joint4_position_PLA.csv
+|       |   |-- joint5_position_PLA.csv
+|       |   `-- joint6_position_PLA.csv
+|       `-- plots/
+|           |-- all_joints_position_with_phases.png
+|           |-- joint1_position_PLA.png
+|           |-- joint2_position_PLA.png
+|           |-- joint3_position_PLA.png
+|           |-- joint4_position_PLA.png
+|           |-- joint5_position_PLA.png
+|           `-- joint6_position_PLA.png
 `-- SWEE/
     `-- <processed_run_name>_SWEE_YYYYMMDD_HHMMSS/
         |-- csv/
@@ -45,7 +62,7 @@ outputs/
 
 ## Input Data
 
-Both analysis scripts read processed joint files:
+The analysis scripts read processed joint files:
 
 ```text
 Processed data/<processed_run_name>/joint_1.csv
@@ -63,6 +80,7 @@ joint,bag_time_ns,bag_time_sec,header_stamp_sec,position,velocity,effort,phase
 The analysis scripts use:
 
 - `velocity` for PLA.
+- `position` for PLA_position.
 - `effort` for SWEE.
 - `phase` to attach each qualitative output segment or window to the robot task
   phase that dominates that time range.
@@ -152,6 +170,29 @@ Example fact direction:
 velocity_trend(run1, joint2, pick, ramp_up).
 velocity_trend(run1, joint4, return_home, ramp_down).
 ```
+
+## PLA_position: Piecewise Linear Approximation on Position
+
+PLA_position applies the same segment-and-slope idea to the **position** signal.
+It is useful when the presentation needs to show the actual joint motion shape,
+not only the velocity trend.
+
+The script is:
+
+```text
+scripts/analysis/pla_joint_position.py
+```
+
+Unlike the velocity PLA script, this script processes every valid folder in
+`Processed data/` by default and creates a combined plot:
+
+```text
+plots/all_joints_position_with_phases.png
+```
+
+The per-joint CSV files contain segment timing, phase, label, slope, intercept,
+and start/end/mean position values. The combined plot is usually the clearest
+single artifact for presenting how all joints move across the task phases.
 
 ## SWEE: Sliding Window Effort Energy
 
@@ -253,12 +294,13 @@ The intended logic-learning path is:
 ```text
 Processed data
   -> PLA velocity labels
+  -> PLA_position motion-shape labels
   -> SWEE effort energy labels
   -> Prolog facts
   -> Popper background knowledge and examples
   -> learned rules
 ```
 
-The value of PLA and SWEE is that they convert continuous robot signals into
+The value of these analyses is that they convert continuous robot signals into
 discrete symbolic descriptions. Those symbolic descriptions are much easier for
 an ILP system such as Popper to use than raw numeric time-series samples.
