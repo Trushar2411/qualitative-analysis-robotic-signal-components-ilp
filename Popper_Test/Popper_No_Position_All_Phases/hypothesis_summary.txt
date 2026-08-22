@@ -1,0 +1,397 @@
+==================================================
+PHASE: gripper_closing
+==================================================
+RUN 1
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 2
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 3
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 4
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 5
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 6
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 7
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 8
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 9
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 10
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+==================================================
+PHASE: gripper_opening
+==================================================
+RUN 1
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 2
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 3
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 4
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 5
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 6
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 7
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 8
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 9
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 10
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+==================================================
+PHASE: home
+==================================================
+RUN 1
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j3_eff_constant(V0),j6_vel_constant(V0),j5_eff_constant(V0),j4_eff_constant(V0).
+
+RUN 2
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j4_eff_constant(V0),j5_eff_constant(V0),j4_vel_constant(V0),j3_eff_constant(V0).
+
+RUN 3
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j3_eff_constant(V0),j4_eff_constant(V0),j6_vel_constant(V0),j5_eff_constant(V0).
+
+RUN 4
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j3_eff_constant(V0),j4_eff_constant(V0),j4_vel_constant(V0),j5_eff_constant(V0).
+
+RUN 5
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j4_eff_constant(V0),j5_vel_constant(V0),j4_vel_constant(V0),j5_eff_constant(V0).
+
+RUN 6
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j5_vel_constant(V0),j4_eff_constant(V0),j3_eff_constant(V0),j6_eff_constant(V0).
+
+RUN 7
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j4_eff_constant(V0),j2_eff_constant(V0),j6_vel_constant(V0),j5_vel_constant(V0).
+
+RUN 8
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j5_eff_constant(V0),j6_eff_constant(V0),j3_eff_constant(V0),j2_vel_constant(V0).
+
+RUN 9
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j5_vel_constant(V0),j4_eff_constant(V0),j6_eff_constant(V0),j3_eff_constant(V0).
+
+RUN 10
+0.4s Precision:1.00 Recall:1.00 TP:5 FN:0 TN:142 FP:0 Size:5 MDL:5
+0.4s phase_home(V0):- j5_eff_constant(V0),j4_eff_constant(V0),j6_vel_constant(V0),j2_eff_constant(V0).
+
+==================================================
+PHASE: lift
+==================================================
+RUN 1
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 2
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 3
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 4
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 5
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 6
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 7
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 8
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 9
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 10
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+==================================================
+PHASE: pick
+==================================================
+RUN 1
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 2
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 3
+0.5s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.5s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 4
+0.5s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.5s phase_pick(V0):- j2_eff_decreases(V0),j1_eff_constant(V0).
+
+RUN 5
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 6
+0.5s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.5s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 7
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 8
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 9
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+RUN 10
+0.4s Precision:0.88 Recall:0.91 TP:29 FN:3 TN:111 FP:4 Size:3 MDL:10
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+
+==================================================
+PHASE: pick_delay
+==================================================
+RUN 1
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 2
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 3
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 4
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 5
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 6
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 7
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 8
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 9
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 10
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+==================================================
+PHASE: place
+==================================================
+RUN 1
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 2
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 3
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 4
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 5
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 6
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 7
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 8
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 9
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+RUN 10
+NO FINAL SOLUTION METRICS FOUND
+NO HYPOTHESIS FOUND
+
+==================================================
+PHASE: retract
+==================================================
+RUN 1
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j2_eff_increases(V0),j1_eff_constant(V0),j3_eff_decreases(V0).
+
+RUN 2
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j3_eff_decreases(V0),j2_eff_increases(V0),j1_eff_constant(V0).
+
+RUN 3
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j3_eff_decreases(V0),j2_eff_increases(V0),j1_eff_constant(V0).
+
+RUN 4
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j2_eff_increases(V0),j3_eff_decreases(V0),j1_eff_constant(V0).
+
+RUN 5
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j3_eff_decreases(V0),j1_eff_constant(V0),j2_eff_increases(V0).
+
+RUN 6
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j3_eff_decreases(V0),j1_eff_constant(V0),j2_eff_increases(V0).
+
+RUN 7
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j3_eff_decreases(V0),j2_eff_increases(V0),j1_eff_constant(V0).
+
+RUN 8
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j2_eff_increases(V0),j1_eff_constant(V0),j3_eff_decreases(V0).
+
+RUN 9
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j3_eff_decreases(V0),j1_eff_constant(V0),j2_eff_increases(V0).
+
+RUN 10
+0.4s Precision:1.00 Recall:0.42 TP:5 FN:7 TN:135 FP:0 Size:4 MDL:11
+0.4s phase_retract(V0):- j1_eff_constant(V0),j3_eff_decreases(V0),j2_eff_increases(V0).
+
+==================================================
+PHASE: return_home
+==================================================
+RUN 1
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_increases(V0).
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_decreases(V0).
+
+RUN 2
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_decreases(V0).
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_increases(V0).
+
+RUN 3
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_decreases(V0).
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_increases(V0).
+
+RUN 4
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j1_eff_decreases(V0),j2_eff_increases(V0).
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_increases(V0).
+
+RUN 5
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j1_eff_increases(V0),j2_eff_increases(V0).
+0.4s phase_return_home(V0):- j1_eff_decreases(V0),j2_eff_increases(V0).
+
+RUN 6
+0.5s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.5s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_decreases(V0).
+0.5s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_increases(V0).
+
+RUN 7
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j1_eff_increases(V0),j2_eff_increases(V0).
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_decreases(V0).
+
+RUN 8
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j1_eff_decreases(V0),j2_eff_increases(V0).
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_increases(V0).
+
+RUN 9
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j2_eff_increases(V0),j1_eff_decreases(V0).
+0.4s phase_return_home(V0):- j1_eff_increases(V0),j2_eff_increases(V0).
+
+RUN 10
+0.4s Precision:0.82 Recall:0.82 TP:23 FN:5 TN:114 FP:5 Size:6 MDL:16
+0.4s phase_return_home(V0):- j1_eff_decreases(V0),j2_eff_increases(V0).
+0.4s phase_return_home(V0):- j1_eff_increases(V0),j2_eff_increases(V0).
+
