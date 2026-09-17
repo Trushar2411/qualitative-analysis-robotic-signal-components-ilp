@@ -12,8 +12,36 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 RAW_DATA_DIR = REPO_ROOT / "Raw data"
 PROCESSED_DATA_DIR = REPO_ROOT / "Processed data"
 
-RAW_RUN_NAME = "pick_place_No_object_1"
 FULL_MOTION_CSV = "full_motion_joint_states.csv"
+
+
+def find_latest_raw_run(raw_data_dir: Path) -> Path:
+    """Return the most recently modified valid run folder."""
+
+    if not raw_data_dir.exists():
+        raise FileNotFoundError(
+            f"Raw data directory not found: {raw_data_dir}"
+        )
+
+    valid_run_dirs = [
+        run_dir
+        for run_dir in raw_data_dir.iterdir()
+        if run_dir.is_dir()
+        and (run_dir / "csv" / FULL_MOTION_CSV).is_file()
+    ]
+
+    if not valid_run_dirs:
+        raise FileNotFoundError(
+            f"No run folder containing csv/{FULL_MOTION_CSV} "
+            f"was found in: {raw_data_dir}"
+        )
+
+    return max(
+        valid_run_dirs,
+        key=lambda run_dir: (
+            run_dir / "csv" / FULL_MOTION_CSV
+        ).stat().st_mtime,
+    )
 
 
 def build_joint_dataframe(
@@ -46,18 +74,15 @@ def build_joint_dataframe(
         )
 
     joint_df = raw_df[required_columns].copy()
-
     joint_df.insert(0, "joint", prefix)
 
-    joint_df = joint_df.rename(
+    return joint_df.rename(
         columns={
             f"{prefix}_position": "position",
             f"{prefix}_velocity": "velocity",
             f"{prefix}_effort": "effort",
         }
     )
-
-    return joint_df
 
 
 def create_processed_run(
@@ -75,7 +100,6 @@ def create_processed_run(
     print(f"Reading: {source_csv}")
 
     raw_df = pd.read_csv(source_csv)
-
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     output_dir = (
@@ -89,16 +113,12 @@ def create_processed_run(
     )
 
     for joint_number in range(1, 7):
-
         joint_df = build_joint_dataframe(
             raw_df,
             joint_number,
         )
 
-        output_csv = (
-            output_dir
-            / f"joint_{joint_number}.csv"
-        )
+        output_csv = output_dir / f"joint_{joint_number}.csv"
 
         joint_df.to_csv(
             output_csv,
@@ -117,15 +137,17 @@ def parse_args() -> argparse.Namespace:
             "CSV per xArm joint."
         )
     )
+
     parser.add_argument(
         "--raw-run",
         type=Path,
         default=None,
         help=(
-            "Path to a raw run folder. Defaults to "
-            f"Raw data/{RAW_RUN_NAME}."
+            "Optional path to a specific raw run folder. "
+            "If omitted, the latest valid folder in Raw data is used."
         ),
     )
+
     return parser.parse_args()
 
 
@@ -135,26 +157,22 @@ def main() -> None:
     if args.raw_run is not None:
         raw_run_dir = args.raw_run.expanduser().resolve()
     else:
-        raw_run_dir = (
-            RAW_DATA_DIR
-            / RAW_RUN_NAME
-        ).resolve()
+        raw_run_dir = find_latest_raw_run(
+            RAW_DATA_DIR.resolve()
+        )
+
+        print(f"Latest raw run detected: {raw_run_dir.name}")
 
     if not raw_run_dir.exists():
         raise FileNotFoundError(
             f"Raw run folder not found: {raw_run_dir}"
         )
 
-    output_dir = create_processed_run(
-        raw_run_dir
-    )
+    output_dir = create_processed_run(raw_run_dir)
 
     print()
     print(f"Raw run used: {raw_run_dir}")
-    print(
-        f"Processed joint CSV files saved to: "
-        f"{output_dir}"
-    )
+    print(f"Processed joint CSV files saved to: {output_dir}")
 
 
 if __name__ == "__main__":
