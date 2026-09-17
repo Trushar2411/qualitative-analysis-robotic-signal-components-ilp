@@ -1,0 +1,7 @@
+dataset,source,rows,within_phase_transitions,home,gripper_opening,pick,gripper_closing,lift,place,retract,return_home
+dataset_1,full_motion_joint_states(3).csv,149,140,4,24,43,9,10,10,12,28
+dataset_2,full_motion_joint_states2.csv,162,153,13,24,44,8,10,12,14,28
+dataset_3,full_motion_joint_states3.csv,172,163,2,24,44,8,10,23,24,28
+dataset_4,full_motion_joint_states4.csv,154,145,3,24,43,9,10,13,16,27
+dataset_5,full_motion_joint_states5.csv,154,145,0,25,43,9,10,14,16,28
+dataset_6,full_motion_joint_states6.csv,158,149,13,24,44,7,10,11,12,28

@@ -1,0 +1,124 @@
+0.1s Max rules: 1
+0.1s Max vars: 1
+0.1s Max body: 4
+0.1s Consulting /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:65:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:171:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:22
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:215:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:313:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:22
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:357:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:477:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:22
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:520:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:620:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:22
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:663:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:777:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:22
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:821:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.1s Consulting /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/pick/bk.pl
+0.2s Consulting /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper/popper/lp/test.pl
+0.2s Loading examples
+0.2s Deducing neg example recalls
+0.2s Determining number of examples
+0.2s Finding pointless rules
+0.2s Pointless relation: j6_eff_constant/1
+0.2s Pointless relation: j6_vel_constant/1
+0.2s Pointless relation: j4_vel_increases/1
+0.2s Pointless relation: j6_vel_decreases/1
+0.2s Pointless relation: j6_eff_decreases/1
+0.2s Pointless relation: j6_eff_increases/1
+0.2s Pointless relation: j6_vel_increases/1
+0.2s Loading recalls FAILURE
+0.4s Generating partial hypotheses of size: 2
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:169 fn:92 tn:549 fp:85 size:2 mdl:179
+0.4s phase_pick(V0):- j2_eff_decreases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 3
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:115 fn:146 tn:629 fp:5 size:3 mdl:154
+0.4s phase_pick(V0):- j1_eff_constant(V0),j3_eff_increases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:165 fn:96 tn:630 fp:4 size:3 mdl:103
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 4
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:173 fn:88 tn:630 fp:4 size:6 mdl:98
+0.4s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.4s phase_pick(V0):- j1_vel_constant(V0),j5_vel_increases(V0).
+0.4s ********************
+0.4s New bound from greedy search: 98
+0.5s Generating partial hypotheses of size: 5
+0.7s Calling CP solver for final noisy combine stage with 32 rules
+0.7s ********** SOLUTION **********
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j5_vel_increases(V0).
+0.7s ******************************
+Num. programs: 1204
+Test:
+ 	 Called: 1204 times 	Total: 0.15 	 Mean: 0.0001	Max: 0.001 	 Percentage: 38%
+Load Data:
+ 	 Called: 1 times 	Total: 0.09 	 Mean: 0.0928	Max: 0.093 	 Percentage: 24%
+Combine:
+ 	 Called: 4 times 	Total: 0.07 	 Mean: 0.0183	Max: 0.024 	 Percentage: 18%
+Check_Reducible1:
+ 	 Called: 1204 times 	Total: 0.03 	 Mean: 0.0000	Max: 0.000 	 Percentage: 6%
+Generate:
+ 	 Called: 1205 times 	Total: 0.02 	 Mean: 0.0000	Max: 0.000 	 Percentage: 5%
+Constrain:
+ 	 Called: 1204 times 	Total: 0.02 	 Mean: 0.0000	Max: 0.000 	 Percentage: 4%
+Find Mucs:
+ 	 Called: 107 times 	Total: 0.01 	 Mean: 0.0001	Max: 0.000 	 Percentage: 1%
+Check Subsumed And Covers_Too_Few:
+ 	 Called: 8 times 	Total: 0.00 	 Mean: 0.0000	Max: 0.000 	 Percentage: 0%
+Total operation time: 0.39s
+Total execution time: 0.68s

@@ -1,0 +1,155 @@
+0.1s Max rules: 1
+0.1s Max vars: 1
+0.1s Max body: 4
+0.1s Consulting /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:22:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:94:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:102:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:155:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:171:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:245:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:253:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:297:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:313:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:398:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:406:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:461:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:477:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:552:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:560:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:603:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:620:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:696:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:704:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:761:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:777:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:849:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:6
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:857:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.1s Consulting /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/tasks/gripper_opening/bk.pl
+0.2s Consulting /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper/popper/lp/test.pl
+0.2s Loading examples
+0.2s Deducing neg example recalls
+0.2s Determining number of examples
+0.2s Finding pointless rules
+0.2s Pointless relation: j6_vel_decreases/1
+0.2s Pointless relation: j4_vel_decreases/1
+0.2s Pointless relation: j6_eff_decreases/1
+0.2s Pointless relation: j6_vel_constant/1
+0.2s Pointless relation: j4_vel_increases/1
+0.2s Pointless relation: j6_eff_increases/1
+0.2s Pointless relation: j6_eff_constant/1
+0.2s Loading recalls FAILURE
+0.4s Generating partial hypotheses of size: 2
+0.4s Generating partial hypotheses of size: 3
+0.4s Generating partial hypotheses of size: 4
+0.4s Generating partial hypotheses of size: 5
+NO SOLUTION
+Num. programs: 404
+Load Data:
+ 	 Called: 1 times 	Total: 0.09 	 Mean: 0.0935	Max: 0.094 	 Percentage: 52%
+Test:
+ 	 Called: 404 times 	Total: 0.06 	 Mean: 0.0002	Max: 0.001 	 Percentage: 34%
+Check_Reducible1:
+ 	 Called: 404 times 	Total: 0.01 	 Mean: 0.0000	Max: 0.000 	 Percentage: 4%
+Generate:
+ 	 Called: 405 times 	Total: 0.01 	 Mean: 0.0000	Max: 0.000 	 Percentage: 4%
+Constrain:
+ 	 Called: 404 times 	Total: 0.01 	 Mean: 0.0000	Max: 0.000 	 Percentage: 3%
+Find Mucs:
+ 	 Called: 19 times 	Total: 0.00 	 Mean: 0.0000	Max: 0.000 	 Percentage: 0%
+Combine:
+ 	 Called: 1 times 	Total: 0.00 	 Mean: 0.0000	Max: 0.000 	 Percentage: 0%
+Total operation time: 0.18s
+Total execution time: 0.47s

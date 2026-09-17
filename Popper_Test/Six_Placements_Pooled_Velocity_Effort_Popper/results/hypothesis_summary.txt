@@ -1,0 +1,442 @@
+POOLED SIX DATASETS | velocity + effort | deadband 0.01 | 10 runs/phase
+
+==================================================
+PHASE: gripper_closing | RUN: 1 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 2 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 3 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 4 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 5 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 6 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 7 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 8 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 9 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_closing | RUN: 10 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 1 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 2 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 3 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 4 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 5 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 6 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 7 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 8 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 9 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: gripper_opening | RUN: 10 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 1 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 2 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 3 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 4 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 5 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 6 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 7 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 8 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 9 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: home | RUN: 10 | EXIT: 0
+NO FINAL SOLUTION FOUND (see log)
+
+==================================================
+PHASE: lift | RUN: 1 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j4_eff_decreases(V0),j1_vel_constant(V0).
+0.6s phase_lift(V0):- j3_vel_increases(V0),j2_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 2 | EXIT: 0
+0.7s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.7s phase_lift(V0):- j1_vel_constant(V0),j4_eff_decreases(V0).
+0.7s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 3 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j4_eff_decreases(V0),j1_vel_constant(V0).
+0.6s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 4 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j1_vel_constant(V0),j4_eff_decreases(V0).
+0.6s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 5 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j1_vel_constant(V0),j4_eff_decreases(V0).
+0.6s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 6 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j1_vel_constant(V0),j4_eff_decreases(V0).
+0.6s phase_lift(V0):- j3_vel_increases(V0),j2_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 7 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j4_eff_decreases(V0),j1_vel_constant(V0).
+0.6s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 8 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j4_eff_decreases(V0),j1_vel_constant(V0).
+0.6s phase_lift(V0):- j3_vel_increases(V0),j2_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 9 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j4_eff_decreases(V0),j1_vel_constant(V0).
+0.6s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: lift | RUN: 10 | EXIT: 0
+0.6s Precision:0.86 Recall:0.53 TP:32 FN:28 TN:830 FP:5 Size:6 MDL:39
+0.6s phase_lift(V0):- j1_vel_constant(V0),j4_eff_decreases(V0).
+0.6s phase_lift(V0):- j2_vel_increases(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: pick | RUN: 1 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j2_eff_decreases(V0),j1_eff_constant(V0).
+0.7s phase_pick(V0):- j3_vel_increases(V0),j1_vel_constant(V0).
+
+==================================================
+PHASE: pick | RUN: 2 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: pick | RUN: 3 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j5_vel_increases(V0),j1_vel_constant(V0).
+
+==================================================
+PHASE: pick | RUN: 4 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: pick | RUN: 5 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j2_eff_decreases(V0),j1_eff_constant(V0).
+0.7s phase_pick(V0):- j5_vel_increases(V0),j1_vel_constant(V0).
+
+==================================================
+PHASE: pick | RUN: 6 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j3_vel_increases(V0).
+
+==================================================
+PHASE: pick | RUN: 7 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j5_vel_increases(V0).
+
+==================================================
+PHASE: pick | RUN: 8 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j2_eff_decreases(V0),j1_eff_constant(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j5_vel_increases(V0).
+
+==================================================
+PHASE: pick | RUN: 9 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j1_eff_constant(V0),j2_eff_decreases(V0).
+0.7s phase_pick(V0):- j5_vel_increases(V0),j1_vel_constant(V0).
+
+==================================================
+PHASE: pick | RUN: 10 | EXIT: 0
+0.7s Precision:0.98 Recall:0.66 TP:173 FN:88 TN:630 FP:4 Size:6 MDL:98
+0.7s phase_pick(V0):- j2_eff_decreases(V0),j1_eff_constant(V0).
+0.7s phase_pick(V0):- j1_vel_constant(V0),j5_vel_increases(V0).
+
+==================================================
+PHASE: place | RUN: 1 | EXIT: 0
+0.7s Precision:0.82 Recall:0.55 TP:46 FN:37 TN:802 FP:10 Size:13 MDL:60
+0.7s phase_place(V0):- j5_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j4_eff_constant(V0),j1_eff_decreases(V0),j2_eff_decreases(V0),j3_vel_constant(V0).
+0.7s phase_place(V0):- j4_eff_constant(V0),j2_eff_decreases(V0),j1_eff_increases(V0),j3_vel_constant(V0).
+
+==================================================
+PHASE: place | RUN: 2 | EXIT: 0
+0.7s Precision:0.83 Recall:0.54 TP:45 FN:38 TN:803 FP:9 Size:13 MDL:60
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j1_eff_decreases(V0),j3_vel_constant(V0),j4_eff_constant(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j5_vel_constant(V0),j1_eff_increases(V0),j4_eff_constant(V0).
+
+==================================================
+PHASE: place | RUN: 3 | EXIT: 0
+0.7s Precision:0.83 Recall:0.54 TP:45 FN:38 TN:803 FP:9 Size:13 MDL:60
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_constant(V0),j1_eff_decreases(V0),j2_eff_decreases(V0).
+0.7s phase_place(V0):- j1_eff_increases(V0),j4_eff_constant(V0),j5_vel_constant(V0),j2_eff_decreases(V0).
+
+==================================================
+PHASE: place | RUN: 4 | EXIT: 0
+0.7s Precision:0.82 Recall:0.55 TP:46 FN:37 TN:802 FP:10 Size:13 MDL:60
+0.7s phase_place(V0):- j4_eff_increases(V0),j5_vel_constant(V0).
+0.7s phase_place(V0):- j4_eff_constant(V0),j2_eff_decreases(V0),j3_vel_constant(V0),j1_eff_decreases(V0).
+0.7s phase_place(V0):- j4_eff_constant(V0),j2_eff_decreases(V0),j3_vel_constant(V0),j1_eff_increases(V0).
+
+==================================================
+PHASE: place | RUN: 5 | EXIT: 0
+0.7s Precision:0.82 Recall:0.55 TP:46 FN:37 TN:802 FP:10 Size:13 MDL:60
+0.7s phase_place(V0):- j5_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j4_eff_constant(V0),j3_vel_constant(V0),j1_eff_decreases(V0),j2_eff_decreases(V0).
+0.7s phase_place(V0):- j1_eff_increases(V0),j2_vel_constant(V0),j4_eff_constant(V0),j2_eff_decreases(V0).
+
+==================================================
+PHASE: place | RUN: 6 | EXIT: 0
+0.7s Precision:0.82 Recall:0.55 TP:46 FN:37 TN:802 FP:10 Size:13 MDL:60
+0.7s phase_place(V0):- j5_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j3_vel_constant(V0),j4_eff_constant(V0),j1_eff_decreases(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j3_vel_constant(V0),j4_eff_constant(V0),j1_eff_increases(V0).
+
+==================================================
+PHASE: place | RUN: 7 | EXIT: 0
+0.7s Precision:0.83 Recall:0.54 TP:45 FN:38 TN:803 FP:9 Size:13 MDL:60
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j4_eff_constant(V0),j3_vel_constant(V0),j1_eff_decreases(V0),j2_eff_decreases(V0).
+0.7s phase_place(V0):- j1_eff_increases(V0),j2_vel_constant(V0),j4_eff_constant(V0),j2_eff_decreases(V0).
+
+==================================================
+PHASE: place | RUN: 8 | EXIT: 0
+0.7s Precision:0.83 Recall:0.54 TP:45 FN:38 TN:803 FP:9 Size:13 MDL:60
+0.7s phase_place(V0):- j4_eff_increases(V0),j3_vel_constant(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j3_vel_constant(V0),j4_eff_constant(V0),j1_eff_decreases(V0).
+0.7s phase_place(V0):- j1_eff_increases(V0),j2_eff_decreases(V0),j3_vel_constant(V0),j4_eff_constant(V0).
+
+==================================================
+PHASE: place | RUN: 9 | EXIT: 0
+0.7s Precision:0.83 Recall:0.54 TP:45 FN:38 TN:803 FP:9 Size:13 MDL:60
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j3_vel_constant(V0),j2_eff_decreases(V0),j4_eff_constant(V0),j1_eff_decreases(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j1_eff_increases(V0),j2_vel_constant(V0),j4_eff_constant(V0).
+
+==================================================
+PHASE: place | RUN: 10 | EXIT: 0
+0.7s Precision:0.83 Recall:0.54 TP:45 FN:38 TN:803 FP:9 Size:13 MDL:60
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_increases(V0).
+0.7s phase_place(V0):- j2_eff_decreases(V0),j3_vel_constant(V0),j4_eff_constant(V0),j1_eff_decreases(V0).
+0.7s phase_place(V0):- j3_vel_constant(V0),j4_eff_constant(V0),j1_eff_increases(V0),j2_eff_decreases(V0).
+
+==================================================
+PHASE: retract | RUN: 1 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j3_vel_decreases(V0),j1_vel_increases(V0).
+0.6s phase_retract(V0):- j3_eff_decreases(V0),j1_eff_constant(V0),j5_vel_constant(V0),j2_eff_increases(V0).
+
+==================================================
+PHASE: retract | RUN: 2 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j3_vel_decreases(V0),j1_vel_increases(V0).
+0.6s phase_retract(V0):- j1_eff_constant(V0),j2_eff_increases(V0),j5_vel_constant(V0),j3_eff_decreases(V0).
+
+==================================================
+PHASE: retract | RUN: 3 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j3_vel_decreases(V0),j1_vel_increases(V0).
+0.6s phase_retract(V0):- j3_eff_decreases(V0),j2_eff_increases(V0),j2_vel_constant(V0),j1_eff_constant(V0).
+
+==================================================
+PHASE: retract | RUN: 4 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j1_vel_increases(V0),j3_vel_decreases(V0).
+0.6s phase_retract(V0):- j1_eff_constant(V0),j2_eff_increases(V0),j3_eff_decreases(V0),j5_vel_constant(V0).
+
+==================================================
+PHASE: retract | RUN: 5 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j1_vel_increases(V0),j3_vel_decreases(V0).
+0.6s phase_retract(V0):- j3_eff_decreases(V0),j2_eff_increases(V0),j1_eff_constant(V0),j5_vel_constant(V0).
+
+==================================================
+PHASE: retract | RUN: 6 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j1_vel_increases(V0),j3_vel_decreases(V0).
+0.6s phase_retract(V0):- j2_eff_increases(V0),j3_eff_decreases(V0),j1_eff_constant(V0),j5_vel_constant(V0).
+
+==================================================
+PHASE: retract | RUN: 7 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j3_vel_decreases(V0),j1_vel_increases(V0).
+0.6s phase_retract(V0):- j5_vel_constant(V0),j3_eff_decreases(V0),j1_eff_constant(V0),j2_eff_increases(V0).
+
+==================================================
+PHASE: retract | RUN: 8 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j3_vel_decreases(V0),j1_vel_increases(V0).
+0.6s phase_retract(V0):- j5_vel_constant(V0),j3_eff_decreases(V0),j2_eff_increases(V0),j1_eff_constant(V0).
+
+==================================================
+PHASE: retract | RUN: 9 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j3_vel_decreases(V0),j1_vel_increases(V0).
+0.6s phase_retract(V0):- j2_eff_increases(V0),j5_vel_constant(V0),j3_eff_decreases(V0),j1_eff_constant(V0).
+
+==================================================
+PHASE: retract | RUN: 10 | EXIT: 0
+0.6s Precision:0.92 Recall:0.12 TP:11 FN:83 TN:800 FP:1 Size:8 MDL:92
+0.6s phase_retract(V0):- j1_vel_increases(V0),j3_vel_decreases(V0).
+0.6s phase_retract(V0):- j5_vel_constant(V0),j1_eff_constant(V0),j3_eff_decreases(V0),j2_eff_increases(V0).
+
+==================================================
+PHASE: return_home | RUN: 1 | EXIT: 0
+2.3s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+2.3s phase_return_home(V0):- j2_vel_increases(V0),j1_vel_decreases(V0).
+2.3s phase_return_home(V0):- j1_eff_decreases(V0),j2_vel_constant(V0),j2_eff_increases(V0),j4_eff_constant(V0).
+2.3s phase_return_home(V0):- j1_eff_increases(V0),j2_vel_constant(V0),j2_eff_increases(V0),j4_eff_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 2 | EXIT: 0
+2.8s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+2.8s phase_return_home(V0):- j1_vel_decreases(V0),j2_vel_increases(V0).
+2.8s phase_return_home(V0):- j4_eff_constant(V0),j1_eff_increases(V0),j2_vel_constant(V0),j2_eff_increases(V0).
+2.8s phase_return_home(V0):- j4_eff_constant(V0),j1_eff_decreases(V0),j2_vel_constant(V0),j2_eff_increases(V0).
+
+==================================================
+PHASE: return_home | RUN: 3 | EXIT: 0
+3.1s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+3.1s phase_return_home(V0):- j2_vel_increases(V0),j1_vel_decreases(V0).
+3.1s phase_return_home(V0):- j4_eff_constant(V0),j2_eff_increases(V0),j1_eff_decreases(V0),j2_vel_constant(V0).
+3.1s phase_return_home(V0):- j1_eff_increases(V0),j4_eff_constant(V0),j2_eff_increases(V0),j2_vel_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 4 | EXIT: 0
+2.3s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+2.3s phase_return_home(V0):- j1_vel_decreases(V0),j2_vel_increases(V0).
+2.3s phase_return_home(V0):- j5_vel_constant(V0),j1_eff_increases(V0),j2_eff_increases(V0),j4_eff_constant(V0).
+2.3s phase_return_home(V0):- j5_vel_constant(V0),j1_eff_decreases(V0),j2_eff_increases(V0),j4_eff_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 5 | EXIT: 0
+3.2s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+3.2s phase_return_home(V0):- j2_vel_increases(V0),j1_vel_decreases(V0).
+3.2s phase_return_home(V0):- j4_eff_constant(V0),j1_eff_increases(V0),j2_eff_increases(V0),j2_vel_constant(V0).
+3.2s phase_return_home(V0):- j4_eff_constant(V0),j1_eff_decreases(V0),j2_eff_increases(V0),j2_vel_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 6 | EXIT: 0
+2.3s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+2.3s phase_return_home(V0):- j1_vel_decreases(V0),j2_vel_increases(V0).
+2.3s phase_return_home(V0):- j1_eff_decreases(V0),j4_eff_constant(V0),j2_eff_increases(V0),j2_vel_constant(V0).
+2.3s phase_return_home(V0):- j1_eff_increases(V0),j4_eff_constant(V0),j2_eff_increases(V0),j2_vel_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 7 | EXIT: 0
+3.4s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+3.4s phase_return_home(V0):- j2_vel_increases(V0),j1_vel_decreases(V0).
+3.4s phase_return_home(V0):- j4_eff_constant(V0),j2_eff_increases(V0),j1_eff_decreases(V0),j3_vel_constant(V0).
+3.4s phase_return_home(V0):- j4_eff_constant(V0),j2_eff_increases(V0),j1_eff_increases(V0),j3_vel_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 8 | EXIT: 0
+2.6s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+2.6s phase_return_home(V0):- j2_vel_increases(V0),j1_vel_decreases(V0).
+2.6s phase_return_home(V0):- j1_eff_decreases(V0),j4_eff_constant(V0),j2_eff_increases(V0),j3_vel_constant(V0).
+2.6s phase_return_home(V0):- j1_eff_increases(V0),j4_eff_constant(V0),j2_eff_increases(V0),j3_vel_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 9 | EXIT: 0
+2.6s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+2.6s phase_return_home(V0):- j1_vel_decreases(V0),j2_vel_increases(V0).
+2.6s phase_return_home(V0):- j2_eff_increases(V0),j4_eff_constant(V0),j5_vel_constant(V0),j1_eff_increases(V0).
+2.6s phase_return_home(V0):- j5_vel_constant(V0),j1_eff_decreases(V0),j2_eff_increases(V0),j4_eff_constant(V0).
+
+==================================================
+PHASE: return_home | RUN: 10 | EXIT: 0
+4.5s Precision:0.69 Recall:0.81 TP:135 FN:32 TN:666 FP:62 Size:13 MDL:107
+4.5s phase_return_home(V0):- j1_vel_decreases(V0),j2_vel_increases(V0).
+4.5s phase_return_home(V0):- j2_eff_increases(V0),j4_eff_constant(V0),j2_vel_constant(V0),j1_eff_decreases(V0).
+4.5s phase_return_home(V0):- j2_eff_increases(V0),j4_eff_constant(V0),j1_eff_increases(V0),j2_vel_constant(V0).
+
