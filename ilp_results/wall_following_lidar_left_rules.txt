@@ -1,0 +1,10 @@
+Phase: wall_following
+Sensor: lidar_left
+Expected shape: is_constant
+==================================================
+
+NO SOLUTION FOUND
+
+
+FULL POPPER OUTPUT:
+NOT ENOUGH EXAMPLES

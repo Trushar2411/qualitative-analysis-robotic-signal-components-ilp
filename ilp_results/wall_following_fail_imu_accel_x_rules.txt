@@ -1,0 +1,40 @@
+Phase: wall_following_fail
+Sensor: imu_accel_x
+Expected shape: is_oscillating
+==================================================
+
+LEARNED RULES:
+  phase_correct(V0):- fail_imu_x_oscillating(V0).
+
+SCORES:
+  precision: 1.0
+  recall: 1.0
+  tp: 1
+  fn: 0
+  tn: 3
+  fp: 0
+
+
+FULL POPPER OUTPUT:
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:1 FN:0 TN:3 FP:0 Size:2
+phase_correct(V0):- fail_imu_x_oscillating(V0).
+******************************
+Num. programs: 1
+Init:
+	Called: 2 times 	 Total: 0.02 	 Mean: 0.0112 	 Max: 0.022 	 Percentage: 72%
+Load Data:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0048 	 Max: 0.005 	 Percentage: 15%
+Bkcons:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0022 	 Max: 0.002 	 Percentage: 7%
+Test:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0007 	 Max: 0.001 	 Percentage: 2%
+Recalls:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0005 	 Max: 0.000 	 Percentage: 1%
+Generate:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0003 	 Max: 0.000 	 Percentage: 0%
+Find_Pointless_Relations:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0001 	 Max: 0.000 	 Percentage: 0%
+Total operation time: 0.03s
+Total execution time: 0.04s
+14:15:38 Generating programs of size: 2

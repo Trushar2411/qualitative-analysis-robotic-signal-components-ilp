@@ -1,0 +1,57 @@
+ILP PHASE LEARNING SUMMARY
+Robile Wall Following
+============================================================
+
+Phase: approaching_wall
+Sensor: imu_accel_x
+Expected: is_decreasing
+Rules:
+  phase_correct(V0):- approach_imu_x_decreasing(V0).
+Precision: 1.0
+Recall: 1.0
+
+Phase: wall_following
+Sensor: none
+Expected: is_constant
+NO SOLUTION
+
+Phase: obstacle_detected
+Sensor: imu_accel_x
+Expected: is_decreasing
+Rules:
+  phase_correct(V0):- detect_imu_x_decreasing(V0).
+Precision: 1.0
+Recall: 1.0
+
+Phase: obstacle_avoidance
+Sensor: imu_accel_x
+Expected: is_increasing
+Rules:
+  phase_correct(V0):- avoid_imu_x_increasing(V0).
+Precision: 1.0
+Recall: 1.0
+
+Phase: wall_reacquired
+Sensor: imu_accel_y
+Expected: is_decreasing
+Rules:
+  phase_correct(V0):- reacquire_imu_y_decreasing(V0).
+Precision: 1.0
+Recall: 1.0
+
+Phase: wall_following_fail
+Sensor: imu_accel_x
+Expected: is_oscillating
+Rules:
+  phase_correct(V0):- fail_imu_x_oscillating(V0).
+Precision: 1.0
+Recall: 1.0
+
+Phase: searching_wall
+Sensor: imu_accel_x
+Expected: is_oscillating
+Rules:
+  phase_correct(V0):- search_imu_x_oscillating(V0).
+Precision: 1.0
+Recall: 1.0
+

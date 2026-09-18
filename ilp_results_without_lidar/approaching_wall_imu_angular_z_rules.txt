@@ -1,0 +1,116 @@
+Phase: approaching_wall
+Sensor: imu_angular_z
+Expected shape: is_decreasing
+==================================================
+
+LEARNED RULES:
+  phase_correct(V0):- approach_imu_decreasing(V0).
+
+SCORES:
+  precision: 1.0
+  recall: 1.0
+  tp: 13
+  fn: 0
+  tn: 10
+  fp: 0
+
+
+FULL POPPER OUTPUT:
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:13 FN:0 TN:10 FP:0 Size:2
+phase_correct(V0):- approach_imu_decreasing(V0).
+******************************
+Num. programs: 3
+Init:
+	Called: 2 times 	 Total: 0.02 	 Mean: 0.0101 	 Max: 0.020 	 Percentage: 61%
+Load Data:
+	Called: 1 times 	 Total: 0.01 	 Mean: 0.0077 	 Max: 0.008 	 Percentage: 23%
+Bkcons:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0023 	 Max: 0.002 	 Percentage: 7%
+Recalls:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0011 	 Max: 0.001 	 Percentage: 3%
+Test:
+	Called: 3 times 	 Total: 0.00 	 Mean: 0.0002 	 Max: 0.000 	 Percentage: 1%
+Generate:
+	Called: 3 times 	 Total: 0.00 	 Mean: 0.0001 	 Max: 0.000 	 Percentage: 0%
+Constrain:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0001 	 Max: 0.000 	 Percentage: 0%
+Find_Pointless_Relations:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0002 	 Max: 0.000 	 Percentage: 0%
+Find Mucs:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0000 	 Max: 0.000 	 Percentage: 0%
+Check_Reducible1:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0000 	 Max: 0.000 	 Percentage: 0%
+Total operation time: 0.03s
+Total execution time: 0.04s
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:9:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:10:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_increasing/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:11:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:12:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_increasing/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:17:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_oscillating/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:18:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:19:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_increasing/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:21:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:23:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_increasing/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:24:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:25:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_increasing/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:26:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:27:
+Warning:    Clauses of approach_imu_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_imu_increasing/1
+Warning:    Use :- discontiguous approach_imu_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:28:
+Warning:    Clauses of approach_imu_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_imu_decreasing/1
+Warning:    Use :- discontiguous approach_imu_increasing/1. to suppress this message
+15:03:00 Generating programs of size: 2

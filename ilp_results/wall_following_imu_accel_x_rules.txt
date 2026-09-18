@@ -1,0 +1,10 @@
+Phase: wall_following
+Sensor: imu_accel_x
+Expected shape: is_constant
+==================================================
+
+NO SOLUTION FOUND
+
+
+FULL POPPER OUTPUT:
+NOT ENOUGH EXAMPLES

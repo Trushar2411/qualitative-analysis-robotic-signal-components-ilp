@@ -1,0 +1,71 @@
+Phase: obstacle_detected
+Sensor: imu_accel_y
+Expected shape: is_decreasing
+==================================================
+
+LEARNED RULES:
+  phase_correct(V0):- detect_imu_y_decreasing(V0).
+
+SCORES:
+  precision: 1.0
+  recall: 1.0
+  tp: 7
+  fn: 0
+  tn: 3
+  fp: 0
+
+
+FULL POPPER OUTPUT:
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:7 FN:0 TN:3 FP:0 Size:2
+phase_correct(V0):- detect_imu_y_decreasing(V0).
+******************************
+Num. programs: 2
+Init:
+	Called: 2 times 	 Total: 0.02 	 Mean: 0.0096 	 Max: 0.019 	 Percentage: 67%
+Load Data:
+	Called: 1 times 	 Total: 0.01 	 Mean: 0.0051 	 Max: 0.005 	 Percentage: 18%
+Bkcons:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0020 	 Max: 0.002 	 Percentage: 7%
+Test:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0004 	 Max: 0.001 	 Percentage: 2%
+Recalls:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0006 	 Max: 0.001 	 Percentage: 1%
+Generate:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0002 	 Max: 0.000 	 Percentage: 1%
+Constrain:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0003 	 Max: 0.000 	 Percentage: 0%
+Find_Pointless_Relations:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0001 	 Max: 0.000 	 Percentage: 0%
+Find Mucs:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0001 	 Max: 0.000 	 Percentage: 0%
+Check_Reducible1:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0000 	 Max: 0.000 	 Percentage: 0%
+Total operation time: 0.03s
+Total execution time: 0.03s
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:8:
+Warning:    Clauses of detect_imu_y_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: detect_imu_y_increasing/1
+Warning:    Use :- discontiguous detect_imu_y_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:9:
+Warning:    Clauses of detect_imu_y_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: detect_imu_y_decreasing/1
+Warning:    Use :- discontiguous detect_imu_y_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:10:
+Warning:    Clauses of detect_imu_y_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: detect_imu_y_increasing/1
+Warning:    Use :- discontiguous detect_imu_y_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:12:
+Warning:    Clauses of detect_imu_y_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: detect_imu_y_decreasing/1
+Warning:    Use :- discontiguous detect_imu_y_increasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:13:
+Warning:    Clauses of detect_imu_y_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: detect_imu_y_increasing/1
+Warning:    Use :- discontiguous detect_imu_y_decreasing/1. to suppress this message
+14:15:35 Generating programs of size: 2

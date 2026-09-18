@@ -1,0 +1,10 @@
+Phase: wall_reacquired
+Sensor: odom_linear_x
+Expected shape: is_decreasing
+==================================================
+
+NO SOLUTION FOUND
+
+
+FULL POPPER OUTPUT:
+NOT ENOUGH EXAMPLES

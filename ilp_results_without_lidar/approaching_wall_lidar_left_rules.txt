@@ -1,0 +1,91 @@
+Phase: approaching_wall
+Sensor: lidar_left
+Expected shape: is_decreasing
+==================================================
+
+LEARNED RULES:
+  phase_correct(V0):- approach_lidar_decreasing(V0).
+
+SCORES:
+  precision: 1.0
+  recall: 1.0
+  tp: 15
+  fn: 0
+  tn: 8
+  fp: 0
+
+
+FULL POPPER OUTPUT:
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:15 FN:0 TN:8 FP:0 Size:2
+phase_correct(V0):- approach_lidar_decreasing(V0).
+******************************
+Num. programs: 2
+Init:
+	Called: 2 times 	 Total: 0.05 	 Mean: 0.0234 	 Max: 0.047 	 Percentage: 75%
+Load Data:
+	Called: 1 times 	 Total: 0.01 	 Mean: 0.0069 	 Max: 0.007 	 Percentage: 11%
+Bkcons:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0044 	 Max: 0.004 	 Percentage: 7%
+Test:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0006 	 Max: 0.001 	 Percentage: 1%
+Recalls:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0011 	 Max: 0.001 	 Percentage: 1%
+Generate:
+	Called: 2 times 	 Total: 0.00 	 Mean: 0.0002 	 Max: 0.000 	 Percentage: 0%
+Constrain:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0004 	 Max: 0.000 	 Percentage: 0%
+Find_Pointless_Relations:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0002 	 Max: 0.000 	 Percentage: 0%
+Find Mucs:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0001 	 Max: 0.000 	 Percentage: 0%
+Check_Reducible1:
+	Called: 1 times 	 Total: 0.00 	 Mean: 0.0000 	 Max: 0.000 	 Percentage: 0%
+Total operation time: 0.06s
+Total execution time: 0.07s
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:9:
+Warning:    Clauses of approach_lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_lidar_oscillating/1
+Warning:    Use :- discontiguous approach_lidar_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:10:
+Warning:    Clauses of approach_lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_lidar_decreasing/1
+Warning:    Use :- discontiguous approach_lidar_oscillating/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:11:
+Warning:    Clauses of approach_lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_lidar_oscillating/1
+Warning:    Use :- discontiguous approach_lidar_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:13:
+Warning:    Clauses of approach_lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_lidar_decreasing/1
+Warning:    Use :- discontiguous approach_lidar_oscillating/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:14:
+Warning:    Clauses of approach_lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_lidar_oscillating/1
+Warning:    Use :- discontiguous approach_lidar_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:16:
+Warning:    Clauses of approach_lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_lidar_decreasing/1
+Warning:    Use :- discontiguous approach_lidar_oscillating/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:19:
+Warning:    Clauses of approach_lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_lidar_constant/1
+Warning:    Use :- discontiguous approach_lidar_decreasing/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:26:
+Warning:    Clauses of approach_lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:7
+Warning:    Current predicate: approach_lidar_decreasing/1
+Warning:    Use :- discontiguous approach_lidar_oscillating/1. to suppress this message
+Warning: /home/alisha/rnd_ws/popper_run/bk.pl:27:
+Warning:    Clauses of approach_lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /home/alisha/rnd_ws/popper_run/bk.pl:6
+Warning:    Current predicate: approach_lidar_oscillating/1
+Warning:    Use :- discontiguous approach_lidar_decreasing/1. to suppress this message
+14:15:33 Generating programs of size: 2

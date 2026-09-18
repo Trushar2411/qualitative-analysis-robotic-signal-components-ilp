@@ -1,0 +1,10 @@
+Phase: obstacle_avoidance
+Sensor: odom_linear_x
+Expected shape: is_increasing
+==================================================
+
+NO SOLUTION FOUND
+
+
+FULL POPPER OUTPUT:
+NOT ENOUGH EXAMPLES

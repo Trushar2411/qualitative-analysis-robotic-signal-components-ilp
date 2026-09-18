@@ -1,0 +1,10 @@
+Phase: searching_wall
+Sensor: odom_linear_x
+Expected shape: is_oscillating
+==================================================
+
+NO SOLUTION FOUND
+
+
+FULL POPPER OUTPUT:
+NOT ENOUGH EXAMPLES

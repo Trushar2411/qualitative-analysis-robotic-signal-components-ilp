@@ -1,0 +1,10 @@
+Phase: wall_following_fail
+Sensor: imu_accel_y
+Expected shape: is_oscillating
+==================================================
+
+NO SOLUTION FOUND
+
+
+FULL POPPER OUTPUT:
+NOT ENOUGH EXAMPLES
