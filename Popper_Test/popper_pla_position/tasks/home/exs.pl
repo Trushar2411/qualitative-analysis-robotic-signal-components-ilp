@@ -1,0 +1,9 @@
+pos(phase_home(e000)).
+neg(phase_home(e001)).
+neg(phase_home(e002)).
+neg(phase_home(e003)).
+neg(phase_home(e004)).
+neg(phase_home(e005)).
+neg(phase_home(e006)).
+neg(phase_home(e007)).
+neg(phase_home(e008)).

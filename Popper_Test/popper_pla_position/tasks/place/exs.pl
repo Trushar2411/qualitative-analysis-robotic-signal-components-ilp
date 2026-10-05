@@ -1,0 +1,9 @@
+pos(phase_place(e006)).
+neg(phase_place(e000)).
+neg(phase_place(e001)).
+neg(phase_place(e002)).
+neg(phase_place(e003)).
+neg(phase_place(e004)).
+neg(phase_place(e005)).
+neg(phase_place(e007)).
+neg(phase_place(e008)).

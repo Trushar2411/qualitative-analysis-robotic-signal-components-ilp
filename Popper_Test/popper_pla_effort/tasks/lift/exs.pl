@@ -1,0 +1,9 @@
+pos(phase_lift(e005)).
+neg(phase_lift(e000)).
+neg(phase_lift(e001)).
+neg(phase_lift(e002)).
+neg(phase_lift(e003)).
+neg(phase_lift(e004)).
+neg(phase_lift(e006)).
+neg(phase_lift(e007)).
+neg(phase_lift(e008)).

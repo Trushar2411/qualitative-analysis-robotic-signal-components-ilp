@@ -1,0 +1,9 @@
+pos(phase_gripper_opening(e001)).
+neg(phase_gripper_opening(e000)).
+neg(phase_gripper_opening(e002)).
+neg(phase_gripper_opening(e003)).
+neg(phase_gripper_opening(e004)).
+neg(phase_gripper_opening(e005)).
+neg(phase_gripper_opening(e006)).
+neg(phase_gripper_opening(e007)).
+neg(phase_gripper_opening(e008)).

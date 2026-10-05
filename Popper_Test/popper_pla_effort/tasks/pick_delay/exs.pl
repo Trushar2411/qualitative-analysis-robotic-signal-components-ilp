@@ -1,0 +1,9 @@
+pos(phase_pick_delay(e003)).
+neg(phase_pick_delay(e000)).
+neg(phase_pick_delay(e001)).
+neg(phase_pick_delay(e002)).
+neg(phase_pick_delay(e004)).
+neg(phase_pick_delay(e005)).
+neg(phase_pick_delay(e006)).
+neg(phase_pick_delay(e007)).
+neg(phase_pick_delay(e008)).

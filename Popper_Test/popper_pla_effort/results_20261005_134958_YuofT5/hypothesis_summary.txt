@@ -1,0 +1,891 @@
+Popper phase results
+Started: 2026-10-05T13:49:58+02:00
+Popper directory: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper
+Timeout per task: 120 seconds
+Runs per phase: 10
+Runner: uv | Learning: strict
+
+Each section contains complete Popper output, including rules and scores when produced.
+Exit code 0 does not guarantee a learned hypothesis. Repeated runs use the same data.
+
+===== PHASE: gripper_closing | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_closing | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: gripper_opening | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: home | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: lift | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: lift | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_lift(V0):- j4_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j1_constant(V0),j5_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j1_constant(V0),j5_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j3_ramp_up(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j3_ramp_up(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j1_constant(V0),j3_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j1_constant(V0),j3_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j5_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: pick | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j1_constant(V0),j3_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j1_constant(V0),j3_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: pick_delay | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: pick_delay | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+NO SOLUTION
+
+
+===== PHASE: place | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j1_ramp_up(V0),j5_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j1_ramp_up(V0),j5_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j4_constant(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j4_constant(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j3_ramp_up(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j1_ramp_up(V0),j5_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j1_ramp_up(V0),j5_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: place | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_place(V0):- j5_ramp_down(V0),j1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_place(V0):- j5_ramp_down(V0),j1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j5_ramp_up(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j5_ramp_up(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j5_ramp_up(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j5_ramp_up(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j3_ramp_down(V0),j1_constant(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_retract(V0):- j1_constant(V0),j3_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 2 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 3 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 4 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 5 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 6 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 7 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 8 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 9 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: return_home | RUN: 10 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:2
+0.3s phase_return_home(V0):- j1_ramp_down(V0).
+0.3s ******************************
+
+
+Finished: 2026-10-05T13:50:36+02:00

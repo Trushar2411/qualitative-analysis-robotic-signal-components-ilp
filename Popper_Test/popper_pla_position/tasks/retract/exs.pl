@@ -1,0 +1,9 @@
+pos(phase_retract(e007)).
+neg(phase_retract(e000)).
+neg(phase_retract(e001)).
+neg(phase_retract(e002)).
+neg(phase_retract(e003)).
+neg(phase_retract(e004)).
+neg(phase_retract(e005)).
+neg(phase_retract(e006)).
+neg(phase_retract(e008)).

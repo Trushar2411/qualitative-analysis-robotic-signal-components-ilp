@@ -1,0 +1,9 @@
+pos(phase_pick(e002)).
+neg(phase_pick(e000)).
+neg(phase_pick(e001)).
+neg(phase_pick(e003)).
+neg(phase_pick(e004)).
+neg(phase_pick(e005)).
+neg(phase_pick(e006)).
+neg(phase_pick(e007)).
+neg(phase_pick(e008)).

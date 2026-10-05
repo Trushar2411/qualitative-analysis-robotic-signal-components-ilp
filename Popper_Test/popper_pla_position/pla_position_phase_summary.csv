@@ -1,0 +1,10 @@
+phase,joint1,joint2,joint3,joint4,joint5,joint6,joint1_ramp_up_count,joint1_ramp_down_count,joint1_constant_count,joint1_total_windows,joint2_ramp_up_count,joint2_ramp_down_count,joint2_constant_count,joint2_total_windows,joint3_ramp_up_count,joint3_ramp_down_count,joint3_constant_count,joint3_total_windows,joint4_ramp_up_count,joint4_ramp_down_count,joint4_constant_count,joint4_total_windows,joint5_ramp_up_count,joint5_ramp_down_count,joint5_constant_count,joint5_total_windows,joint6_ramp_up_count,joint6_ramp_down_count,joint6_constant_count,joint6_total_windows
+home,constant,constant,constant,constant,constant,constant,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1
+gripper_opening,constant,constant,constant,constant,constant,constant,0,1,4,5,1,0,4,5,0,1,4,5,0,0,5,5,0,1,4,5,0,0,5,5
+pick,constant,ramp_up,ramp_down,constant,ramp_down,constant,0,0,6,6,6,0,0,6,0,6,0,6,0,0,6,6,0,6,0,6,0,0,6,6
+pick_delay,constant,constant,constant,constant,constant,constant,0,0,3,3,0,0,3,3,0,0,3,3,0,0,3,3,0,0,3,3,0,0,3,3
+gripper_closing,constant,constant,constant,constant,constant,constant,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1
+lift,ramp_down,ramp_down,ramp_down,constant,ramp_up,constant,0,2,0,2,0,2,0,2,0,2,0,2,0,0,2,2,2,0,0,2,0,0,2,2
+place,ramp_up,ramp_up,ramp_up,constant,ramp_down,constant,1,0,1,2,2,0,0,2,2,0,0,2,0,0,2,2,0,2,0,2,0,0,2,2
+retract,constant,ramp_down,constant,constant,ramp_up,constant,0,0,2,2,0,2,0,2,0,0,2,2,0,0,2,2,2,0,0,2,0,0,2,2
+return_home,ramp_up,ramp_down,ramp_up,constant,ramp_up,constant,5,0,0,5,0,5,0,5,5,0,0,5,0,0,5,5,5,0,0,5,0,0,5,5

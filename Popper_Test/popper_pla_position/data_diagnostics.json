@@ -1,0 +1,25 @@
+{
+  "examples": 9,
+  "used_joints": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "conflicting_signatures": [
+    {
+      "labels": [
+        "constant",
+        "constant",
+        "constant",
+        "constant"
+      ],
+      "phases": [
+        "home",
+        "gripper_opening",
+        "pick_delay",
+        "gripper_closing"
+      ]
+    }
+  ]
+}

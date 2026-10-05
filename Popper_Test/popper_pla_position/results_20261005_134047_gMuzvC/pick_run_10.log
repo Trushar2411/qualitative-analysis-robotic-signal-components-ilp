@@ -1,0 +1,11 @@
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:0 tn:8 fp:0 size:3
+0.3s phase_pick(V0):- j3_ramp_down(V0),j5_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:1 FN:0 TN:8 FP:0 Size:3
+0.3s phase_pick(V0):- j3_ramp_down(V0),j5_ramp_down(V0).
+0.3s ******************************
