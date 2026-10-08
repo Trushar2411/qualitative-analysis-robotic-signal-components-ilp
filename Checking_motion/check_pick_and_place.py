@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 
-CSV = Path("full_motion_joint_states_modified.csv")
+CSV = Path(__file__).resolve().parent / "full_motion_joint_states_modified.csv"
 
 thresholds = {
     "position": 0.002,

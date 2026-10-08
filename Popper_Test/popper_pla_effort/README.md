@@ -1,34 +1,29 @@
-# Strict Popper for updated effort data
+# xArm effort phase-summary tasks
 
-Uses the supplied nine-row effort phase summary. Joints 1–5 are retained, including joint 4; joint 6 is excluded. Only the summary labels ramp_up, ramp_down and constant become background facts. Counts are not used as predictors. Targets are phases, with one positive and eight negative examples per task. Facts do not contain phase names.
+The input is `pla_effort_phase_summary.csv`. Nine phase summaries supply
+one positive and eight negative examples per target. Features are overall
+`ramp_up`, `ramp_down`, or `constant` labels for joints 1–5. Counts are
+retained for inspection and are excluded from the learning predicates.
 
-## Run
+Each `tasks/PHASE/` folder contains `bk.pl`, `bias.pl`, and `exs.pl`. The bias
+permits at most 5 body literals and three clauses. The runner uses strict
+learning and omits `--noisy`.
 
-Requires uv, SWI-Prolog and your Popper checkout with its dependencies configured.
-Extract this folder under Popper_Test and run from inside it:
-
-```bash
-bash run_all_phases_strict.sh ../../Popper 120 1
-```
-
-Or pass the absolute path to your Popper checkout. The script runs `uv run popper.py TASK --timeout 120` from that checkout. It never passes --noisy. The final argument controls repeated runs; these reuse the same data and are not cross-validation.
-
-Each phase has tasks/PHASE/bias.pl, exs.pl and bk.pl. The bias permits up to five body literals and three clauses, with no minimum body length. Popper may choose a shorter rule and does not enumerate every equivalent rule.
-
-A fresh results directory contains individual logs, hypothesis_summary.txt and run_status.tsv. Exit code 0 alone does not mean a hypothesis was found.
-
-## Independently check results
-
-Replace RESULTS_DIRECTORY with the directory printed by the runner:
+From the repository root:
 
 ```bash
-uv run python verify_results.py RESULTS_DIRECTORY
+bash Popper_Test/popper_pla_effort/run_all_phases_strict.sh "$PWD/Popper" 120 1
+python Popper_Test/popper_pla_effort/verify_results.py Popper_Test/popper_pla_effort/RESULTS_DIRECTORY
 ```
 
-This writes verified_scores.csv by evaluating final supported rules directly against the input summary. These are training scores, not evidence of generalization.
+Replace `RESULTS_DIRECTORY` with the folder printed by the launcher. Each run
+creates a fresh `results_<timestamp>_<suffix>/` with logs,
+`hypothesis_summary.txt`, and `run_status.tsv`. Verification writes
+`verified_scores.csv` and rejects unsupported rule syntax. These are training
+scores on the same phase summaries.
 
-## Identical examples
-
-home, gripper_opening, pick_delay and gripper_closing all have the same constant joint 1–5 signature. Each such task has identical positive and negative feature vectors, so strict learning cannot separate them using this background knowledge. NO SOLUTION is expected for these tasks. To distinguish them, supply additional real information such as gripper state or temporal context. The package does not change labels or add features that encode the answer.
-
-Effort trends describe changes in effort, not necessarily physical joint movement. A summary label may hide mixed window trends; the original counts remain in the included CSV for inspection.
+Home, gripper_opening, pick_delay, and gripper_closing have identical retained
+label signatures. Strict learning cannot separate those positives from identical
+negatives using these features. A missing hypothesis for those tasks is a data
+limitation. Summary trends may also hide mixed window behavior. Effort trend
+describes effort change and does not itself establish physical movement.

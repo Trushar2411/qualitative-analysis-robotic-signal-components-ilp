@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run from any directory: bash /path/to/FrankaReplay_Ubuntu/setup_ubuntu.sh
+# Run from any directory: bash /path/to/FrankaReplay/setup_ubuntu.sh
 set -euo pipefail
 project_dir="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 cd "$project_dir"
@@ -20,6 +20,6 @@ elif [ ! -x .venv/bin/python ]; then
 fi
 .venv/bin/python -c 'import sys; assert sys.version_info[:2] == (3, 12), "Expected Python 3.12. Move the old .venv aside, then rerun setup."'
 "$replay_uv" pip install --python .venv/bin/python --only-binary=:all: -r requirements.txt
-.venv/bin/python -c 'import numpy, h5py, pybullet, pybullet_data; print("Replay dependencies are ready.")'
+.venv/bin/python -c 'import numpy, pandas, matplotlib, h5py, pybullet, pybullet_data; print("Replay dependencies are ready.")'
 mkdir -p data
-printf '%s\n' 'Setup complete.' 'Next: put an HDF5 dataset in data/, then run:' '.venv/bin/python franka_replay.py data/source_demos.hdf5 --demo 0'
+printf '%s\n' 'Setup complete.' 'Next: put an HDF5 dataset in data/, then run:' '.venv/bin/python scripts/franka_replay.py data/source_demos.hdf5 --demo 0'

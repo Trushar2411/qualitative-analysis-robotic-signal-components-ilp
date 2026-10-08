@@ -1,45 +1,29 @@
-# Updated position PLA Popper
+# xArm position phase-summary tasks
 
-Built from the supplied pla_position_phase_summary(1).csv, retained here as
-pla_position_phase_summary.csv. All nine phases are included: home,
-gripper_opening, pick, pick_delay, gripper_closing, lift, place, retract,
-return_home. Each task has bias.pl, exs.pl and bk.pl, one positive and eight
-negative examples. Static facts/examples are grouped to avoid warnings.
+The input is `pla_position_phase_summary.csv`. Nine phase summaries supply
+one positive and eight negative examples per target. Features are overall
+`ramp_up`, `ramp_down`, or `constant` labels for joints 1, 2, 3, and 5. Counts are
+retained for inspection and are excluded from the learning predicates.
 
-Features are the overall position labels for joints 1,2,3,5. Joints 4 and 6,
-which have constant summary labels throughout, are excluded. No seen
-predicates, count features or minimum-body constraints. max_body(4) and
-max_clauses(3) are upper bounds. Phase names appear only in examples, not BK.
+Each `tasks/PHASE/` folder contains `bk.pl`, `bias.pl`, and `exs.pl`. The bias
+permits at most 4 body literals and three clauses. The runner uses strict
+learning and omits `--noisy`.
 
-Extract under Popper_Test, enter popper_pla_position_updated, then run:
+From the repository root:
 
 ```bash
-bash run_all_phases_uv.sh ../../Popper 120 1
+bash Popper_Test/popper_pla_position/run_all_phases_strict.sh "$PWD/Popper" 120 1
+python Popper_Test/popper_pla_position/verify_results.py Popper_Test/popper_pla_position/RESULTS_DIRECTORY
 ```
 
-The runner always uses uv run popper.py with --noisy and creates a fresh
-results folder with individual logs, hypothesis_summary.txt and run_status.tsv.
-The last two arguments are timeout seconds and number of runs per phase.
+Replace `RESULTS_DIRECTORY` with the folder printed by the launcher. Each run
+creates a fresh `results_<timestamp>_<suffix>/` with logs,
+`hypothesis_summary.txt`, and `run_status.tsv`. Verification writes
+`verified_scores.csv` and rejects unsupported rule syntax. These are training
+scores on the same phase summaries.
 
-Check final unary joint-trend rules directly against this CSV with:
-
-```bash
-python3 verify_results.py results_YOUR_FOLDER_NAME
-```
-
-Use the actual results folder printed by the runner. This creates
-verified_scores.csv with training scores. Unsupported rule syntax is rejected.
-
-home, gripper_opening, pick_delay and gripper_closing have identical overall
-labels. They cannot be perfectly distinguished with these features. Noisy
-learning may yield approximate rules or no hypothesis. There is only one
-positive example per phase, regardless of the number of windows summarized.
-Repeated runs are not new data or independent validation.
-
-The gripper_opening counts still contain one moving window for joints
-1,2,3,5. These count columns are not learning features here, but this CSV
-does not establish that all opening windows are stationary. The phase summary
-also does not show whether the original windows overlap.
-
-Input label/count consistency, example counts, allowed predicates and
-Python/Bash syntax were checked. Popper was not run during preparation.
+Home, gripper_opening, pick_delay, and gripper_closing have identical retained
+label signatures. Strict learning cannot separate those positives from identical
+negatives using these features. A missing hypothesis for those tasks is a data
+limitation. Summary trends may also hide mixed window behavior. Effort trend
+describes effort change and does not itself establish physical movement.

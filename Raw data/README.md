@@ -1,31 +1,25 @@
-# Raw Data
+# xArm recordings
 
-This folder stores the original pick-and-place recordings before preprocessing.
-Each run is kept in its own folder so the source data remains traceable.
+The current recordings are `pick_place_20260904_145823`,
+`pick_place_20260904_150700`, `pick_place_20260904_151320`,
+`pick_place_20260904_151638`, `pick_place_20260904_151910`, and
+`pick_place_20260904_153331`. Earlier object/no-object recordings are in `OLD/`.
 
-## Current Runs
+Each current run contains a `csv/` directory. Its
+`full_motion_joint_states.csv` is the preprocessing input; other CSVs contain
+phase intervals or phase-specific signals. ROS bag metadata may be present under
+`rosbag/`; bag payloads are excluded by the repository's ignore rules and may
+need to be obtained separately.
 
-- `pick_place_No_object_1` through `pick_place_No_object_5`
-- `pick_place_Object_1` through `pick_place_Object_5`
+The full-motion CSV preserves joint position, velocity, effort, timing, and
+phase labels. A phase label describes the programmed sequence; it does not
+independently verify object contact or grasp success.
 
-## Expected Run Structure
+From the repository root:
 
-```text
-Raw data/<run_name>/
-|-- csv/
-|   |-- full_motion_joint_states.csv
-|   |-- phase_timestamps.csv
-|   |-- home_joint_states.csv
-|   |-- gripper_opening_joint_states.csv
-|   |-- pick_joint_states.csv
-|   |-- gripper_closing_joint_states.csv
-|   |-- lift_joint_states.csv
-|   |-- place_joint_states.csv
-|   |-- retract_joint_states.csv
-|   `-- return_home_joint_states.csv
-`-- rosbag/
-    `-- metadata.yaml
+```bash
+python scripts/preprocessing/create_joint_processed_data.py --raw-run "Raw data/pick_place_20260904_145823"
 ```
 
-`full_motion_joint_states.csv` is the main input for preprocessing. The
-phase-specific CSV files are useful for inspection and presentation examples.
+Keep original recordings intact when comparing preprocessing methods. Generated
+per-joint data belongs in `Processed data/` and analysis results in `outputs/`.

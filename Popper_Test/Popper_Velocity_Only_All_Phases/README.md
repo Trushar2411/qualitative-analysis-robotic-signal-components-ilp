@@ -1,36 +1,21 @@
-# Popper Velocity-Only All-Phases
+# xArm velocity only phase tasks
 
-This experiment removes both position and effort.
+Each phase directory contains its own `bk.pl`, `bias.pl`, and `exs.pl`.
+The features are adjacent-sample changes in velocity only, labeled `increases`,
+`decreases`, or `constant`. There are 18 candidate body predicates.
+Position is excluded. The fixed delta deadband is 0.01 for the included signals.
 
-Signals available:
-- joint1_velocity ... joint6_velocity
+The tasks cover home, gripper_opening, pick, pick_delay, gripper_closing,
+lift, place, retract, and return_home. Background predicate declarations
+prevent discontiguous-clause warnings without changing the facts.
 
-Relations:
-- increases
-- decreases
-- constant
+From the repository root:
 
-Velocity deadband: 0.01
-
-Total candidate body predicates: 18.
-
-All phases found in the CSV are included:
-- home
-- gripper_opening
-- pick
-- pick_delay
-- gripper_closing
-- lift
-- place
-- retract
-- return_home
-
-Run:
 ```bash
-cd /path/to/Popper_Velocity_Only_All_Phases
-chmod +x run_all_phases.sh
-./run_all_phases.sh ~/qualitative-analysis-robotic-signal-components-ilp/Popper
+RUNS=10 bash Popper_Test/Popper_Velocity_Only_All_Phases/run_all_phases.sh "$PWD/Popper"
 ```
 
-The shell script runs every phase 10 times and creates one file only:
-`hypothesis_summary.txt`.
+The default is ten repeats. The launcher replaces `hypothesis_summary.txt`
+in this experiment folder and collects final clauses and score lines.
+It does not retain separate per-run logs. Repeats use the same task examples;
+report their scores as training fits.

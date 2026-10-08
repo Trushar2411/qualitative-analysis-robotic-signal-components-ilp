@@ -16,6 +16,9 @@ def flatten_datasets(group, prefix=""):
             data.update(flatten_datasets(item, name))
 
         elif isinstance(item, h5py.Dataset):
+            # Ignore images and scalars before reading arrays into memory.
+            if item.ndim not in (1, 2) or not np.issubdtype(item.dtype, np.number):
+                continue
             values = np.asarray(item)
 
             if values.ndim == 0:
@@ -34,7 +37,7 @@ def flatten_datasets(group, prefix=""):
     return data
 
 
-def convert_hdf5_to_csv(input_file, output_dir):
+def convert_hdf5_to_csv(input_file, output_dir, demos=None):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -46,7 +49,15 @@ def convert_hdf5_to_csv(input_file, output_dir):
         else:
             root = f
 
+        if demos:
+            missing = set(demos) - set(root)
+            if missing:
+                raise ValueError(f"Unknown demonstrations: {sorted(missing)}")
+
         for demo_name, demo_group in root.items():
+
+            if demos and demo_name not in demos:
+                continue
 
             if not isinstance(demo_group, h5py.Group):
                 continue
@@ -87,17 +98,19 @@ if __name__ == "__main__":
         description="Convert HDF5 demonstrations into CSV files"
     )
 
-    parser.add_argument(
-        "input",
-        help="Path to input HDF5 file"
-    )
+    parser.add_argument("input", help="Path to input HDF5 file")
 
     parser.add_argument(
         "--output",
-        default="converted_csv",
-        help="Output directory"
+        default=Path(__file__).resolve().parents[1] / "data" / "converted",
+        help="Output directory",
     )
 
+    parser.add_argument(
+        "--demo",
+        action="append",
+        help="Exact demonstration name; repeat to select several",
+    )
     args = parser.parse_args()
 
-    convert_hdf5_to_csv(args.input, args.output)
+    convert_hdf5_to_csv(args.input, args.output, args.demo)

@@ -2,12 +2,12 @@
 # Franka PLA: POSITION-ONLY strict Popper learning for five phases.
 # Usage: bash run_all_phases_strict.sh [popper_directory] [timeout_seconds] [runs]
 # Example: bash run_all_phases_strict.sh \
-#   /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper 120 10
+#   /absolute/path/to/Popper 120 10
 # Run from any directory; this script must be beside tasks/.
 set -uo pipefail
 
 TASK_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-DEFAULT_POPPER="$HOME/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper"
+DEFAULT_POPPER="$(cd -- "$TASK_ROOT/../.." && pwd)/Popper"
 if (( $# > 3 )); then
     echo "Usage: bash $0 [popper_directory] [timeout_seconds=120] [runs=1]" >&2
     exit 2

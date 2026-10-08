@@ -32,10 +32,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
-# ============================================================
 # CONFIGURATION
-# ============================================================
 
 PHASES = [
     "approach",
@@ -55,9 +52,8 @@ SMOOTH_WINDOW = 5
 GRIP_FRACTION = 0.20
 
 
-# ============================================================
 # DETECT GRIPPER EVENTS
-# ============================================================
+
 
 def detect_events(df):
 
@@ -71,11 +67,7 @@ def detect_events(df):
     # Smooth finger movement
     finger_smooth = (
         pd.Series(fingers)
-        .rolling(
-            window=SMOOTH_WINDOW,
-            center=True,
-            min_periods=1
-        )
+        .rolling(window=SMOOTH_WINDOW, center=True, min_periods=1)
         .median()
         .to_numpy()
     )
@@ -86,22 +78,16 @@ def detect_events(df):
     spread = high - low
 
     if spread < 0.003:
-        raise ValueError(
-            "No significant gripper opening/closing detected."
-        )
+        raise ValueError("No significant gripper opening/closing detected.")
 
     closed_threshold = high - GRIP_FRACTION * spread
     open_threshold = low + GRIP_FRACTION * spread
 
     indices = np.arange(len(df))
 
-    # --------------------------------------------------------
     # Detect closing
-    # --------------------------------------------------------
 
-    close_start_candidates = np.where(
-        finger_smooth < closed_threshold
-    )[0]
+    close_start_candidates = np.where(finger_smooth < closed_threshold)[0]
 
     if len(close_start_candidates) == 0:
         raise ValueError("Gripper closing not detected.")
@@ -109,8 +95,7 @@ def detect_events(df):
     close_start_idx = close_start_candidates[0]
 
     close_end_candidates = np.where(
-        (indices >= close_start_idx)
-        & (finger_smooth <= open_threshold)
+        (indices >= close_start_idx) & (finger_smooth <= open_threshold)
     )[0]
 
     if len(close_end_candidates) == 0:
@@ -118,13 +103,10 @@ def detect_events(df):
 
     close_end_idx = close_end_candidates[0]
 
-    # --------------------------------------------------------
     # Detect opening
-    # --------------------------------------------------------
 
     open_start_candidates = np.where(
-        (indices > close_end_idx)
-        & (finger_smooth > open_threshold)
+        (indices > close_end_idx) & (finger_smooth > open_threshold)
     )[0]
 
     if len(open_start_candidates) == 0:
@@ -133,8 +115,7 @@ def detect_events(df):
     open_start_idx = open_start_candidates[0]
 
     open_end_candidates = np.where(
-        (indices >= open_start_idx)
-        & (finger_smooth >= closed_threshold)
+        (indices >= open_start_idx) & (finger_smooth >= closed_threshold)
     )[0]
 
     if len(open_end_candidates) == 0:
@@ -142,16 +123,8 @@ def detect_events(df):
 
     open_end_idx = open_end_candidates[0]
 
-    if not (
-        close_start_idx
-        < close_end_idx
-        < open_start_idx
-        < open_end_idx
-        < len(df)
-    ):
-        raise ValueError(
-            "Invalid sequence of gripper events."
-        )
+    if not (close_start_idx < close_end_idx < open_start_idx < open_end_idx < len(df)):
+        raise ValueError("Invalid sequence of gripper events.")
 
     return [
         float(time[close_start_idx]),
@@ -161,9 +134,8 @@ def detect_events(df):
     ]
 
 
-# ============================================================
 # ADD SMALL PICK / PLACE PADDING
-# ============================================================
+
 
 def expand_boundaries(
     raw_events,
@@ -186,12 +158,7 @@ def expand_boundaries(
 
     # All five phases must have positive duration.
     if not (
-        t_start
-        < boundaries[0]
-        < boundaries[1]
-        < boundaries[2]
-        < boundaries[3]
-        < t_end
+        t_start < boundaries[0] < boundaries[1] < boundaries[2] < boundaries[3] < t_end
     ):
         raise ValueError(
             "Phase boundaries overlap or exceed recording duration. "
@@ -201,9 +168,8 @@ def expand_boundaries(
     return boundaries
 
 
-# ============================================================
 # ASSIGN PHASE LABELS
-# ============================================================
+
 
 def assign_phases(df, boundaries):
 
@@ -230,9 +196,8 @@ def assign_phases(df, boundaries):
     return labeled_df
 
 
-# ============================================================
 # CREATE PHASE SUMMARY
-# ============================================================
+
 
 def create_phase_summary(df, labeled_df, boundaries):
 
@@ -242,23 +207,21 @@ def create_phase_summary(df, labeled_df, boundaries):
     starts = [time_start] + boundaries
     ends = boundaries + [time_end]
 
-    summary = pd.DataFrame({
-        "phase": PHASES,
-        "start_sec": starts,
-        "end_sec": ends,
-        "duration_sec": np.array(ends) - np.array(starts),
-        "samples": [
-            int((labeled_df["phase"] == phase).sum())
-            for phase in PHASES
-        ],
-    })
+    summary = pd.DataFrame(
+        {
+            "phase": PHASES,
+            "start_sec": starts,
+            "end_sec": ends,
+            "duration_sec": np.array(ends) - np.array(starts),
+            "samples": [int((labeled_df["phase"] == phase).sum()) for phase in PHASES],
+        }
+    )
 
     return summary
 
 
-# ============================================================
 # PLOT SEGMENTED SIGNALS
-# ============================================================
+
 
 def plot_segmentation(df, boundaries, output_file):
 
@@ -278,9 +241,7 @@ def plot_segmentation(df, boundaries, output_file):
         constrained_layout=True,
     )
 
-    # --------------------------------------------------------
     # Arm joint positions
-    # --------------------------------------------------------
 
     for joint in range(1, 8):
 
@@ -295,9 +256,7 @@ def plot_segmentation(df, boundaries, output_file):
     axes[0].set_title("Robot Joint Positions")
     axes[0].legend(ncol=7, fontsize=8)
 
-    # --------------------------------------------------------
     # Arm joint velocities
-    # --------------------------------------------------------
 
     for joint in range(1, 8):
 
@@ -311,9 +270,7 @@ def plot_segmentation(df, boundaries, output_file):
     axes[1].set_ylabel("Velocity (rad/s)")
     axes[1].set_title("Robot Joint Velocities")
 
-    # --------------------------------------------------------
     # Finger positions
-    # --------------------------------------------------------
 
     for finger in (1, 2):
 
@@ -328,9 +285,7 @@ def plot_segmentation(df, boundaries, output_file):
     axes[2].set_title("Gripper Finger Positions")
     axes[2].legend()
 
-    # --------------------------------------------------------
     # Finger velocities
-    # --------------------------------------------------------
 
     for finger in (1, 2):
 
@@ -346,9 +301,7 @@ def plot_segmentation(df, boundaries, output_file):
     axes[3].set_xlabel("Elapsed Time (seconds)")
     axes[3].legend()
 
-    # --------------------------------------------------------
     # Display phase regions
-    # --------------------------------------------------------
 
     colors = [
         "#d9eaf7",
@@ -400,9 +353,8 @@ def plot_segmentation(df, boundaries, output_file):
     plt.close(fig)
 
 
-# ============================================================
 # PROCESS ONE DEMONSTRATION
-# ============================================================
+
 
 def process_demo(csv_file, output_dir, args):
 
@@ -412,22 +364,23 @@ def process_demo(csv_file, output_dir, args):
 
     for joint in range(1, 8):
 
-        required_columns.extend([
-            f"joint_{joint}_position",
-            f"joint_{joint}_velocity",
-        ])
+        required_columns.extend(
+            [
+                f"joint_{joint}_position",
+                f"joint_{joint}_velocity",
+            ]
+        )
 
     for finger in (1, 2):
 
-        required_columns.extend([
-            f"finger_{finger}_position",
-            f"finger_{finger}_velocity",
-        ])
+        required_columns.extend(
+            [
+                f"finger_{finger}_position",
+                f"finger_{finger}_velocity",
+            ]
+        )
 
-    missing = [
-        col for col in required_columns
-        if col not in df.columns
-    ]
+    missing = [col for col in required_columns if col not in df.columns]
 
     if missing:
         raise ValueError(f"Missing columns: {missing}")
@@ -435,9 +388,7 @@ def process_demo(csv_file, output_dir, args):
     if df[required_columns].isna().any().any():
         raise ValueError("Required columns contain missing values.")
 
-    df = df.sort_values(
-        "time_seconds"
-    ).reset_index(drop=True)
+    df = df.sort_values("time_seconds").reset_index(drop=True)
 
     time = df["time_seconds"].to_numpy(dtype=float)
 
@@ -445,19 +396,13 @@ def process_demo(csv_file, output_dir, args):
         raise ValueError("Required columns contain non-finite values.")
 
     if np.any(np.diff(time) <= 0):
-        raise ValueError(
-            "Time values must be strictly increasing."
-        )
+        raise ValueError("Time values must be strictly increasing.")
 
-    # --------------------------------------------------------
     # Detect gripper events
-    # --------------------------------------------------------
 
     raw_events = detect_events(df)
 
-    # --------------------------------------------------------
     # Expand pick and place
-    # --------------------------------------------------------
 
     boundaries = expand_boundaries(
         raw_events,
@@ -469,9 +414,7 @@ def process_demo(csv_file, output_dir, args):
         place_after=args.place_after,
     )
 
-    # --------------------------------------------------------
     # Assign phase labels
-    # --------------------------------------------------------
 
     labeled_df = assign_phases(df, boundaries)
 
@@ -485,9 +428,7 @@ def process_demo(csv_file, output_dir, args):
 
     labeled_file = output_dir / f"{demo_name}_labeled.csv"
 
-    summary_file = (
-        output_dir / f"{demo_name}_phase_boundaries.csv"
-    )
+    summary_file = output_dir / f"{demo_name}_phase_boundaries.csv"
 
     plot_file = output_dir / f"{demo_name}_phases.png"
 
@@ -509,9 +450,8 @@ def process_demo(csv_file, output_dir, args):
     return summary
 
 
-# ============================================================
 # MAIN
-# ============================================================
+
 
 def main():
 
@@ -528,7 +468,7 @@ def main():
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("segmented_franka"),
+        default=Path(__file__).resolve().parents[1] / "data" / "segmented",
     )
 
     parser.add_argument(
@@ -576,13 +516,12 @@ def main():
 
     if input_path.is_dir():
 
-        csv_files = sorted(
-            input_path.glob("*.csv")
-        )
+        csv_files = sorted(input_path.glob("*.csv"))
 
         # Avoid processing previously labeled outputs.
         csv_files = [
-            path for path in csv_files
+            path
+            for path in csv_files
             if not path.stem.endswith("_labeled")
             and not path.stem.endswith("_phase_boundaries")
             and path.name != "all_phase_boundaries.csv"
@@ -612,9 +551,7 @@ def main():
 
         except (ValueError, KeyError, OSError) as error:
 
-            print(
-                f"\nSKIPPED {csv_file.name}: {error}"
-            )
+            print(f"\nSKIPPED {csv_file.name}: {error}")
 
     if all_summaries:
 
@@ -636,6 +573,8 @@ def main():
     print(f"Successfully processed: {processed}")
     print(f"Skipped: {len(csv_files) - processed}")
     print(f"Output directory: {output_dir}")
+    if processed != len(csv_files):
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

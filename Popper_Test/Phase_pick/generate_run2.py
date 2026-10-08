@@ -2,8 +2,8 @@ from pathlib import Path
 import pandas as pd
 import sys
 
-CSV = Path(sys.argv[1] if len(sys.argv) > 1 else "full_motion_joint_states.csv")
-OUT = Path(sys.argv[2] if len(sys.argv) > 2 else "Run2_phase_pick")
+CSV = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parent / "full_motion_joint_states.csv")
+OUT = Path(sys.argv[2] if len(sys.argv) > 2 else Path(__file__).resolve().parent / "Run2_phase_pick")
 OUT.mkdir(exist_ok=True)
 
 df = pd.read_csv(CSV)
