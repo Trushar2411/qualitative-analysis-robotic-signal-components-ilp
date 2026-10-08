@@ -1,0 +1,351 @@
+Franka PLA POSITION ONLY — Popper strict learning results
+Started: 2026-10-08T17:02:43+02:00
+Popper directory: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper
+Timeout per run: 120 seconds
+Runs per phase: 1
+Runner: uv run popper.py | Position predicates only | Strict learning (no --noisy)
+Results are training-set hypotheses; repeated runs are not independent validation.
+Exit code 0 does not guarantee a hypothesis.
+
+===== PHASE: approach | RUN: 1 | EXIT CODE: 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:50 tn:21 fp:0 size:3
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:2 fn:49 tn:21 fp:0 size:6
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:4 fn:47 tn:21 fp:0 size:9
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:5 fn:46 tn:21 fp:0 size:12
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:8 fn:43 tn:21 fp:0 size:15
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:9 fn:42 tn:21 fp:0 size:18
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:11 fn:40 tn:21 fp:0 size:21
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:12 fn:39 tn:21 fp:0 size:24
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:13 fn:38 tn:21 fp:0 size:27
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:14 fn:37 tn:21 fp:0 size:30
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:16 fn:35 tn:21 fp:0 size:33
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_2_constant(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:17 fn:34 tn:21 fp:0 size:36
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_constant(V0).
+0.3s approach(V0):- position_joint_2_constant(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:19 fn:32 tn:21 fp:0 size:39
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_constant(V0).
+0.3s approach(V0):- position_joint_2_constant(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_2_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:20 fn:31 tn:21 fp:0 size:42
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_up(V0),position_joint_2_constant(V0).
+0.3s approach(V0):- position_joint_2_constant(V0),position_joint_1_ramp_up(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.3s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.3s approach(V0):- position_joint_2_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.3s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.3s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.3s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.3s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:22 fn:29 tn:21 fp:0 size:45
+0.4s approach(V0):- position_joint_6_ramp_up(V0),position_joint_1_ramp_up(V0).
+0.4s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_constant(V0).
+0.4s approach(V0):- position_joint_4_ramp_up(V0),position_joint_2_constant(V0).
+0.4s approach(V0):- position_joint_2_constant(V0),position_joint_1_ramp_up(V0).
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.4s approach(V0):- position_joint_5_ramp_up(V0),position_joint_3_ramp_down(V0).
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_6_ramp_up(V0).
+0.4s approach(V0):- position_joint_1_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.4s approach(V0):- position_joint_3_ramp_down(V0),position_joint_2_ramp_up(V0).
+0.4s approach(V0):- position_joint_2_ramp_up(V0),position_joint_4_constant(V0).
+0.4s approach(V0):- position_joint_5_ramp_up(V0),position_joint_4_constant(V0).
+0.4s approach(V0):- position_joint_7_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.4s approach(V0):- position_joint_5_ramp_up(V0),position_joint_6_ramp_up(V0).
+0.4s approach(V0):- position_joint_6_ramp_up(V0),position_joint_4_constant(V0).
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_3_constant(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 4
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:22 fn:29 tn:21 fp:0 size:18
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.4s approach(V0):- position_joint_2_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_constant(V0).
+0.4s approach(V0):- position_joint_5_ramp_up(V0),position_joint_4_constant(V0).
+0.4s approach(V0):- position_joint_2_ramp_up(V0),position_joint_3_constant(V0).
+0.4s approach(V0):- position_joint_4_ramp_up(V0),position_joint_2_constant(V0).
+0.4s ********************
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:0.43 TP:22 FN:29 TN:21 FP:0 Size:18
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_ramp_down(V0).
+0.4s approach(V0):- position_joint_2_ramp_up(V0),position_joint_7_ramp_down(V0).
+0.4s approach(V0):- position_joint_4_ramp_down(V0),position_joint_5_constant(V0).
+0.4s approach(V0):- position_joint_5_ramp_up(V0),position_joint_4_constant(V0).
+0.4s approach(V0):- position_joint_2_ramp_up(V0),position_joint_3_constant(V0).
+0.4s approach(V0):- position_joint_4_ramp_up(V0),position_joint_2_constant(V0).
+0.4s ******************************
+
+
+===== PHASE: pick | RUN: 1 | EXIT CODE: 0 =====
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/pick/exs.pl:55:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:1 tn:70 fp:0 size:2
+0.3s pick(V0):- position_finger_2_ramp_down(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:2 fn:0 tn:70 fp:0 size:2
+0.3s pick(V0):- position_finger_1_ramp_down(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:2 FN:0 TN:70 FP:0 Size:2
+0.3s pick(V0):- position_finger_1_ramp_down(V0).
+0.3s ******************************
+
+
+===== PHASE: transport | RUN: 1 | EXIT CODE: 0 =====
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/transport/exs.pl:71:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/transport/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:3 fn:13 tn:56 fp:0 size:3
+0.3s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:4 fn:12 tn:56 fp:0 size:6
+0.3s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.3s transport(V0):- position_joint_5_ramp_up(V0),position_joint_4_ramp_down(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:5 fn:11 tn:56 fp:0 size:9
+0.3s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.3s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.3s transport(V0):- position_joint_5_ramp_up(V0),position_joint_4_ramp_down(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:6 fn:10 tn:56 fp:0 size:12
+0.3s transport(V0):- position_joint_1_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.3s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.3s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.3s transport(V0):- position_joint_5_ramp_up(V0),position_joint_4_ramp_down(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:8 fn:8 tn:56 fp:0 size:15
+0.3s transport(V0):- position_joint_4_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.3s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.3s transport(V0):- position_joint_1_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.3s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.3s transport(V0):- position_joint_5_ramp_up(V0),position_joint_4_ramp_down(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:9 fn:7 tn:56 fp:0 size:19
+0.4s transport(V0):- position_joint_4_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.4s transport(V0):- position_joint_1_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.4s transport(V0):- position_joint_5_ramp_up(V0),position_joint_4_ramp_down(V0).
+0.4s transport(V0):- position_joint_1_ramp_up(V0),position_joint_5_ramp_up(V0),position_joint_7_ramp_up(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:10 fn:6 tn:56 fp:0 size:23
+0.4s transport(V0):- position_joint_4_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.4s transport(V0):- position_joint_1_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.4s transport(V0):- position_joint_5_ramp_up(V0),position_joint_4_ramp_down(V0).
+0.4s transport(V0):- position_joint_1_ramp_up(V0),position_joint_5_ramp_up(V0),position_joint_7_ramp_up(V0).
+0.4s transport(V0):- position_joint_5_constant(V0),position_joint_4_constant(V0),position_joint_7_ramp_up(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:10 fn:6 tn:56 fp:0 size:20
+0.4s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.4s transport(V0):- position_joint_4_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.4s transport(V0):- position_joint_3_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_5_constant(V0),position_joint_4_constant(V0),position_joint_7_ramp_up(V0).
+0.4s transport(V0):- position_joint_4_ramp_up(V0),position_joint_7_ramp_up(V0),position_joint_2_ramp_up(V0).
+0.4s ********************
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:0.62 TP:10 FN:6 TN:56 FP:0 Size:20
+0.4s transport(V0):- position_joint_3_ramp_down(V0),position_joint_4_constant(V0).
+0.4s transport(V0):- position_joint_4_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_6_ramp_up(V0),position_joint_5_ramp_down(V0).
+0.4s transport(V0):- position_joint_3_ramp_up(V0),position_joint_2_ramp_down(V0).
+0.4s transport(V0):- position_joint_5_constant(V0),position_joint_4_constant(V0),position_joint_7_ramp_up(V0).
+0.4s transport(V0):- position_joint_4_ramp_up(V0),position_joint_7_ramp_up(V0),position_joint_2_ramp_up(V0).
+0.4s ******************************
+
+
+===== PHASE: place | RUN: 1 | EXIT CODE: 0 =====
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/place/exs.pl:73:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/place/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:2 fn:0 tn:70 fp:0 size:2
+0.3s place(V0):- position_finger_1_ramp_up(V0).
+0.3s ********************
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:1.00 TP:2 FN:0 TN:70 FP:0 Size:2
+0.3s place(V0):- position_finger_1_ramp_up(V0).
+0.3s ******************************
+
+
+===== PHASE: retract | RUN: 1 | EXIT CODE: 0 =====
+ERROR: prog:1:
+ERROR:    dynamic/1: No permission to modify static procedure `retract/1'
+0.4s Generating partial hypotheses of size: 2
+0.4s Generating partial hypotheses of size: 3
+0.4s Generating partial hypotheses of size: 4
+NO SOLUTION
+
+
+Finished: 2026-10-08T17:02:45+02:00

@@ -1,0 +1,20 @@
+Warning: /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/pick/exs.pl:41:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:1 fn:1 tn:55 fp:0 size:2
+0.3s pick(V0):- position_finger_2_ramp_down(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:2 fn:0 tn:55 fp:0 size:2
+0.3s pick(V0):- position_finger_1_ramp_down(V0).
+0.3s ********************
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:1.00 TP:2 FN:0 TN:55 FP:0 Size:2
+0.4s pick(V0):- position_finger_1_ramp_down(V0).
+0.4s ******************************

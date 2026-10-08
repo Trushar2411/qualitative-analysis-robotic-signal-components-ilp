@@ -1,0 +1,6 @@
+phase	run	positives	negatives	exit_code	log
+approach	1	51	21	0	/home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/results_position_only_20261008_170243_55WjHS/approach_run_1.log
+pick	1	2	70	0	/home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/results_position_only_20261008_170243_55WjHS/pick_run_1.log
+transport	1	16	56	0	/home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/results_position_only_20261008_170243_55WjHS/transport_run_1.log
+place	1	2	70	0	/home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/results_position_only_20261008_170243_55WjHS/place_run_1.log
+retract	1	1	71	0	/home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/franka_position_only/results_position_only_20261008_170243_55WjHS/retract_run_1.log

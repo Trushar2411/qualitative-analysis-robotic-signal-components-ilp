@@ -1,0 +1,6 @@
+ERROR: prog:1:
+ERROR:    dynamic/1: No permission to modify static procedure `retract/1'
+0.4s Generating partial hypotheses of size: 2
+0.4s Generating partial hypotheses of size: 3
+0.4s Generating partial hypotheses of size: 4
+NO SOLUTION
