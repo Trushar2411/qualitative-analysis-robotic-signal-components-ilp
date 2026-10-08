@@ -24,7 +24,7 @@ ROBOT_IP = "192.168.1.204"
 TOPICS_TO_RECORD = ["/xarm/joint_states"]
 
 # Output folder
-BASE_OUTPUT_DIR = Path("Raw data")
+BASE_OUTPUT_DIR = Path(__file__).resolve().parents[2] / "Raw data"
 
 # Joint positions
 HOME_POSITION = [0, -53.6, 4.3, 0, 49.4, 0]

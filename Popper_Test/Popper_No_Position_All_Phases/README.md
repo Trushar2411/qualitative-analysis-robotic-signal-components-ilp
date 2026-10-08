@@ -1,56 +1,22 @@
-# Popper No-Position Experiment — Clean Version
+# xArm velocity and effort phase tasks
 
-This experiment completely removes all joint-position information.
+Each phase directory contains its own `bk.pl`, `bias.pl`, and `exs.pl`.
+The features are adjacent-sample changes in velocity and effort, labeled `increases`,
+`decreases`, or `constant`. There are 36 candidate body predicates.
+Position is excluded. This folder retains precomputed facts; no source CSV
+or regeneration script is included. Inspect `bk.pl` when reproducing the task.
 
-## Signals available to Popper
+The tasks cover home, gripper_opening, pick, pick_delay, gripper_closing,
+lift, place, retract, and return_home. Background predicate declarations
+prevent discontiguous-clause warnings without changing the facts.
 
-- 6 joint velocity signals
-- 6 joint effort signals
-- 3 qualitative relations per signal: `increases`, `decreases`, `constant`
-
-Total candidate body predicates: 36.
-
-## SWI-Prolog warning suppression
-
-Every phase `bk.pl` now starts with declarations such as:
-
-```prolog
-:- discontiguous j1_vel_increases/1.
-:- discontiguous j1_vel_decreases/1.
-:- discontiguous j1_vel_constant/1.
-
-:- discontiguous j1_eff_increases/1.
-:- discontiguous j1_eff_decreases/1.
-:- discontiguous j1_eff_constant/1.
-```
-
-The same declarations are included for joints 2–6. They suppress the
-`Clauses ... are not together in the source-file` warnings and do not change
-the learned logic.
-
-## Run all phases 10 times
+From the repository root:
 
 ```bash
-cd /path/to/Popper_No_Position_All_Phases_Clean
-chmod +x run_all_phases.sh
-./run_all_phases.sh ~/qualitative-analysis-robotic-signal-components-ilp/Popper
+RUNS=10 bash Popper_Test/Popper_No_Position_All_Phases/run_all_phases.sh "$PWD/Popper"
 ```
 
-The script creates only:
-
-```text
-hypothesis_summary.txt
-```
-
-It does not create separate logs or hypothesis files.
-
-The summary contains, for each phase and each of 10 runs:
-
-- final Precision / Recall / TP / FN / TN / FP / Size / MDL line
-- final learned hypothesis rule(s)
-
-To change the number of repetitions temporarily:
-
-```bash
-RUNS=3 ./run_all_phases.sh ~/qualitative-analysis-robotic-signal-components-ilp/Popper
-```
+The default is ten repeats. The launcher replaces `hypothesis_summary.txt`
+in this experiment folder and collects final clauses and score lines.
+It does not retain separate per-run logs. Repeats use the same task examples;
+report their scores as training fits.

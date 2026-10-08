@@ -1,36 +1,28 @@
-# Pooled Popper models for all six placements
+# Six-placement pooled velocity/effort tasks
 
-The six CSVs are **pooled before learning**. There are eight Popper tasks, one
-for each phase. Each task has positive transitions for its phase from all six
-recordings and negative transitions for the other phases from all six
-recordings. Dataset 5 contributes no `home` positives, but the other five do.
+The six recordings are pooled before learning into eight phase tasks. Each
+phase task includes positives and negatives across the recordings.
+Each adjacent-row transition is retained only when both rows have the same
+phase. Velocity and effort differences use a 0.01 deadband; position is excluded.
+Six joints and three labels per signal produce 36 candidate body predicates.
 
-Each state has a unique name: `d3_s42` means dataset 3, CSV row 42 to 43.
-The mapping between dataset numbers and filenames, together with phase
-counts, is in `tasks/input_counts.csv`. Transitions across phase boundaries
-are excluded. No facts mix adjacent rows from different recordings.
+The recording order and phase counts are recorded in `tasks/input_counts.csv`.
+Dataset 5 has no home transitions in the included source mapping. Joint 4 and
+joint 6 velocity were constant in those source recordings. Regenerating with
+other files requires checking these properties again.
 
-Each joint contributes six candidate predicates: velocity and effort, each
-classified as `increases`, `decreases`, or `constant` by comparing consecutive
-values with a fixed 0.01 deadband. Position is excluded. The bias has 36 body
-predicates, `max_vars(1)`, `max_body(4)`, and `max_clauses(3)`.
-Joint 4 and joint 6 velocity stay zero in all six source CSVs.
-
-From the unpacked directory, with Popper, uv, and swipl installed:
+From the repository root:
 
 ```bash
-RUNS=1 bash run_pooled.sh /absolute/path/to/Popper
-RUNS=10 bash run_pooled.sh /absolute/path/to/Popper
+RUNS=10 bash Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/run_pooled.sh "$PWD/Popper"
+python Popper_Test/Six_Placements_Pooled_Velocity_Effort_Popper/build_pooled.py /absolute/path/to/six_csvs
 ```
 
-The second command replaces the first summary. It writes
-`results/hypothesis_summary.txt` and full per-run output in `results/logs/`.
-The file `tasks/place/exs.pl` now contains examples from all placements;
-the same is true for each other phase. Training precision and recall on the
-pooled data do not measure performance on a previously unseen placement.
+Generation expects exactly six `full_motion_joint_states*.csv` files. File sort
+order determines dataset numbering. The launcher writes
+`results/hypothesis_summary.txt` and per-run `results/logs/`, replacing matching
+outputs on another run. Use a copy or preserve results before repeating.
 
-To regenerate from the six CSVs:
-
-```bash
-python3 build_pooled.py /absolute/path/to/csv_directory
-```
+The learning scores use the generated training tasks. Repeated runs do not
+supply independent recordings. Hold out a whole recording to assess transfer
+across object placements.

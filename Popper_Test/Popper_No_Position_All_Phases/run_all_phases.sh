@@ -3,7 +3,7 @@
 set -u
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-POPPER_ROOT="${1:-$HOME/qualitative-analysis-robotic-signal-components-ilp/Popper}"
+POPPER_ROOT="${1:-$ROOT/../../Popper}"
 SUMMARY="$ROOT/hypothesis_summary.txt"
 RUNS="${RUNS:-10}"
 

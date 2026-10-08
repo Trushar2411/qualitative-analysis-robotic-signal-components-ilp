@@ -29,3 +29,6 @@ data/raw/rosbags/
 Thumbs.db
 .vscode/
 .idea/
+
+# Fresh Franka pipeline runs; retained historical outputs remain tracked.
+FrankaReplay/outputs/runs/

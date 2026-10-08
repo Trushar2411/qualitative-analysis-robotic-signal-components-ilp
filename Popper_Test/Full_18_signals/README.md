@@ -1,60 +1,19 @@
-# Single Popper Project: 18 Signals x 3 Relations
+# Signal-change relation task
 
-This project uses all six joints and all three signal classes:
+The target is `signal_change(Signal, Time, Relation)`. It maps qualitative
+comparison facts to `increases`, `decreases`, or `unchanged` for six joints,
+each with position, velocity, and effort signals.
 
-- position
-- velocity
-- effort
+The folder contains `bk.pl`, `bias.pl`, `exs.pl`, and a saved `hypothesis.pl`.
+No source CSV or regeneration script is included here. Inspect the task files
+for the exact facts and examples.
 
-There are 18 signals total and three relations:
-
-- `increases`
-- `decreases`
-- `unchanged`
-
-The target is:
-
-```prolog
-signal_change(Signal, Time, Relation).
-```
-
-Examples are generated automatically from adjacent raw CSV rows. No action,
-phase, fault, pick, or place labels are used.
-
-## Expected Learned Program
-
-```prolog
-signal_change(S,T,R):-
-    signal_increases(S,T),
-    relation_increases(R).
-
-signal_change(S,T,R):-
-    signal_decreases(S,T),
-    relation_decreases(R).
-
-signal_change(S,T,R):-
-    signal_unchanged(S,T),
-    relation_unchanged(R).
-```
-
-## Data Counts
-
-- Rows: 157
-- Adjacent pairs per signal: 156
-- Signals: 18
-- Positive examples: 2808
-- Negative examples: 5616
-- Increases: 453
-- Decreases: 392
-- Unchanged: 1963
-
-## Run
+From the repository root:
 
 ```bash
-cd ~/Popper
+cd Popper
 uv run popper.py ../Popper_Test/Full_18_signals --noisy -v
 ```
 
-This is a self-supervised relation-learning test. The raw values determine the
-examples, and Popper learns the three general clauses connecting each comparison
-predicate to its relation symbol.
+Examples and comparison predicates encode the same signal-change relation.
+This is a check of relation learning; it does not classify action phases or faults.

@@ -1,40 +1,33 @@
-# Scripts
+# xArm scripts
 
-This folder contains the runnable Python workflow for turning xArm pick-and-place
-recordings into qualitative signal descriptions.
+Run the commands below from the repository root, with the analysis dependencies
+installed. Collection scripts also require a running ROS2/xArm setup.
 
-## Folder Layout
+| Script | Input and behavior |
+|---|---|
+| `data_collection/real_robot_pick_and_place_recorder.py` | Executes the configured real-robot sequence and records ROS joint states and phases under `Raw data/` |
+| `data_collection/simulated_pick_and_place_recorder.py` | Publishes trajectories to configured simulation controllers and records a ROS bag |
+| `preprocessing/create_joint_processed_data.py` | Splits one raw full-motion CSV into six per-joint CSVs |
+| `preprocessing/relabel_pick_place_csv.py` | Relabels exported gripper-width CSVs in place; separate from the xArm preprocessing pipeline |
+| `analysis/piecewise_linear_approximation_velocity.py` | Velocity PLA for the latest processed run, or a selected run |
+| `analysis/pla_joint_position.py` | Position PLA for all current processed runs, or a selected run |
+| `analysis/sliding_window_effort_energy.py` | Effort energy windows for the latest processed run, or a selected run |
+| `analysis/pla_velocity_effort_all_runs.py` | Velocity and effort PLA across current processed runs, with phase-shaded plots |
 
-```text
-scripts/
-|-- data_collection/
-|   |-- real_robot_pick_and_place_recorder.py
-|   `-- simulated_pick_and_place_recorder.py
-|-- preprocessing/
-|   `-- create_joint_processed_data.py
-`-- analysis/
-    |-- piecewise_linear_approximation_velocity.py
-    |-- pla_joint_position.py
-    `-- sliding_window_effort_energy.py
+```bash
+python scripts/preprocessing/create_joint_processed_data.py --raw-run "Raw data/pick_place_20260904_145823"
+python scripts/analysis/piecewise_linear_approximation_velocity.py
+python scripts/analysis/pla_joint_position.py
+python scripts/analysis/sliding_window_effort_energy.py
+python scripts/analysis/pla_velocity_effort_all_runs.py
 ```
 
-## Typical Order
+Each analysis accepts `--processed-run` for an explicit per-joint run folder.
+Use `--help` for its complete options. Current default discovery reads immediate
+run folders in `Processed data/`; historical runs under `OLD/` need an explicit path.
 
-1. Record or prepare raw data in `Raw data/<run>/csv/full_motion_joint_states.csv`.
-2. Split the raw full-motion CSV into per-joint files:
-
-   ```bash
-   python3 scripts/preprocessing/create_joint_processed_data.py --raw-run "Raw data/pick_place_Object_1"
-   ```
-
-3. Run qualitative analysis on processed joint files:
-
-   ```bash
-   python3 scripts/analysis/piecewise_linear_approximation_velocity.py
-   python3 scripts/analysis/pla_joint_position.py
-   python3 scripts/analysis/sliding_window_effort_energy.py
-   ```
-
-The velocity PLA and SWEE scripts default to the latest processed run. The
-position PLA script processes all valid processed runs unless `--processed-run`
-is provided.
+`relabel_pick_place_csv.py` uses gripper-width threshold crossings and ten-sample
+pick/place intervals. Supply `--directory` explicitly: its historical default
+`pick_place_csv/` is not included in this branch. It requires `phase` as the final
+CSV field and preserves the numeric signal fields while replacing labels. These
+labels are estimates, separate from the Franka segmentation workflow.
