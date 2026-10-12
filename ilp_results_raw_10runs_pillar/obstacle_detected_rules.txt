@@ -1,0 +1,10 @@
+Phase: obstacle_detected
+Task: pill
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+==================================================
+
+RULES (most common first):
+  [10/10] phase_correct(V0):- lidar_constant(V0),lidar_fr_oscillating(V0).
+
+Avg Recall: 0.43

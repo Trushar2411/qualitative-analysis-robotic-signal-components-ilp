@@ -1,0 +1,10 @@
+Phase: wall_reacquired
+Task: all
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+==================================================
+
+RULES (most common first):
+  [10/10] phase_correct(V0):- lidar_oscillating(V0).
+
+Avg Recall: 1.00

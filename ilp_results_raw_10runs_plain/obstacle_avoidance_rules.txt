@@ -1,0 +1,7 @@
+Phase: obstacle_avoidance
+Task: pw
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+==================================================
+
+NO SOLUTION

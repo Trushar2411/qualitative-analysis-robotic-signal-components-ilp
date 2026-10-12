@@ -1,0 +1,39 @@
+ILP PHASE LEARNING SUMMARY
+Task: all
+Method: QTA (10 runs)
+Sensors: lidar_left, lidar_right, lidar_front, lidar_front_right
+Good runs only! idle + searching_wall removed
+============================================================
+
+Phase: approaching_wall
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_decreasing(V0).
+  [10/10x] phase_correct(V0):- lidar_oscillating(V0).
+Avg Recall: 1.00
+
+Phase: wall_following
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_constant(V0),lidar_r_oscillating(V0).
+Avg Recall: 1.00
+
+Phase: obstacle_detected
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_fr_constant(V0),lidar_r_constant(V0).
+  [10/10x] phase_correct(V0):- lidar_constant(V0),lidar_r_decreasing(V0).
+Avg Recall: 1.00
+
+Phase: obstacle_avoidance
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_f_constant(V0),lidar_increasing(V0).
+  [10/10x] phase_correct(V0):- lidar_increasing(V0),lidar_r_oscillating(V0).
+Avg Recall: 0.29
+
+Phase: wall_reacquired
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_constant(V0),lidar_fr_increasing(V0).
+  [10/10x] phase_correct(V0):- lidar_constant(V0),lidar_r_increasing(V0).
+Avg Recall: 0.71
+
+Phase: wall_following_fail
+NO SOLUTION
+

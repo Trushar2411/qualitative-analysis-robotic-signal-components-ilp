@@ -1,0 +1,12 @@
+Phase: wall_following
+Task: pw
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+==================================================
+
+RULES (most common first):
+  [5/10] phase_correct(V0):- lidar_r_constant(V0).
+  [3/10] phase_correct(V0):- lidar_fr_constant(V0).
+  [2/10] phase_correct(V0):- lidar_constant(V0).
+
+Avg Recall: 1.00

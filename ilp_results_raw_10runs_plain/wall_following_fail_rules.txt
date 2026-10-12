@@ -1,0 +1,7 @@
+Phase: wall_following_fail
+Task: pw
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+==================================================
+
+NO SOLUTION

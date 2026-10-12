@@ -1,0 +1,44 @@
+ILP PHASE LEARNING SUMMARY
+Task: pw
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+============================================================
+
+Phase: approaching_wall
+Expected: decreasing
+Most consistent rule:
+  [5/10x] phase_correct(V0):- lidar_fr_increasing(V0).
+
+All rules found:
+  [5/10x] phase_correct(V0):- lidar_fr_increasing(V0).
+  [3/10x] phase_correct(V0):- lidar_decreasing(V0).
+  [2/10x] phase_correct(V0):- lidar_r_increasing(V0).
+Avg Recall: 1.00
+
+Phase: wall_following
+Expected: constant
+Most consistent rule:
+  [5/10x] phase_correct(V0):- lidar_r_constant(V0).
+
+All rules found:
+  [5/10x] phase_correct(V0):- lidar_r_constant(V0).
+  [3/10x] phase_correct(V0):- lidar_fr_constant(V0).
+  [2/10x] phase_correct(V0):- lidar_constant(V0).
+Avg Recall: 1.00
+
+Phase: obstacle_detected
+Expected: decreasing
+NO SOLUTION
+
+Phase: obstacle_avoidance
+Expected: increasing
+NO SOLUTION
+
+Phase: wall_reacquired
+Expected: decreasing
+NO SOLUTION
+
+Phase: wall_following_fail
+Expected: oscillating
+NO SOLUTION
+

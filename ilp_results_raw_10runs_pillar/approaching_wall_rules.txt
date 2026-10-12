@@ -1,0 +1,11 @@
+Phase: approaching_wall
+Task: pill
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+==================================================
+
+RULES (most common first):
+  [6/10] phase_correct(V0):- lidar_r_increasing(V0).
+  [4/10] phase_correct(V0):- lidar_decreasing(V0).
+
+Avg Recall: 1.00

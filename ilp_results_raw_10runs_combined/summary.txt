@@ -1,0 +1,57 @@
+ILP PHASE LEARNING SUMMARY
+Task: all
+Method: RAW DOMINANT (10 runs)
+Good runs only!
+============================================================
+
+Phase: approaching_wall
+Expected: decreasing
+Most consistent rule:
+  [6/10x] phase_correct(V0):- lidar_decreasing(V0).
+
+All rules found:
+  [6/10x] phase_correct(V0):- lidar_decreasing(V0).
+  [4/10x] phase_correct(V0):- lidar_r_increasing(V0).
+Avg Recall: 1.00
+
+Phase: wall_following
+Expected: constant
+Most consistent rule:
+  [5/10x] phase_correct(V0):- lidar_constant(V0),lidar_f_decreasing(V0).
+
+All rules found:
+  [5/10x] phase_correct(V0):- lidar_constant(V0),lidar_f_decreasing(V0).
+  [5/10x] phase_correct(V0):- lidar_f_decreasing(V0),lidar_r_constant(V0).
+Avg Recall: 0.24
+
+Phase: obstacle_detected
+Expected: decreasing
+Most consistent rule:
+  [10/10x] phase_correct(V0):- lidar_constant(V0),lidar_fr_oscillating(V0).
+
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_constant(V0),lidar_fr_oscillating(V0).
+Avg Recall: 0.43
+
+Phase: obstacle_avoidance
+Expected: increasing
+Most consistent rule:
+  [10/10x] phase_correct(V0):- lidar_increasing(V0).
+
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_increasing(V0).
+Avg Recall: 1.00
+
+Phase: wall_reacquired
+Expected: decreasing
+Most consistent rule:
+  [10/10x] phase_correct(V0):- lidar_oscillating(V0).
+
+All rules found:
+  [10/10x] phase_correct(V0):- lidar_oscillating(V0).
+Avg Recall: 1.00
+
+Phase: wall_following_fail
+Expected: oscillating
+NO SOLUTION
+
