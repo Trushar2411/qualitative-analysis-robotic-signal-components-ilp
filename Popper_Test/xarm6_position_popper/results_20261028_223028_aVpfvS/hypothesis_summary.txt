@@ -1,0 +1,163 @@
+Position-only Popper strict learning
+Started: 2026-10-28T22:30:28+01:00
+CSV: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/full_motion_joint_states(20261028-205807).csv
+Popper: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper
+Timeout: 120 seconds
+Runs: 1
+Only position predicates; no velocity or effort.
+
+
+===== gripper_closing | RUN 1 | EXIT 0 =====
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_closing/exs.pl:104:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_closing/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+5.3s Generating partial hypotheses of size: 2
+5.3s ********************
+5.3s New best hypothesis:
+5.3s tp:10 fn:5 tn:211 fp:0 size:2
+5.3s gripper_closing(V0):- right_finger_joint_position_increases(V0).
+5.3s ********************
+5.3s Generating partial hypotheses of size: 3
+5.3s Generating partial hypotheses of size: 4
+5.3s ********** SOLUTION **********
+5.3s Precision:1.00 Recall:0.67 TP:10 FN:5 TN:211 FP:0 Size:2
+5.3s gripper_closing(V0):- right_finger_joint_position_increases(V0).
+5.3s ******************************
+
+===== gripper_opening | RUN 1 | EXIT 0 =====
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_opening/exs.pl:48:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_opening/exs.pl:156:
+Warning:    Clauses of pos/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_opening/exs.pl:33
+Warning:    Current predicate: neg/1
+Warning:    Use :- discontiguous pos/1. to suppress this message
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_opening/exs.pl:171:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_opening/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:20 fn:10 tn:196 fp:0 size:2
+0.3s gripper_opening(V0):- right_finger_joint_position_decreases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 3
+0.3s Generating partial hypotheses of size: 4
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:0.67 TP:20 FN:10 TN:196 FP:0 Size:2
+0.3s gripper_opening(V0):- right_finger_joint_position_decreases(V0).
+0.3s ******************************
+
+===== home | RUN 1 | EXIT 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:2 fn:29 tn:195 fp:0 size:3
+0.3s home(V0):- joint2_position_decreases(V0),joint5_position_constant(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:0.06 TP:2 FN:29 TN:195 FP:0 Size:3
+0.4s home(V0):- joint2_position_decreases(V0),joint5_position_constant(V0).
+0.4s ******************************
+
+===== lift | RUN 1 | EXIT 0 =====
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/lift/exs.pl:130:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/lift/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.4s Generating partial hypotheses of size: 3
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:17 fn:9 tn:200 fp:0 size:3
+0.4s lift(V0):- joint1_position_decreases(V0),joint3_position_decreases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 4
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:0.65 TP:17 FN:9 TN:200 FP:0 Size:3
+0.4s lift(V0):- joint1_position_decreases(V0),joint3_position_decreases(V0).
+0.4s ******************************
+
+===== pick | RUN 1 | EXIT 0 =====
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/pick/exs.pl:89:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/pick/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:25 fn:16 tn:185 fp:0 size:3
+0.3s pick(V0):- joint3_position_decreases(V0),joint2_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:0.61 TP:25 FN:16 TN:185 FP:0 Size:3
+0.3s pick(V0):- joint3_position_decreases(V0),joint2_position_increases(V0).
+0.3s ******************************
+
+===== place | RUN 1 | EXIT 0 =====
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/place/exs.pl:156:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/place/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:14 fn:12 tn:200 fp:0 size:3
+0.3s place(V0):- joint5_position_decreases(V0),joint1_position_increases(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:18 fn:8 tn:200 fp:0 size:6
+0.3s place(V0):- joint5_position_decreases(V0),joint3_position_constant(V0).
+0.3s place(V0):- joint5_position_decreases(V0),joint1_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:0.69 TP:18 FN:8 TN:200 FP:0 Size:6
+0.4s place(V0):- joint5_position_decreases(V0),joint3_position_constant(V0).
+0.4s place(V0):- joint5_position_decreases(V0),joint1_position_increases(V0).
+0.4s ******************************
+
+===== retract | RUN 1 | EXIT 0 =====
+ERROR: prog:1:
+ERROR:    dynamic/1: No permission to modify static procedure `retract/1'
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/retract/exs.pl:197:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/retract/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.4s Generating partial hypotheses of size: 2
+0.4s Generating partial hypotheses of size: 3
+0.4s Generating partial hypotheses of size: 4
+NO SOLUTION
+
+===== return_home | RUN 1 | EXIT 0 =====
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:23 fn:8 tn:195 fp:0 size:3
+0.3s return_home(V0):- joint5_position_increases(V0),joint1_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:0.74 TP:23 FN:8 TN:195 FP:0 Size:3
+0.3s return_home(V0):- joint5_position_increases(V0),joint1_position_increases(V0).
+0.3s ******************************
+
+Finished: 2026-10-28T22:30:39+01:00

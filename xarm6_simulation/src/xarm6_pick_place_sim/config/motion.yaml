@@ -1,0 +1,23 @@
+# Arm targets are degrees, exactly as in the supplied real-robot script.
+# Durations are simulation seconds. The original script did not specify speed.
+# Set and settle this angle before recording, so both opening steps go 0.33 -> 0.15.
+initial_gripper_rad: 0.33
+poses_deg:
+  home: [0, -53.6, 4.3, 0, 49.4, 0]
+  pick: [0, 39, -60, 0, -67, 0]
+  lift: [-22, 25, -72, 0, -45, 0]
+  place: [-15, 46, -68, 0, -69, 0]
+  retract: [-21, 16, -67, 0, -42, 0]
+gripper_sdk:
+  open: 700
+  close: 520
+sequence:
+  - {phase: home, pose: home, duration: 5.0, dwell: 1.0}
+  - {phase: gripper_opening, gripper: open, duration: 2.0, dwell: 1.0}
+  - {phase: pick, pose: pick, duration: 5.0, dwell: 3.0}
+  - {phase: gripper_closing, gripper: close, duration: 2.0, dwell: 1.0}
+  - {phase: lift, pose: lift, duration: 4.0, dwell: 1.0}
+  - {phase: place, pose: place, duration: 4.0, dwell: 1.0}
+  - {phase: gripper_opening, gripper: open, duration: 2.0, dwell: 1.0}
+  - {phase: retract, pose: retract, duration: 4.0, dwell: 1.0}
+  - {phase: return_home, pose: home, duration: 5.0, dwell: 1.0}

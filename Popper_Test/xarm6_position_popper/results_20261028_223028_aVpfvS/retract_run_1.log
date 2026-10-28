@@ -1,0 +1,11 @@
+ERROR: prog:1:
+ERROR:    dynamic/1: No permission to modify static procedure `retract/1'
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/retract/exs.pl:197:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/retract/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.4s Generating partial hypotheses of size: 2
+0.4s Generating partial hypotheses of size: 3
+0.4s Generating partial hypotheses of size: 4
+NO SOLUTION

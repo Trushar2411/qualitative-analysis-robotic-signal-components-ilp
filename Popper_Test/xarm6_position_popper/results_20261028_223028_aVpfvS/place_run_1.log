@@ -1,0 +1,24 @@
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/place/exs.pl:156:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/place/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:14 fn:12 tn:200 fp:0 size:3
+0.3s place(V0):- joint5_position_decreases(V0),joint1_position_increases(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:18 fn:8 tn:200 fp:0 size:6
+0.3s place(V0):- joint5_position_decreases(V0),joint3_position_constant(V0).
+0.3s place(V0):- joint5_position_decreases(V0),joint1_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.4s ********** SOLUTION **********
+0.4s Precision:1.00 Recall:0.69 TP:18 FN:8 TN:200 FP:0 Size:6
+0.4s place(V0):- joint5_position_decreases(V0),joint3_position_constant(V0).
+0.4s place(V0):- joint5_position_decreases(V0),joint1_position_increases(V0).
+0.4s ******************************

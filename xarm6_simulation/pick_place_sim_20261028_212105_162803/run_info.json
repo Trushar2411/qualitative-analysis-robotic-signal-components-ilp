@@ -1,0 +1,9 @@
+{
+  "completed": true,
+  "cycles_requested": 1,
+  "joint_messages": 4630,
+  "time_base": "ROS simulation time; nanoseconds",
+  "telemetry_source": "Gazebo joint-state plugin, all 12 actual simulated joints",
+  "effort": "Not published by the Gazebo joint-state plugin; CSV fields are empty.",
+  "scene": "zero-gravity motion test; no object or grasp/contact validation"
+}

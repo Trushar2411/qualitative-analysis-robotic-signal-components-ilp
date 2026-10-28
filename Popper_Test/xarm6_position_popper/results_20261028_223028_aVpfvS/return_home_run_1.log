@@ -1,0 +1,12 @@
+0.3s Generating partial hypotheses of size: 2
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:23 fn:8 tn:195 fp:0 size:3
+0.3s return_home(V0):- joint5_position_increases(V0),joint1_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:0.74 TP:23 FN:8 TN:195 FP:0 Size:3
+0.3s return_home(V0):- joint5_position_increases(V0),joint1_position_increases(V0).
+0.3s ******************************

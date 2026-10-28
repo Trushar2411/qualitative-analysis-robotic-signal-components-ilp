@@ -1,0 +1,83 @@
+[
+  {
+    "phase_id": "cycle_001_step_01",
+    "cycle": 1,
+    "step": 1,
+    "phase": "home",
+    "start_time_ns": 2100000000,
+    "end_time_ns": 8100000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_02",
+    "cycle": 1,
+    "step": 2,
+    "phase": "gripper_opening",
+    "start_time_ns": 8100000000,
+    "end_time_ns": 11100000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_03",
+    "cycle": 1,
+    "step": 3,
+    "phase": "pick",
+    "start_time_ns": 11100000000,
+    "end_time_ns": 19200000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_04",
+    "cycle": 1,
+    "step": 4,
+    "phase": "gripper_closing",
+    "start_time_ns": 19200000000,
+    "end_time_ns": 22200000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_05",
+    "cycle": 1,
+    "step": 5,
+    "phase": "lift",
+    "start_time_ns": 22200000000,
+    "end_time_ns": 27300000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_06",
+    "cycle": 1,
+    "step": 6,
+    "phase": "place",
+    "start_time_ns": 27300000000,
+    "end_time_ns": 32400000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_07",
+    "cycle": 1,
+    "step": 7,
+    "phase": "gripper_opening",
+    "start_time_ns": 32400000000,
+    "end_time_ns": 35400000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_08",
+    "cycle": 1,
+    "step": 8,
+    "phase": "retract",
+    "start_time_ns": 35400000000,
+    "end_time_ns": 40500000000,
+    "status": "completed"
+  },
+  {
+    "phase_id": "cycle_001_step_09",
+    "cycle": 1,
+    "step": 9,
+    "phase": "return_home",
+    "start_time_ns": 40500000000,
+    "end_time_ns": 46600000000,
+    "status": "completed"
+  }
+]

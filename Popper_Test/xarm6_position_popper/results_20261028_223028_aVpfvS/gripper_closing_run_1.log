@@ -1,0 +1,17 @@
+Warning: /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_closing/exs.pl:104:
+Warning:    Clauses of neg/1 are not together in the source-file
+Warning:    Earlier definition at /home/tezz/qualitative-analysis-robotic-signal-components-ilp/Popper_Test/xarm6_position_popper/tasks/gripper_closing/exs.pl:2
+Warning:    Current predicate: pos/1
+Warning:    Use :- discontiguous neg/1. to suppress this message
+5.3s Generating partial hypotheses of size: 2
+5.3s ********************
+5.3s New best hypothesis:
+5.3s tp:10 fn:5 tn:211 fp:0 size:2
+5.3s gripper_closing(V0):- right_finger_joint_position_increases(V0).
+5.3s ********************
+5.3s Generating partial hypotheses of size: 3
+5.3s Generating partial hypotheses of size: 4
+5.3s ********** SOLUTION **********
+5.3s Precision:1.00 Recall:0.67 TP:10 FN:5 TN:211 FP:0 Size:2
+5.3s gripper_closing(V0):- right_finger_joint_position_increases(V0).
+5.3s ******************************
