@@ -1,0 +1,924 @@
+{
+  "source": "C:\\Users\\Trushar\\Documents\\GitHub\\qualitative-analysis-robotic-signal-components-ilp\\Checking_motion\\full_motion_joint_states_shrikar.csv",
+  "status": "PATTERN_DETECTED",
+  "abstraction": "least_squares_fitted_change",
+  "match_unit": "windows",
+  "source_rows": 3079,
+  "window_count": 154,
+  "window_mode": "unlabelled_fixed",
+  "window_index_source": null,
+  "settings": {
+    "window": 20,
+    "step": 20,
+    "min_samples": 8,
+    "threshold": 0.004,
+    "finger_threshold": 0.001,
+    "min_consecutive": 1,
+    "closing_direction": "increases"
+  },
+  "required_order": [
+    "pick",
+    "gripper_closing",
+    "lift",
+    "place",
+    "gripper_opening",
+    "retract",
+    "return_home"
+  ],
+  "rules": {
+    "pick": [
+      [
+        "j3_pos_decreases",
+        "j5_pos_decreases"
+      ],
+      [
+        "j2_pos_increases",
+        "j3_pos_decreases"
+      ]
+    ],
+    "gripper_closing": [
+      [
+        "right_finger_pos_increases"
+      ]
+    ],
+    "lift": [
+      [
+        "j1_pos_decreases"
+      ]
+    ],
+    "place": [
+      [
+        "j2_pos_increases",
+        "j3_pos_increases"
+      ],
+      [
+        "j1_pos_increases",
+        "j5_pos_decreases"
+      ],
+      [
+        "j3_pos_increases",
+        "j5_pos_decreases"
+      ],
+      [
+        "j1_pos_increases",
+        "j2_pos_increases"
+      ]
+    ],
+    "gripper_opening": [
+      [
+        "right_finger_pos_decreases"
+      ]
+    ],
+    "retract": [
+      [
+        "j3_pos_constant",
+        "j5_pos_increases"
+      ],
+      [
+        "j2_pos_decreases",
+        "j3_pos_constant"
+      ]
+    ],
+    "return_home": [
+      [
+        "j1_pos_increases",
+        "j5_pos_increases"
+      ],
+      [
+        "j1_pos_increases",
+        "j2_pos_decreases"
+      ],
+      [
+        "j3_pos_increases",
+        "j5_pos_increases"
+      ],
+      [
+        "j3_pos_increases",
+        "j2_pos_decreases"
+      ]
+    ]
+  },
+  "matches": {
+    "pick": 29,
+    "gripper_closing": 15,
+    "lift": 14,
+    "place": 7,
+    "gripper_opening": 7,
+    "retract": 7,
+    "return_home": 25
+  },
+  "rule_logic": "OR between alternatives; AND on the same window within each alternative",
+  "rule_matches": {
+    "pick": [
+      {
+        "rule_id": "pick_r1",
+        "predicates": [
+          "j3_pos_decreases",
+          "j5_pos_decreases"
+        ],
+        "training_frequency": "7/10",
+        "matching_windows": 0,
+        "blocks": []
+      },
+      {
+        "rule_id": "pick_r2",
+        "predicates": [
+          "j2_pos_increases",
+          "j3_pos_decreases"
+        ],
+        "training_frequency": "3/10",
+        "matching_windows": 29,
+        "blocks": [
+          {
+            "action": "pick",
+            "start_window": 25,
+            "end_window": 53,
+            "start_window_id": "w00025",
+            "end_window_id": "w00053",
+            "matching_windows": 29,
+            "start_row": 500,
+            "end_row": 1079,
+            "start_time_sec": 1793357598.6625412,
+            "end_time_sec": 1793357604.4831982,
+            "start_elapsed_sec": 5.009325265884399,
+            "end_elapsed_sec": 10.829982280731201
+          }
+        ]
+      }
+    ],
+    "gripper_closing": [
+      {
+        "rule_id": "gripper_closing_r1",
+        "predicates": [
+          "right_finger_pos_increases"
+        ],
+        "training_frequency": null,
+        "matching_windows": 15,
+        "blocks": [
+          {
+            "action": "gripper_closing",
+            "start_window": 0,
+            "end_window": 0,
+            "start_window_id": "w00000",
+            "end_window_id": "w00000",
+            "matching_windows": 1,
+            "start_row": 0,
+            "end_row": 19,
+            "start_time_sec": 1793357593.653216,
+            "end_time_sec": 1793357593.8441656,
+            "start_elapsed_sec": 0.0,
+            "end_elapsed_sec": 0.1909496784210205
+          },
+          {
+            "action": "gripper_closing",
+            "start_window": 15,
+            "end_window": 20,
+            "start_window_id": "w00015",
+            "end_window_id": "w00020",
+            "matching_windows": 6,
+            "start_row": 300,
+            "end_row": 419,
+            "start_time_sec": 1793357596.6631732,
+            "end_time_sec": 1793357597.8533552,
+            "start_elapsed_sec": 3.0099573135375977,
+            "end_elapsed_sec": 4.200139284133911
+          },
+          {
+            "action": "gripper_closing",
+            "start_window": 69,
+            "end_window": 75,
+            "start_window_id": "w00069",
+            "end_window_id": "w00075",
+            "matching_windows": 7,
+            "start_row": 1380,
+            "end_row": 1519,
+            "start_time_sec": 1793357607.5032072,
+            "end_time_sec": 1793357608.8923724,
+            "start_elapsed_sec": 13.84999132156372,
+            "end_elapsed_sec": 15.239156484603882
+          },
+          {
+            "action": "gripper_closing",
+            "start_window": 121,
+            "end_window": 121,
+            "start_window_id": "w00121",
+            "end_window_id": "w00121",
+            "matching_windows": 1,
+            "start_row": 2420,
+            "end_row": 2439,
+            "start_time_sec": 1793357617.933111,
+            "end_time_sec": 1793357618.1229694,
+            "start_elapsed_sec": 24.279895067214966,
+            "end_elapsed_sec": 24.46975350379944
+          }
+        ]
+      }
+    ],
+    "lift": [
+      {
+        "rule_id": "lift_r1",
+        "predicates": [
+          "j1_pos_decreases"
+        ],
+        "training_frequency": "10/10",
+        "matching_windows": 14,
+        "blocks": [
+          {
+            "action": "lift",
+            "start_window": 79,
+            "end_window": 84,
+            "start_window_id": "w00079",
+            "end_window_id": "w00084",
+            "matching_windows": 6,
+            "start_row": 1580,
+            "end_row": 1699,
+            "start_time_sec": 1793357609.5028703,
+            "end_time_sec": 1793357610.7032044,
+            "start_elapsed_sec": 15.84965443611145,
+            "end_elapsed_sec": 17.049988508224487
+          },
+          {
+            "action": "lift",
+            "start_window": 112,
+            "end_window": 119,
+            "start_window_id": "w00112",
+            "end_window_id": "w00119",
+            "matching_windows": 8,
+            "start_row": 2240,
+            "end_row": 2399,
+            "start_time_sec": 1793357616.1334877,
+            "end_time_sec": 1793357617.723154,
+            "start_elapsed_sec": 22.480271816253662,
+            "end_elapsed_sec": 24.06993818283081
+          }
+        ]
+      }
+    ],
+    "place": [
+      {
+        "rule_id": "place_r1",
+        "predicates": [
+          "j2_pos_increases",
+          "j3_pos_increases"
+        ],
+        "training_frequency": "3/10",
+        "matching_windows": 6,
+        "blocks": [
+          {
+            "action": "place",
+            "start_window": 91,
+            "end_window": 96,
+            "start_window_id": "w00091",
+            "end_window_id": "w00096",
+            "matching_windows": 6,
+            "start_row": 1820,
+            "end_row": 1939,
+            "start_time_sec": 1793357611.913009,
+            "end_time_sec": 1793357613.1033187,
+            "start_elapsed_sec": 18.259793043136597,
+            "end_elapsed_sec": 19.45010280609131
+          }
+        ]
+      },
+      {
+        "rule_id": "place_r2",
+        "predicates": [
+          "j1_pos_increases",
+          "j5_pos_decreases"
+        ],
+        "training_frequency": "3/10",
+        "matching_windows": 0,
+        "blocks": []
+      },
+      {
+        "rule_id": "place_r3",
+        "predicates": [
+          "j3_pos_increases",
+          "j5_pos_decreases"
+        ],
+        "training_frequency": "3/10",
+        "matching_windows": 0,
+        "blocks": []
+      },
+      {
+        "rule_id": "place_r4",
+        "predicates": [
+          "j1_pos_increases",
+          "j2_pos_increases"
+        ],
+        "training_frequency": "1/10",
+        "matching_windows": 7,
+        "blocks": [
+          {
+            "action": "place",
+            "start_window": 90,
+            "end_window": 96,
+            "start_window_id": "w00090",
+            "end_window_id": "w00096",
+            "matching_windows": 7,
+            "start_row": 1800,
+            "end_row": 1939,
+            "start_time_sec": 1793357611.71308,
+            "end_time_sec": 1793357613.1033187,
+            "start_elapsed_sec": 18.059864044189453,
+            "end_elapsed_sec": 19.45010280609131
+          }
+        ]
+      }
+    ],
+    "gripper_opening": [
+      {
+        "rule_id": "gripper_opening_r1",
+        "predicates": [
+          "right_finger_pos_decreases"
+        ],
+        "training_frequency": null,
+        "matching_windows": 7,
+        "blocks": [
+          {
+            "action": "gripper_opening",
+            "start_window": 102,
+            "end_window": 108,
+            "start_window_id": "w00102",
+            "end_window_id": "w00108",
+            "matching_windows": 7,
+            "start_row": 2040,
+            "end_row": 2179,
+            "start_time_sec": 1793357614.113436,
+            "end_time_sec": 1793357615.5131953,
+            "start_elapsed_sec": 20.460220098495483,
+            "end_elapsed_sec": 21.859979391098022
+          }
+        ]
+      }
+    ],
+    "retract": [
+      {
+        "rule_id": "retract_r1",
+        "predicates": [
+          "j3_pos_constant",
+          "j5_pos_increases"
+        ],
+        "training_frequency": "5/10",
+        "matching_windows": 0,
+        "blocks": []
+      },
+      {
+        "rule_id": "retract_r2",
+        "predicates": [
+          "j2_pos_decreases",
+          "j3_pos_constant"
+        ],
+        "training_frequency": "5/10",
+        "matching_windows": 7,
+        "blocks": [
+          {
+            "action": "retract",
+            "start_window": 113,
+            "end_window": 119,
+            "start_window_id": "w00113",
+            "end_window_id": "w00119",
+            "matching_windows": 7,
+            "start_row": 2260,
+            "end_row": 2399,
+            "start_time_sec": 1793357616.3332372,
+            "end_time_sec": 1793357617.723154,
+            "start_elapsed_sec": 22.680021286010742,
+            "end_elapsed_sec": 24.06993818283081
+          }
+        ]
+      }
+    ],
+    "return_home": [
+      {
+        "rule_id": "return_home_r1",
+        "predicates": [
+          "j1_pos_increases",
+          "j5_pos_increases"
+        ],
+        "training_frequency": "3/10",
+        "matching_windows": 0,
+        "blocks": []
+      },
+      {
+        "rule_id": "return_home_r2",
+        "predicates": [
+          "j1_pos_increases",
+          "j2_pos_decreases"
+        ],
+        "training_frequency": "3/10",
+        "matching_windows": 23,
+        "blocks": [
+          {
+            "action": "return_home",
+            "start_window": 126,
+            "end_window": 148,
+            "start_window_id": "w00126",
+            "end_window_id": "w00148",
+            "matching_windows": 23,
+            "start_row": 2520,
+            "end_row": 2979,
+            "start_time_sec": 1793357618.9528916,
+            "end_time_sec": 1793357623.562515,
+            "start_elapsed_sec": 25.299675703048706,
+            "end_elapsed_sec": 29.90929913520813
+          }
+        ]
+      },
+      {
+        "rule_id": "return_home_r3",
+        "predicates": [
+          "j3_pos_increases",
+          "j5_pos_increases"
+        ],
+        "training_frequency": "2/10",
+        "matching_windows": 0,
+        "blocks": []
+      },
+      {
+        "rule_id": "return_home_r4",
+        "predicates": [
+          "j3_pos_increases",
+          "j2_pos_decreases"
+        ],
+        "training_frequency": "2/10",
+        "matching_windows": 25,
+        "blocks": [
+          {
+            "action": "return_home",
+            "start_window": 112,
+            "end_window": 112,
+            "start_window_id": "w00112",
+            "end_window_id": "w00112",
+            "matching_windows": 1,
+            "start_row": 2240,
+            "end_row": 2259,
+            "start_time_sec": 1793357616.1334877,
+            "end_time_sec": 1793357616.3235202,
+            "start_elapsed_sec": 22.480271816253662,
+            "end_elapsed_sec": 22.67030429840088
+          },
+          {
+            "action": "return_home",
+            "start_window": 125,
+            "end_window": 148,
+            "start_window_id": "w00125",
+            "end_window_id": "w00148",
+            "matching_windows": 24,
+            "start_row": 2500,
+            "end_row": 2979,
+            "start_time_sec": 1793357618.7530508,
+            "end_time_sec": 1793357623.562515,
+            "start_elapsed_sec": 25.09983491897583,
+            "end_elapsed_sec": 29.90929913520813
+          }
+        ]
+      }
+    ]
+  },
+  "missing_actions": [],
+  "complete_sequences": [
+    [
+      {
+        "action": "pick",
+        "start_window": 25,
+        "end_window": 53,
+        "start_window_id": "w00025",
+        "end_window_id": "w00053",
+        "matching_windows": 29,
+        "start_row": 500,
+        "end_row": 1079,
+        "start_time_sec": 1793357598.6625412,
+        "end_time_sec": 1793357604.4831982,
+        "start_elapsed_sec": 5.009325265884399,
+        "end_elapsed_sec": 10.829982280731201,
+        "contributing_rule_ids": "pick_r2"
+      },
+      {
+        "action": "gripper_closing",
+        "start_window": 69,
+        "end_window": 75,
+        "start_window_id": "w00069",
+        "end_window_id": "w00075",
+        "matching_windows": 7,
+        "start_row": 1380,
+        "end_row": 1519,
+        "start_time_sec": 1793357607.5032072,
+        "end_time_sec": 1793357608.8923724,
+        "start_elapsed_sec": 13.84999132156372,
+        "end_elapsed_sec": 15.239156484603882,
+        "contributing_rule_ids": "gripper_closing_r1"
+      },
+      {
+        "action": "lift",
+        "start_window": 79,
+        "end_window": 84,
+        "start_window_id": "w00079",
+        "end_window_id": "w00084",
+        "matching_windows": 6,
+        "start_row": 1580,
+        "end_row": 1699,
+        "start_time_sec": 1793357609.5028703,
+        "end_time_sec": 1793357610.7032044,
+        "start_elapsed_sec": 15.84965443611145,
+        "end_elapsed_sec": 17.049988508224487,
+        "contributing_rule_ids": "lift_r1"
+      },
+      {
+        "action": "place",
+        "start_window": 90,
+        "end_window": 96,
+        "start_window_id": "w00090",
+        "end_window_id": "w00096",
+        "matching_windows": 7,
+        "start_row": 1800,
+        "end_row": 1939,
+        "start_time_sec": 1793357611.71308,
+        "end_time_sec": 1793357613.1033187,
+        "start_elapsed_sec": 18.059864044189453,
+        "end_elapsed_sec": 19.45010280609131,
+        "contributing_rule_ids": "place_r1;place_r4"
+      },
+      {
+        "action": "gripper_opening",
+        "start_window": 102,
+        "end_window": 108,
+        "start_window_id": "w00102",
+        "end_window_id": "w00108",
+        "matching_windows": 7,
+        "start_row": 2040,
+        "end_row": 2179,
+        "start_time_sec": 1793357614.113436,
+        "end_time_sec": 1793357615.5131953,
+        "start_elapsed_sec": 20.460220098495483,
+        "end_elapsed_sec": 21.859979391098022,
+        "contributing_rule_ids": "gripper_opening_r1"
+      },
+      {
+        "action": "retract",
+        "start_window": 113,
+        "end_window": 119,
+        "start_window_id": "w00113",
+        "end_window_id": "w00119",
+        "matching_windows": 7,
+        "start_row": 2260,
+        "end_row": 2399,
+        "start_time_sec": 1793357616.3332372,
+        "end_time_sec": 1793357617.723154,
+        "start_elapsed_sec": 22.680021286010742,
+        "end_elapsed_sec": 24.06993818283081,
+        "contributing_rule_ids": "retract_r2"
+      },
+      {
+        "action": "return_home",
+        "start_window": 125,
+        "end_window": 148,
+        "start_window_id": "w00125",
+        "end_window_id": "w00148",
+        "matching_windows": 24,
+        "start_row": 2500,
+        "end_row": 2979,
+        "start_time_sec": 1793357618.7530508,
+        "end_time_sec": 1793357623.562515,
+        "start_elapsed_sec": 25.09983491897583,
+        "end_elapsed_sec": 29.90929913520813,
+        "contributing_rule_ids": "return_home_r2;return_home_r4"
+      }
+    ]
+  ],
+  "ordered_prefix": [
+    {
+      "action": "pick",
+      "start_window": 25,
+      "end_window": 53,
+      "start_window_id": "w00025",
+      "end_window_id": "w00053",
+      "matching_windows": 29,
+      "start_row": 500,
+      "end_row": 1079,
+      "start_time_sec": 1793357598.6625412,
+      "end_time_sec": 1793357604.4831982,
+      "start_elapsed_sec": 5.009325265884399,
+      "end_elapsed_sec": 10.829982280731201,
+      "contributing_rule_ids": "pick_r2"
+    },
+    {
+      "action": "gripper_closing",
+      "start_window": 69,
+      "end_window": 75,
+      "start_window_id": "w00069",
+      "end_window_id": "w00075",
+      "matching_windows": 7,
+      "start_row": 1380,
+      "end_row": 1519,
+      "start_time_sec": 1793357607.5032072,
+      "end_time_sec": 1793357608.8923724,
+      "start_elapsed_sec": 13.84999132156372,
+      "end_elapsed_sec": 15.239156484603882,
+      "contributing_rule_ids": "gripper_closing_r1"
+    },
+    {
+      "action": "lift",
+      "start_window": 79,
+      "end_window": 84,
+      "start_window_id": "w00079",
+      "end_window_id": "w00084",
+      "matching_windows": 6,
+      "start_row": 1580,
+      "end_row": 1699,
+      "start_time_sec": 1793357609.5028703,
+      "end_time_sec": 1793357610.7032044,
+      "start_elapsed_sec": 15.84965443611145,
+      "end_elapsed_sec": 17.049988508224487,
+      "contributing_rule_ids": "lift_r1"
+    },
+    {
+      "action": "place",
+      "start_window": 90,
+      "end_window": 96,
+      "start_window_id": "w00090",
+      "end_window_id": "w00096",
+      "matching_windows": 7,
+      "start_row": 1800,
+      "end_row": 1939,
+      "start_time_sec": 1793357611.71308,
+      "end_time_sec": 1793357613.1033187,
+      "start_elapsed_sec": 18.059864044189453,
+      "end_elapsed_sec": 19.45010280609131,
+      "contributing_rule_ids": "place_r1;place_r4"
+    },
+    {
+      "action": "gripper_opening",
+      "start_window": 102,
+      "end_window": 108,
+      "start_window_id": "w00102",
+      "end_window_id": "w00108",
+      "matching_windows": 7,
+      "start_row": 2040,
+      "end_row": 2179,
+      "start_time_sec": 1793357614.113436,
+      "end_time_sec": 1793357615.5131953,
+      "start_elapsed_sec": 20.460220098495483,
+      "end_elapsed_sec": 21.859979391098022,
+      "contributing_rule_ids": "gripper_opening_r1"
+    },
+    {
+      "action": "retract",
+      "start_window": 113,
+      "end_window": 119,
+      "start_window_id": "w00113",
+      "end_window_id": "w00119",
+      "matching_windows": 7,
+      "start_row": 2260,
+      "end_row": 2399,
+      "start_time_sec": 1793357616.3332372,
+      "end_time_sec": 1793357617.723154,
+      "start_elapsed_sec": 22.680021286010742,
+      "end_elapsed_sec": 24.06993818283081,
+      "contributing_rule_ids": "retract_r2"
+    },
+    {
+      "action": "return_home",
+      "start_window": 125,
+      "end_window": 148,
+      "start_window_id": "w00125",
+      "end_window_id": "w00148",
+      "matching_windows": 24,
+      "start_row": 2500,
+      "end_row": 2979,
+      "start_time_sec": 1793357618.7530508,
+      "end_time_sec": 1793357623.562515,
+      "start_elapsed_sec": 25.09983491897583,
+      "end_elapsed_sec": 29.90929913520813,
+      "contributing_rule_ids": "return_home_r2;return_home_r4"
+    }
+  ],
+  "next_unmatched_stage_in_order": null,
+  "detected_blocks": [
+    {
+      "action": "pick",
+      "start_window": 25,
+      "end_window": 53,
+      "start_window_id": "w00025",
+      "end_window_id": "w00053",
+      "matching_windows": 29,
+      "start_row": 500,
+      "end_row": 1079,
+      "start_time_sec": 1793357598.6625412,
+      "end_time_sec": 1793357604.4831982,
+      "start_elapsed_sec": 5.009325265884399,
+      "end_elapsed_sec": 10.829982280731201,
+      "contributing_rule_ids": "pick_r2"
+    },
+    {
+      "action": "gripper_closing",
+      "start_window": 0,
+      "end_window": 0,
+      "start_window_id": "w00000",
+      "end_window_id": "w00000",
+      "matching_windows": 1,
+      "start_row": 0,
+      "end_row": 19,
+      "start_time_sec": 1793357593.653216,
+      "end_time_sec": 1793357593.8441656,
+      "start_elapsed_sec": 0.0,
+      "end_elapsed_sec": 0.1909496784210205,
+      "contributing_rule_ids": "gripper_closing_r1"
+    },
+    {
+      "action": "gripper_closing",
+      "start_window": 15,
+      "end_window": 20,
+      "start_window_id": "w00015",
+      "end_window_id": "w00020",
+      "matching_windows": 6,
+      "start_row": 300,
+      "end_row": 419,
+      "start_time_sec": 1793357596.6631732,
+      "end_time_sec": 1793357597.8533552,
+      "start_elapsed_sec": 3.0099573135375977,
+      "end_elapsed_sec": 4.200139284133911,
+      "contributing_rule_ids": "gripper_closing_r1"
+    },
+    {
+      "action": "gripper_closing",
+      "start_window": 69,
+      "end_window": 75,
+      "start_window_id": "w00069",
+      "end_window_id": "w00075",
+      "matching_windows": 7,
+      "start_row": 1380,
+      "end_row": 1519,
+      "start_time_sec": 1793357607.5032072,
+      "end_time_sec": 1793357608.8923724,
+      "start_elapsed_sec": 13.84999132156372,
+      "end_elapsed_sec": 15.239156484603882,
+      "contributing_rule_ids": "gripper_closing_r1"
+    },
+    {
+      "action": "gripper_closing",
+      "start_window": 121,
+      "end_window": 121,
+      "start_window_id": "w00121",
+      "end_window_id": "w00121",
+      "matching_windows": 1,
+      "start_row": 2420,
+      "end_row": 2439,
+      "start_time_sec": 1793357617.933111,
+      "end_time_sec": 1793357618.1229694,
+      "start_elapsed_sec": 24.279895067214966,
+      "end_elapsed_sec": 24.46975350379944,
+      "contributing_rule_ids": "gripper_closing_r1"
+    },
+    {
+      "action": "lift",
+      "start_window": 79,
+      "end_window": 84,
+      "start_window_id": "w00079",
+      "end_window_id": "w00084",
+      "matching_windows": 6,
+      "start_row": 1580,
+      "end_row": 1699,
+      "start_time_sec": 1793357609.5028703,
+      "end_time_sec": 1793357610.7032044,
+      "start_elapsed_sec": 15.84965443611145,
+      "end_elapsed_sec": 17.049988508224487,
+      "contributing_rule_ids": "lift_r1"
+    },
+    {
+      "action": "lift",
+      "start_window": 112,
+      "end_window": 119,
+      "start_window_id": "w00112",
+      "end_window_id": "w00119",
+      "matching_windows": 8,
+      "start_row": 2240,
+      "end_row": 2399,
+      "start_time_sec": 1793357616.1334877,
+      "end_time_sec": 1793357617.723154,
+      "start_elapsed_sec": 22.480271816253662,
+      "end_elapsed_sec": 24.06993818283081,
+      "contributing_rule_ids": "lift_r1"
+    },
+    {
+      "action": "place",
+      "start_window": 90,
+      "end_window": 96,
+      "start_window_id": "w00090",
+      "end_window_id": "w00096",
+      "matching_windows": 7,
+      "start_row": 1800,
+      "end_row": 1939,
+      "start_time_sec": 1793357611.71308,
+      "end_time_sec": 1793357613.1033187,
+      "start_elapsed_sec": 18.059864044189453,
+      "end_elapsed_sec": 19.45010280609131,
+      "contributing_rule_ids": "place_r1;place_r4"
+    },
+    {
+      "action": "gripper_opening",
+      "start_window": 102,
+      "end_window": 108,
+      "start_window_id": "w00102",
+      "end_window_id": "w00108",
+      "matching_windows": 7,
+      "start_row": 2040,
+      "end_row": 2179,
+      "start_time_sec": 1793357614.113436,
+      "end_time_sec": 1793357615.5131953,
+      "start_elapsed_sec": 20.460220098495483,
+      "end_elapsed_sec": 21.859979391098022,
+      "contributing_rule_ids": "gripper_opening_r1"
+    },
+    {
+      "action": "retract",
+      "start_window": 113,
+      "end_window": 119,
+      "start_window_id": "w00113",
+      "end_window_id": "w00119",
+      "matching_windows": 7,
+      "start_row": 2260,
+      "end_row": 2399,
+      "start_time_sec": 1793357616.3332372,
+      "end_time_sec": 1793357617.723154,
+      "start_elapsed_sec": 22.680021286010742,
+      "end_elapsed_sec": 24.06993818283081,
+      "contributing_rule_ids": "retract_r2"
+    },
+    {
+      "action": "return_home",
+      "start_window": 112,
+      "end_window": 112,
+      "start_window_id": "w00112",
+      "end_window_id": "w00112",
+      "matching_windows": 1,
+      "start_row": 2240,
+      "end_row": 2259,
+      "start_time_sec": 1793357616.1334877,
+      "end_time_sec": 1793357616.3235202,
+      "start_elapsed_sec": 22.480271816253662,
+      "end_elapsed_sec": 22.67030429840088,
+      "contributing_rule_ids": "return_home_r4"
+    },
+    {
+      "action": "return_home",
+      "start_window": 125,
+      "end_window": 148,
+      "start_window_id": "w00125",
+      "end_window_id": "w00148",
+      "matching_windows": 24,
+      "start_row": 2500,
+      "end_row": 2979,
+      "start_time_sec": 1793357618.7530508,
+      "end_time_sec": 1793357623.562515,
+      "start_elapsed_sec": 25.09983491897583,
+      "end_elapsed_sec": 29.90929913520813,
+      "contributing_rule_ids": "return_home_r2;return_home_r4"
+    }
+  ],
+  "time_column": "header_stamp_sec",
+  "signal_diagnostics": {
+    "j1": {
+      "column": "joint1_position",
+      "range": 0.3866684376265759,
+      "invalid_samples": 0
+    },
+    "j2": {
+      "column": "joint2_position",
+      "range": 1.7428696671593935,
+      "invalid_samples": 0
+    },
+    "j3": {
+      "column": "joint3_position",
+      "range": 1.3345658547742325,
+      "invalid_samples": 0
+    },
+    "j5": {
+      "column": "joint5_position",
+      "range": 0.0013941087748203795,
+      "invalid_samples": 0
+    },
+    "left_finger": {
+      "column": "left_finger_position",
+      "range": 0.3137254901960785,
+      "invalid_samples": 0
+    },
+    "right_finger": {
+      "column": "right_finger_position",
+      "range": 0.3137254901960785,
+      "invalid_samples": 0
+    }
+  },
+  "right_finger_moving_windows": 22,
+  "both_fingers_same_direction_windows": 22,
+  "reference_evaluation": null,
+  "notes": [
+    "13 arm alternatives from the ten-run table; gripper direction predicates are unchanged.",
+    "Fitted-change abstraction and default thresholds match the supplied prepare_popper.py.",
+    "The combined OR rule set needs its own evaluation; training frequencies are not confidence scores.",
+    "Global window boundaries can cross actions; they are not the original phase-bounded training windows.",
+    "Initial home/preparation are optional; opening after place is required.",
+    "Ordered motion evidence cannot verify successful object grasp or placement.",
+    "There is no maximum allowed gap between stages; inspect the reported time/row ranges."
+  ]
+}
