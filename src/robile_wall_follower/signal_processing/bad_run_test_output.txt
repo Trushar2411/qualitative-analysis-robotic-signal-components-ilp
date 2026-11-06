@@ -1,0 +1,83 @@
+
+=== How often does the phase rule fire?  (good = training recall, bad = new test) ===
+method              phase                                         rule bad  good
+   QTA   approaching_wall                              left decreasing 1/6 17/17
+   QTA obstacle_avoidance                   left inc + front const/inc 0/3   6/7
+   QTA  obstacle_detected (fr const + r const) OR (left const + r dec) 2/3   7/7
+   QTA     wall_following                      front_right oscillating 5/7 17/17
+   QTA    wall_reacquired  left const + fr/r inc OR front dec + fr dec 2/2   6/7
+   RAW   approaching_wall                    A: left decreasing [6/10] 2/6 17/17
+   RAW   approaching_wall                   B: right increasing [4/10] 3/6 17/17
+   RAW obstacle_avoidance                              left increasing 2/3   7/7
+   RAW  obstacle_detected                  left const + fr oscillating 1/3   3/7
+   RAW     wall_following             A: left const + front dec [5/10] 0/7  4/17
+   RAW     wall_following               B: front dec + fr const [5/10] 0/7  4/17
+   RAW    wall_reacquired                             left oscillating 1/2   7/7
+
+=== Bad runs, phase by phase ===
+method         run               phase                                             rule fires                                                                             labels                                            note
+   RAW pill_bad_01   obstacle_detected                      left const + fr oscillating    no left=oscillating | right=oscillating | front=oscillating | front_right=oscillating                                                
+   RAW pill_bad_01  obstacle_avoidance                                  left increasing FIRES    left=increasing | right=decreasing | front=oscillating | front_right=decreasing                                                
+   RAW pill_bad_01     wall_reacquired                                 left oscillating FIRES  left=oscillating | right=decreasing | front=oscillating | front_right=oscillating                                                
+   RAW pill_bad_01    approaching_wall                        A: left decreasing [6/10] FIRES    left=decreasing | right=increasing | front=oscillating | front_right=increasing                                                
+   RAW pill_bad_01    approaching_wall                       B: right increasing [4/10] FIRES    left=decreasing | right=increasing | front=oscillating | front_right=increasing                                                
+   RAW pill_bad_01      wall_following                 A: left const + front dec [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW pill_bad_01      wall_following                   B: front dec + fr const [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW pill_bad_02    approaching_wall                        A: left decreasing [6/10]    no      left=oscillating | right=increasing | front=decreasing | front_right=constant lidar_left/right mostly invalid (63-68% capped)
+   RAW pill_bad_02    approaching_wall                       B: right increasing [4/10] FIRES      left=oscillating | right=increasing | front=decreasing | front_right=constant lidar_left/right mostly invalid (63-68% capped)
+   RAW pill_bad_02   obstacle_detected                      left const + fr oscillating    no    left=oscillating | right=oscillating | front=oscillating | front_right=constant lidar_left/right mostly invalid (63-68% capped)
+   RAW pill_bad_02  obstacle_avoidance                                  left increasing    no      left=oscillating | right=decreasing | front=increasing | front_right=constant lidar_left/right mostly invalid (63-68% capped)
+   RAW pill_bad_03    approaching_wall                        A: left decreasing [6/10] FIRES      left=decreasing | right=increasing | front=constant | front_right=oscillating                                                
+   RAW pill_bad_03    approaching_wall                       B: right increasing [4/10] FIRES      left=decreasing | right=increasing | front=constant | front_right=oscillating                                                
+   RAW pill_bad_03      wall_following                 A: left const + front dec [5/10]    no          left=constant | right=constant | front=constant | front_right=oscillating                                                
+   RAW pill_bad_03      wall_following                   B: front dec + fr const [5/10]    no          left=constant | right=constant | front=constant | front_right=oscillating                                                
+   RAW pill_bad_03   obstacle_detected                      left const + fr oscillating FIRES     left=constant | right=oscillating | front=decreasing | front_right=oscillating                                                
+   RAW pill_bad_03  obstacle_avoidance                                  left increasing FIRES     left=increasing | right=decreasing | front=increasing | front_right=decreasing                                                
+   RAW pill_bad_03     wall_reacquired                                 left oscillating    no    left=constant | right=oscillating | front=oscillating | front_right=oscillating                                                
+   RAW pill_bad_03 wall_following_fail              (no own rule) rules that fire: none     -          left=constant | right=oscillating | front=constant | front_right=constant                                                
+   RAW   pw_bad_01    approaching_wall                        A: left decreasing [6/10]    no left=oscillating | right=oscillating | front=oscillating | front_right=oscillating                                                
+   RAW   pw_bad_01    approaching_wall                       B: right increasing [4/10]    no left=oscillating | right=oscillating | front=oscillating | front_right=oscillating                                                
+   RAW   pw_bad_01      wall_following                 A: left const + front dec [5/10]    no       left=constant | right=constant | front=oscillating | front_right=oscillating                                                
+   RAW   pw_bad_01      wall_following                   B: front dec + fr const [5/10]    no       left=constant | right=constant | front=oscillating | front_right=oscillating                                                
+   RAW   pw_bad_02      wall_following                 A: left const + front dec [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_02      wall_following                   B: front dec + fr const [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_03 wall_following_fail              (no own rule) rules that fire: none     -          left=constant | right=constant | front=oscillating | front_right=constant                                                
+   RAW   pw_bad_03      wall_following                 A: left const + front dec [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_03      wall_following                   B: front dec + fr const [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_04 wall_following_fail              (no own rule) rules that fire: none     -          left=constant | right=constant | front=oscillating | front_right=constant                                                
+   RAW   pw_bad_04      wall_following                 A: left const + front dec [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_04      wall_following                   B: front dec + fr const [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_04    approaching_wall                        A: left decreasing [6/10]    no    left=oscillating | right=oscillating | front=constant | front_right=oscillating                                                
+   RAW   pw_bad_04    approaching_wall                       B: right increasing [4/10]    no    left=oscillating | right=oscillating | front=constant | front_right=oscillating                                                
+   RAW   pw_bad_05 wall_following_fail              (no own rule) rules that fire: none     -       left=constant | right=oscillating | front=oscillating | front_right=constant                                                
+   RAW   pw_bad_05      wall_following                 A: left const + front dec [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_05      wall_following                   B: front dec + fr const [5/10]    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   RAW   pw_bad_05    approaching_wall                        A: left decreasing [6/10]    no  left=oscillating | right=oscillating | front=decreasing | front_right=oscillating                                                
+   RAW   pw_bad_05    approaching_wall                       B: right increasing [4/10]    no  left=oscillating | right=oscillating | front=decreasing | front_right=oscillating                                                
+   QTA pill_bad_01   obstacle_detected     (fr const + r const) OR (left const + r dec)    no     left=increasing | right=decreasing | front=increasing | front_right=decreasing                                                
+   QTA pill_bad_01  obstacle_avoidance                       left inc + front const/inc    no   left=increasing | right=oscillating | front=oscillating | front_right=decreasing                                                
+   QTA pill_bad_01     wall_reacquired      left const + fr/r inc OR front dec + fr dec FIRES     left=constant | right=increasing | front=oscillating | front_right=oscillating                                                
+   QTA pill_bad_01    approaching_wall                                  left decreasing FIRES     left=decreasing | right=increasing | front=increasing | front_right=decreasing                                                
+   QTA pill_bad_01      wall_following                          front_right oscillating FIRES    left=constant | right=oscillating | front=oscillating | front_right=oscillating                                                
+   QTA pill_bad_02    approaching_wall                                  left decreasing    no   left=oscillating | right=oscillating | front=decreasing | front_right=decreasing lidar_left/right mostly invalid (63-68% capped)
+   QTA pill_bad_02   obstacle_detected     (fr const + r const) OR (left const + r dec) FIRES           left=decreasing | right=constant | front=constant | front_right=constant lidar_left/right mostly invalid (63-68% capped)
+   QTA pill_bad_02  obstacle_avoidance                       left inc + front const/inc    no     left=decreasing | right=decreasing | front=increasing | front_right=decreasing lidar_left/right mostly invalid (63-68% capped)
+   QTA pill_bad_03    approaching_wall                                  left decreasing    no  left=oscillating | right=oscillating | front=decreasing | front_right=oscillating                                                
+   QTA pill_bad_03      wall_following                          front_right oscillating FIRES    left=constant | right=oscillating | front=oscillating | front_right=oscillating                                                
+   QTA pill_bad_03   obstacle_detected     (fr const + r const) OR (left const + r dec) FIRES       left=constant | right=decreasing | front=decreasing | front_right=increasing                                                
+   QTA pill_bad_03  obstacle_avoidance                       left inc + front const/inc    no    left=decreasing | right=oscillating | front=decreasing | front_right=increasing                                                
+   QTA pill_bad_03     wall_reacquired      left const + fr/r inc OR front dec + fr dec FIRES     left=decreasing | right=increasing | front=decreasing | front_right=decreasing                                                
+   QTA pill_bad_03 wall_following_fail (no own rule) rules that fire: obstacle_detected     -             left=constant | right=constant | front=constant | front_right=constant                                                
+   QTA   pw_bad_01    approaching_wall                                  left decreasing    no left=oscillating | right=oscillating | front=oscillating | front_right=oscillating                                                
+   QTA   pw_bad_01      wall_following                          front_right oscillating FIRES    left=constant | right=oscillating | front=oscillating | front_right=oscillating                                                
+   QTA   pw_bad_02      wall_following                          front_right oscillating FIRES    left=constant | right=oscillating | front=oscillating | front_right=oscillating                                                
+   QTA   pw_bad_03 wall_following_fail   (no own rule) rules that fire: wall_reacquired     -   left=oscillating | right=oscillating | front=decreasing | front_right=decreasing                                                
+   QTA   pw_bad_03      wall_following                          front_right oscillating    no     left=constant | right=oscillating | front=oscillating | front_right=decreasing                                                
+   QTA   pw_bad_04 wall_following_fail              (no own rule) rules that fire: none     -  left=oscillating | right=oscillating | front=oscillating | front_right=decreasing                                                
+   QTA   pw_bad_04      wall_following                          front_right oscillating FIRES    left=constant | right=oscillating | front=oscillating | front_right=oscillating                                                
+   QTA   pw_bad_04    approaching_wall                                  left decreasing    no             left=constant | right=constant | front=constant | front_right=constant                                                
+   QTA   pw_bad_05 wall_following_fail   (no own rule) rules that fire: wall_reacquired     -      left=constant | right=increasing | front=oscillating | front_right=decreasing                                                
+   QTA   pw_bad_05      wall_following                          front_right oscillating    no     left=constant | right=oscillating | front=oscillating | front_right=decreasing                                                
+   QTA   pw_bad_05    approaching_wall                                  left decreasing    no       left=constant | right=increasing | front=increasing | front_right=decreasing                                                
+
+Saved: bad_run_test/rule_firing_per_run.csv

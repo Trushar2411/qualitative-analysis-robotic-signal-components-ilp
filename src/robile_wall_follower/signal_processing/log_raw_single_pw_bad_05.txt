@@ -1,0 +1,101 @@
+============================================================
+ILP PHASE LEARNER - RAW DOMINANT
+Task: all
+Runs per phase: 10
+Good runs only!
+ALL sensors combined!
+============================================================
+Loaded 1 good run CSV files for task=all
+
+##################################################
+# PHASE: approaching_wall
+##################################################
+
+Preparing data for approaching_wall...
+pos=1 neg=2
+  Run 1/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_oscillating(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_oscillating(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_f_decreasing(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_oscillating(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_oscillating(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_oscillating(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_f_decreasing(V0).
+
+✅ Most consistent:
+  ('phase_correct(V0):- lidar_oscillating(V0).', 5)
+
+##################################################
+# PHASE: wall_following
+##################################################
+
+Preparing data for wall_following...
+pos=1 neg=2
+  Run 1/10... ✅ phase_correct(V0):- lidar_r_constant(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_f_constant(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_r_constant(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_f_constant(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_f_constant(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_f_constant(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_r_constant(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_r_constant(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_r_constant(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_f_constant(V0).
+
+✅ Most consistent:
+  ('phase_correct(V0):- lidar_r_constant(V0).', 5)
+
+##################################################
+# PHASE: obstacle_detected
+##################################################
+
+Preparing data for obstacle_detected...
+pos=0 neg=3
+Not enough examples!
+❌ NO SOLUTION
+
+##################################################
+# PHASE: obstacle_avoidance
+##################################################
+
+Preparing data for obstacle_avoidance...
+pos=0 neg=3
+Not enough examples!
+❌ NO SOLUTION
+
+##################################################
+# PHASE: wall_reacquired
+##################################################
+
+Preparing data for wall_reacquired...
+pos=0 neg=3
+Not enough examples!
+❌ NO SOLUTION
+
+##################################################
+# PHASE: wall_following_fail
+##################################################
+
+Preparing data for wall_following_fail...
+pos=1 neg=2
+  Run 1/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0).
+
+✅ Most consistent:
+  ('phase_correct(V0):- lidar_f_oscillating(V0).', 10)
+Summary: /home/alisha/rnd_ws/ilp_results_raw_singlerun_pw_bad_05/summary.txt
+
+============================================================
+COMPLETE!
+Results: /home/alisha/rnd_ws/ilp_results_raw_singlerun_pw_bad_05
+============================================================

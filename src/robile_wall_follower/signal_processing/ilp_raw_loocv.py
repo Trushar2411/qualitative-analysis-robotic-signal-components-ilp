@@ -39,15 +39,15 @@ PYTHON_PATH = os.path.expanduser(
     '~/popper_env/bin/python')
 
 # ── CHANGE THESE FOR EACH TASK ────────────────────────────────
-TASK        = 'pw'
-RESULTS_DIR = os.path.expanduser(
-    '~/rnd_ws/ilp_results_raw_10runs_plain')
+# TASK        = 'pw'
+# RESULTS_DIR = os.path.expanduser(
+#     '~/rnd_ws/ilp_results_raw_10runs_plain')
 # TASK        = 'pill'
 # RESULTS_DIR = os.path.expanduser(
 #     '~/rnd_ws/ilp_results_raw_10runs_pillar')
-# TASK        = 'all'
-# RESULTS_DIR = os.path.expanduser(
-#     '~/rnd_ws/ilp_results_raw_10runs_combined')
+TASK        = 'all'
+RESULTS_DIR = os.path.expanduser(
+    '~/rnd_ws/ilp_results_raw_10runs_combined')
 # ──────────────────────────────────────────────────────────────
 
 NUM_RUNS = 10  # Same as Trushar!

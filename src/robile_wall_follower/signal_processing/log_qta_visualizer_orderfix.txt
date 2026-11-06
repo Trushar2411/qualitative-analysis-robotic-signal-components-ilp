@@ -1,0 +1,517 @@
+Found 25 files to process
+
+==================================================
+Processing: pill_bad_01_pillar_wall_bad.csv
+  Run: pill_bad_01
+  Type: negative
+  Windows found: ['idle', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired', 'approaching_wall', 'wall_following']
+
+  QTA shapes for lidar_left:
+    idle                      → is_constant
+    obstacle_detected         → is_increasing
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_constant
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_bad_02_pillar_wall_bad.csv
+  Run: pill_bad_02
+  Type: negative
+  Windows found: ['searching_wall', 'approaching_wall', 'obstacle_detected', 'obstacle_avoidance']
+
+  QTA shapes for lidar_left:
+    searching_wall            → is_oscillating
+    approaching_wall          → is_oscillating
+    obstacle_detected         → is_decreasing
+    obstacle_avoidance        → is_decreasing
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_bad_03_pillar_wall_bad.csv
+  Run: pill_bad_03
+  Type: negative
+  Windows found: ['idle', 'approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired', 'wall_following_fail']
+
+  QTA shapes for lidar_left:
+    idle                      → is_decreasing
+    approaching_wall          → is_oscillating
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_decreasing
+    wall_reacquired           → is_decreasing
+    wall_following_fail       → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_01_pillar_wall_good.csv
+  Run: pill_good_01
+  Type: positive
+  Windows found: ['idle', 'approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired']
+
+  QTA shapes for lidar_left:
+    idle                      → is_oscillating
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_02_pillar_wall_good.csv
+  Run: pill_good_02
+  Type: positive
+  Windows found: ['idle', 'approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired']
+
+  QTA shapes for lidar_left:
+    idle                      → is_decreasing
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_increasing
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_03_pillar_wall_good.csv
+  Run: pill_good_03
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_04_pillar_wall_good.csv
+  Run: pill_good_04
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_05_pillar_wall_good.csv
+  Run: pill_good_05
+  Type: positive
+  Windows found: ['idle', 'approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired']
+
+  QTA shapes for lidar_left:
+    idle                      → is_oscillating
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_increasing
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_06_pillar_wall_good.csv
+  Run: pill_good_06
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pill_good_07_pillar_wall_good.csv
+  Run: pill_good_07
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'obstacle_detected', 'obstacle_avoidance', 'wall_reacquired', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    obstacle_detected         → is_constant
+    obstacle_avoidance        → is_increasing
+    wall_reacquired           → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pw_bad_01_plain_wall_bad.csv
+  Run: pw_bad_01
+  Type: negative
+  Windows found: ['approaching_wall', 'searching_wall', 'wall_following']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_oscillating
+    searching_wall            → is_oscillating
+    wall_following            → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pw_bad_02_plain_wall_bad.csv
+  Run: pw_bad_02
+  Type: negative
+  Windows found: ['idle', 'wall_following']
+
+  QTA shapes for lidar_left:
+    idle                      → is_constant
+    wall_following            → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+
+==================================================
+Processing: pw_bad_03_plain_wall_bad.csv
+  Run: pw_bad_03
+  Type: negative
+  Windows found: ['wall_following_fail', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    wall_following_fail       → is_oscillating
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_bad_04_plain_wall_bad.csv
+  Run: pw_bad_04
+  Type: negative
+  Windows found: ['idle', 'wall_following_fail', 'wall_following', 'approaching_wall']
+
+  QTA shapes for lidar_left:
+    idle                      → is_constant
+    wall_following_fail       → is_oscillating
+    wall_following            → is_constant
+    approaching_wall          → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_bad_05_plain_wall_bad.csv
+  Run: pw_bad_05
+  Type: negative
+  Windows found: ['wall_following_fail', 'wall_following', 'approaching_wall', 'idle']
+
+  QTA shapes for lidar_left:
+    wall_following_fail       → is_constant
+    wall_following            → is_constant
+    approaching_wall          → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+  Saved: odom_angular_z_QTA.png
+
+==================================================
+Processing: pw_good_01_plain_wall_good.csv
+  Run: pw_good_01
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_02_plain_wall_good.csv
+  Run: pw_good_02
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_03_plain_wall_good.csv
+  Run: pw_good_03
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+
+==================================================
+Processing: pw_good_04_plain_wall_good.csv
+  Run: pw_good_04
+  Type: positive
+  Windows found: ['idle', 'approaching_wall', 'wall_following']
+
+  QTA shapes for lidar_left:
+    idle                      → is_constant
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_05_plain_wall_good.csv
+  Run: pw_good_05
+  Type: positive
+  Windows found: ['idle', 'approaching_wall', 'wall_following']
+
+  QTA shapes for lidar_left:
+    idle                      → is_constant
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_06_plain_wall_good.csv
+  Run: pw_good_06
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_07_plain_wall_good.csv
+  Run: pw_good_07
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_08_plain_wall_good.csv
+  Run: pw_good_08
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+
+==================================================
+Processing: pw_good_09_plain_wall_good.csv
+  Run: pw_good_09
+  Type: positive
+  Windows found: ['approaching_wall', 'wall_following', 'idle']
+
+  QTA shapes for lidar_left:
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+    idle                      → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+Processing: pw_good_10_plain_wall_good.csv
+  Run: pw_good_10
+  Type: positive
+  Windows found: ['idle', 'searching_wall', 'approaching_wall', 'wall_following']
+
+  QTA shapes for lidar_left:
+    idle                      → is_oscillating
+    searching_wall            → is_decreasing
+    approaching_wall          → is_decreasing
+    wall_following            → is_constant
+  Saved: lidar_left_QTA.png
+  Saved: lidar_right_QTA.png
+  Saved: lidar_front_QTA.png
+  Saved: lidar_front_right_QTA.png
+  Saved: imu_angular_z_QTA.png
+  Saved: imu_accel_x_QTA.png
+  Saved: imu_accel_y_QTA.png
+  Saved: odom_linear_x_QTA.png
+
+==================================================
+COMPLETE!
+Processed 25 files
+Plots saved to: /home/alisha/rnd_ws/plots_qta
+JSON saved to:  /home/alisha/rnd_ws/qta_results
+
+Next step: Run prolog_generator.py!

@@ -1,0 +1,141 @@
+
+Loaded 27 runs
+  pw_bad_01                    bad      plain   rows=987
+  pw_good_01                   good     plain   rows=495
+  pw_good_02                   good     plain   rows=441
+  pw_good_03                   good     plain   rows=558
+  pw_good_04                   good     plain   rows=494
+  pw_good_05                   good     plain   rows=699
+  pw_good_06                   good     plain   rows=502
+  pw_good_07                   good     plain   rows=511
+  pw_good_08                   good     plain   rows=542
+  pw_good_09                   good     plain   rows=538
+  pw_good_10                   good     plain   rows=486
+  pw_bad_02                    bad      plain   rows=588
+  pw_bad_03                    bad      plain   rows=503
+  pw_bad_04                    bad      plain   rows=651
+  pw_bad_05                    bad      plain   rows=527
+  pillar_no obstacle lables    unknown  pillar  rows=1047
+  pillar_obstacle detected missing unknown  pillar  rows=906
+  pill_good_01                 good     pillar  rows=818
+  pill_good_02                 good     pillar  rows=806
+  pill_good_03                 good     pillar  rows=817
+  pill_good_04                 good     pillar  rows=797
+  pill_good_05                 good     pillar  rows=804
+  pill_good_06                 good     pillar  rows=816
+  pill_good_07                 good     pillar  rows=823
+  pill_bad_01                  bad      pillar  rows=814
+  pill_bad_02                  bad      pillar  rows=369
+  pill_bad_03                  bad      pillar  rows=796
+
+=== good_plain  (runs=10, chance precision=0.11) ===
+           sensor  hit_rate  precision  precision_x_chance   f1  avg_cps decision
+     cmd_linear_x      0.63       1.00                9.33 0.77     3.00     KEEP
+            pos_x      1.00       0.64                5.94 0.77     6.30     KEEP
+            pos_y      1.00       0.51                4.77 0.67     8.20     KEEP
+       lidar_left      0.79       0.44                4.09 0.56    10.20     KEEP
+lidar_front_right      0.63       0.40                3.69 0.48    11.30     KEEP
+      lidar_right      0.74       0.26                2.42 0.38    20.60     KEEP
+    imu_angular_z      0.66       0.26                2.42 0.37    10.30     KEEP
+    odom_linear_x      1.00       0.21                1.96 0.34    24.30     KEEP
+      lidar_front      0.85       0.19                1.80 0.31    24.20     KEEP
+      imu_accel_y      0.42       0.21                1.93 0.27     6.40     DROP
+   odom_angular_z      0.67       0.18                1.64 0.27    17.10     KEEP
+      imu_accel_x      0.19       0.07                0.64 0.10     8.20     DROP
+    cmd_angular_z      0.00       0.00                0.00 0.00     0.00     DROP
+    wheel_speed_0      0.00       0.00                0.00 0.00     0.00     DROP
+    wheel_speed_1      0.00       0.00                0.00 0.00     0.00     DROP
+    wheel_speed_2      0.00       0.00                0.00 0.00     0.00     DROP
+    wheel_speed_3      0.00       0.00                0.00 0.00     0.00     DROP
+
+=== good_pillar  (runs=7, chance precision=0.17) ===
+            sensor  hit_rate  precision  precision_x_chance   f1  avg_cps decision
+    odom_angular_z      0.98       0.65                3.70 0.78    21.86     KEEP
+      cmd_linear_x      0.61       1.00                5.73 0.75     8.43     KEEP
+        lidar_left      0.88       0.62                3.55 0.72    24.71     KEEP
+     odom_linear_x      0.88       0.52                2.95 0.65    17.57     KEEP
+distance_travelled      0.91       0.47                2.71 0.62    18.00     KEEP
+             pos_x      0.95       0.43                2.46 0.59    21.86     KEEP
+             pos_y      0.85       0.41                2.36 0.55    16.00     KEEP
+       lidar_right      0.88       0.38                2.20 0.53    30.57     KEEP
+ lidar_front_right      0.65       0.40                2.27 0.48    16.29     KEEP
+       lidar_front      0.71       0.36                2.07 0.47    32.71     KEEP
+     imu_angular_z      0.93       0.28                1.63 0.43    45.29     KEEP
+       imu_accel_y      0.62       0.25                1.46 0.36    18.86     DROP
+       imu_accel_x      0.54       0.22                1.27 0.31    19.43     DROP
+     cmd_angular_z      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_0      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_1      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_2      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_3      0.00       0.00                0.00 0.00     0.00     DROP
+
+=== good_all  (runs=17, chance precision=0.13) ===
+            sensor  hit_rate  precision  precision_x_chance   f1  avg_cps decision
+      cmd_linear_x      0.62       1.00                7.41 0.77     5.24     KEEP
+             pos_x      0.98       0.55                4.09 0.70    12.71     KEEP
+        lidar_left      0.83       0.51                3.80 0.63    16.18     KEEP
+             pos_y      0.94       0.47                3.49 0.62    11.41     KEEP
+distance_travelled      0.91       0.47                3.50 0.62    18.00     KEEP
+ lidar_front_right      0.64       0.40                2.93 0.48    13.35     KEEP
+    odom_angular_z      0.80       0.37                2.74 0.48    19.06     KEEP
+     odom_linear_x      0.95       0.34                2.49 0.47    21.53     KEEP
+       lidar_right      0.80       0.31                2.30 0.44    24.71     KEEP
+     imu_angular_z      0.77       0.27                2.00 0.39    24.71     KEEP
+       lidar_front      0.79       0.26                1.95 0.38    27.71     KEEP
+       imu_accel_y      0.50       0.23                1.68 0.31    11.53     KEEP
+       imu_accel_x      0.33       0.13                0.98 0.19    12.82     DROP
+     cmd_angular_z      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_0      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_1      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_2      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_3      0.00       0.00                0.00 0.00     0.00     DROP
+
+=== bad_all  (runs=8, chance precision=0.30) ===
+            sensor  hit_rate  precision  precision_x_chance   f1  avg_cps decision
+             pos_x      0.95       0.64                2.11 0.75    23.75     KEEP
+      cmd_linear_x      0.66       1.00                3.29 0.75    12.12     KEEP
+distance_travelled      0.94       0.59                1.93 0.72    24.00     KEEP
+             pos_y      0.86       0.60                1.98 0.70    18.62     KEEP
+        lidar_left      0.91       0.55                1.83 0.68    34.25     KEEP
+     imu_angular_z      0.92       0.52                1.72 0.64    38.25     KEEP
+    odom_angular_z      0.85       0.51                1.68 0.62    34.38     KEEP
+     odom_linear_x      0.96       0.47                1.54 0.61    40.25     KEEP
+       lidar_front      0.93       0.48                1.57 0.60    42.25     KEEP
+       lidar_right      0.87       0.43                1.40 0.57    41.25     DROP
+       imu_accel_x      0.56       0.48                1.59 0.52    15.62     KEEP
+ lidar_front_right      0.58       0.43                1.43 0.47    24.12     DROP
+       imu_accel_y      0.52       0.43                1.42 0.44    13.75     DROP
+     cmd_angular_z      0.12       0.08                0.27 0.10     7.25     DROP
+     wheel_speed_0      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_1      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_2      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_3      0.00       0.00                0.00 0.00     0.00     DROP
+
+=== all_runs  (runs=27, chance precision=0.19) ===
+            sensor  hit_rate  precision  precision_x_chance   f1  avg_cps decision
+      cmd_linear_x      0.62       1.00                5.39 0.75     7.33     KEEP
+             pos_x      0.96       0.56                3.03 0.70    16.41     KEEP
+             pos_y      0.91       0.51                2.73 0.64    13.93     KEEP
+distance_travelled      0.92       0.50                2.67 0.64    19.25     KEEP
+        lidar_left      0.84       0.53                2.87 0.64    21.56     KEEP
+    odom_angular_z      0.82       0.42                2.25 0.53    24.26     KEEP
+     odom_linear_x      0.93       0.38                2.03 0.51    27.07     KEEP
+       lidar_right      0.83       0.35                1.87 0.48    30.37     KEEP
+     imu_angular_z      0.83       0.35                1.87 0.47    30.89     KEEP
+ lidar_front_right      0.62       0.40                2.14 0.47    17.48     KEEP
+       lidar_front      0.83       0.33                1.77 0.44    33.56     KEEP
+       imu_accel_y      0.51       0.28                1.52 0.34    13.22     KEEP
+       imu_accel_x      0.42       0.25                1.32 0.30    14.59     DROP
+     cmd_angular_z      0.04       0.02                0.13 0.03     2.15     DROP
+     wheel_speed_0      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_1      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_2      0.00       0.00                0.00 0.00     0.00     DROP
+     wheel_speed_3      0.00       0.00                0.00 0.00     0.00     DROP
+
+=== Sensors KEPT by CPD (good runs) vs bad runs ===
+  good runs keep : ['cmd_linear_x', 'distance_travelled', 'imu_accel_y', 'imu_angular_z', 'lidar_front', 'lidar_front_right', 'lidar_left', 'lidar_right', 'odom_angular_z', 'odom_linear_x', 'pos_x', 'pos_y']
+  bad runs keep  : ['cmd_linear_x', 'distance_travelled', 'imu_accel_x', 'imu_angular_z', 'lidar_front', 'lidar_left', 'odom_angular_z', 'odom_linear_x', 'pos_x', 'pos_y']
+  only in good   : ['imu_accel_y', 'lidar_front_right', 'lidar_right']
+  only in bad    : ['imu_accel_x']
+
+Saved: cpd_results/cpd_per_run.csv and cpd_results/cpd_summary.csv

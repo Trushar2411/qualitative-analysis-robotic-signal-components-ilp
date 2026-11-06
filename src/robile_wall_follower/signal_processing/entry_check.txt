@@ -1,0 +1,30 @@
+
+=== plain: lidar_left ENTRY label per phase occurrence (good runs) ===
+entry             no_jump  none
+phase                          
+approaching_wall        0    10
+wall_following         10     0
+
+=== plain: lidar_left QTA trend per phase occurrence ===
+qta               constant  decreasing
+phase                                 
+approaching_wall         0          10
+wall_following          10           0
+
+=== pillar: lidar_left ENTRY label per phase occurrence (good runs) ===
+entry               jump_down  jump_up  no_jump  none
+phase                                                
+approaching_wall            6        0        2     7
+obstacle_avoidance          0        0        7     0
+obstacle_detected           7        0        0     0
+wall_following              2        0       13     0
+wall_reacquired             0        7        0     0
+
+=== pillar: lidar_left QTA trend per phase occurrence ===
+qta                 constant  decreasing  increasing
+phase                                               
+approaching_wall           1          14           0
+obstacle_avoidance         0           0           7
+obstacle_detected          7           0           0
+wall_following            15           0           0
+wall_reacquired            5           0           2

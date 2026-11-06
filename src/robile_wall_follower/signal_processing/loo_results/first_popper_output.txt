@@ -1,0 +1,1436 @@
+********** SOLUTION **********
+Precision:1.00 Recall:1.00 TP:12 FN:0 TN:30 FP:0 Size:2
+phase_correct(V0):- lidar_decreasing(V0).
+******************************
+Warning: /tmp/loo_ljtozx54/bk.pl:6:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:13:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:14:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:15:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:17:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:19:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:21:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:22:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:23:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:24:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:26:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_increasing/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:28:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_decreasing/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:32:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:37:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:38:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:39:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:42:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_jump_down/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:43:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:44:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:45:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:46:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:47:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:48:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:49:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:50:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:51:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:52:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:53:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:54:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:55:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:56:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:57:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:58:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:59:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:60:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:61:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:62:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:63:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:64:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:65:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:66:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:67:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:68:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:69:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:70:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:71:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:72:
+Warning:    Clauses of lidar_r_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:35
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:73:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_jump_down/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:75:
+Warning:    Clauses of lidar_fr_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:8
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:76:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:77:
+Warning:    Clauses of lidar_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:25
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:78:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_increasing/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:79:
+Warning:    Clauses of lidar_r_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:27
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:80:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_decreasing/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:81:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:82:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:83:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:84:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:85:
+Warning:    Clauses of lidar_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:33
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:86:
+Warning:    Clauses of lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:34
+Warning:    Current predicate: lidar_jump_up/1
+Warning:    Use :- discontiguous lidar_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:87:
+Warning:    Clauses of lidar_r_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:35
+Warning:    Current predicate: lidar_oscillating/1
+Warning:    Use :- discontiguous lidar_r_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:88:
+Warning:    Clauses of lidar_r_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:36
+Warning:    Current predicate: lidar_r_jump_down/1
+Warning:    Use :- discontiguous lidar_r_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:89:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:91:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:92:
+Warning:    Clauses of lidar_fr_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:40
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:93:
+Warning:    Clauses of lidar_fr_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:31
+Warning:    Current predicate: lidar_fr_increasing/1
+Warning:    Use :- discontiguous lidar_fr_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:94:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:95:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:96:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:97:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:98:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:99:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:100:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:101:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:102:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:103:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:104:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:105:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:106:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:107:
+Warning:    Clauses of lidar_fr_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:40
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:108:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_fr_increasing/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:109:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:110:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:111:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:112:
+Warning:    Clauses of lidar_fr_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:41
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:113:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:114:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:115:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:116:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:117:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:118:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:119:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:120:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:121:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:122:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:123:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:124:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:126:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_increasing/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:127:
+Warning:    Clauses of lidar_fr_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:8
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:128:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:129:
+Warning:    Clauses of lidar_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:25
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:130:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_increasing/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:131:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:132:
+Warning:    Clauses of lidar_r_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:36
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_r_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:133:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:134:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:135:
+Warning:    Clauses of lidar_fr_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:41
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:136:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:137:
+Warning:    Clauses of lidar_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:33
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:138:
+Warning:    Clauses of lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:34
+Warning:    Current predicate: lidar_jump_up/1
+Warning:    Use :- discontiguous lidar_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:139:
+Warning:    Clauses of lidar_r_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:35
+Warning:    Current predicate: lidar_oscillating/1
+Warning:    Use :- discontiguous lidar_r_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:140:
+Warning:    Clauses of lidar_r_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:36
+Warning:    Current predicate: lidar_r_jump_down/1
+Warning:    Use :- discontiguous lidar_r_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:141:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:142:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:143:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:144:
+Warning:    Clauses of lidar_fr_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:31
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:145:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:146:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:147:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:148:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:149:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:150:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:151:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:152:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:153:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:154:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:155:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:156:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:157:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:158:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:159:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:160:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:161:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:162:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:163:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:164:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:165:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:166:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:167:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:168:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:169:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:170:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:171:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:172:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:173:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:174:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:175:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:176:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:177:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:178:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:179:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:180:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:181:
+Warning:    Clauses of lidar_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:25
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:182:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_increasing/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:183:
+Warning:    Clauses of lidar_r_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:27
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:184:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_decreasing/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:185:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:186:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:187:
+Warning:    Clauses of lidar_fr_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:8
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:188:
+Warning:    Clauses of lidar_fr_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:31
+Warning:    Current predicate: lidar_fr_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:189:
+Warning:    Clauses of lidar_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:33
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:190:
+Warning:    Clauses of lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:34
+Warning:    Current predicate: lidar_jump_up/1
+Warning:    Use :- discontiguous lidar_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:191:
+Warning:    Clauses of lidar_r_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:35
+Warning:    Current predicate: lidar_oscillating/1
+Warning:    Use :- discontiguous lidar_r_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:192:
+Warning:    Clauses of lidar_r_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:36
+Warning:    Current predicate: lidar_r_jump_down/1
+Warning:    Use :- discontiguous lidar_r_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:193:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:194:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:195:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:196:
+Warning:    Clauses of lidar_fr_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:40
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:197:
+Warning:    Clauses of lidar_fr_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:41
+Warning:    Current predicate: lidar_fr_increasing/1
+Warning:    Use :- discontiguous lidar_fr_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:198:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_jump_down/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:199:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:200:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:201:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:202:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:203:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:204:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:205:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:206:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:207:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:208:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:209:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:210:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:211:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:212:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:213:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:214:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:215:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:216:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:217:
+Warning:    Clauses of lidar_fr_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:31
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:218:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:219:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:220:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:221:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:222:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:223:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:224:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:225:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:226:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:227:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:228:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:229:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:230:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:231:
+Warning:    Clauses of lidar_fr_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:8
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:232:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:233:
+Warning:    Clauses of lidar_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:25
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:234:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_increasing/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:235:
+Warning:    Clauses of lidar_r_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:27
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:236:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_decreasing/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:237:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:238:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:239:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:240:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:241:
+Warning:    Clauses of lidar_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:33
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:242:
+Warning:    Clauses of lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:34
+Warning:    Current predicate: lidar_jump_up/1
+Warning:    Use :- discontiguous lidar_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:243:
+Warning:    Clauses of lidar_r_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:35
+Warning:    Current predicate: lidar_oscillating/1
+Warning:    Use :- discontiguous lidar_r_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:244:
+Warning:    Clauses of lidar_r_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:36
+Warning:    Current predicate: lidar_r_jump_down/1
+Warning:    Use :- discontiguous lidar_r_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:245:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:246:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:247:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:248:
+Warning:    Clauses of lidar_fr_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:31
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:249:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:250:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:251:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:252:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:253:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:254:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:255:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:256:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:257:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:258:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:259:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:260:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:261:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:262:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:263:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:264:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:265:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:266:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:267:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:268:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:269:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:270:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:271:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:272:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:273:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:274:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:275:
+Warning:    Clauses of lidar_f_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:30
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_f_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:276:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_oscillating/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:277:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:278:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:279:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:280:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:281:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:282:
+Warning:    Clauses of lidar_f_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:29
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:283:
+Warning:    Clauses of lidar_fr_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:8
+Warning:    Current predicate: lidar_f_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:284:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_decreasing/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:285:
+Warning:    Clauses of lidar_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:25
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:286:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_increasing/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:287:
+Warning:    Clauses of lidar_r_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:27
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:288:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_decreasing/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:289:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_r_no_jump/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:290:
+Warning:    Clauses of lidar_f_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:7
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:291:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_f_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:292:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:293:
+Warning:    Clauses of lidar_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:33
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:294:
+Warning:    Clauses of lidar_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:34
+Warning:    Current predicate: lidar_jump_up/1
+Warning:    Use :- discontiguous lidar_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:295:
+Warning:    Clauses of lidar_r_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:35
+Warning:    Current predicate: lidar_oscillating/1
+Warning:    Use :- discontiguous lidar_r_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:296:
+Warning:    Clauses of lidar_r_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:36
+Warning:    Current predicate: lidar_r_jump_down/1
+Warning:    Use :- discontiguous lidar_r_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:297:
+Warning:    Clauses of lidar_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:1
+Warning:    Current predicate: lidar_r_oscillating/1
+Warning:    Use :- discontiguous lidar_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:298:
+Warning:    Clauses of lidar_f_decreasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:90
+Warning:    Current predicate: lidar_decreasing/1
+Warning:    Use :- discontiguous lidar_f_decreasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:299:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_decreasing/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:300:
+Warning:    Clauses of lidar_fr_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:31
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:301:
+Warning:    Clauses of lidar_fr_oscillating/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:3
+Warning:    Current predicate: lidar_fr_jump_up/1
+Warning:    Use :- discontiguous lidar_fr_oscillating/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:302:
+Warning:    Clauses of lidar_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:18
+Warning:    Current predicate: lidar_fr_oscillating/1
+Warning:    Use :- discontiguous lidar_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:303:
+Warning:    Clauses of lidar_r_increasing/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:4
+Warning:    Current predicate: lidar_jump_down/1
+Warning:    Use :- discontiguous lidar_r_increasing/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:304:
+Warning:    Clauses of lidar_r_jump_up/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:12
+Warning:    Current predicate: lidar_r_increasing/1
+Warning:    Use :- discontiguous lidar_r_jump_up/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:305:
+Warning:    Clauses of lidar_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:5
+Warning:    Current predicate: lidar_r_jump_up/1
+Warning:    Use :- discontiguous lidar_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:306:
+Warning:    Clauses of lidar_f_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:2
+Warning:    Current predicate: lidar_constant/1
+Warning:    Use :- discontiguous lidar_f_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:307:
+Warning:    Clauses of lidar_f_jump_down/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:74
+Warning:    Current predicate: lidar_f_constant/1
+Warning:    Use :- discontiguous lidar_f_jump_down/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:308:
+Warning:    Clauses of lidar_fr_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:16
+Warning:    Current predicate: lidar_f_jump_down/1
+Warning:    Use :- discontiguous lidar_fr_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:309:
+Warning:    Clauses of lidar_fr_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:9
+Warning:    Current predicate: lidar_fr_constant/1
+Warning:    Use :- discontiguous lidar_fr_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:310:
+Warning:    Clauses of lidar_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:10
+Warning:    Current predicate: lidar_fr_no_jump/1
+Warning:    Use :- discontiguous lidar_no_jump/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:311:
+Warning:    Clauses of lidar_r_constant/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:11
+Warning:    Current predicate: lidar_no_jump/1
+Warning:    Use :- discontiguous lidar_r_constant/1. to suppress this message
+Warning: /tmp/loo_ljtozx54/bk.pl:312:
+Warning:    Clauses of lidar_r_no_jump/1 are not together in the source-file
+Warning:    Earlier definition at /tmp/loo_ljtozx54/bk.pl:20
+Warning:    Current predicate: lidar_r_constant/1
+Warning:    Use :- discontiguous lidar_r_no_jump/1. to suppress this message
+09:30:56 Generating programs of size: 2
+09:30:56 ********************
+09:30:56 New best hypothesis:
+09:30:56 tp:4 fn:8 tn:30 fp:0 size:2
+09:30:56 phase_correct(V0):- lidar_fr_increasing(V0).
+09:30:56 ********************
+09:30:56 ********************
+09:30:56 New best hypothesis:
+09:30:56 tp:11 fn:1 tn:30 fp:0 size:4
+09:30:56 phase_correct(V0):- lidar_fr_increasing(V0).
+09:30:56 phase_correct(V0):- lidar_r_increasing(V0).
+09:30:56 ********************

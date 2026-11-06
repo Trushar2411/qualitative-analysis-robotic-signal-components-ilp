@@ -1,0 +1,75 @@
+============================================================
+ILP PHASE LEARNER - QTA | Task: all
+Sensors: ['lidar_left', 'lidar_right', 'lidar_front', 'lidar_front_right']
+============================================================
+Loaded 1 good-run QTA files for task=all
+
+# PHASE: approaching_wall
+pos=1 neg=4
+  Run 1/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+
+# PHASE: wall_following
+pos=1 neg=4
+  Run 1/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_constant(V
+  Run 2/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_constant(V
+  Run 3/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_fr_oscilla
+  Run 4/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_constant(V
+  Run 5/10... ✅ phase_correct(V0):- lidar_constant(V0),lidar_r_oscillating(V
+  Run 6/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_constant(V
+  Run 7/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0),lidar_r_oscilla
+  Run 8/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_constant(V
+  Run 9/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_fr_oscilla
+  Run 10/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_constant(V
+
+# PHASE: obstacle_detected
+pos=1 neg=4
+  Run 1/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_r_decreasing(V0).
+
+# PHASE: obstacle_avoidance
+pos=1 neg=4
+  Run 1/10... ✅ phase_correct(V0):- lidar_fr_decreasing(V0),lidar_r_oscillat
+  Run 2/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_fr_decreas
+  Run 3/10... ✅ phase_correct(V0):- lidar_fr_decreasing(V0),lidar_r_oscillat
+  Run 4/10... ✅ phase_correct(V0):- lidar_fr_decreasing(V0),lidar_r_oscillat
+  Run 5/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_fr_decreas
+  Run 6/10... ✅ phase_correct(V0):- lidar_fr_decreasing(V0),lidar_r_oscillat
+  Run 7/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_fr_decreas
+  Run 8/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0),lidar_fr_decreas
+  Run 9/10... ✅ phase_correct(V0):- lidar_fr_decreasing(V0),lidar_r_oscillat
+  Run 10/10... ✅ phase_correct(V0):- lidar_fr_decreasing(V0),lidar_r_oscillat
+
+# PHASE: wall_reacquired
+pos=1 neg=4
+  Run 1/10... ✅ phase_correct(V0):- lidar_constant(V0),lidar_r_increasing(V0
+  Run 2/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_fr_oscillat
+  Run 3/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0),lidar_r_increas
+  Run 4/10... ✅ phase_correct(V0):- lidar_constant(V0),lidar_r_increasing(V0
+  Run 5/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_constant(V0
+  Run 6/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_constant(V0
+  Run 7/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_constant(V0
+  Run 8/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0),lidar_r_increas
+  Run 9/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0),lidar_r_increas
+  Run 10/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_constant(V0
+
+# PHASE: wall_following_fail
+pos=0 neg=5
+Not enough examples!
+Summary: /home/alisha/rnd_ws/ilp_results_qta_singlerun_pill_bad_01/summary.txt

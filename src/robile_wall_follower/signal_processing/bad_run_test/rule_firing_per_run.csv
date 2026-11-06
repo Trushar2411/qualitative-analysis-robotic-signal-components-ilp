@@ -1,0 +1,208 @@
+method,run,quality,phase,rule,fires,labels
+RAW,pill_bad_01,bad,obstacle_detected,left const + fr oscillating,False,left=oscillating | right=oscillating | front=oscillating | front_right=oscillating
+RAW,pill_bad_01,bad,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=oscillating | front_right=decreasing
+RAW,pill_bad_01,bad,wall_reacquired,left oscillating,True,left=oscillating | right=decreasing | front=oscillating | front_right=oscillating
+RAW,pill_bad_01,bad,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=oscillating | front_right=increasing
+RAW,pill_bad_01,bad,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=oscillating | front_right=increasing
+RAW,pill_bad_01,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_bad_01,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_bad_02,bad,approaching_wall,A: left decreasing [6/10],False,left=oscillating | right=increasing | front=decreasing | front_right=constant
+RAW,pill_bad_02,bad,approaching_wall,B: right increasing [4/10],True,left=oscillating | right=increasing | front=decreasing | front_right=constant
+RAW,pill_bad_02,bad,obstacle_detected,left const + fr oscillating,False,left=oscillating | right=oscillating | front=oscillating | front_right=constant
+RAW,pill_bad_02,bad,obstacle_avoidance,left increasing,False,left=oscillating | right=decreasing | front=increasing | front_right=constant
+RAW,pill_bad_03,bad,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=oscillating
+RAW,pill_bad_03,bad,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=oscillating
+RAW,pill_bad_03,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=oscillating
+RAW,pill_bad_03,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=oscillating
+RAW,pill_bad_03,bad,obstacle_detected,left const + fr oscillating,True,left=constant | right=oscillating | front=decreasing | front_right=oscillating
+RAW,pill_bad_03,bad,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=increasing | front_right=decreasing
+RAW,pill_bad_03,bad,wall_reacquired,left oscillating,False,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+RAW,pill_bad_03,bad,wall_following_fail,(no own rule) rules that fire: none,,left=constant | right=oscillating | front=constant | front_right=constant
+RAW,pill_good_01,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_01,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_01,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_01,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_01,good,obstacle_detected,left const + fr oscillating,True,left=constant | right=decreasing | front=constant | front_right=oscillating
+RAW,pill_good_01,good,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=constant | front_right=decreasing
+RAW,pill_good_01,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=oscillating | front_right=decreasing
+RAW,pill_good_02,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=oscillating
+RAW,pill_good_02,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=oscillating
+RAW,pill_good_02,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_02,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_02,good,obstacle_detected,left const + fr oscillating,False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_02,good,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=constant | front_right=oscillating
+RAW,pill_good_02,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=oscillating | front_right=oscillating
+RAW,pill_good_03,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_03,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_03,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_03,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_03,good,obstacle_detected,left const + fr oscillating,False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_03,good,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=constant | front_right=decreasing
+RAW,pill_good_03,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=constant | front_right=oscillating
+RAW,pill_good_04,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_04,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_04,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_04,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_04,good,obstacle_detected,left const + fr oscillating,True,left=constant | right=constant | front=oscillating | front_right=oscillating
+RAW,pill_good_04,good,obstacle_avoidance,left increasing,True,left=increasing | right=oscillating | front=increasing | front_right=decreasing
+RAW,pill_good_04,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=constant | front_right=oscillating
+RAW,pill_good_05,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=oscillating
+RAW,pill_good_05,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=oscillating
+RAW,pill_good_05,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_05,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_05,good,obstacle_detected,left const + fr oscillating,False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_05,good,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=constant | front_right=oscillating
+RAW,pill_good_05,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=oscillating | front_right=decreasing
+RAW,pill_good_06,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=constant
+RAW,pill_good_06,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=constant
+RAW,pill_good_06,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_06,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pill_good_06,good,obstacle_detected,left const + fr oscillating,False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_06,good,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=oscillating | front_right=decreasing
+RAW,pill_good_06,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=constant | front_right=oscillating
+RAW,pill_good_07,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_07,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=decreasing | front_right=oscillating
+RAW,pill_good_07,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_07,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pill_good_07,good,obstacle_detected,left const + fr oscillating,True,left=constant | right=constant | front=oscillating | front_right=oscillating
+RAW,pill_good_07,good,obstacle_avoidance,left increasing,True,left=increasing | right=decreasing | front=constant | front_right=decreasing
+RAW,pill_good_07,good,wall_reacquired,left oscillating,True,left=oscillating | right=oscillating | front=constant | front_right=oscillating
+RAW,pw_bad_01,bad,approaching_wall,A: left decreasing [6/10],False,left=oscillating | right=oscillating | front=oscillating | front_right=oscillating
+RAW,pw_bad_01,bad,approaching_wall,B: right increasing [4/10],False,left=oscillating | right=oscillating | front=oscillating | front_right=oscillating
+RAW,pw_bad_01,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=oscillating
+RAW,pw_bad_01,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=oscillating
+RAW,pw_bad_02,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_02,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_03,bad,wall_following_fail,(no own rule) rules that fire: none,,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_bad_03,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_03,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_04,bad,wall_following_fail,(no own rule) rules that fire: none,,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_bad_04,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_04,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_04,bad,approaching_wall,A: left decreasing [6/10],False,left=oscillating | right=oscillating | front=constant | front_right=oscillating
+RAW,pw_bad_04,bad,approaching_wall,B: right increasing [4/10],False,left=oscillating | right=oscillating | front=constant | front_right=oscillating
+RAW,pw_bad_05,bad,wall_following_fail,(no own rule) rules that fire: none,,left=constant | right=oscillating | front=oscillating | front_right=constant
+RAW,pw_bad_05,bad,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_05,bad,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_bad_05,bad,approaching_wall,A: left decreasing [6/10],False,left=oscillating | right=oscillating | front=decreasing | front_right=oscillating
+RAW,pw_bad_05,bad,approaching_wall,B: right increasing [4/10],False,left=oscillating | right=oscillating | front=decreasing | front_right=oscillating
+RAW,pw_good_01,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=oscillating | front_right=increasing
+RAW,pw_good_01,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=oscillating | front_right=increasing
+RAW,pw_good_01,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_good_01,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_good_02,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_02,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_02,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_02,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_03,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_03,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_03,good,wall_following,A: left const + front dec [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_03,good,wall_following,B: front dec + fr const [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_04,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_04,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_04,good,wall_following,A: left const + front dec [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_04,good,wall_following,B: front dec + fr const [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_05,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_05,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_05,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_05,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_06,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_06,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_06,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_06,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_07,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_07,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_07,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_07,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=oscillating | front_right=constant
+RAW,pw_good_08,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_08,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_08,good,wall_following,A: left const + front dec [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_good_08,good,wall_following,B: front dec + fr const [5/10],False,left=constant | right=constant | front=constant | front_right=constant
+RAW,pw_good_09,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_09,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_09,good,wall_following,A: left const + front dec [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_09,good,wall_following,B: front dec + fr const [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_10,good,approaching_wall,A: left decreasing [6/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_10,good,approaching_wall,B: right increasing [4/10],True,left=decreasing | right=increasing | front=constant | front_right=increasing
+RAW,pw_good_10,good,wall_following,A: left const + front dec [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+RAW,pw_good_10,good,wall_following,B: front dec + fr const [5/10],True,left=constant | right=constant | front=decreasing | front_right=constant
+QTA,pill_bad_01,bad,obstacle_detected,(fr const + r const) OR (left const + r dec),False,left=increasing | right=decreasing | front=increasing | front_right=decreasing
+QTA,pill_bad_01,bad,obstacle_avoidance,left inc + front const/inc,False,left=increasing | right=oscillating | front=oscillating | front_right=decreasing
+QTA,pill_bad_01,bad,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=constant | right=increasing | front=oscillating | front_right=oscillating
+QTA,pill_bad_01,bad,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=increasing | front_right=decreasing
+QTA,pill_bad_01,bad,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_bad_02,bad,approaching_wall,left decreasing,False,left=oscillating | right=oscillating | front=decreasing | front_right=decreasing
+QTA,pill_bad_02,bad,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=decreasing | right=constant | front=constant | front_right=constant
+QTA,pill_bad_02,bad,obstacle_avoidance,left inc + front const/inc,False,left=decreasing | right=decreasing | front=increasing | front_right=decreasing
+QTA,pill_bad_03,bad,approaching_wall,left decreasing,False,left=oscillating | right=oscillating | front=decreasing | front_right=oscillating
+QTA,pill_bad_03,bad,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_bad_03,bad,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=decreasing | front=decreasing | front_right=increasing
+QTA,pill_bad_03,bad,obstacle_avoidance,left inc + front const/inc,False,left=decreasing | right=oscillating | front=decreasing | front_right=increasing
+QTA,pill_bad_03,bad,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=decreasing | right=increasing | front=decreasing | front_right=decreasing
+QTA,pill_bad_03,bad,wall_following_fail,(no own rule) rules that fire: obstacle_detected,,left=constant | right=constant | front=constant | front_right=constant
+QTA,pill_good_01,good,approaching_wall,left decreasing,True,left=decreasing | right=oscillating | front=decreasing | front_right=increasing
+QTA,pill_good_01,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_good_01,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=decreasing | front=constant | front_right=constant
+QTA,pill_good_01,good,obstacle_avoidance,left inc + front const/inc,True,left=increasing | right=decreasing | front=constant | front_right=decreasing
+QTA,pill_good_01,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=constant | right=increasing | front=increasing | front_right=decreasing
+QTA,pill_good_02,good,approaching_wall,left decreasing,True,left=decreasing | right=oscillating | front=constant | front_right=constant
+QTA,pill_good_02,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=constant | front_right=oscillating
+QTA,pill_good_02,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=constant | front=constant | front_right=constant
+QTA,pill_good_02,good,obstacle_avoidance,left inc + front const/inc,False,left=increasing | right=decreasing | front=decreasing | front_right=constant
+QTA,pill_good_02,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,False,left=increasing | right=decreasing | front=decreasing | front_right=constant
+QTA,pill_good_03,good,approaching_wall,left decreasing,True,left=decreasing | right=constant | front=decreasing | front_right=increasing
+QTA,pill_good_03,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_good_03,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=constant | front=oscillating | front_right=constant
+QTA,pill_good_03,good,obstacle_avoidance,left inc + front const/inc,True,left=increasing | right=decreasing | front=increasing | front_right=decreasing
+QTA,pill_good_03,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=constant | right=increasing | front=increasing | front_right=constant
+QTA,pill_good_04,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=decreasing | front_right=increasing
+QTA,pill_good_04,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_good_04,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=constant | front=constant | front_right=constant
+QTA,pill_good_04,good,obstacle_avoidance,left inc + front const/inc,True,left=increasing | right=increasing | front=increasing | front_right=decreasing
+QTA,pill_good_04,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=constant | right=constant | front=decreasing | front_right=increasing
+QTA,pill_good_05,good,approaching_wall,left decreasing,True,left=decreasing | right=oscillating | front=decreasing | front_right=increasing
+QTA,pill_good_05,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_good_05,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=constant | front=increasing | front_right=constant
+QTA,pill_good_05,good,obstacle_avoidance,left inc + front const/inc,True,left=increasing | right=decreasing | front=constant | front_right=constant
+QTA,pill_good_05,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=increasing | right=decreasing | front=decreasing | front_right=decreasing
+QTA,pill_good_06,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=decreasing | front_right=increasing
+QTA,pill_good_06,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_good_06,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=constant | front=constant | front_right=constant
+QTA,pill_good_06,good,obstacle_avoidance,left inc + front const/inc,True,left=increasing | right=decreasing | front=increasing | front_right=decreasing
+QTA,pill_good_06,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=constant | right=increasing | front=constant | front_right=constant
+QTA,pill_good_07,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=decreasing | front_right=increasing
+QTA,pill_good_07,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pill_good_07,good,obstacle_detected,(fr const + r const) OR (left const + r dec),True,left=constant | right=constant | front=constant | front_right=constant
+QTA,pill_good_07,good,obstacle_avoidance,left inc + front const/inc,True,left=increasing | right=decreasing | front=increasing | front_right=decreasing
+QTA,pill_good_07,good,wall_reacquired,left const + fr/r inc OR front dec + fr dec,True,left=constant | right=increasing | front=constant | front_right=constant
+QTA,pw_bad_01,bad,approaching_wall,left decreasing,False,left=oscillating | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_bad_01,bad,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_bad_02,bad,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_bad_03,bad,wall_following_fail,(no own rule) rules that fire: wall_reacquired,,left=oscillating | right=oscillating | front=decreasing | front_right=decreasing
+QTA,pw_bad_03,bad,wall_following,front_right oscillating,False,left=constant | right=oscillating | front=oscillating | front_right=decreasing
+QTA,pw_bad_04,bad,wall_following_fail,(no own rule) rules that fire: none,,left=oscillating | right=oscillating | front=oscillating | front_right=decreasing
+QTA,pw_bad_04,bad,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_bad_04,bad,approaching_wall,left decreasing,False,left=constant | right=constant | front=constant | front_right=constant
+QTA,pw_bad_05,bad,wall_following_fail,(no own rule) rules that fire: wall_reacquired,,left=constant | right=increasing | front=oscillating | front_right=decreasing
+QTA,pw_bad_05,bad,wall_following,front_right oscillating,False,left=constant | right=oscillating | front=oscillating | front_right=decreasing
+QTA,pw_bad_05,bad,approaching_wall,left decreasing,False,left=constant | right=increasing | front=increasing | front_right=decreasing
+QTA,pw_good_01,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=increasing | front_right=increasing
+QTA,pw_good_01,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_02,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=constant | front_right=increasing
+QTA,pw_good_02,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_03,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=decreasing | front_right=increasing
+QTA,pw_good_03,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_04,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=decreasing | front_right=increasing
+QTA,pw_good_04,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_05,good,approaching_wall,left decreasing,True,left=decreasing | right=oscillating | front=increasing | front_right=increasing
+QTA,pw_good_05,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_06,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=constant | front_right=increasing
+QTA,pw_good_06,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_07,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=increasing | front_right=increasing
+QTA,pw_good_07,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_08,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=increasing | front_right=increasing
+QTA,pw_good_08,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=constant | front_right=oscillating
+QTA,pw_good_09,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=decreasing | front_right=increasing
+QTA,pw_good_09,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating
+QTA,pw_good_10,good,approaching_wall,left decreasing,True,left=decreasing | right=increasing | front=oscillating | front_right=increasing
+QTA,pw_good_10,good,wall_following,front_right oscillating,True,left=constant | right=oscillating | front=oscillating | front_right=oscillating

@@ -1,0 +1,76 @@
+ENTRY experiment | method=qta | TASK=all | results -> /home/alisha/rnd_ws/ilp_results_qta_entry_combined
+============================================================
+ILP PHASE LEARNER - QTA | Task: all
+Sensors: ['lidar_left', 'lidar_right', 'lidar_front', 'lidar_front_right']
+============================================================
+Loaded 17 good-run QTA files for task=all
+
+# PHASE: approaching_wall
+pos=25 neg=46
+  Run 1/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_decreasing(V0).
+
+# PHASE: wall_following
+pos=25 neg=46
+  Run 1/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_fr_oscillating(V0).
+
+# PHASE: obstacle_detected
+pos=7 neg=64
+  Run 1/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_fr_constant(V
+  Run 2/10... ✅ phase_correct(V0):- lidar_jump_down(V0),lidar_fr_constant(V0
+  Run 3/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_jump_down(V0)
+  Run 4/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_fr_constant(V
+  Run 5/10... ✅ phase_correct(V0):- lidar_fr_constant(V0),lidar_fr_no_jump(V
+  Run 6/10... ✅ phase_correct(V0):- lidar_jump_down(V0),lidar_fr_no_jump(V0)
+  Run 7/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_jump_down(V0)
+  Run 8/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_fr_constant(V
+  Run 9/10... ✅ phase_correct(V0):- lidar_fr_constant(V0),lidar_fr_no_jump(V
+  Run 10/10... ✅ phase_correct(V0):- lidar_jump_down(V0),lidar_fr_no_jump(V0)
+
+# PHASE: obstacle_avoidance
+pos=7 neg=64
+  Run 1/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+  Run 2/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+  Run 3/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+  Run 4/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+  Run 5/10... ✅ phase_correct(V0):- lidar_increasing(V0),lidar_fr_no_jump(V0
+  Run 6/10... ✅ phase_correct(V0):- lidar_increasing(V0),lidar_fr_no_jump(V0
+  Run 7/10... ✅ phase_correct(V0):- lidar_increasing(V0),lidar_fr_no_jump(V0
+  Run 8/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+  Run 9/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+  Run 10/10... ✅ phase_correct(V0):- lidar_fr_no_jump(V0),lidar_increasing(V0
+
+# PHASE: wall_reacquired
+pos=7 neg=64
+  Run 1/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_jump_up(V0).
+
+# PHASE: wall_following_fail
+pos=0 neg=71
+Not enough examples!
+Summary: /home/alisha/rnd_ws/ilp_results_qta_entry_combined/summary.txt

@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """
-ILP Phase Learner WITHOUT QTA
-==============================
-Uses row-by-row delta comparison
-then picks DOMINANT label per run!
+ILP Phase Learner WITHOUT QTA (Raw)
+=====================================
+FAIR COMPARISON with QTA method!
 
-For each run in each phase:
-1. Count increases/decreases/constant
-   across all consecutive row pairs
-2. Pick dominant label for that run
-3. Create ONE Prolog fact per run!
+Uses SAME example logic as QTA:
+pos = runs where RAW label matches
+      expected shape for this phase!
+neg = runs where RAW label does NOT
+      match expected shape!
 
-This is the RAW baseline approach!
-Used for comparison with QTA!
+KEY DIFFERENCE FROM QTA:
+QTA: normalized slope / mean → label
+RAW: ratio of delta counts → label
 
 Author: Alisha Syed Karimulla
 Project: Qualitative Analysis of Robotic
@@ -23,6 +23,7 @@ import os
 import subprocess
 import pandas as pd
 import numpy as np
+from collections import Counter
 
 
 # ── CONFIGURATION ─────────────────────────────────────────────
@@ -37,7 +38,6 @@ POPPER_PATH = os.path.expanduser(
 PYTHON_PATH = os.path.expanduser(
     '~/popper_env/bin/python')
 
-# Try ALL sensors!
 SENSORS_TO_TRY = [
     'lidar_left',
     'lidar_right',
@@ -59,8 +59,26 @@ PHASES = [
     'searching_wall',
 ]
 
-# Fixed threshold for delta
-DELTA_THRESHOLD = 0.01
+# Expected shape per phase
+# Same as QTA script!
+# Based on domain knowledge of
+# robot wall following behavior!
+PHASE_EXPECTED = {
+    'approaching_wall':    'is_decreasing',
+    'wall_following':      'is_constant',
+    'obstacle_detected':   'is_decreasing',
+    'obstacle_avoidance':  'is_increasing',
+    'wall_reacquired':     'is_decreasing',
+    'wall_following_fail': 'is_oscillating',
+    'searching_wall':      'is_oscillating',
+}
+
+# RAW classification thresholds
+DELTA_THRESHOLD       = 0.01
+ZERO_THRESHOLD        = 0.02
+CONSTANT_RATIO        = 0.60
+OSCILLATING_INC_RATIO = 0.20
+OSCILLATING_DEC_RATIO = 0.20
 # ──────────────────────────────────────────────────────────────
 
 
@@ -98,8 +116,65 @@ def load_all_csv_files():
     return all_runs
 
 
+def classify_raw_5labels(values):
+    """
+    Classifies signal using 5 labels
+    using ratio of delta counts.
+
+    KEY DIFFERENCE FROM QTA:
+    QTA: normalized_slope = slope/mean
+    RAW: ratio of inc/dec/con counts
+    """
+    values = np.array(values, dtype=float)
+    values = values[~np.isnan(values)]
+    values = values[values != 0.0]
+
+    if len(values) < 3:
+        return None
+
+    mean_val = np.mean(np.abs(values))
+
+    inc = dec = con = 0
+    for i in range(len(values) - 1):
+        delta = values[i+1] - values[i]
+        if delta > DELTA_THRESHOLD:
+            inc += 1
+        elif delta < -DELTA_THRESHOLD:
+            dec += 1
+        else:
+            con += 1
+
+    total = inc + dec + con
+    if total == 0:
+        return None
+
+    ir = inc / total
+    dr = dec / total
+    cr = con / total
+
+    # Label 1: is_zero
+    if mean_val < ZERO_THRESHOLD:
+        return 'is_zero'
+
+    # Label 2: is_constant
+    if cr > CONSTANT_RATIO:
+        return 'is_constant'
+
+    # Label 3: is_oscillating
+    if (ir > OSCILLATING_INC_RATIO
+            and dr > OSCILLATING_DEC_RATIO):
+        return 'is_oscillating'
+
+    # Label 4: is_decreasing
+    if dr > ir:
+        return 'is_decreasing'
+
+    # Label 5: is_increasing
+    return 'is_increasing'
+
+
 def generate_predicate_name(
-        phase, sensor, label):
+        phase, sensor, shape):
     """Creates predicate name."""
     phase_short = {
         'approaching_wall':    'approach',
@@ -122,29 +197,36 @@ def generate_predicate_name(
         'odom_linear_x':     'odom',
     }.get(sensor, sensor[:5])
 
+    shape_short = {
+        'is_constant':    'constant',
+        'is_increasing':  'increasing',
+        'is_decreasing':  'decreasing',
+        'is_oscillating': 'oscillating',
+        'is_zero':        'zero',
+    }.get(shape, shape)
+
     return (f'{phase_short}_'
             f'{sensor_short}_'
-            f'{label}')
+            f'{shape_short}')
 
 
-def process_all_runs(all_runs, phase, sensor):
+def process_all_runs(
+        all_runs, phase, sensor):
     """
     For each run:
-    1. Count increases/decreases/constant
-       across ALL row pairs in phase window
-    2. Pick DOMINANT label for that run
-    3. Create ONE fact per run!
-
-    Key difference from QTA:
-    QTA uses normalized slope
-    RAW uses dominant delta count!
+    1. Extract phase window from CSV
+    2. Calculate RAW label
+    3. Compare with EXPECTED shape
+    4. pos = matches expected
+       neg = does not match
     """
     results    = []
     predicates = set()
 
+    expected = PHASE_EXPECTED.get(phase)
+
     for run in all_runs:
         run_id       = run['run_id']
-        example_type = run['example_type']
         df           = run['df']
 
         if 'action_label' not in df.columns:
@@ -161,46 +243,28 @@ def process_all_runs(all_runs, phase, sensor):
             continue
 
         values = phase_df[sensor].values
+        shape  = classify_raw_5labels(values)
 
-        # Count labels across all row pairs
-        inc = dec = con = 0
-        for i in range(len(values) - 1):
-            v1 = values[i]
-            v2 = values[i + 1]
-            if np.isnan(v1) or np.isnan(v2):
-                continue
-            delta = v2 - v1
-            if delta > DELTA_THRESHOLD:
-                inc += 1
-            elif delta < -DELTA_THRESHOLD:
-                dec += 1
-            else:
-                con += 1
-
-        total = inc + dec + con
-        if total == 0:
+        if shape is None:
             continue
 
-        # Pick DOMINANT label for this run!
-        if dec > inc and dec > con:
-            dominant = 'decreasing'
-        elif inc > dec and inc > con:
-            dominant = 'increasing'
-        else:
-            dominant = 'constant'
-
         pred = generate_predicate_name(
-            phase, sensor, dominant)
+            phase, sensor, shape)
         predicates.add(pred)
+
+        # SAME logic as QTA!
+        # pos = matches expected shape!
+        # neg = does not match!
+        if shape == expected:
+            example_type = 'positive'
+        else:
+            example_type = 'negative'
 
         results.append({
             'run_id':       run_id,
             'example_type': example_type,
-            'dominant':     dominant,
+            'shape':        shape,
             'predicate':    pred,
-            'inc':          inc,
-            'dec':          dec,
-            'con':          con,
         })
 
     return results, predicates
@@ -238,24 +302,19 @@ def generate_bias(predicates):
     """Generates bias file."""
     lines = []
     lines.append('head_pred(phase_correct,1).')
-
     for pred in sorted(predicates):
         lines.append(f'body_pred({pred},1).')
-
     lines.append('type(phase_correct,(run,)).')
     for pred in sorted(predicates):
         lines.append(f'type({pred},(run,)).')
-
     lines.append(
         'direction(phase_correct,(in,)).')
     for pred in sorted(predicates):
         lines.append(
             f'direction({pred},(in,)).')
-
     lines.append('max_clauses(3).')
     lines.append('max_body(1).')
     lines.append('max_vars(1).')
-
     return '\n'.join(lines)
 
 
@@ -333,10 +392,10 @@ def save_results(
     with open(filename, 'w') as f:
         f.write(f'Phase: {phase}\n')
         f.write(f'Sensor: {sensor}\n')
-        f.write('Method: RAW DOMINANT DELTA\n')
+        f.write('Method: RAW 5-LABEL\n')
         f.write(
-            f'Delta threshold: '
-            f'{DELTA_THRESHOLD}\n')
+            f'Expected: '
+            f'{PHASE_EXPECTED.get(phase)}\n')
         f.write('='*50 + '\n\n')
 
         if rules:
@@ -353,13 +412,14 @@ def save_results(
         f.write('\n\nFULL POPPER OUTPUT:\n')
         f.write(popper_output)
 
-    print(f'  Saved: {filename}')
     return filename
 
 
 def learn_rules_raw(all_runs, phase, sensor):
     """Learns rules for one phase."""
     print(f'\n--- Sensor: {sensor} ---')
+    print(f'    Expected: '
+          f'{PHASE_EXPECTED.get(phase)}')
 
     run_results, predicates = \
         process_all_runs(
@@ -371,36 +431,30 @@ def learn_rules_raw(all_runs, phase, sensor):
 
     # Show classifications
     for r in run_results:
+        match = '✅' if r['example_type'] \
+            == 'positive' else '❌'
         print(f'    {r["run_id"]:20s} '
-              f'{r["example_type"]:8s} '
-              f'inc={r["inc"]:3d} '
-              f'dec={r["dec"]:3d} '
-              f'con={r["con"]:3d} '
-              f'→ {r["dominant"]}')
+              f'{r["shape"]:15s} {match}')
 
     pos_examples, neg_examples = \
         generate_exs(run_results)
 
-    print(f'  Positive: {len(pos_examples)}')
-    print(f'  Negative: {len(neg_examples)}')
+    print(f'  pos={len(pos_examples)} '
+          f'neg={len(neg_examples)}')
 
     if not pos_examples or \
        not neg_examples:
         print('  Not enough examples!')
+        save_results(
+            phase, sensor, None,
+            {}, 'NOT ENOUGH EXAMPLES')
         return None
-
-    bk_content   = generate_bk(run_results)
-    bias_content = generate_bias(predicates)
 
     os.makedirs(POPPER_DIR, exist_ok=True)
 
     with open(os.path.join(
             POPPER_DIR, 'bk.pl'), 'w') as f:
-        f.write(
-            f'% Phase: {phase}\n'
-            f'% Sensor: {sensor}\n'
-            f'% Method: Dominant delta\n\n')
-        f.write(bk_content)
+        f.write(generate_bk(run_results))
 
     exs_content = (
         '% Positive examples\n' +
@@ -414,7 +468,7 @@ def learn_rules_raw(all_runs, phase, sensor):
 
     with open(os.path.join(
             POPPER_DIR, 'bias.pl'), 'w') as f:
-        f.write(bias_content)
+        f.write(generate_bias(predicates))
 
     print('  Running Popper...')
     popper_output = run_popper()
@@ -422,10 +476,10 @@ def learn_rules_raw(all_runs, phase, sensor):
         popper_output)
 
     if rules:
-        print(f'  ✅ SOLUTION FOUND!')
+        print(f'  ✅ SOLUTION!')
         for rule in rules:
             print(f'    {rule}')
-        print(f'  Scores: {scores}')
+        print(f'  {scores}')
     else:
         print(f'  ❌ NO SOLUTION')
 
@@ -444,22 +498,29 @@ def generate_summary(all_results):
 
     with open(summary_path, 'w') as f:
         f.write('ILP PHASE LEARNING SUMMARY\n')
-        f.write('Method: RAW DOMINANT DELTA\n')
-        f.write('(No QTA — for comparison!)\n')
+        f.write('Method: RAW 5-LABEL\n')
+        f.write('(For comparison with QTA!)\n')
         f.write('='*60 + '\n\n')
+        f.write('Example logic (SAME as QTA):\n')
         f.write(
-            f'Delta threshold: '
-            f'{DELTA_THRESHOLD}\n\n')
+            'pos = RAW label matches '
+            'expected shape!\n')
         f.write(
-            'Method: Count increases/decreases/'
-            'constant across all row pairs\n')
-        f.write(
-            'Pick dominant label per run!\n\n')
+            'neg = RAW label does NOT '
+            'match expected shape!\n\n')
+        f.write('Expected shapes:\n')
+        for phase, shape in \
+                PHASE_EXPECTED.items():
+            f.write(f'  {phase}: {shape}\n')
+        f.write('\n')
 
         for phase, sensor, rules, scores \
                 in all_results:
             f.write(f'Phase: {phase}\n')
             f.write(f'Sensor: {sensor}\n')
+            f.write(
+                f'Expected: '
+                f'{PHASE_EXPECTED.get(phase)}\n')
 
             if rules:
                 f.write('Rules:\n')
@@ -482,9 +543,11 @@ def generate_summary(all_results):
 if __name__ == '__main__':
 
     print('='*60)
-    print('ILP PHASE LEARNER - RAW DOMINANT')
-    print('Counts deltas → picks dominant!')
-    print('ONE fact per run per phase!')
+    print('ILP PHASE LEARNER - RAW 5-LABEL')
+    print('FAIR COMPARISON WITH QTA!')
+    print('Same example logic as QTA!')
+    print('pos = matches expected shape!')
+    print('neg = does not match!')
     print('='*60)
 
     all_runs = load_all_csv_files()
@@ -495,6 +558,8 @@ if __name__ == '__main__':
     for phase in PHASES:
         print(f'\n\n{"#"*60}')
         print(f'# PHASE: {phase}')
+        print(f'# Expected: '
+              f'{PHASE_EXPECTED.get(phase)}')
         print(f'{"#"*60}')
 
         best_result = None

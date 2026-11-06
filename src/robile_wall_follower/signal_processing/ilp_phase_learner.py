@@ -21,7 +21,8 @@ import subprocess
 # ── CONFIGURATION ─────────────────────────────────────────────
 QTA_DIR     = os.path.expanduser('~/rnd_ws/qta_results')
 POPPER_DIR  = os.path.expanduser('~/rnd_ws/popper_run')
-RESULTS_DIR = os.path.expanduser('~/rnd_ws/ilp_results')
+# RESULTS_DIR = os.path.expanduser('~/rnd_ws/ilp_results')
+RESULTS_DIR = os.path.expanduser('~/rnd_ws/ilp_results_qta_plain')
 POPPER_PATH = os.path.expanduser('~/Popper/popper.py')
 PYTHON_PATH = os.path.expanduser('~/popper_env/bin/python')
 
@@ -51,7 +52,10 @@ PHASE_EXPECTED = {
 
 # Sensors to try for each phase
 SENSORS_TO_TRY = [
-    # 'lidar_left',
+    'lidar_left',
+    'lidar_right',
+    'lidar_front',
+    'lidar_front_right',
     'imu_accel_x',
     'imu_accel_y',
     'imu_angular_z',
@@ -60,22 +64,60 @@ SENSORS_TO_TRY = [
 # ──────────────────────────────────────────────────────────────
 
 
+# def load_all_qta_results():
+#     """Loads all QTA JSON files."""
+#     results = []
+#     files = sorted([
+#         f for f in os.listdir(QTA_DIR)
+#         if f.endswith('_qta.json')])
+
+#     for filename in files:
+#         filepath = os.path.join(QTA_DIR, filename)
+#         with open(filepath, 'r') as f:
+#             result = json.load(f)
+#             results.append(result)
+
+#     print(f'Loaded {len(results)} QTA result files')
+#     return results
+
+
+
+# def load_all_qta_results():
+#     """Loads ONLY good run QTA JSON files!"""
+#     results = []
+#     files = sorted([
+#         f for f in os.listdir(QTA_DIR)
+#         if f.endswith('_qta.json')])
+
+#     for filename in files:
+#         filepath = os.path.join(QTA_DIR, filename)
+#         with open(filepath, 'r') as f:
+#             result = json.load(f)
+#             # ONLY load good runs for training!
+#             if result.get('example_type') == 'positive':
+#                 results.append(result)
+
+#     print(f'Loaded {len(results)} GOOD run QTA files')
+#     return results
+
+
 def load_all_qta_results():
-    """Loads all QTA JSON files."""
+    """Loads ONLY plain wall good run QTA JSON files!"""
     results = []
     files = sorted([
         f for f in os.listdir(QTA_DIR)
         if f.endswith('_qta.json')])
 
     for filename in files:
-        filepath = os.path.join(QTA_DIR, filename)
-        with open(filepath, 'r') as f:
-            result = json.load(f)
-            results.append(result)
+        # Task 1: Plain wall good runs only!
+        if 'pw' in filename and 'good' in filename:
+            filepath = os.path.join(QTA_DIR, filename)
+            with open(filepath, 'r') as f:
+                result = json.load(f)
+                results.append(result)
 
-    print(f'Loaded {len(results)} QTA result files')
+    print(f'Loaded {len(results)} plain wall good run QTA files')
     return results
-
 
 def get_shape_for_phase(result, phase, sensor):
     """

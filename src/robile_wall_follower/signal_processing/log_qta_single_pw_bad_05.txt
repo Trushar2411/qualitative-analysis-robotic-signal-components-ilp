@@ -1,0 +1,57 @@
+============================================================
+ILP PHASE LEARNER - QTA | Task: all
+Sensors: ['lidar_left', 'lidar_right', 'lidar_front', 'lidar_front_right']
+============================================================
+Loaded 1 good-run QTA files for task=all
+
+# PHASE: approaching_wall
+pos=1 neg=2
+  Run 1/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_f_increasing(V0).
+
+# PHASE: wall_following
+pos=1 neg=2
+  Run 1/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 2/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 3/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 4/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 5/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 6/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 7/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 8/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 9/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+  Run 10/10... ✅ phase_correct(V0):- lidar_r_oscillating(V0).
+
+# PHASE: obstacle_detected
+pos=0 neg=3
+Not enough examples!
+
+# PHASE: obstacle_avoidance
+pos=0 neg=3
+Not enough examples!
+
+# PHASE: wall_reacquired
+pos=0 neg=3
+Not enough examples!
+
+# PHASE: wall_following_fail
+pos=1 neg=2
+  Run 1/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_f_oscillati
+  Run 2/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0),lidar_r_increasi
+  Run 3/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0),lidar_r_increasi
+  Run 4/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0),lidar_r_increasi
+  Run 5/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0),lidar_r_increasi
+  Run 6/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_f_oscillati
+  Run 7/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0),lidar_r_increasi
+  Run 8/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_f_oscillati
+  Run 9/10... ✅ phase_correct(V0):- lidar_f_oscillating(V0),lidar_r_increasi
+  Run 10/10... ✅ phase_correct(V0):- lidar_r_increasing(V0),lidar_f_oscillati
+Summary: /home/alisha/rnd_ws/ilp_results_qta_singlerun_pw_bad_05/summary.txt
