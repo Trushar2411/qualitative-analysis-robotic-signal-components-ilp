@@ -1,0 +1,44 @@
+0.4s Generating partial hypotheses of size: 2
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:195 fn:414 tn:1118 fp:100 size:2 mdl:516
+0.4s return_home(V0):- joint3_effort_increases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:493 fn:116 tn:1006 fp:212 size:2 mdl:330
+0.4s return_home(V0):- joint3_position_increases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:463 fn:146 tn:1088 fp:130 size:2 mdl:278
+0.4s return_home(V0):- joint1_position_increases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 3
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:463 fn:146 tn:1218 fp:0 size:3 mdl:149
+0.5s return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+0.5s ********************
+0.5s Generating partial hypotheses of size: 4
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:468 fn:141 tn:1218 fp:0 size:6 mdl:147
+0.5s return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+0.5s return_home(V0):- joint3_position_increases(V0),joint3_effort_increases(V0).
+0.5s ********************
+0.6s ********************
+0.6s New best hypothesis:
+0.6s tp:505 fn:104 tn:1209 fp:9 size:15 mdl:128
+0.6s return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+0.6s return_home(V0):- joint3_position_increases(V0),joint2_position_decreases(V0),joint1_velocity_increases(V0).
+0.6s return_home(V0):- joint3_position_increases(V0),joint3_effort_decreases(V0),joint3_velocity_decreases(V0).
+0.6s return_home(V0):- joint3_effort_increases(V0),joint5_position_increases(V0),joint3_velocity_decreases(V0).
+0.6s ********************
+0.6s ********** SOLUTION **********
+0.6s Precision:0.98 Recall:0.83 TP:505 FN:104 TN:1209 FP:9 Size:15 MDL:128
+0.6s return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+0.6s return_home(V0):- joint3_position_increases(V0),joint2_position_decreases(V0),joint1_velocity_increases(V0).
+0.6s return_home(V0):- joint3_position_increases(V0),joint3_effort_decreases(V0),joint3_velocity_decreases(V0).
+0.6s return_home(V0):- joint3_effort_increases(V0),joint5_position_increases(V0),joint3_velocity_decreases(V0).
+0.6s ******************************

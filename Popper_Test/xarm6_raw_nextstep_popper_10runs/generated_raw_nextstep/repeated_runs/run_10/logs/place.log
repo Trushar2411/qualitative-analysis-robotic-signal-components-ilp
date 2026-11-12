@@ -1,0 +1,48 @@
+0.4s Generating partial hypotheses of size: 2
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:182 fn:322 tn:855 fp:153 size:2 mdl:477
+0.4s place(V0):- joint1_velocity_decreases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:317 fn:187 tn:785 fp:223 size:2 mdl:412
+0.4s place(V0):- joint3_position_increases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:272 fn:232 tn:862 fp:146 size:2 mdl:380
+0.4s place(V0):- joint2_effort_decreases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:343 fn:161 tn:884 fp:124 size:2 mdl:287
+0.4s place(V0):- joint1_position_increases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:404 fn:100 tn:880 fp:128 size:2 mdl:230
+0.4s place(V0):- joint5_position_decreases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 3
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:343 fn:161 tn:1008 fp:0 size:3 mdl:164
+0.5s place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+0.5s ********************
+0.5s Generating partial hypotheses of size: 4
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:437 fn:67 tn:1004 fp:4 size:12 mdl:83
+0.5s place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+0.5s place(V0):- joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+0.5s place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+0.5s place(V0):- joint1_velocity_increases(V0),joint2_position_increases(V0).
+0.5s ********************
+0.6s ********** SOLUTION **********
+0.6s Precision:0.99 Recall:0.87 TP:437 FN:67 TN:1004 FP:4 Size:12 MDL:83
+0.6s place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+0.6s place(V0):- joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+0.6s place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+0.6s place(V0):- joint1_velocity_increases(V0),joint2_position_increases(V0).
+0.6s ******************************

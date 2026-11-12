@@ -1,0 +1,669 @@
+{
+  "source": "/mnt/data/full_motion_joint_states(20261111-191003)(4).csv",
+  "method": "raw_adjacent_sample_delta_no_window_no_pla",
+  "window_size": null,
+  "feature_operation": "x[i+1]-x[i]",
+  "thresholds": {
+    "joint1_position": 0.0001,
+    "joint1_velocity": 0.0001,
+    "joint1_effort": 0.001,
+    "joint2_position": 0.0001,
+    "joint2_velocity": 0.0001,
+    "joint2_effort": 0.001,
+    "joint3_position": 0.0001,
+    "joint3_velocity": 0.0001,
+    "joint3_effort": 0.001,
+    "joint4_position": 0.0001,
+    "joint4_velocity": 0.0001,
+    "joint4_effort": 0.001,
+    "joint5_position": 0.0001,
+    "joint5_velocity": 0.0001,
+    "joint5_effort": 0.001,
+    "joint6_position": 0.0001,
+    "joint6_velocity": 0.0001,
+    "joint6_effort": 0.001,
+    "left_finger_joint_position": 0.0001,
+    "left_finger_joint_velocity": 0.0001,
+    "right_finger_joint_position": 0.0001,
+    "right_finger_joint_velocity": 0.0001
+  },
+  "max_predicates": 12,
+  "max_neg_ratio": 2.0,
+  "seed": 42,
+  "source_rows": 4455,
+  "transitions": 4446,
+  "phases": {
+    "home": {
+      "target": "home",
+      "positive": 609,
+      "negative": 1218,
+      "selected_predicates": [
+        {
+          "name": "joint5_position_increases",
+          "score": 0.45026,
+          "positive_rate": 0.8342,
+          "negative_rate": 0.3432
+        },
+        {
+          "name": "joint2_position_decreases",
+          "score": 0.43224,
+          "positive_rate": 0.803,
+          "negative_rate": 0.3235
+        },
+        {
+          "name": "joint1_position_constant",
+          "score": 0.40969,
+          "positive_rate": 1.0,
+          "negative_rate": 0.5903
+        },
+        {
+          "name": "joint1_velocity_constant",
+          "score": 0.39901,
+          "positive_rate": 1.0,
+          "negative_rate": 0.601
+        },
+        {
+          "name": "joint3_position_increases",
+          "score": 0.31544,
+          "positive_rate": 0.6076,
+          "negative_rate": 0.2151
+        },
+        {
+          "name": "joint3_effort_constant",
+          "score": 0.17434,
+          "positive_rate": 0.9392,
+          "negative_rate": 0.7594
+        },
+        {
+          "name": "joint1_effort_constant",
+          "score": 0.14368,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8563
+        },
+        {
+          "name": "left_finger_joint_position_constant",
+          "score": 0.13957,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8604
+        },
+        {
+          "name": "right_finger_joint_position_constant",
+          "score": 0.13957,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8604
+        },
+        {
+          "name": "joint3_velocity_constant",
+          "score": 0.13012,
+          "positive_rate": 0.6683,
+          "negative_rate": 0.5123
+        },
+        {
+          "name": "joint5_velocity_decreases",
+          "score": 0.087,
+          "positive_rate": 0.4417,
+          "negative_rate": 0.321
+        },
+        {
+          "name": "joint5_velocity_increases",
+          "score": 0.07559,
+          "positive_rate": 0.4056,
+          "negative_rate": 0.298
+        }
+      ]
+    },
+    "gripper_opening": {
+      "target": "gripper_opening",
+      "positive": 598,
+      "negative": 1196,
+      "selected_predicates": [
+        {
+          "name": "joint5_velocity_constant",
+          "score": 0.7199,
+          "positive_rate": 1.0,
+          "negative_rate": 0.2801
+        },
+        {
+          "name": "joint2_velocity_constant",
+          "score": 0.71739,
+          "positive_rate": 1.0,
+          "negative_rate": 0.2826
+        },
+        {
+          "name": "joint5_position_constant",
+          "score": 0.69983,
+          "positive_rate": 1.0,
+          "negative_rate": 0.3002
+        },
+        {
+          "name": "joint2_position_constant",
+          "score": 0.66054,
+          "positive_rate": 1.0,
+          "negative_rate": 0.3395
+        },
+        {
+          "name": "joint2_effort_constant",
+          "score": 0.5301,
+          "positive_rate": 1.0,
+          "negative_rate": 0.4699
+        },
+        {
+          "name": "left_finger_joint_position_decreases",
+          "score": 0.52533,
+          "positive_rate": 0.6405,
+          "negative_rate": 0.0
+        },
+        {
+          "name": "right_finger_joint_position_decreases",
+          "score": 0.52533,
+          "positive_rate": 0.6405,
+          "negative_rate": 0.0
+        },
+        {
+          "name": "joint3_velocity_constant",
+          "score": 0.50585,
+          "positive_rate": 1.0,
+          "negative_rate": 0.4941
+        },
+        {
+          "name": "joint3_position_constant",
+          "score": 0.50251,
+          "positive_rate": 1.0,
+          "negative_rate": 0.4975
+        },
+        {
+          "name": "joint1_position_constant",
+          "score": 0.39381,
+          "positive_rate": 1.0,
+          "negative_rate": 0.6062
+        },
+        {
+          "name": "joint1_velocity_constant",
+          "score": 0.3796,
+          "positive_rate": 1.0,
+          "negative_rate": 0.6204
+        },
+        {
+          "name": "joint5_effort_constant",
+          "score": 0.37124,
+          "positive_rate": 1.0,
+          "negative_rate": 0.6288
+        }
+      ]
+    },
+    "pick": {
+      "target": "pick",
+      "positive": 809,
+      "negative": 1618,
+      "selected_predicates": [
+        {
+          "name": "joint5_position_decreases",
+          "score": 0.44092,
+          "positive_rate": 0.6514,
+          "negative_rate": 0.1174
+        },
+        {
+          "name": "joint1_position_constant",
+          "score": 0.41718,
+          "positive_rate": 1.0,
+          "negative_rate": 0.5828
+        },
+        {
+          "name": "joint1_velocity_constant",
+          "score": 0.41409,
+          "positive_rate": 1.0,
+          "negative_rate": 0.5859
+        },
+        {
+          "name": "joint2_position_increases",
+          "score": 0.40334,
+          "positive_rate": 0.6094,
+          "negative_rate": 0.1082
+        },
+        {
+          "name": "joint3_position_decreases",
+          "score": 0.39944,
+          "positive_rate": 0.6057,
+          "negative_rate": 0.1082
+        },
+        {
+          "name": "joint1_effort_constant",
+          "score": 0.17305,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8269
+        },
+        {
+          "name": "left_finger_joint_position_constant",
+          "score": 0.15266,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8473
+        },
+        {
+          "name": "right_finger_joint_position_constant",
+          "score": 0.15266,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8473
+        },
+        {
+          "name": "joint3_velocity_increases",
+          "score": 0.09508,
+          "positive_rate": 0.3436,
+          "negative_rate": 0.2021
+        },
+        {
+          "name": "joint2_effort_decreases",
+          "score": 0.08755,
+          "positive_rate": 0.3177,
+          "negative_rate": 0.1848
+        },
+        {
+          "name": "joint3_velocity_decreases",
+          "score": 0.07543,
+          "positive_rate": 0.3337,
+          "negative_rate": 0.2206
+        },
+        {
+          "name": "joint5_effort_decreases",
+          "score": 0.07193,
+          "positive_rate": 0.2447,
+          "negative_rate": 0.1292
+        }
+      ]
+    },
+    "gripper_closing": {
+      "target": "gripper_closing",
+      "positive": 299,
+      "negative": 598,
+      "selected_predicates": [
+        {
+          "name": "joint5_position_constant",
+          "score": 0.66221,
+          "positive_rate": 1.0,
+          "negative_rate": 0.3378
+        },
+        {
+          "name": "joint5_velocity_constant",
+          "score": 0.65552,
+          "positive_rate": 1.0,
+          "negative_rate": 0.3445
+        },
+        {
+          "name": "joint2_velocity_constant",
+          "score": 0.6505,
+          "positive_rate": 1.0,
+          "negative_rate": 0.3495
+        },
+        {
+          "name": "joint2_position_constant",
+          "score": 0.61873,
+          "positive_rate": 1.0,
+          "negative_rate": 0.3813
+        },
+        {
+          "name": "left_finger_joint_position_increases",
+          "score": 0.52724,
+          "positive_rate": 0.6421,
+          "negative_rate": 0.0
+        },
+        {
+          "name": "right_finger_joint_position_increases",
+          "score": 0.52724,
+          "positive_rate": 0.6421,
+          "negative_rate": 0.0
+        },
+        {
+          "name": "joint3_position_constant",
+          "score": 0.49498,
+          "positive_rate": 1.0,
+          "negative_rate": 0.505
+        },
+        {
+          "name": "joint3_velocity_constant",
+          "score": 0.47993,
+          "positive_rate": 1.0,
+          "negative_rate": 0.5201
+        },
+        {
+          "name": "joint2_effort_constant",
+          "score": 0.45819,
+          "positive_rate": 1.0,
+          "negative_rate": 0.5418
+        },
+        {
+          "name": "joint1_velocity_constant",
+          "score": 0.36957,
+          "positive_rate": 1.0,
+          "negative_rate": 0.6304
+        },
+        {
+          "name": "joint1_position_constant",
+          "score": 0.36622,
+          "positive_rate": 1.0,
+          "negative_rate": 0.6338
+        },
+        {
+          "name": "joint5_effort_constant",
+          "score": 0.31773,
+          "positive_rate": 1.0,
+          "negative_rate": 0.6823
+        }
+      ]
+    },
+    "lift": {
+      "target": "lift",
+      "positive": 509,
+      "negative": 1018,
+      "selected_predicates": [
+        {
+          "name": "joint1_position_decreases",
+          "score": 0.56192,
+          "positive_rate": 0.7387,
+          "negative_rate": 0.0923
+        },
+        {
+          "name": "joint3_position_decreases",
+          "score": 0.49872,
+          "positive_rate": 0.721,
+          "negative_rate": 0.1415
+        },
+        {
+          "name": "joint1_effort_increases",
+          "score": 0.4104,
+          "positive_rate": 0.556,
+          "negative_rate": 0.0285
+        },
+        {
+          "name": "joint5_position_increases",
+          "score": 0.38503,
+          "positive_rate": 0.7898,
+          "negative_rate": 0.3595
+        },
+        {
+          "name": "joint2_position_decreases",
+          "score": 0.33372,
+          "positive_rate": 0.7289,
+          "negative_rate": 0.3428
+        },
+        {
+          "name": "joint1_velocity_decreases",
+          "score": 0.26073,
+          "positive_rate": 0.4912,
+          "negative_rate": 0.1415
+        },
+        {
+          "name": "joint1_velocity_increases",
+          "score": 0.19925,
+          "positive_rate": 0.4185,
+          "negative_rate": 0.1375
+        },
+        {
+          "name": "joint2_effort_increases",
+          "score": 0.15148,
+          "positive_rate": 0.4479,
+          "negative_rate": 0.2387
+        },
+        {
+          "name": "joint5_effort_constant",
+          "score": 0.13332,
+          "positive_rate": 0.7741,
+          "negative_rate": 0.6238
+        },
+        {
+          "name": "left_finger_joint_position_constant",
+          "score": 0.12967,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8703
+        },
+        {
+          "name": "right_finger_joint_position_constant",
+          "score": 0.12967,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8703
+        },
+        {
+          "name": "joint1_effort_decreases",
+          "score": 0.12066,
+          "positive_rate": 0.2161,
+          "negative_rate": 0.0177
+        }
+      ]
+    },
+    "place": {
+      "target": "place",
+      "positive": 504,
+      "negative": 1008,
+      "selected_predicates": [
+        {
+          "name": "joint5_position_decreases",
+          "score": 0.60768,
+          "positive_rate": 0.8016,
+          "negative_rate": 0.127
+        },
+        {
+          "name": "joint2_position_increases",
+          "score": 0.5516,
+          "positive_rate": 0.754,
+          "negative_rate": 0.125
+        },
+        {
+          "name": "joint1_position_increases",
+          "score": 0.46849,
+          "positive_rate": 0.6806,
+          "negative_rate": 0.123
+        },
+        {
+          "name": "joint3_position_increases",
+          "score": 0.3321,
+          "positive_rate": 0.629,
+          "negative_rate": 0.2212
+        },
+        {
+          "name": "joint2_effort_decreases",
+          "score": 0.30397,
+          "positive_rate": 0.5397,
+          "negative_rate": 0.1448
+        },
+        {
+          "name": "joint1_velocity_decreases",
+          "score": 0.14246,
+          "positive_rate": 0.3611,
+          "negative_rate": 0.1518
+        },
+        {
+          "name": "left_finger_joint_position_constant",
+          "score": 0.14187,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8581
+        },
+        {
+          "name": "right_finger_joint_position_constant",
+          "score": 0.14187,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8581
+        },
+        {
+          "name": "joint5_velocity_increases",
+          "score": 0.13238,
+          "positive_rate": 0.4583,
+          "negative_rate": 0.2768
+        },
+        {
+          "name": "joint1_velocity_increases",
+          "score": 0.12061,
+          "positive_rate": 0.3214,
+          "negative_rate": 0.1389
+        },
+        {
+          "name": "joint2_velocity_decreases",
+          "score": 0.07435,
+          "positive_rate": 0.4008,
+          "negative_rate": 0.2946
+        },
+        {
+          "name": "joint2_velocity_increases",
+          "score": 0.07188,
+          "positive_rate": 0.4206,
+          "negative_rate": 0.3194
+        }
+      ]
+    },
+    "retract": {
+      "target": "retract_phase",
+      "positive": 509,
+      "negative": 1018,
+      "selected_predicates": [
+        {
+          "name": "joint3_position_constant",
+          "score": 0.53242,
+          "positive_rate": 1.0,
+          "negative_rate": 0.4676
+        },
+        {
+          "name": "joint1_position_decreases",
+          "score": 0.47506,
+          "positive_rate": 0.6562,
+          "negative_rate": 0.0825
+        },
+        {
+          "name": "joint5_position_increases",
+          "score": 0.43255,
+          "positive_rate": 0.8271,
+          "negative_rate": 0.3536
+        },
+        {
+          "name": "joint2_position_decreases",
+          "score": 0.36146,
+          "positive_rate": 0.7564,
+          "negative_rate": 0.3448
+        },
+        {
+          "name": "joint2_effort_increases",
+          "score": 0.28962,
+          "positive_rate": 0.5894,
+          "negative_rate": 0.225
+        },
+        {
+          "name": "joint3_velocity_constant",
+          "score": 0.20743,
+          "positive_rate": 0.7308,
+          "negative_rate": 0.4912
+        },
+        {
+          "name": "left_finger_joint_position_constant",
+          "score": 0.13949,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8605
+        },
+        {
+          "name": "right_finger_joint_position_constant",
+          "score": 0.13949,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8605
+        },
+        {
+          "name": "joint1_velocity_increases",
+          "score": 0.12692,
+          "positive_rate": 0.332,
+          "negative_rate": 0.1415
+        },
+        {
+          "name": "joint5_velocity_decreases",
+          "score": 0.10683,
+          "positive_rate": 0.4597,
+          "negative_rate": 0.3134
+        },
+        {
+          "name": "joint2_velocity_increases",
+          "score": 0.09832,
+          "positive_rate": 0.4401,
+          "negative_rate": 0.3035
+        },
+        {
+          "name": "joint2_velocity_decreases",
+          "score": 0.09208,
+          "positive_rate": 0.442,
+          "negative_rate": 0.3143
+        }
+      ]
+    },
+    "return_home": {
+      "target": "return_home",
+      "positive": 609,
+      "negative": 1218,
+      "selected_predicates": [
+        {
+          "name": "joint1_position_increases",
+          "score": 0.57519,
+          "positive_rate": 0.7603,
+          "negative_rate": 0.1067
+        },
+        {
+          "name": "joint3_position_increases",
+          "score": 0.57495,
+          "positive_rate": 0.8095,
+          "negative_rate": 0.1741
+        },
+        {
+          "name": "joint5_position_increases",
+          "score": 0.46565,
+          "positive_rate": 0.8325,
+          "negative_rate": 0.3243
+        },
+        {
+          "name": "joint2_position_decreases",
+          "score": 0.4467,
+          "positive_rate": 0.8046,
+          "negative_rate": 0.3095
+        },
+        {
+          "name": "joint3_effort_decreases",
+          "score": 0.21701,
+          "positive_rate": 0.3875,
+          "negative_rate": 0.0747
+        },
+        {
+          "name": "joint3_velocity_increases",
+          "score": 0.17873,
+          "positive_rate": 0.4417,
+          "negative_rate": 0.1938
+        },
+        {
+          "name": "joint3_effort_increases",
+          "score": 0.15717,
+          "positive_rate": 0.3202,
+          "negative_rate": 0.0821
+        },
+        {
+          "name": "left_finger_joint_position_constant",
+          "score": 0.15435,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8456
+        },
+        {
+          "name": "right_finger_joint_position_constant",
+          "score": 0.15435,
+          "positive_rate": 1.0,
+          "negative_rate": 0.8456
+        },
+        {
+          "name": "joint1_velocity_decreases",
+          "score": 0.15309,
+          "positive_rate": 0.3711,
+          "negative_rate": 0.1478
+        },
+        {
+          "name": "joint3_velocity_decreases",
+          "score": 0.14427,
+          "positive_rate": 0.4171,
+          "negative_rate": 0.2135
+        },
+        {
+          "name": "joint1_velocity_increases",
+          "score": 0.12908,
+          "positive_rate": 0.3268,
+          "negative_rate": 0.1322
+        }
+      ]
+    }
+  }
+}

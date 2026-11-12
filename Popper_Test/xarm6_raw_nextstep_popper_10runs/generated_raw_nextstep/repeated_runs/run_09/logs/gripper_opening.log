@@ -1,0 +1,37 @@
+0.5s Generating partial hypotheses of size: 2
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:598 fn:0 tn:601 fp:595 size:2 mdl:597
+0.5s gripper_opening(V0):- joint3_position_constant(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:598 fn:0 tn:605 fp:591 size:2 mdl:593
+0.5s gripper_opening(V0):- joint3_velocity_constant(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:598 fn:0 tn:634 fp:562 size:2 mdl:564
+0.5s gripper_opening(V0):- joint2_effort_constant(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:598 fn:0 tn:837 fp:359 size:2 mdl:361
+0.5s gripper_opening(V0):- joint5_position_constant(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:598 fn:0 tn:861 fp:335 size:2 mdl:337
+0.5s gripper_opening(V0):- joint5_velocity_constant(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:383 fn:215 tn:1196 fp:0 size:2 mdl:217
+0.5s gripper_opening(V0):- left_finger_joint_position_decreases(V0).
+0.5s ********************
+0.5s Generating partial hypotheses of size: 3
+0.5s Generating partial hypotheses of size: 4
+0.6s ********** SOLUTION **********
+0.6s Precision:1.00 Recall:0.64 TP:383 FN:215 TN:1196 FP:0 Size:2 MDL:217
+0.6s gripper_opening(V0):- left_finger_joint_position_decreases(V0).
+0.6s ******************************

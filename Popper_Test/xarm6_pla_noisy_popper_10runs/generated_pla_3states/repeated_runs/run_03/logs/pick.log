@@ -1,0 +1,37 @@
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:10 fn:30 tn:76 fp:4 size:2 mdl:36
+0.3s pick(V0):- joint3_velocity_decreases(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:25 fn:15 tn:70 fp:10 size:2 mdl:27
+0.3s pick(V0):- joint3_position_decreases(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:25 fn:15 tn:76 fp:4 size:2 mdl:21
+0.3s pick(V0):- joint2_position_increases(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:26 fn:14 tn:76 fp:4 size:2 mdl:20
+0.3s pick(V0):- joint5_position_decreases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:25 fn:15 tn:80 fp:0 size:3 mdl:18
+0.3s pick(V0):- joint3_position_decreases(V0),joint2_position_increases(V0).
+0.3s ********************
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:26 fn:14 tn:80 fp:0 size:3 mdl:17
+0.3s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.3s ********** SOLUTION **********
+0.3s Precision:1.00 Recall:0.65 TP:26 FN:14 TN:80 FP:0 Size:3 MDL:17
+0.3s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0).
+0.3s ******************************

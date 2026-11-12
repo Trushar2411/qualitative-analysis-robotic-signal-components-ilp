@@ -1,0 +1,16 @@
+head_pred(pick,1).
+body_pred(joint5_position_decreases,1).
+body_pred(joint1_position_constant,1).
+body_pred(joint1_velocity_constant,1).
+body_pred(joint2_position_increases,1).
+body_pred(joint3_position_decreases,1).
+body_pred(joint1_effort_constant,1).
+body_pred(left_finger_joint_position_constant,1).
+body_pred(right_finger_joint_position_constant,1).
+body_pred(joint3_velocity_increases,1).
+body_pred(joint2_effort_decreases,1).
+body_pred(joint3_velocity_decreases,1).
+body_pred(joint5_effort_decreases,1).
+max_vars(1).
+max_body(3).
+max_clauses(2).

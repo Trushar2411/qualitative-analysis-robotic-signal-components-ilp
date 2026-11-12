@@ -1,0 +1,46 @@
+0.5s Generating partial hypotheses of size: 2
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:527 fn:282 tn:1428 fp:190 size:2 mdl:474
+0.5s pick(V0):- joint5_position_decreases(V0).
+0.5s ********************
+0.5s Generating partial hypotheses of size: 3
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:533 fn:276 tn:1428 fp:190 size:4 mdl:470
+0.5s pick(V0):- joint5_position_decreases(V0).
+0.5s pick(V0):- joint2_position_increases(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:527 fn:282 tn:1585 fp:33 size:3 mdl:318
+0.5s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0).
+0.5s ********************
+0.6s Generating partial hypotheses of size: 4
+0.6s ********************
+0.6s New best hypothesis:
+0.6s tp:533 fn:276 tn:1585 fp:33 size:6 mdl:315
+0.6s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0).
+0.6s pick(V0):- joint1_position_constant(V0),joint2_position_increases(V0).
+0.6s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:527 fn:282 tn:1599 fp:19 size:4 mdl:305
+0.7s pick(V0):- joint1_effort_constant(V0),joint5_position_decreases(V0),joint1_position_constant(V0).
+0.7s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:527 fn:282 tn:1618 fp:0 size:4 mdl:286
+0.7s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0),joint1_velocity_constant(V0).
+0.7s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:533 fn:276 tn:1618 fp:0 size:8 mdl:284
+0.7s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0),joint1_velocity_constant(V0).
+0.7s pick(V0):- joint1_position_constant(V0),joint2_position_increases(V0),joint1_velocity_constant(V0).
+0.7s ********************
+0.8s ********** SOLUTION **********
+0.8s Precision:1.00 Recall:0.66 TP:533 FN:276 TN:1618 FP:0 Size:8 MDL:284
+0.8s pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0),joint1_velocity_constant(V0).
+0.8s pick(V0):- joint1_position_constant(V0),joint2_position_increases(V0),joint1_velocity_constant(V0).
+0.8s ******************************

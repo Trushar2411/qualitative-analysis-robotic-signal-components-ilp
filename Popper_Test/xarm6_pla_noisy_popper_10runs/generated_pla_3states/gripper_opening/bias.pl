@@ -1,0 +1,14 @@
+head_pred(gripper_opening,1).
+body_pred(joint2_position_constant,1).
+body_pred(joint5_position_constant,1).
+body_pred(left_finger_joint_position_decreases,1).
+body_pred(right_finger_joint_position_decreases,1).
+body_pred(joint5_velocity_constant,1).
+body_pred(joint2_velocity_constant,1).
+body_pred(joint3_position_constant,1).
+body_pred(joint1_position_constant,1).
+body_pred(joint3_velocity_constant,1).
+body_pred(joint1_velocity_constant,1).
+max_vars(1).
+max_body(3).
+max_clauses(2).

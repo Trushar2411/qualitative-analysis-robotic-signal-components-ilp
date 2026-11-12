@@ -1,0 +1,11 @@
+phase,rank,frequency,fraction_of_all_runs,mean_training_precision,mean_training_recall,hypothesis
+home,1,10,1.0,0.96,0.8299999999999998,"home(V0):-joint1_position_constant(V0),joint2_position_decreases(V0)."
+gripper_opening,1,7,0.7,1.0,0.67,gripper_opening(V0):-left_finger_joint_position_decreases(V0).
+gripper_opening,2,3,0.3,1.0,0.67,gripper_opening(V0):-right_finger_joint_position_decreases(V0).
+pick,1,10,1.0,1.0,0.65,"pick(V0):-joint1_position_constant(V0),joint5_position_decreases(V0)."
+gripper_closing,1,6,0.6,1.0,0.67,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+gripper_closing,2,4,0.4,1.0,0.67,gripper_closing(V0):-left_finger_joint_position_increases(V0).
+lift,1,10,1.0,1.0,0.76,"lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+place,1,10,1.0,0.95,0.72,"place(V0):-joint2_position_increases(V0),joint3_velocity_constant(V0)."
+retract,1,10,1.0,0.95,0.8400000000000001,"retract_phase(V0):-joint3_position_constant(V0),joint5_position_increases(V0)."
+return_home,1,10,1.0,1.0,0.77,"return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0)."

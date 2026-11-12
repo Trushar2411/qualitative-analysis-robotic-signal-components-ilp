@@ -1,0 +1,401 @@
+run,phase,status,returncode,seconds,precision,recall,tp,fn,tn,fp,size,mdl,hypothesis,canonical_hypothesis
+1,home,ok,0,0.926,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_position_constant(V0),joint5_position_increases(V0),joint1_velocity_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+2,home,ok,0,0.91,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_increases(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+3,home,ok,0,0.919,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0),joint1_position_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+4,home,ok,0,0.924,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_increases(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+5,home,ok,0,0.922,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint5_position_increases(V0),joint1_velocity_constant(V0),joint1_position_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+6,home,ok,0,0.918,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0),joint1_position_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+7,home,ok,0,0.913,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+8,home,ok,0,0.919,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0),joint1_position_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+9,home,ok,0,0.935,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint5_position_increases(V0),joint1_position_constant(V0),joint1_velocity_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+10,home,ok,0,0.927,0.98,0.83,508,101,1209,9,4,114.0,"home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0),joint1_position_constant(V0).","home(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_increases(V0)."
+1,gripper_opening,ok,0,0.676,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- left_finger_joint_position_decreases(V0).,gripper_opening(V0):-left_finger_joint_position_decreases(V0).
+2,gripper_opening,ok,0,0.674,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- right_finger_joint_position_decreases(V0).,gripper_opening(V0):-right_finger_joint_position_decreases(V0).
+3,gripper_opening,ok,0,0.675,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- right_finger_joint_position_decreases(V0).,gripper_opening(V0):-right_finger_joint_position_decreases(V0).
+4,gripper_opening,ok,0,0.681,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- right_finger_joint_position_decreases(V0).,gripper_opening(V0):-right_finger_joint_position_decreases(V0).
+5,gripper_opening,ok,0,0.679,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- right_finger_joint_position_decreases(V0).,gripper_opening(V0):-right_finger_joint_position_decreases(V0).
+6,gripper_opening,ok,0,0.675,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- left_finger_joint_position_decreases(V0).,gripper_opening(V0):-left_finger_joint_position_decreases(V0).
+7,gripper_opening,ok,0,0.674,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- right_finger_joint_position_decreases(V0).,gripper_opening(V0):-right_finger_joint_position_decreases(V0).
+8,gripper_opening,ok,0,0.678,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- left_finger_joint_position_decreases(V0).,gripper_opening(V0):-left_finger_joint_position_decreases(V0).
+9,gripper_opening,ok,0,0.675,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- left_finger_joint_position_decreases(V0).,gripper_opening(V0):-left_finger_joint_position_decreases(V0).
+10,gripper_opening,ok,0,0.681,1.0,0.64,383,215,1196,0,2,217.0,gripper_opening(V0):- left_finger_joint_position_decreases(V0).,gripper_opening(V0):-left_finger_joint_position_decreases(V0).
+1,pick,ok,0,0.928,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_position_constant(V0),joint5_position_decreases(V0),joint1_velocity_constant(V0).
+pick(V0):- joint1_position_constant(V0),joint2_position_increases(V0),joint1_velocity_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+2,pick,ok,0,0.891,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint1_velocity_constant(V0),joint2_position_increases(V0),joint1_position_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+3,pick,ok,0,0.961,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint5_position_decreases(V0),joint1_position_constant(V0),joint1_velocity_constant(V0).
+pick(V0):- joint1_position_constant(V0),joint2_position_increases(V0),joint1_velocity_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+4,pick,ok,0,0.949,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+5,pick,ok,0,0.92,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint2_position_increases(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+6,pick,ok,0,0.903,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint2_position_increases(V0),joint1_velocity_constant(V0),joint1_position_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+7,pick,ok,0,0.899,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint2_position_increases(V0),joint1_velocity_constant(V0),joint1_position_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+8,pick,ok,0,0.922,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint2_position_increases(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+9,pick,ok,0,0.887,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint1_position_constant(V0),joint5_position_decreases(V0).
+pick(V0):- joint1_velocity_constant(V0),joint2_position_increases(V0),joint1_position_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+10,pick,ok,0,0.911,1.0,0.66,533,276,1618,0,8,284.0,"pick(V0):- joint1_velocity_constant(V0),joint5_position_decreases(V0),joint1_position_constant(V0).
+pick(V0):- joint1_velocity_constant(V0),joint2_position_increases(V0),joint1_position_constant(V0).","pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint2_position_increases(V0).
+pick(V0):-joint1_position_constant(V0),joint1_velocity_constant(V0),joint5_position_decreases(V0)."
+1,gripper_closing,ok,0,0.559,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- right_finger_joint_position_increases(V0).,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+2,gripper_closing,ok,0,0.565,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- right_finger_joint_position_increases(V0).,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+3,gripper_closing,ok,0,0.561,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- left_finger_joint_position_increases(V0).,gripper_closing(V0):-left_finger_joint_position_increases(V0).
+4,gripper_closing,ok,0,0.563,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- right_finger_joint_position_increases(V0).,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+5,gripper_closing,ok,0,0.567,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- left_finger_joint_position_increases(V0).,gripper_closing(V0):-left_finger_joint_position_increases(V0).
+6,gripper_closing,ok,0,0.561,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- left_finger_joint_position_increases(V0).,gripper_closing(V0):-left_finger_joint_position_increases(V0).
+7,gripper_closing,ok,0,0.561,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- left_finger_joint_position_increases(V0).,gripper_closing(V0):-left_finger_joint_position_increases(V0).
+8,gripper_closing,ok,0,0.561,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- right_finger_joint_position_increases(V0).,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+9,gripper_closing,ok,0,0.567,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- right_finger_joint_position_increases(V0).,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+10,gripper_closing,ok,0,0.577,1.0,0.64,192,107,598,0,2,109.0,gripper_closing(V0):- right_finger_joint_position_increases(V0).,gripper_closing(V0):-right_finger_joint_position_increases(V0).
+1,lift,ok,0,0.701,0.96,0.98,500,9,998,20,19,48.0,"lift(V0):- joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint2_position_decreases(V0),joint3_position_decreases(V0).
+lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+2,lift,ok,0,0.702,0.96,0.98,500,9,998,20,19,48.0,"lift(V0):- joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+3,lift,ok,0,0.702,0.96,0.98,501,8,998,20,20,48.0,"lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+lift(V0):- joint2_position_decreases(V0),joint3_position_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_velocity_decreases(V0),joint2_effort_increases(V0).
+lift(V0):- joint2_effort_increases(V0),joint5_position_increases(V0),joint1_effort_increases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint2_effort_increases(V0),joint5_position_increases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+4,lift,ok,0,0.697,0.96,0.98,501,8,998,20,20,48.0,"lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+lift(V0):- joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):- joint2_effort_increases(V0),joint5_position_increases(V0),joint1_effort_increases(V0).
+lift(V0):- joint2_effort_increases(V0),joint5_effort_constant(V0),joint1_velocity_decreases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint2_effort_increases(V0),joint5_position_increases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+5,lift,ok,0,0.705,0.96,0.98,500,9,998,20,19,48.0,"lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+lift(V0):- joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):- joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):- joint1_velocity_decreases(V0),joint1_effort_decreases(V0).
+lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+lift(V0):- joint2_effort_increases(V0),joint1_velocity_decreases(V0),joint5_effort_constant(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+6,lift,ok,0,0.713,0.96,0.98,500,9,998,20,19,48.0,"lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+lift(V0):- joint1_velocity_decreases(V0),joint1_effort_decreases(V0).
+lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint1_velocity_decreases(V0),joint5_effort_constant(V0),joint2_effort_increases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+7,lift,ok,0,0.7,0.96,0.98,501,8,998,20,20,48.0,"lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+lift(V0):- joint2_position_decreases(V0),joint3_position_decreases(V0).
+lift(V0):- joint1_velocity_decreases(V0),joint1_effort_decreases(V0).
+lift(V0):- joint5_position_increases(V0),joint1_effort_increases(V0),joint2_effort_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_velocity_decreases(V0),joint2_effort_increases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint2_effort_increases(V0),joint5_position_increases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+8,lift,ok,0,0.702,0.96,0.98,501,8,998,20,20,48.0,"lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+lift(V0):- joint2_effort_increases(V0),joint1_effort_increases(V0),joint5_position_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint2_effort_increases(V0),joint5_position_increases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+9,lift,ok,0,0.708,0.96,0.98,500,9,998,20,19,48.0,"lift(V0):- joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):- joint2_position_decreases(V0),joint3_position_decreases(V0).
+lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+10,lift,ok,0,0.701,0.96,0.98,500,9,998,20,19,48.0,"lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+lift(V0):- joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):- joint1_velocity_decreases(V0),joint1_effort_decreases(V0).
+lift(V0):- joint1_velocity_decreases(V0),joint5_effort_constant(V0),joint2_effort_increases(V0).","lift(V0):-joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+lift(V0):-joint1_effort_decreases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_effort_increases(V0),joint1_position_decreases(V0).
+lift(V0):-joint1_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint1_velocity_decreases(V0),joint2_effort_increases(V0),joint5_effort_constant(V0).
+lift(V0):-joint2_position_decreases(V0),joint3_position_decreases(V0)."
+1,place,ok,0,0.727,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):- joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint1_velocity_increases(V0),joint2_position_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+2,place,ok,0,0.724,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):- joint5_position_decreases(V0),joint1_velocity_decreases(V0).
+place(V0):- joint2_velocity_increases(V0),joint5_velocity_increases(V0).
+place(V0):- joint1_velocity_increases(V0),joint2_position_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+3,place,ok,0,0.724,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+place(V0):- joint5_position_decreases(V0),joint1_velocity_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint2_position_increases(V0),joint1_velocity_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+4,place,ok,0,0.73,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):- joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint2_position_increases(V0),joint1_velocity_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+5,place,ok,0,0.724,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+place(V0):- joint5_position_decreases(V0),joint1_velocity_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint2_position_increases(V0),joint1_velocity_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+6,place,ok,0,0.729,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+place(V0):- joint5_position_decreases(V0),joint1_velocity_decreases(V0).
+place(V0):- joint2_velocity_increases(V0),joint5_velocity_increases(V0).
+place(V0):- joint2_position_increases(V0),joint1_velocity_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+7,place,ok,0,0.727,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):- joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):- joint2_velocity_increases(V0),joint5_velocity_increases(V0).
+place(V0):- joint1_velocity_increases(V0),joint2_position_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+8,place,ok,0,0.733,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):- joint5_position_decreases(V0),joint1_velocity_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint2_position_increases(V0),joint1_velocity_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+9,place,ok,0,0.726,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+place(V0):- joint5_position_decreases(V0),joint1_velocity_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint2_position_increases(V0),joint1_velocity_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+10,place,ok,0,0.735,0.99,0.87,437,67,1004,4,12,83.0,"place(V0):- joint2_position_increases(V0),joint1_position_increases(V0).
+place(V0):- joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):- joint5_velocity_increases(V0),joint2_velocity_increases(V0).
+place(V0):- joint1_velocity_increases(V0),joint2_position_increases(V0).","place(V0):-joint1_position_increases(V0),joint2_position_increases(V0).
+place(V0):-joint1_velocity_decreases(V0),joint5_position_decreases(V0).
+place(V0):-joint1_velocity_increases(V0),joint2_position_increases(V0).
+place(V0):-joint2_velocity_increases(V0),joint5_velocity_increases(V0)."
+1,retract,ok,0,0.918,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+retract_phase(V0):- joint3_position_constant(V0),joint1_velocity_increases(V0),joint5_position_increases(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint2_effort_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):- joint2_velocity_decreases(V0),joint3_position_constant(V0),joint2_position_decreases(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+2,retract,ok,0,0.887,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint2_effort_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint3_position_constant(V0),joint2_velocity_decreases(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint1_velocity_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint3_velocity_constant(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+3,retract,ok,0,0.846,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint1_velocity_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint2_effort_increases(V0),joint3_velocity_constant(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint3_velocity_constant(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+4,retract,ok,0,0.872,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint3_position_constant(V0),joint2_effort_increases(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint5_position_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint1_velocity_increases(V0),joint5_position_increases(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+5,retract,ok,0,0.877,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint1_velocity_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint3_velocity_constant(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint2_effort_increases(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+6,retract,ok,0,0.851,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint2_effort_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint5_position_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint1_velocity_increases(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+7,retract,ok,0,0.866,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint2_effort_increases(V0),joint3_velocity_constant(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint1_velocity_increases(V0),joint5_position_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint3_velocity_constant(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+8,retract,ok,0,0.924,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint2_effort_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint5_position_increases(V0),joint1_velocity_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint5_position_increases(V0),joint3_position_constant(V0).
+retract_phase(V0):- joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+9,retract,ok,0,0.807,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+retract_phase(V0):- joint3_position_constant(V0),joint2_effort_increases(V0),joint3_velocity_constant(V0).
+retract_phase(V0):- joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):- joint3_position_constant(V0),joint1_velocity_increases(V0),joint5_position_increases(V0).
+retract_phase(V0):- joint3_position_constant(V0),joint2_position_decreases(V0),joint2_velocity_decreases(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+10,retract,ok,0,0.844,0.91,0.89,455,54,972,46,19,119.0,"retract_phase(V0):- joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):- joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):- joint2_velocity_decreases(V0),joint3_position_constant(V0),joint2_position_decreases(V0).
+retract_phase(V0):- joint3_velocity_constant(V0),joint2_effort_increases(V0),joint3_position_constant(V0).","retract_phase(V0):-joint1_velocity_increases(V0),joint3_position_constant(V0),joint5_position_increases(V0).
+retract_phase(V0):-joint2_effort_increases(V0),joint3_position_constant(V0),joint3_velocity_constant(V0).
+retract_phase(V0):-joint2_position_decreases(V0),joint2_velocity_decreases(V0),joint3_position_constant(V0).
+retract_phase(V0):-joint2_velocity_decreases(V0),joint5_velocity_decreases(V0).
+retract_phase(V0):-joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0)."
+1,return_home,ok,0,0.727,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint2_position_decreases(V0),joint1_position_increases(V0).
+return_home(V0):- joint2_position_decreases(V0),joint3_position_increases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint3_effort_decreases(V0),joint3_position_increases(V0).
+return_home(V0):- joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+2,return_home,ok,0,0.735,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint1_velocity_increases(V0),joint3_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint3_position_increases(V0),joint3_effort_decreases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint5_position_increases(V0),joint3_effort_increases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+3,return_home,ok,0,0.732,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint3_position_increases(V0),joint1_velocity_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint3_position_increases(V0),joint3_effort_decreases(V0),joint3_velocity_decreases(V0).
+return_home(V0):- joint5_position_increases(V0),joint3_effort_increases(V0),joint3_velocity_decreases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+4,return_home,ok,0,0.737,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint2_position_decreases(V0),joint1_position_increases(V0).
+return_home(V0):- joint3_position_increases(V0),joint2_position_decreases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_position_increases(V0),joint3_velocity_decreases(V0),joint3_effort_decreases(V0).
+return_home(V0):- joint3_effort_increases(V0),joint5_position_increases(V0),joint3_velocity_decreases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+5,return_home,ok,0,0.735,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint3_position_increases(V0),joint2_position_decreases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_position_increases(V0),joint3_effort_decreases(V0),joint3_velocity_decreases(V0).
+return_home(V0):- joint3_effort_increases(V0),joint5_position_increases(V0),joint3_velocity_decreases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+6,return_home,ok,0,0.74,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint2_position_decreases(V0),joint1_position_increases(V0).
+return_home(V0):- joint3_position_increases(V0),joint2_position_decreases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint3_position_increases(V0),joint3_effort_decreases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint5_position_increases(V0),joint3_effort_increases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+7,return_home,ok,0,0.739,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint1_velocity_increases(V0),joint3_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint3_position_increases(V0),joint3_effort_decreases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint5_position_increases(V0),joint3_effort_increases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+8,return_home,ok,0,0.751,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint2_position_decreases(V0),joint1_position_increases(V0).
+return_home(V0):- joint3_position_increases(V0),joint2_position_decreases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_position_increases(V0),joint3_velocity_decreases(V0),joint3_effort_decreases(V0).
+return_home(V0):- joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+9,return_home,ok,0,0.728,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint2_position_decreases(V0),joint1_position_increases(V0).
+return_home(V0):- joint2_position_decreases(V0),joint3_position_increases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint3_position_increases(V0),joint3_effort_decreases(V0).
+return_home(V0):- joint3_velocity_decreases(V0),joint3_effort_increases(V0),joint5_position_increases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."
+10,return_home,ok,0,0.735,0.98,0.83,505,104,1209,9,15,128.0,"return_home(V0):- joint2_position_decreases(V0),joint1_position_increases(V0).
+return_home(V0):- joint2_position_decreases(V0),joint3_position_increases(V0),joint1_velocity_increases(V0).
+return_home(V0):- joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):- joint5_position_increases(V0),joint3_effort_increases(V0),joint3_velocity_decreases(V0).","return_home(V0):-joint1_position_increases(V0),joint2_position_decreases(V0).
+return_home(V0):-joint1_velocity_increases(V0),joint2_position_decreases(V0),joint3_position_increases(V0).
+return_home(V0):-joint3_effort_decreases(V0),joint3_position_increases(V0),joint3_velocity_decreases(V0).
+return_home(V0):-joint3_effort_increases(V0),joint3_velocity_decreases(V0),joint5_position_increases(V0)."

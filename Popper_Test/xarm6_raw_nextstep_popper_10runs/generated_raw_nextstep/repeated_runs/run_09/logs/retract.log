@@ -1,0 +1,53 @@
+0.4s Generating partial hypotheses of size: 2
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:385 fn:124 tn:667 fp:351 size:2 mdl:477
+0.4s retract_phase(V0):- joint2_position_decreases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:334 fn:175 tn:934 fp:84 size:2 mdl:261
+0.4s retract_phase(V0):- joint1_position_decreases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 3
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:385 fn:124 tn:985 fp:33 size:3 mdl:160
+0.4s retract_phase(V0):- joint3_position_constant(V0),joint2_position_decreases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:421 fn:88 tn:977 fp:41 size:3 mdl:132
+0.4s retract_phase(V0):- joint3_position_constant(V0),joint5_position_increases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 4
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:443 fn:66 tn:963 fp:55 size:6 mdl:127
+0.4s retract_phase(V0):- joint3_position_constant(V0),joint5_position_increases(V0).
+0.4s retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+0.4s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:452 fn:57 tn:966 fp:52 size:11 mdl:120
+0.5s retract_phase(V0):- joint3_position_constant(V0),joint5_position_increases(V0).
+0.5s retract_phase(V0):- joint3_position_constant(V0),joint2_effort_increases(V0),joint3_velocity_constant(V0).
+0.5s retract_phase(V0):- joint5_velocity_decreases(V0),joint2_effort_increases(V0),joint2_velocity_decreases(V0).
+0.5s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:455 fn:54 tn:972 fp:46 size:19 mdl:119
+0.7s retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint2_effort_increases(V0),joint3_velocity_constant(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint1_velocity_increases(V0),joint5_position_increases(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint2_position_decreases(V0),joint2_velocity_decreases(V0).
+0.7s ********************
+0.7s ********** SOLUTION **********
+0.7s Precision:0.91 Recall:0.89 TP:455 FN:54 TN:972 FP:46 Size:19 MDL:119
+0.7s retract_phase(V0):- joint5_velocity_decreases(V0),joint2_velocity_decreases(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint2_effort_increases(V0),joint3_velocity_constant(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint3_velocity_constant(V0),joint5_position_increases(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint1_velocity_increases(V0),joint5_position_increases(V0).
+0.7s retract_phase(V0):- joint3_position_constant(V0),joint2_position_decreases(V0),joint2_velocity_decreases(V0).
+0.7s ******************************

@@ -1,0 +1,17 @@
+0.3s Generating partial hypotheses of size: 2
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:19 fn:6 tn:46 fp:4 size:2 mdl:12
+0.3s place(V0):- joint2_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 3
+0.3s ********************
+0.3s New best hypothesis:
+0.3s tp:18 fn:7 tn:49 fp:1 size:3 mdl:11
+0.3s place(V0):- joint3_velocity_constant(V0),joint2_position_increases(V0).
+0.3s ********************
+0.3s Generating partial hypotheses of size: 4
+0.3s ********** SOLUTION **********
+0.3s Precision:0.95 Recall:0.72 TP:18 FN:7 TN:49 FP:1 Size:3 MDL:11
+0.3s place(V0):- joint3_velocity_constant(V0),joint2_position_increases(V0).
+0.3s ******************************

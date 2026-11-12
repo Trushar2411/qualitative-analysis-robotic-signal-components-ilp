@@ -1,0 +1,76 @@
+0.4s Generating partial hypotheses of size: 2
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:283 fn:226 tn:989 fp:29 size:2 mdl:257
+0.4s lift(V0):- joint1_effort_increases(V0).
+0.4s ********************
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:376 fn:133 tn:924 fp:94 size:2 mdl:229
+0.4s lift(V0):- joint1_position_decreases(V0).
+0.4s ********************
+0.4s Generating partial hypotheses of size: 3
+0.4s ********************
+0.4s New best hypothesis:
+0.4s tp:486 fn:23 tn:879 fp:139 size:6 mdl:168
+0.4s lift(V0):- joint1_position_decreases(V0).
+0.4s lift(V0):- joint1_effort_decreases(V0).
+0.4s lift(V0):- joint1_effort_increases(V0).
+0.4s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:393 fn:116 tn:971 fp:47 size:4 mdl:167
+0.5s lift(V0):- joint1_effort_decreases(V0).
+0.5s lift(V0):- joint1_effort_increases(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:367 fn:142 tn:1018 fp:0 size:3 mdl:145
+0.5s lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+0.5s ********************
+0.5s Generating partial hypotheses of size: 4
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:485 fn:24 tn:993 fp:25 size:11 mdl:60
+0.5s lift(V0):- joint1_effort_decreases(V0).
+0.5s lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+0.5s lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+0.5s lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:481 fn:28 tn:1002 fp:16 size:15 mdl:59
+0.5s lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+0.5s lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+0.5s lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+0.5s lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+0.5s lift(V0):- joint1_position_decreases(V0),joint1_effort_increases(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:505 fn:4 tn:989 fp:29 size:16 mdl:49
+0.5s lift(V0):- joint1_effort_decreases(V0).
+0.5s lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+0.5s lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+0.5s lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).
+0.5s lift(V0):- joint2_effort_increases(V0),joint1_effort_increases(V0),joint5_position_increases(V0).
+0.5s ********************
+0.6s ********************
+0.6s New best hypothesis:
+0.6s tp:501 fn:8 tn:998 fp:20 size:20 mdl:48
+0.6s lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+0.6s lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+0.6s lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+0.6s lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+0.6s lift(V0):- joint2_effort_increases(V0),joint1_effort_increases(V0),joint5_position_increases(V0).
+0.6s lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).
+0.6s ********************
+0.6s ********** SOLUTION **********
+0.6s Precision:0.96 Recall:0.98 TP:501 FN:8 TN:998 FP:20 Size:20 MDL:48
+0.6s lift(V0):- joint1_effort_decreases(V0),joint1_velocity_decreases(V0).
+0.6s lift(V0):- joint5_effort_constant(V0),joint1_effort_decreases(V0).
+0.6s lift(V0):- joint5_effort_constant(V0),joint1_effort_increases(V0).
+0.6s lift(V0):- joint3_position_decreases(V0),joint2_position_decreases(V0).
+0.6s lift(V0):- joint2_effort_increases(V0),joint1_effort_increases(V0),joint5_position_increases(V0).
+0.6s lift(V0):- joint5_effort_constant(V0),joint2_effort_increases(V0),joint1_velocity_decreases(V0).
+0.6s ******************************

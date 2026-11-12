@@ -1,0 +1,57 @@
+0.5s Generating partial hypotheses of size: 2
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:508 fn:101 tn:800 fp:418 size:2 mdl:521
+0.5s home(V0):- joint5_position_increases(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:489 fn:120 tn:824 fp:394 size:2 mdl:516
+0.5s home(V0):- joint2_position_decreases(V0).
+0.5s ********************
+0.5s ********************
+0.5s New best hypothesis:
+0.5s tp:370 fn:239 tn:956 fp:262 size:2 mdl:503
+0.5s home(V0):- joint3_position_increases(V0).
+0.5s ********************
+0.5s Generating partial hypotheses of size: 3
+0.6s ********************
+0.6s New best hypothesis:
+0.6s tp:247 fn:362 tn:1102 fp:116 size:3 mdl:481
+0.6s home(V0):- joint1_position_constant(V0),joint5_velocity_increases(V0).
+0.6s ********************
+0.6s ********************
+0.6s New best hypothesis:
+0.6s tp:508 fn:101 tn:1138 fp:80 size:3 mdl:184
+0.6s home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0).
+0.6s ********************
+0.6s ********************
+0.6s New best hypothesis:
+0.6s tp:489 fn:120 tn:1189 fp:29 size:3 mdl:152
+0.6s home(V0):- joint2_position_decreases(V0),joint1_position_constant(V0).
+0.6s ********************
+0.6s Generating partial hypotheses of size: 4
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:489 fn:120 tn:1203 fp:15 size:4 mdl:139
+0.7s home(V0):- joint2_position_decreases(V0),joint1_effort_constant(V0),joint1_position_constant(V0).
+0.7s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:508 fn:101 tn:1188 fp:30 size:4 mdl:135
+0.7s home(V0):- joint5_position_increases(V0),joint1_effort_constant(V0),joint1_position_constant(V0).
+0.7s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:489 fn:120 tn:1216 fp:2 size:4 mdl:126
+0.7s home(V0):- joint2_position_decreases(V0),joint1_velocity_constant(V0),joint1_position_constant(V0).
+0.7s ********************
+0.7s ********************
+0.7s New best hypothesis:
+0.7s tp:508 fn:101 tn:1209 fp:9 size:4 mdl:114
+0.7s home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0),joint1_position_constant(V0).
+0.7s ********************
+0.8s ********** SOLUTION **********
+0.8s Precision:0.98 Recall:0.83 TP:508 FN:101 TN:1209 FP:9 Size:4 MDL:114
+0.8s home(V0):- joint1_velocity_constant(V0),joint5_position_increases(V0),joint1_position_constant(V0).
+0.8s ******************************

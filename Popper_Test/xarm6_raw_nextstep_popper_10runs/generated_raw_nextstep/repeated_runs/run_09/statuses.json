@@ -1,0 +1,58 @@
+{
+  "home": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.935,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:40.551047+00:00"
+  },
+  "gripper_opening": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.675,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:41.228695+00:00"
+  },
+  "pick": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.887,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:42.116634+00:00"
+  },
+  "gripper_closing": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.567,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:42.684495+00:00"
+  },
+  "lift": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.708,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:43.392752+00:00"
+  },
+  "place": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.726,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:44.119497+00:00"
+  },
+  "retract": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.807,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:44.926595+00:00"
+  },
+  "return_home": {
+    "status": "ok",
+    "returncode": 0,
+    "seconds": 0.728,
+    "has_final_solution": true,
+    "timestamp_utc": "2026-11-11T22:16:45.655126+00:00"
+  }
+}
