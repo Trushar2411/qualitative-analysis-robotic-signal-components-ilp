@@ -11,7 +11,7 @@ runs or batches under the following folders:
 | `PLA_velocity_effort/` | `pla_velocity_effort_all_runs.py` | Combined batches of velocity/effort PLA and phase-shaded plots |
 
 The generators are in `scripts/analysis/` and read per-joint files in
-`Processed data/`. The default searches do not recurse into `OLD/`; pass
+`data/processed/`. The default searches do not recurse into `OLD/`; pass
 `--processed-run` to analyze a specific archived run.
 
 PLA labels a fitted signal change as `ramp_up`, `ramp_down`, or `constant`.

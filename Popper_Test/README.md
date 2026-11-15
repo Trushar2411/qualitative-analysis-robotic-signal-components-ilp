@@ -17,6 +17,9 @@ contain multiple tasks, source CSVs, and captured runs.
 | [Six_Placements_Pooled_Velocity_Effort_Popper](Six_Placements_Pooled_Velocity_Effort_Popper/README.md) | Six recordings pooled into phase tasks |
 | [popper_pla_position](popper_pla_position/README.md) | xArm position phase-summary labels |
 | [popper_pla_effort](popper_pla_effort/README.md) | xArm effort phase-summary labels |
+| [xarm6_raw_nextstep_popper_10runs](xarm6_raw_nextstep_popper_10runs/README.md) | Raw adjacent-sample deltas, noisy learning, eight targets |
+| [xarm6_pla_noisy_popper_10runs](xarm6_pla_noisy_popper_10runs/README.md) | Phase-aligned position and velocity PLA trends, noisy learning |
+| [xarm6_position_popper](xarm6_position_popper/README.md) | Position-only PLA, strict learning |
 | [franka_popper_pla](franka_popper_pla/README.md) | Franka position and velocity window labels |
 | [franka_position_only](franka_position_only/README.md) | Franka position window labels |
 

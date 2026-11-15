@@ -1,0 +1,5 @@
+Complexity metric,RAW,PLA,Reduction using PLA
+Mean number of clauses,3.29,1.0,69.60% fewer clauses
+Mean body literals,7.77,1.71,77.99% fewer conditions
+Mean hypothesis size,11.06,2.71,75.50% smaller hypotheses
+Mean execution time (s),0.742,0.434,41.51% faster training

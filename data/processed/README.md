@@ -8,11 +8,11 @@ Each file contains:
 joint,bag_time_ns,bag_time_sec,header_stamp_sec,position,velocity,effort,phase
 ```
 
-Existing historical processed runs are under `OLD/`. No current per-joint runs
-were committed at the time of this cleanup. Create one from a September recording:
+The September per-joint export for `pick_place_20260904_153331` is checked in.
+Earlier processed runs are under `OLD/`. Create one from a September recording:
 
 ```bash
-python scripts/preprocessing/create_joint_processed_data.py --raw-run "Raw data/pick_place_20260904_145823"
+python scripts/preprocessing/create_joint_processed_data.py --raw-run "data/raw/pick_place_20260904_145823"
 ```
 
 Run this from the repository root. Analysis scripts use immediate run folders by

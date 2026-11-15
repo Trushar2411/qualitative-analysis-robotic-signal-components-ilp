@@ -5,7 +5,7 @@ installed. Collection scripts also require a running ROS2/xArm setup.
 
 | Script | Input and behavior |
 |---|---|
-| `data_collection/real_robot_pick_and_place_recorder.py` | Executes the configured real-robot sequence and records ROS joint states and phases under `Raw data/` |
+| `data_collection/real_robot_pick_and_place_recorder.py` | Executes the configured real-robot sequence and records ROS joint states and phases under `data/raw/` |
 | `data_collection/simulated_pick_and_place_recorder.py` | Publishes trajectories to configured simulation controllers and records a ROS bag |
 | `preprocessing/create_joint_processed_data.py` | Splits one raw full-motion CSV into six per-joint CSVs |
 | `preprocessing/relabel_pick_place_csv.py` | Relabels exported gripper-width CSVs in place; separate from the xArm preprocessing pipeline |
@@ -15,7 +15,7 @@ installed. Collection scripts also require a running ROS2/xArm setup.
 | `analysis/pla_velocity_effort_all_runs.py` | Velocity and effort PLA across current processed runs, with phase-shaded plots |
 
 ```bash
-python scripts/preprocessing/create_joint_processed_data.py --raw-run "Raw data/pick_place_20260904_145823"
+python scripts/preprocessing/create_joint_processed_data.py --raw-run "data/raw/pick_place_20260904_145823"
 python scripts/analysis/piecewise_linear_approximation_velocity.py
 python scripts/analysis/pla_joint_position.py
 python scripts/analysis/sliding_window_effort_energy.py
@@ -24,7 +24,7 @@ python scripts/analysis/pla_velocity_effort_all_runs.py
 
 Each analysis accepts `--processed-run` for an explicit per-joint run folder.
 Use `--help` for its complete options. Current default discovery reads immediate
-run folders in `Processed data/`; historical runs under `OLD/` need an explicit path.
+run folders in `data/processed/`; historical runs under `OLD/` need an explicit path.
 
 `relabel_pick_place_csv.py` uses gripper-width threshold crossings and ten-sample
 pick/place intervals. Supply `--directory` explicitly: its historical default

@@ -3,7 +3,7 @@
 # Strict Popper via uv. Generates position-only Prolog tasks automatically.
 set -uo pipefail
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-POPPER_DIR="${1:-/home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper}"
+POPPER_DIR="${1:-"$ROOT/../../Popper"}"
 TIMEOUT_SECONDS="${2:-120}"
 RUNS="${3:-1}"
 INPUT_CSV="${INPUT_CSV:-$ROOT/full_motion_joint_states(20261028-205807).csv}"

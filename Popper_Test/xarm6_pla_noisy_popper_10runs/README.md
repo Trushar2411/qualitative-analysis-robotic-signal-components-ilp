@@ -10,15 +10,16 @@ There are eight binary classification tasks: `home`, `gripper_opening`, `pick`, 
 
 ## Run on Ubuntu
 
-Extract the ZIP, enter its `xarm6_pla_noisy_10runs` directory and execute:
+From this experiment directory, allocate a fresh run directory:
 
 ```bash
+run_dir="$(mktemp -d)"
 python3 run_pla_noisy_10x.py generated_pla_3states \
-  /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper \
-  120 --runs 10
+  "$PWD/../../Popper" \
+  120 --runs 10 --output "$run_dir/repeated_runs"
 ```
 
-The second argument is the **Popper folder** containing `popper.py`, not the `popper.py` file. This requires your installed `uv` or appropriate Python/Popper dependencies. It executes Popper with `--noisy` for each task, 10 repeats. Individual outputs and merged summaries are written under `generated_pla_3states/repeated_runs/`:
+The second argument is the **Popper folder** containing `popper.py`, not the `popper.py` file. This requires your installed `uv` or appropriate Python/Popper dependencies. It executes Popper with `--noisy` for each task, 10 repeats. The saved historical outputs remain in `generated_pla_3states/repeated_runs/`:
 
 - `run_01/logs/<phase>.log` … `run_10/logs/<phase>.log` and per-run `statuses.json`
 - `merged_hypotheses.md`: final hypotheses and their frequencies
@@ -29,7 +30,9 @@ To regenerate the tasks with the original uploaded PLA CSV:
 
 ```bash
 python3 prepare_pla_popper.py '/path/to/pla_window20_reconstructed(1).csv' \
-  --out generated_pla_3states --window-size 20
+  --out "$run_dir/tasks" --window-size 20
 ```
 
 To use a 50-sample window instead, pass `--window-size 50` and use a distinct output directory. **The earlier RAW experiment used 50-sample windows, not 20**, and included joint-effort signals, which the PLA CSV does not include. For an experimentally controlled RAW-vs-PLA comparison, regenerate both with identical windows, split, channels, and negative examples. The current PLA samples all come from **one cycle**; 10 repetitions are not an independent generalization test.
+
+See the [reproduction guide](../../docs/reproduction.md#generate-raw-and-pla-tasks) for checked-in input paths and the paired workflow.

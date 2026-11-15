@@ -10,8 +10,8 @@ import pandas as pd
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-PROCESSED_DATA_DIR = REPO_ROOT / "Processed data"
-OUTPUT_ROOT = REPO_ROOT / "outputs" / "PLA_velocity_effort"
+PROCESSED_DATA_DIR = REPO_ROOT / "data" / "processed"
+OUTPUT_ROOT = REPO_ROOT / "results" / "PLA_velocity_effort"
 
 WINDOW_SIZE = 20
 STEP = 20
@@ -58,7 +58,7 @@ def natural_sort_key(path: Path) -> tuple[object, ...]:
 def find_processed_runs(processed_data_dir: Path) -> list[Path]:
     if not processed_data_dir.exists():
         raise FileNotFoundError(
-            f"Processed data folder not found: {processed_data_dir}"
+            f"data/processed folder not found: {processed_data_dir}"
         )
 
     runs = sorted(
