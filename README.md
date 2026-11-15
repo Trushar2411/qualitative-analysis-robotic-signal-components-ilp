@@ -38,7 +38,6 @@ flowchart LR
 ├── results/              Saved outputs from the xArm workflows
 │   ├── OLD/          Historical xArm PLA and effort analysis
 │   └── comparisons/  Saved xArm6 raw-versus-PLA tables and figures
-├── Check_motion/     Command-line checker with fixed phase rules
 ├── Checking_motion/  Other fixed-rule variants and their saved outputs
 ├── FrankaReplay/     Franka replay, segmentation, and PLA
 ├── archive/          Standalone full-motion PLA trials

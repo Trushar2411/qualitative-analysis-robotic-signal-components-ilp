@@ -24,6 +24,5 @@ compares the first detected block for each phase in this order:
 | retract | `j3_pos_constant`, `j2_pos_decreases` |
 | return_home | `j5_pos_increases`, `j1_pos_increases` |
 
-These are fixed rules embedded in the script. Matching their sequence does not
-verify a grasp. The separate checker in [command-line checker](../Check_motion/README.md) accepts a CSV argument
-and uses its own matching procedure.
+These fixed rules are embedded in the script. A match indicates agreement with
+the rules. Grasp verification requires separate evidence.

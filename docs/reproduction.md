@@ -2,7 +2,7 @@
 
 The commands below use Bash from the repository root and assume the analysis environment from the [README](../README.md#installation-and-reproduction). Use a new output directory for each run.
 
-The offline checks exercised the PLA fit, both task generators and the evaluator with embedded phases. ROS 2 collection and Popper training require their target environments. [Verification details](../RESTRUCTURING_REPORT.md#verification)
+The offline checks exercised the PLA fit, both task generators and the evaluator with embedded phases. ROS 2 collection and Popper training require their target environments.
 
 ## Simulation and recording
 
@@ -67,4 +67,4 @@ With reference phases, compare `ground_truth_accuracy.csv` and `accuracy_macro.c
 
 - The [saved comparison bundle](../results/comparisons/xarm6/) includes the raw and PLA repeated-run CSVs, aggregate classification and complexity tables, boundary errors, and figures. The generating command and aggregation protocol for the classification and boundary tables could not be established from the checked-in files. Treat those tables as historical records.
 - The [unlabelled evaluation](../Pipeline/xarm6_unlabelled_rule_evaluator_updated/results/run_info.json) used a separate input named `full_motion_joint_states_shrikar_joint5_from_joint4.csv`, the majority hypothesis, a phase-blind slope approximation, and a joint-5 position threshold override of 0.00001. It records no ground truth.
-- The saved task manifests give historical source paths from another environment. Their original uploaded filenames differ from the names in this checkout. See the [restructuring report](../RESTRUCTURING_REPORT.md) for the checks used to assess the checked-in inputs.
+- The saved task manifests give historical source paths from another environment. Their original uploaded filenames differ from the names in this checkout. Regenerating tasks from the checked-in inputs reproduced all 48 saved Prolog task files after newline normalization.
