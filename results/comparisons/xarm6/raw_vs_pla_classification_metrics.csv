@@ -1,0 +1,8 @@
+Metric,RAW next-step,PLA,Better result
+Precision,0.978,0.986,PLA
+Recall,0.788,0.724,RAW
+F1-score,0.865,0.833,RAW
+MCC,0.827,0.788,RAW
+Balanced accuracy,0.888,0.859,RAW
+False-positive rate,0.0109,0.0057,PLA
+False-negative rate,0.212,0.276,RAW

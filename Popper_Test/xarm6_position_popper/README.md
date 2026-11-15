@@ -18,11 +18,13 @@ Each window becomes a unique Prolog constant (`w00000`, etc.) with position-tren
 
 ## Ubuntu usage
 
+Run this block in a disposable checkout. The runner regenerates the tracked task files.
+
 ```bash
-cd xarm6_position_popper
+cd Popper_Test/xarm6_position_popper
 python3 -m pip install pandas numpy   # only if missing
 python3 prepare_popper.py 'full_motion_joint_states(20261028-205807).csv'
-bash run_all_phases_strict.sh /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper 120 1
+bash run_all_phases_strict.sh "$PWD/../../Popper" 120 1
 ```
 
 The runner automatically calls `prepare_popper.py`, then `uv run popper.py <task> --timeout <seconds>` **without** `--noisy`. It stores a new, timestamped `results_*/hypothesis_summary.txt` and individual logs. The runner must have a working `uv` installation in the Popper repository, plus SWI-Prolog.
@@ -37,4 +39,4 @@ To change window sizes or thresholds, invoke `prepare_popper.py --help`; note th
 
 ## Interpretation and limitations
 
-The CSV has one `cycle` and is insufficient for independent evaluation or reliable cross-run generalization. The two gripper opening occurrences share a target label but are separate time segments. The exact shape trends may not distinguish all actions. Popper was **not run** when this project was generated, so no hypotheses or precision/recall scores are claimed. An exit code of zero does not guarantee a satisfactory hypothesis.
+The CSV has one `cycle` and is insufficient for independent evaluation or reliable cross-run generalization. The two gripper opening occurrences share a target label but are separate time segments. The exact shape trends may not distinguish all actions. The repository retains a [single recorded run](results_20261028_223028_aVpfvS/hypothesis_summary.txt) for this configuration. An exit code of zero does not guarantee a satisfactory hypothesis.

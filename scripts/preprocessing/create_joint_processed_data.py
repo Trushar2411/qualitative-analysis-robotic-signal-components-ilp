@@ -9,8 +9,8 @@ import pandas as pd
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-RAW_DATA_DIR = REPO_ROOT / "Raw data"
-PROCESSED_DATA_DIR = REPO_ROOT / "Processed data"
+RAW_DATA_DIR = REPO_ROOT / "data" / "raw"
+PROCESSED_DATA_DIR = REPO_ROOT / "data" / "processed"
 
 FULL_MOTION_CSV = "full_motion_joint_states.csv"
 
@@ -144,7 +144,7 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help=(
             "Optional path to a specific raw run folder. "
-            "If omitted, the latest valid folder in Raw data is used."
+            "If omitted, the latest valid folder in data/raw is used."
         ),
     )
 

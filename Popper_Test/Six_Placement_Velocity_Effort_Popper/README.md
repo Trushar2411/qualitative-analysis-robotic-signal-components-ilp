@@ -15,7 +15,7 @@ From the repository root:
 
 ```bash
 RUNS=10 bash Popper_Test/Six_Placement_Velocity_Effort_Popper/run_all.sh "$PWD/Popper"
-python Popper_Test/Six_Placement_Velocity_Effort_Popper/build_inputs.py /absolute/path/to/six_csvs
+python Popper_Test/Six_Placement_Velocity_Effort_Popper/build_inputs.py data/raw/six_placement_csvs
 ```
 
 Generation expects exactly six `full_motion_joint_states*.csv` files. File sort
@@ -26,3 +26,5 @@ outputs on another run. Use a copy or preserve results before repeating.
 The learning scores use the generated training tasks. Repeated runs do not
 supply independent recordings. Hold out a whole recording to assess transfer
 across object placements.
+
+The bundled inputs are in [data/raw/six_placement_csvs](../../data/raw/six_placement_csvs/). Generate tasks in a disposable checkout if using the default output path, or specify a fresh directory with `--output`. The launchers expect their bundled task layout.

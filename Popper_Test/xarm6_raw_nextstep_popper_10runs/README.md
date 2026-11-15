@@ -14,23 +14,24 @@ The output includes `generated_raw_nextstep/transitions.csv` with sample indices
 
 ## Run existing prepared tasks (on Ubuntu)
 
-From this folder, run:
+From this experiment directory, allocate a fresh run directory:
 
 ```bash
+run_dir="$(mktemp -d)"
 python3 run_raw_nextstep_10x.py \
   generated_raw_nextstep \
-  /home/tezz/Trushar/qualitative-analysis-robotic-signal-components-ilp/Popper \
-  120 --runs 10
+  "$PWD/../../Popper" \
+  120 --runs 10 --output "$run_dir/repeated_runs"
 ```
 
-Find outputs in `generated_raw_nextstep/repeated_runs/`: `all_results.csv`, `hypothesis_frequencies.csv`, `merged_hypotheses.md` and individual logs.
+The saved historical outputs remain in `generated_raw_nextstep/repeated_runs/`: `all_results.csv`, `hypothesis_frequencies.csv`, `merged_hypotheses.md` and individual logs.
 
 ## Regenerate from raw CSV
 
 ```bash
 python3 prepare_raw_nextstep_popper.py \
   '/absolute/path/to/full_motion_joint_states(20261111-191003)(4).csv' \
-  --out generated_raw_nextstep \
+  --out "$run_dir/tasks" \
   --position-threshold 0.0001 \
   --velocity-threshold 0.0001 \
   --effort-threshold 0.001 \
@@ -44,3 +45,5 @@ Default thresholds are **per sample difference**; they are illustrative, tunable
 ## Experimental cautions
 
 This recording contains only one complete cycle. Ten runs on unchanged data do not constitute ten independent tests. Accuracy from Popper's final solution is on its selected training examples; it is NOT accuracy on the entire motion or on a held-out recording. Also, because RAW now uses 1-step transitions and PLA used 20-sample windows, the examples and denominators differ: do not claim that a raw-vs-PLA accuracy difference isolates the effect of PLA alone unless the evaluation is performed on the same held-out time intervals.
+
+See the [reproduction guide](../../docs/reproduction.md#generate-raw-and-pla-tasks) for checked-in input paths and the paired workflow.

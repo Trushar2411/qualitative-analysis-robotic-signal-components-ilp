@@ -1,0 +1,14 @@
+{
+  "input": "full_motion_joint_states_shrikar_joint5_from_joint4.csv",
+  "samples": 3079,
+  "seconds": 30.900302410125732,
+  "median_sample_interval_sec": 0.010010242462158203,
+  "rule_selection": "majority",
+  "pla_source": "approximate fixed-window least-squares slope on RAW",
+  "pla_window_samples": 20,
+  "joint5_position_threshold": 1e-05,
+  "smoothing_seconds": 0.2,
+  "min_episode_sec": 0.2,
+  "ground_truth_supplied": false,
+  "caution": "Rule coverage is not accuracy without ground truth. PLA slope fallback is not identical to original training PLA pipeline."
+}

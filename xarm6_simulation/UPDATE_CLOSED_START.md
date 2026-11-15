@@ -4,12 +4,12 @@ Version 0.1.4 raises the fixed base to 1.0 metre above the floor to clear the gr
 
 This revision initializes the gripper to 0.33 rad and waits for stable actual finger readings before opening the rosbag. Both recorded opening steps should now decrease from 0.33 to 0.15 rad. Repeated cycles include a labelled `gripper_reset` between cycles.
 
-CSV exports now exclude the `idle` phase. Holds during task phases remain included, and timestamps keep their original values. The rosbag retains the complete recording. The standalone `scripts/remove_idle_rows.py` can remove idle rows from an existing CSV without ROS; see README.md.
+CSV exports now exclude the `idle` phase. Holds during task phases remain included, and timestamps keep their original values. The rosbag retains the complete recording. The standalone `scripts/remove_idle_rows.py` can remove idle rows from an existing CSV without ROS; see the [simulation guide](README.md).
 
 Version 0.1.3 also defaults the passive finger plugins to kinematic position following, avoiding PID follower offsets blocking the 0.33-rad initialization in this position-only scene. The initialization tolerances and settling gate remain active. This mode represents ideal coupling rather than independent finger dynamics. To opt into the vendor PID mode, use `gripper_mimic_mode:=pid`.
 
 1. Stop the previous simulation with Ctrl+C.
-2. Replace the contents of your previous extracted `xarm6_simulation` folder with this updated folder. Keep its location the same so your workspace's package link continues to work.
+2. Update the repository checkout that supplies the simulation package. Keep its location the same so your workspace's package link continues to work.
 3. In a fresh Ubuntu terminal, rebuild the custom package:
 
 ```bash
@@ -22,7 +22,7 @@ ros2 launch xarm6_pick_place_sim simulation.launch.py record:=true
 
 If your workspace has another location, use that location in the `cd` command. There is no need to clone the vendor repository again.
 
-If you followed the later `install_updated` workflow, use these build and source paths instead, after extracting the updated ZIP into the repository:
+If you followed the later `install_updated` workflow, use these build and source paths instead, with the checked-out package as the build source:
 
 ```bash
 source /opt/ros/humble/setup.bash

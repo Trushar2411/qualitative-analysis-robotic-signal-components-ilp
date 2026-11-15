@@ -1,8 +1,0 @@
-Phase,RAW boundary error (s),PLA boundary error (s),Lower error
-Pick,1.380,1.545,RAW
-Gripper closing,0.535,0.495,PLA
-Lift,0.035,0.645,RAW
-Place,0.345,0.945,RAW
-Gripper opening,0.538,0.545,RAW
-Retract,0.200,0.445,RAW
-Return home,0.515,0.745,RAW

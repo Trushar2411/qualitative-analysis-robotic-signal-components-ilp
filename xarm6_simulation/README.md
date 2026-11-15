@@ -1,6 +1,6 @@
-# Jessie xArm6: simulation and gripper recording
+# xArm6 simulation and telemetry recording
 
-This package replays the nine steps in your supplied real-robot script in Gazebo and records the arm and gripper together. It targets **Ubuntu 22.04, ROS 2 Humble and Gazebo Classic 11**. The robot meshes, gripper mechanism and controllers come from UFACTORY's `xarm_ros2` repository.
+This package replays a nine-step xArm6 motion sequence in Gazebo and records the arm and gripper together. It targets **Ubuntu 22.04, ROS 2 Humble and Gazebo Classic 11**. The robot meshes, gripper mechanism and controllers come from UFACTORY's `xarm_ros2` repository.
 
 The supplied motion is reproduced as joint targets. Movement durations are configurable because the real script did not specify a speed or acceleration. This is a zero-gravity motion-test scene, following the vendor's simulation convention. It has no object, table or grasp/contact model. It does not establish that a cube would be picked up successfully. Gazebo Classic is an older simulator; this package is specifically for the existing Humble stack, not Gazebo Harmonic or Jazzy.
 
@@ -27,15 +27,12 @@ sudo rosdep init
 rosdep update
 ```
 
-## 2. Extract and build
+## 2. Build from the repository
 
-Assuming the ZIP is in `~/Downloads`:
+Run from the repository root:
 
 ```bash
-mkdir -p ~/Trushar
-unzip ~/Downloads/XArm6_Simulation_With_Gripper.zip -d ~/Trushar
-cd ~/Trushar/xarm6_simulation
-bash scripts/build_workspace.sh
+bash xarm6_simulation/scripts/build_workspace.sh
 ```
 
 The build script creates `~/jessie_sim_ws`, downloads UFACTORY's Humble source with its submodules, installs missing dependencies with rosdep (which may request your sudo password), and builds the required packages. It pins a newly cloned vendor checkout to the source revision checked while preparing this package:
@@ -44,10 +41,10 @@ The build script creates `~/jessie_sim_ws`, downloads UFACTORY's Humble source w
 ac736c92b02de7ca7e0be6f737d77d46707464d8
 ```
 
-An existing vendor checkout is reused without resetting it. Keep the extracted `xarm6_simulation` folder because the workspace links to it. To use another workspace:
+An existing vendor checkout is reused without resetting it. Keep the checked-out `xarm6_simulation` folder at its current path because the workspace links to it. To use another workspace:
 
 ```bash
-bash scripts/build_workspace.sh ~/another_jessie_sim_ws
+bash xarm6_simulation/scripts/build_workspace.sh ~/another_jessie_sim_ws
 ```
 
 ## 3. Start the simulation and record one sequence
@@ -157,7 +154,7 @@ Positions are **radians** and velocities are **radians/second**. The standard Ga
 
 ## 6. Joint targets and gripper conversion
 
-The current arm targets are copied from the script in this request:
+The packaged motion configuration defines these arm targets:
 
 | Pose | Joint angles in degrees |
 |---|---|
@@ -175,11 +172,11 @@ drive_joint angle [rad] = (850 - SDK position) / 1000
 520 (close target) -> 0.33 rad
 ```
 
-These SDK positions are not a direct finger-gap measurement in millimetres. Your close target is preserved; it is not replaced with the fully closed limit.
+These SDK positions are not a direct finger-gap measurement in millimetres. The close target is below the fully closed limit.
 
 `initial_gripper_rad: 0.33` is set in `motion.yaml`. Both opening steps now command **0.33 -> 0.15 rad**, so both have a decreasing position trend. The closing step commands **0.15 -> 0.33 rad**. The initial movement from the model's spawn configuration to 0.33 rad happens before recording; it is preparation, not a labelled opening step. Older custom YAML configurations without this key default to their configured SDK close target.
 
-Edit `src/xarm6_pick_place_sim/config/motion.yaml` to change targets, movement durations or dwell times. To keep a separate experiment configuration, copy it and pass the absolute path:
+Edit [motion.yaml](src/xarm6_pick_place_sim/config/motion.yaml) to change targets, movement durations or dwell times. To keep a separate experiment configuration, copy it and pass the absolute path:
 
 ```bash
 ros2 run xarm6_pick_place_sim run_sequence --ros-args \
@@ -192,7 +189,7 @@ Arm commands use joint-trajectory controllers directly. They do not add collisio
 
 Folder names use the computer's date and time. All bag timestamps and phase intervals use **ROS simulation time**. `header_stamp_ns` preserves each simulator message's stamp; `bag_time_ns` is the runner's simulation-clock receipt time. The nanosecond columns are authoritative.
 
-The phase starts before the command and ends after its configured dwell, matching your script's phase definition. CSV labels use half-open intervals `[start, end)`. Samples before the first phase, after the last phase, or in gaps are excluded from the CSV exports. **The exported CSV files contain no `idle` phase.** The rosbag retains the full recording. Timestamps are preserved rather than compressed across removed gaps, and holds inside a labelled phase remain part of that phase. There is no backward/forward fill. An aborted phase is marked `aborted`. An unfinished interval with no end is not silently extended over later samples.
+The phase starts before the command and ends after its configured dwell, as defined by the motion sequence. CSV labels use half-open intervals `[start, end)`. Samples before the first phase, after the last phase, or in gaps are excluded from the CSV exports. **The exported CSV files contain no `idle` phase.** The rosbag retains the full recording. Timestamps are preserved rather than compressed across removed gaps, and holds inside a labelled phase remain part of that phase. There is no backward/forward fill. An aborted phase is marked `aborted`. An unfinished interval with no end is not silently extended over later samples.
 
 The bag writer is in-process, so there is no recorder startup sleep or unconsumed subprocess pipe. On a normal finish it closes the bag before exporting. Ctrl+C attempts to preserve partial logs and recording, but a forced process kill or power loss can still leave an unfinalized bag.
 
@@ -207,10 +204,10 @@ ros2 run xarm6_pick_place_sim export_bag /path/to/run/rosbag
 
 The exporter supports split bags through rosbag2's reader. Phase intervals are loaded from `phase_log.json`, or recovered from bagged phase events when that file is absent.
 
-The same command re-exports older bags with idle rows removed. To remove idle rows from an existing CSV without ROS or changing its other values, use the standalone script from this extracted folder:
+The same command re-exports older bags with idle rows removed. To remove idle rows from an existing CSV without ROS or changing its other values, use the standalone script from the repository root:
 
 ```bash
-python3 scripts/remove_idle_rows.py /path/to/full_motion_joint_states.csv /path/to/full_motion_no_idle.csv
+python3 xarm6_simulation/scripts/remove_idle_rows.py /path/to/full_motion_joint_states.csv /path/to/full_motion_no_idle.csv
 ```
 
 The output path must be a new file. This removes only rows whose phase is blank or `idle`; it does not fix initialization in a previously recorded sequence.

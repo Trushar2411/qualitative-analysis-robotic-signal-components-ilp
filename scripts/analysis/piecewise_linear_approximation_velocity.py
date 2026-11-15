@@ -10,8 +10,8 @@ import pandas as pd
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-PROCESSED_DATA_DIR = REPO_ROOT / "Processed data"
-OUTPUT_ROOT = REPO_ROOT / "outputs" / "PLA"
+PROCESSED_DATA_DIR = REPO_ROOT / "data" / "processed"
+OUTPUT_ROOT = REPO_ROOT / "results" / "PLA"
 
 WINDOW_SIZE = 20
 STEP = 20
@@ -24,7 +24,7 @@ def find_latest_processed_run(
 ) -> Path:
     if not processed_data_dir.exists():
         raise FileNotFoundError(
-            f"Processed data folder not found: {processed_data_dir}"
+            f"data/processed folder not found: {processed_data_dir}"
         )
 
     runs = [
@@ -518,7 +518,7 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=None,
         help=(
-            "Path to a Processed data run folder. "
+            "Path to a data/processed run folder. "
             "Defaults to the latest processed run."
         ),
     )
