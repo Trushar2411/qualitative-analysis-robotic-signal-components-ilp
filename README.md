@@ -65,7 +65,13 @@ Learning requires the pinned [Popper environment](Popper/README.md), including i
 
 The [workflow guide](docs/reproduction.md) distinguishes commands exercised during cleanup from those that require the target ROS 2 or Popper environment. The [experiment index](Popper_Test/README.md) covers separate historical configurations.
 
+### Joint position over time
+
+![Recorded xArm6 joint positions over time, grouped by motion phase](Pipeline/xarm6_plots_with_phases/position_vs_time_with_phases.png)
+
 ## Recorded results
+
+**Raw next-step features gave higher mean training F1, recall, MCC, and balanced accuracy. PLA gave slightly higher precision and produced smaller hypotheses with fewer clauses and body literals.**
 
 The table gives means across the 80 saved training rows per representation, with equal weight per run and phase. Classification metrics were recomputed from the confusion counts. Hypothesis size comes from the saved `size` field. The tasks use different example units and signal sets, which limits attribution of the differences to PLA. [Raw runs](results/comparisons/xarm6/all_results_raw.csv) · [PLA runs](results/comparisons/xarm6/all_results_pla.csv)
 
@@ -78,9 +84,21 @@ The table gives means across the 80 saved training rows per representation, with
 | Balanced accuracy | 0.892 | 0.865 |
 | Mean hypothesis size | 10.175 | 2.750 |
 
-The historical figures summarize an earlier aggregation whose exact protocol still needs to be established. [Classification figure](results/comparisons/xarm6/classification_metrics_comparison.png) · [Complexity figure](results/comparisons/xarm6/complexity_stability_comparison.png) · [Boundary table](results/comparisons/xarm6/raw_vs_pla_boundary_errors.csv) · [Provenance notes](docs/reproduction.md#interpreting-saved-results)
+### Classification by phase
 
-![Recorded xArm6 joint velocities grouped by motion phase](Pipeline/xarm6_plots_with_phases/velocity_vs_time_with_phases.png)
+The saved chart shows 10-run means with the Home phase excluded. Raw scored higher on F1 in five of the seven displayed phases. PLA scored higher for both gripper phases and had a lower average false-positive rate in the saved summary. [Historical classification table](results/comparisons/xarm6/raw_vs_pla_classification_metrics.csv)
+
+![Raw next-step and PLA training precision, recall, F1, MCC, balanced accuracy, and false-positive rate by phase](results/comparisons/xarm6/classification_metrics_comparison.png)
+
+### Rule complexity and repeatability
+
+The saved comparison reports mean clause counts of 3.29 for raw and 1.00 for PLA, and mean body literal counts of 7.77 and 1.71, respectively. PLA also had a shorter recorded mean runtime. Its most frequent rule recurred more often for lift and gripper opening, with ties for the other displayed phases. [Historical complexity table](results/comparisons/xarm6/raw_vs_pla_complexity_metrics.csv)
+
+![Raw and PLA comparison of clause count, body literal count, hypothesis size, and rule repeatability by phase](results/comparisons/xarm6/complexity_stability_comparison.png)
+
+### Phase boundaries
+
+The saved boundary table reports lower error for raw in six of seven phases. PLA had lower error for gripper closing. The exact boundary-scoring protocol still needs to be established. [Phase timeline (PDF)](results/comparisons/xarm6/phase_timeline.pdf) · [Boundary errors](results/comparisons/xarm6/raw_vs_pla_boundary_errors.csv) · [Provenance notes](docs/reproduction.md#interpreting-saved-results)
 
 ## Project status
 
