@@ -1,7 +1,0 @@
-Phase: wall_following
-Task: pill
-Method: RAW DOMINANT (10 runs)
-Good runs only!
-==================================================
-
-NO SOLUTION

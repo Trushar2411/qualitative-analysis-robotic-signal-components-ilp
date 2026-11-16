@@ -1,0 +1,35 @@
+settings: Popper --noisy, max_clauses 3, max_body 4  -> multisensor_results/noisy_c3_b4_lidar+speed/
+7 pillar runs (learn) + 10 plain-wall runs (new-environment test) from /home/alisha/rnd_ws/data_cleaned_odom
+odometry scales (95th-5th percentile): side_speed 0.204, turn_rate_odom 0.018, total_speed 0.223
+  -> jump limits: side_speed 0.020, turn_rate_odom 0.002, total_speed 0.022
+
+===== lidar+speed · RAW · rules learned on all 7 runs =====
+  approaching_wall    L dec   · recall 1.00
+  wall_following      L no jump + R const   · recall 0.87
+  obstacle_detected   L const + L jump↓   · recall 1.00
+  obstacle_avoidance  L inc   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar+speed · RAW)
+
+===== lidar+speed · QTA · rules learned on all 7 runs =====
+  approaching_wall    L dec   · recall 0.93
+  wall_following      SPEED const   · recall 1.00
+  obstacle_detected   SPEED jump↓ + L jump↓ + SPEED dec   · recall 1.00
+  obstacle_avoidance  FR no jump + L inc   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar+speed · QTA)
+
+===== LEAVE-ONE-RUN-OUT (pillar task): lidar only vs lidar + odometry =====
+                   recognised false_alarms phases_using_odometry
+set         method                                              
+lidar+speed QTA         49/51        0/204                   0/5
+            RAW         47/51        3/204                   0/5
+
+===== NEW ENVIRONMENT: rules learned on pillar runs, tested on the 10 plain-wall runs =====
+(plain wall has only approaching_wall and wall_following; false alarms = pillar-phase rules firing there)
+phase              approaching_wall wall_following false_alarms
+set         method                                             
+lidar+speed QTA               10/10          10/10         0/80
+            RAW               10/10          10/10         0/80
+
+Saved in multisensor_results/noisy_c3_b4_lidar+speed/: rules_all_runs.csv, loo_folds.csv, loo_summary.csv, new_environment_plain_wall.csv

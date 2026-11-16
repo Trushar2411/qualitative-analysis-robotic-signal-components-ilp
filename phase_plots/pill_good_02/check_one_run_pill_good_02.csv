@@ -1,0 +1,8 @@
+phase,seconds,L_before,L_start,L_end,speed,side,QTA_L,QTA_SPEED,QTA_FR,RAW_L,RAW_R,QTA_fires,QTA_ok,RAW_fires,RAW_ok
+approaching_wall #1,2.8,,1.2,0.69,0.169,0.164,dec / -,inc / -,dec / -,dec / -,inc / -,approaching_wall,✅,approaching_wall,✅
+wall_following #1,15.3,0.69,0.62,0.5,0.076,0.053,const / no jump,const / jump↓,osc / no jump,const / no jump,const / jump↑,wall_following,✅,wall_following,✅
+obstacle_detected #1,0.5,0.5,0.35,0.35,0.048,0.019,const / jump↓,dec / jump↓,const / no jump,const / jump↓,const / no jump,obstacle_detected,✅,obstacle_detected,✅
+obstacle_avoidance #1,2.5,0.35,0.36,0.99,0.222,-0.191,inc / no jump,inc / jump↑,const / no jump,inc / no jump,dec / no jump,obstacle_avoidance,✅,obstacle_avoidance,✅
+wall_reacquired #1,1.5,0.99,1.23,1.39,0.142,-0.068,inc / jump↑,dec / jump↓,const / jump↑,osc / jump↑,osc / jump↓,wall_reacquired,✅,wall_reacquired,✅
+approaching_wall #2,2.6,1.39,1.27,0.68,0.209,0.181,dec / jump↓,dec / jump↑,const / jump↓,dec / jump↓,inc / jump↑,approaching_wall,✅,approaching_wall,✅
+wall_following #2,49.9,0.68,0.62,0.51,0.076,-0.034,const / no jump,const / jump↓,osc / no jump,const / no jump,const / no jump,wall_following,✅,wall_following,✅

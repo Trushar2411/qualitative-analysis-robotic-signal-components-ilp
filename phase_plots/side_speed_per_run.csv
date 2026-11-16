@@ -1,0 +1,18 @@
+env,run,approaching_wall,wall_following,obstacle_detected,obstacle_avoidance,wall_reacquired
+pillar,pill_good_01_pillar_wall_good.csv,0.141,-0.024,0.019,-0.195,-0.054
+pillar,pill_good_02_pillar_wall_good.csv,0.172,-0.013,0.019,-0.191,-0.068
+pillar,pill_good_03_pillar_wall_good.csv,0.175,-0.025,0.017,-0.194,-0.057
+pillar,pill_good_04_pillar_wall_good.csv,0.151,-0.028,0.013,-0.192,-0.067
+pillar,pill_good_05_pillar_wall_good.csv,0.166,-0.028,0.019,-0.19,-0.066
+pillar,pill_good_06_pillar_wall_good.csv,0.17,-0.029,0.014,-0.191,-0.067
+pillar,pill_good_07_pillar_wall_good.csv,0.121,-0.023,0.017,-0.192,-0.066
+plain wall,pw_good_01_plain_wall_good.csv,0.211,0.002,,,
+plain wall,pw_good_02_plain_wall_good.csv,0.188,0.002,,,
+plain wall,pw_good_03_plain_wall_good.csv,0.219,0.003,,,
+plain wall,pw_good_04_plain_wall_good.csv,0.219,0.003,,,
+plain wall,pw_good_05_plain_wall_good.csv,0.194,0.002,,,
+plain wall,pw_good_06_plain_wall_good.csv,0.217,0.002,,,
+plain wall,pw_good_07_plain_wall_good.csv,0.213,0.003,,,
+plain wall,pw_good_08_plain_wall_good.csv,0.201,0.002,,,
+plain wall,pw_good_09_plain_wall_good.csv,0.22,0.003,,,
+plain wall,pw_good_10_plain_wall_good.csv,0.278,-0.002,,,

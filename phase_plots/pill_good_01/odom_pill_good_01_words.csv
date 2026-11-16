@@ -1,0 +1,22 @@
+sensor,phase,start_s,trend,limit,before,after,jump,jump_word
+side_speed,obstacle_detected,22.5,constant,0.02,0.032,0.019,-0.013,no jump
+side_speed,obstacle_avoidance,23.0,decreasing,0.02,0.019,-0.021,-0.041,jump DOWN
+side_speed,wall_reacquired,25.5,increasing,0.02,-0.267,-0.194,0.073,jump UP
+side_speed,approaching_wall,27.0,decreasing,0.02,0.08,0.172,0.092,jump UP
+side_speed,wall_following,28.7,constant,0.02,0.122,0.077,-0.045,jump DOWN
+side_speed,approaching_wall,29.2,increasing,0.02,0.077,0.096,0.019,no jump
+side_speed,wall_following,29.8,constant,0.02,0.102,0.085,-0.017,no jump
+turn_rate_odom,obstacle_detected,22.5,increasing,0.002,-0.004,-0.003,0.001,no jump
+turn_rate_odom,obstacle_avoidance,23.0,decreasing,0.002,-0.003,-0.013,-0.01,jump DOWN
+turn_rate_odom,wall_reacquired,25.5,increasing,0.002,-0.035,-0.026,0.009,jump UP
+turn_rate_odom,approaching_wall,27.0,decreasing,0.002,0.012,0.018,0.005,jump UP
+turn_rate_odom,wall_following,28.7,decreasing,0.002,0.011,0.004,-0.007,jump DOWN
+turn_rate_odom,approaching_wall,29.2,increasing,0.002,0.004,0.008,0.003,jump UP
+turn_rate_odom,wall_following,29.8,constant,0.002,0.009,0.004,-0.004,jump DOWN
+lidar_left,obstacle_detected,22.5,constant,0.1,0.473,0.342,-0.13,jump DOWN
+lidar_left,obstacle_avoidance,23.0,increasing,0.1,0.342,0.353,0.011,no jump
+lidar_left,wall_reacquired,25.5,constant,0.1,0.976,1.269,0.292,jump UP
+lidar_left,approaching_wall,27.0,decreasing,0.1,1.239,1.025,-0.214,jump DOWN
+lidar_left,wall_following,28.7,constant,0.1,0.679,0.62,-0.059,no jump
+lidar_left,approaching_wall,29.2,constant,0.1,0.62,0.7,0.08,no jump
+lidar_left,wall_following,29.8,constant,0.1,0.694,0.614,-0.08,no jump

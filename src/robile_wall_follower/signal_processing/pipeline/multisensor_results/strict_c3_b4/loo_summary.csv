@@ -1,0 +1,5 @@
+set,method,recognised,false_alarms,phases_using_odometry
+lidar,QTA,49/51,2/204,0/5
+lidar,RAW,47/51,2/204,0/5
+lidar+odom,QTA,48/51,3/204,4/5
+lidar+odom,RAW,48/51,3/204,2/5

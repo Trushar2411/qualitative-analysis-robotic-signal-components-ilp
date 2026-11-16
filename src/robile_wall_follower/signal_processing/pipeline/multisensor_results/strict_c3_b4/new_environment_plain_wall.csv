@@ -1,0 +1,5 @@
+set,method,approaching_wall,wall_following,false_alarms
+lidar,QTA,10/10,10/10,0/80
+lidar,RAW,10/10,10/10,0/80
+lidar+odom,QTA,10/10,0/10,0/80
+lidar+odom,RAW,10/10,0/10,0/80

@@ -1,0 +1,8 @@
+run,phase,piece,rows,RAW_L,RAW_R,RAW_FR,RAW_fits,QTA_L,QTA_R,QTA_FR,QTA_fits
+pill_good_01,wall_reacquired,1,15,jump_up+osc,jump_down+osc,dec+jump_up,part 1,const+jump_up,inc+jump_down,dec+jump_up,part 1
+pill_good_02,wall_reacquired,1,15,jump_up+osc,jump_down+osc,jump_up+osc,part 1,inc+jump_up,dec+jump_down,const+jump_up,part 1
+pill_good_03,wall_reacquired,1,15,jump_up+osc,jump_down+osc,no_jump+osc,part 1,const+jump_up,inc+jump_down,const+no_jump,part 1
+pill_good_04,wall_reacquired,1,15,jump_up+osc,jump_down+osc,jump_down+osc,part 1,const+jump_up,const+jump_down,inc+jump_down,part 1
+pill_good_05,wall_reacquired,1,15,jump_up+osc,jump_down+osc,dec+jump_up,part 1,inc+jump_up,dec+jump_down,dec+jump_up,part 1
+pill_good_06,wall_reacquired,1,15,jump_up+osc,jump_down+osc,no_jump+osc,part 1,const+jump_up,inc+jump_down,const+no_jump,part 1
+pill_good_07,wall_reacquired,1,15,jump_up+osc,jump_down+osc,no_jump+osc,part 1,const+jump_up,inc+jump_down,const+no_jump,part 1

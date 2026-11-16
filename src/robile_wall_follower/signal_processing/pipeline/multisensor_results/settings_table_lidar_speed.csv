@@ -1,0 +1,11 @@
+setting,method,train_recall,train_wrong_fires,no_solution,loo_recall,loo_precision,loo_false_alarms
+noisy_c3_b1,QTA,0.79,2,1,0.84,0.96,2
+noisy_c3_b1,RAW,0.8,7,1,0.84,0.81,10
+noisy_c3_b4,QTA,0.99,0,0,0.96,1.0,0
+noisy_c3_b4,RAW,0.97,2,0,0.92,0.94,3
+strict_c3_b1,QTA,0.59,0,2,0.71,1.0,0
+strict_c3_b1,RAW,0.68,0,1,0.67,0.97,1
+strict_c3_b2,QTA,1.0,0,0,0.98,0.98,1
+strict_c3_b2,RAW,1.0,0,0,1.0,0.96,2
+strict_c3_b4,QTA,1.0,0,0,0.96,0.98,1
+strict_c3_b4,RAW,1.0,0,0,0.94,0.98,1

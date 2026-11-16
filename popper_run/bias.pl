@@ -1,9 +1,0 @@
-head_pred(phase_correct,1).
-body_pred(search_odom_constant,1).
-type(phase_correct,(run,)).
-type(search_odom_constant,(run,)).
-direction(phase_correct,(in,)).
-direction(search_odom_constant,(in,)).
-max_clauses(3).
-max_body(1).
-max_vars(1).

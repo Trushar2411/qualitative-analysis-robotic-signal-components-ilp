@@ -3,8 +3,14 @@ install/
 log/
 __pycache__/
 *.pyc
+*.bak*
 *.bag
 *.db3
+*.zip
+/metadata.yaml
+_old_results/
+**/signal_processing/_to_delete/
+**/signal_processing/_check_first/
 src/Robile/
 src/robile_description/
 src/robile_gazebo/

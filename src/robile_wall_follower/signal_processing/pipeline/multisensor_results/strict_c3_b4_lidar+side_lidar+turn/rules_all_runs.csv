@@ -1,0 +1,21 @@
+set,method,phase,rule,recall,wrong_fires,uses_odometry,timeout
+lidar+side,RAW,approaching_wall,L dec,1.0,0,False,False
+lidar+side,RAW,wall_following,(L no jump + SIDE const) OR (FR const + SIDE jump↓),1.0,0,True,False
+lidar+side,RAW,obstacle_detected,SIDE no jump + L jump↓,1.0,0,True,False
+lidar+side,RAW,obstacle_avoidance,L inc,1.0,0,False,False
+lidar+side,RAW,wall_reacquired,L jump↑,1.0,0,False,False
+lidar+side,QTA,approaching_wall,(L dec) OR (FR dec + FR jump↓),1.0,0,False,False
+lidar+side,QTA,wall_following,(R osc) OR (SIDE jump↓ + R const),1.0,0,True,False
+lidar+side,QTA,obstacle_detected,L jump↓ + SIDE no jump,1.0,0,True,False
+lidar+side,QTA,obstacle_avoidance,L inc + FR no jump,1.0,0,False,False
+lidar+side,QTA,wall_reacquired,L jump↑,1.0,0,False,False
+lidar+turn,RAW,approaching_wall,L dec,1.0,0,False,False
+lidar+turn,RAW,wall_following,TURN jump↓ + R const,1.0,0,True,False
+lidar+turn,RAW,obstacle_detected,(TURN no jump) OR (R jump↓ + FR const),1.0,0,True,False
+lidar+turn,RAW,obstacle_avoidance,L inc,1.0,0,False,False
+lidar+turn,RAW,wall_reacquired,L jump↑,1.0,0,False,False
+lidar+turn,QTA,approaching_wall,(L dec) OR (FR jump↓ + FR dec),1.0,0,False,False
+lidar+turn,QTA,wall_following,L const + TURN jump↓,1.0,0,True,False
+lidar+turn,QTA,obstacle_detected,L jump↓ + FR const + L const,1.0,0,False,False
+lidar+turn,QTA,obstacle_avoidance,FR no jump + L inc,1.0,0,False,False
+lidar+turn,QTA,wall_reacquired,L jump↑,1.0,0,False,False

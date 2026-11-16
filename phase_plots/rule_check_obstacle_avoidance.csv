@@ -1,0 +1,8 @@
+run,phase,piece,rows,RAW_L,RAW_R,RAW_FR,RAW_fits,QTA_L,QTA_R,QTA_FR,QTA_fits
+pill_good_01,obstacle_avoidance,1,25,inc+no_jump,dec+jump_down,dec+no_jump,part 1,inc+no_jump,dec+jump_down,dec+no_jump,part 1
+pill_good_02,obstacle_avoidance,1,25,inc+no_jump,dec+no_jump,no_jump+osc,part 1,inc+no_jump,dec+no_jump,const+no_jump,part 1
+pill_good_03,obstacle_avoidance,1,25,inc+no_jump,dec+no_jump,dec+no_jump,part 1,inc+no_jump,dec+no_jump,dec+no_jump,part 1
+pill_good_04,obstacle_avoidance,1,25,inc+no_jump,jump_up+osc,dec+no_jump,part 1,inc+no_jump,inc+jump_up,dec+no_jump,part 1
+pill_good_05,obstacle_avoidance,1,25,inc+no_jump,dec+no_jump,no_jump+osc,part 1,inc+no_jump,dec+no_jump,const+no_jump,part 1
+pill_good_06,obstacle_avoidance,1,25,inc+no_jump,dec+no_jump,dec+no_jump,part 1,inc+no_jump,dec+no_jump,dec+no_jump,part 1
+pill_good_07,obstacle_avoidance,1,25,inc+no_jump,dec+no_jump,dec+no_jump,part 1,inc+no_jump,dec+no_jump,dec+no_jump,part 1

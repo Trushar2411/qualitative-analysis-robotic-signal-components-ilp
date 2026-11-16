@@ -1,0 +1,3 @@
+set,method,recognised,false_alarms,phases_using_odometry
+lidar+speed,QTA,43/51,2/204,0/5
+lidar+speed,RAW,43/51,10/204,0/5

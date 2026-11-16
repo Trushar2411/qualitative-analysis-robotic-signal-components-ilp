@@ -1,0 +1,45 @@
+7 pillar runs from /home/alisha/rnd_ws/data_cleaned_odom
+odometry scales (95th-5th percentile): side_speed 0.204, turn_rate_odom 0.018
+  -> jump limits: side_speed 0.020, turn_rate_odom 0.002
+
+===== lidar · RAW · rules learned on all 7 runs =====
+  approaching_wall    (L dec) OR (FR inc) OR (R inc) OR (FR inc)   · recall 1.00
+  wall_following      (L const + R jump↑) OR (R const + L no jump) OR (L const + F dec) OR (L osc + F dec) OR (L const + F dec) OR (L const + FR jump↓) OR (L osc + F dec) OR (L const + F dec) OR (L const + FR jump↓) OR (L const + FR dec) OR (L osc + F dec) OR (L const + F dec) OR (L const + FR jump↓) OR (L const + FR dec) OR (L const + R jump↑) OR (L const + F dec) OR (L osc + F dec) OR (L const + FR jump↓) OR (L const + FR dec) OR (L const + R jump↑) OR (L const + F dec) OR (L const + L no jump) OR (L osc + F dec) OR (L const + R jump↑) OR (L const + L no jump) OR (R const + F dec) OR (L const + R jump↑) OR (R const + L no jump)   · recall 1.00
+  obstacle_detected   (L jump↓ + R no jump) OR (R jump↓ + L const) OR (L const + R dec) OR (L const + R dec) OR (R jump↓ + L const) OR (L const + R dec) OR (L jump↓ + R no jump) OR (R jump↓ + L const) OR (L jump↓ + R no jump) OR (R jump↓ + L const)   · recall 1.00
+  obstacle_avoidance  (L inc) OR (F inc)   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar · RAW)
+
+===== lidar · QTA · rules learned on all 7 runs =====
+  approaching_wall    (L dec) OR (FR jump↓ + FR dec) OR (L dec) OR (L dec) OR (FR jump↓ + FR dec)   · recall 1.00
+  wall_following      (FR osc) OR (L no jump + FR const + L const) OR (R osc) OR (R osc) OR (FR osc) OR (R osc) OR (FR osc) OR (F const + FR jump↑) OR (R osc) OR (FR osc) OR (F const + FR jump↑) OR (FR no jump + L no jump + R const) OR (R osc) OR (FR osc) OR (R const + L no jump + FR const) OR (FR osc) OR (L no jump + FR const + L const)   · recall 1.00
+  obstacle_detected   (L const + L jump↓ + FR const) OR (F osc + R jump↓) OR (R dec + L jump↓) OR (F osc + R jump↓) OR (R dec + L jump↓) OR (F osc + R jump↓) OR (F inc + L jump↓) OR (R no jump + L jump↓) OR (R dec + L jump↓) OR (F osc + R jump↓) OR (F inc + L jump↓) OR (R jump↓ + L jump↓) OR (R no jump + L jump↓)   · recall 1.00
+  obstacle_avoidance  (L inc + FR no jump) OR (F inc + R dec) OR (F inc + R dec) OR (R dec + R no jump) OR (F inc + R dec) OR (R dec + R no jump) OR (R dec + L no jump) OR (F inc + L inc) OR (F inc + R dec) OR (R dec + R no jump) OR (R dec + L no jump) OR (F inc + L inc) OR (R dec + L no jump)   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar · QTA)
+
+===== lidar+odom · RAW · rules learned on all 7 runs =====
+  approaching_wall    (L dec) OR (FR inc) OR (SIDE osc) OR (FR inc) OR (SIDE osc) OR (R inc) OR (FR inc) OR (SIDE osc) OR (R inc)   · recall 1.00
+  wall_following      (R const + TURN jump↓) OR (L osc + F dec) OR (L const + FR dec) OR (L osc + F dec) OR (L const + FR dec) OR (L const + F dec) OR (L osc + F dec) OR (L const + FR dec) OR (L const + F dec) OR (L const + FR jump↓) OR (L osc + F dec) OR (L osc + F dec) OR (L const + L no jump) OR (L const + FR dec) OR (L const + FR jump↓) OR (L const + F dec) OR (L osc + F dec) OR (L const + L no jump) OR (L const + FR dec) OR (L const + FR jump↓) OR (L const + SIDE jump↓) OR (L const + F dec) OR (L const + L no jump) OR (L osc + F dec) OR (L const + SIDE jump↓) OR (L osc + F dec) OR (L const + TURN jump↓)   · recall 1.00
+  obstacle_detected   (SIDE no jump + L jump↓) OR (TURN no jump) OR (TURN no jump) OR (R jump↓ + L const)   · recall 1.00
+  obstacle_avoidance  (L inc) OR (F inc)   · recall 1.00
+  wall_reacquired     (L jump↑) OR (TURN inc)   · recall 1.00
+  (leave-one-run-out done for lidar+odom · RAW)
+
+===== lidar+odom · QTA · rules learned on all 7 runs =====
+  approaching_wall    (L dec) OR (SIDE inc + SIDE no jump) OR (L dec) OR (L dec) OR (SIDE inc + SIDE no jump)   · recall 1.00
+  wall_following      (TURN jump↓ + L const) OR (R osc) OR (R osc) OR (FR osc) OR (R osc) OR (FR osc) OR (F const + FR jump↑) OR (R osc) OR (FR osc) OR (F const + FR jump↑) OR (R const + TURN dec) OR (R osc) OR (R const + SIDE jump↓)   · recall 1.00
+  obstacle_detected   (SIDE no jump + L jump↓) OR (TURN no jump) OR (TURN no jump) OR (R jump↓ + F osc)   · recall 1.00
+  obstacle_avoidance  SIDE dec + L inc   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar+odom · QTA)
+
+===== LEAVE-ONE-RUN-OUT (pillar task): lidar only vs lidar + odometry =====
+                  recognised false_alarms phases_using_odometry
+set        method                                              
+lidar      QTA         50/51        8/204                   0/5
+           RAW         48/51        3/204                   0/5
+lidar+odom QTA         49/51       11/204                   4/5
+           RAW         50/51        6/204                   4/5
+
+Saved in multisensor_results/: rules_all_runs.csv, loo_folds.csv, loo_summary.csv

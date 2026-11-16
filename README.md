@@ -1,229 +1,97 @@
-# Robile Wall Following — Qualitative Signal Analysis using ILP
+# Kelo Robile Wall-Following: Interpretable Phase Rules with ILP
 
-**Author:** Alisha Syed Karimulla  
-**Project:** Qualitative Analysis of Robotic Signal Components using Inductive Logic Programming  
-**Supervisor:** Prof. Dr. Javad Ghofrani | Youssef Mahmoud Youssef  
-**University:** Hochschule Bonn-Rhein-Sieg (H-BRS)  
+**Author:** Alisha Syed Karimulla
+**Joint project:** Qualitative Analysis of Robotic Signal Components using Inductive Logic Programming (with Trushar Ghanekar, xArm6 part on branch `xarm`)
+**Supervisors:** Prof. Dr. Javad Ghofrani, Youssef Mahmoud Youssef
+**University:** Hochschule Bonn-Rhein-Sieg (H-BRS)
 
----
+This branch contains the **Kelo Robile** part of the project. A rule-based wall-following controller drives the robot along a wall and around a pillar. The recorded signals are turned into qualitative words, and **Popper** (ILP) learns one short, interpretable rule per controller phase.
 
-## Overview
+## Robot and task
 
-This branch contains the implementation for the **Kelo Robile mobile robot** component of the joint R&D project. The goal is to collect real-world sensor telemetry from the Robile during wall-following tasks, apply qualitative signal abstraction (QTA), and use Inductive Logic Programming (ILP) to learn interpretable rules describing robot behavior.
+- **Robot:** Kelo Robile (holonomic: drives forward and sideways), ROS 2 Humble
+- **Controller:** rule-based wall-following controller (`wall_follower_node.py`, `pillar_follower_node.py`) keeping about 0.5 m to the wall on the left
+- **Logger:** `data_logger_node.py` writes one CSV row every 0.1 s (10 Hz) with sensor values and the controller's phase label
 
----
+| Phase | What the robot does |
+|---|---|
+| `approaching_wall` | moves toward the wall |
+| `wall_following` | drives along the wall at ~0.5 m |
+| `obstacle_detected` | pillar appears, robot brakes (0.5 s) |
+| `obstacle_avoidance` | slides away from the wall around the pillar (2.5 s) |
+| `wall_reacquired` | pillar passed, returns to the wall (1.5 s) |
 
-## Robot Platform
+Not used for rules: `idle`, `searching_wall`, `wall_following_fail`.
 
-**Robot:** Kelo Robile 04  
-**Environment:** Real university corridor (H-BRS)  
-**Controller:** Holonomic P-controller (sideways motion, no rotation)  
-**Framework:** ROS 2 Humble  
+## Data
 
----
+| Scenario | Raw CSV | Good runs | Bad runs (joystick) |
+|---|---|---|---|
+| Plain wall | `data/` | 10 | 5 |
+| Wall with pillar | `data_pillar/` | 7 | 3 |
 
-## Experimental Scenarios
+- `data_cleaned/`: labelled runs, invalid lidar readings capped at 10 m
+- `data_cleaned_odom/`: cleaned runs plus odometry-derived signals (`side_speed`, `total_speed`); input of the final experiments
+- `dataset_labels.json`: good/bad classification of every run
 
-### Scenario 1 — Plain Wall Following
-**Action Labels:**
-| Label | Description |
-|-------|-------------|
-| `idle` | Robot stationary |
-| `searching_wall` | Sliding left to find wall |
-| `approaching_wall` | Moving toward wall |
-| `wall_following` | Stable at 0.5m ✅ |
-| `wall_following_fail` | Too close or unstable ❌ |
+## Method
 
----
+1. **Sensor selection:** all recorded signals were screened. Used: the 4 lidar beams (left, right, front, front-right) and **total speed** from the odometry position. Excluded: wheel speeds (always 0), IMU acceleration (vibration noise), commands `cmd_*` (issued by the controller that also assigns the labels), turning rate (rules did not transfer to a second environment), forward speed (no variation between phases).
+2. **Total speed:** `v = sqrt(dx^2 + dy^2) / 0.1 s` from consecutive odometry positions; values above 1 m/s removed. Matches the commanded speeds (0.100 vs 0.1 m/s in wall following).
+3. **Qualitative words per phase segment:**
+   - *Trend* (inside the segment): increasing, decreasing, constant, oscillating, computed with **RAW** (step-wise ups and downs) and **QTA** (slope and spread)
+   - *Jump* (at the start of the segment): first 0.5 s minus last 0.5 s of the previous segment; ±10 cm for lidar, ±10 % of the signal range for speed
+4. **Popper:** for each phase, the shortest rule that covers all its segments and no others (max 3 clauses, max 4 conditions per clause, 1 variable).
+5. **Evaluation:** leave-one-run-out on the 7 pillar runs, transfer to the 10 plain-wall runs, comparison of Popper settings.
 
-### Scenario 2 — Pillar Wall Following
-**Action Labels:**
-| Label | Description |
-|-------|-------------|
-| `idle` | Robot stationary |
-| `searching_wall` | Sliding left to find wall |
-| `approaching_wall` | Moving toward wall |
-| `wall_following` | Stable at 0.5m ✅ |
-| `obstacle_detected` | Pillar detected ⚠️ |
-| `obstacle_avoidance` | Moving around pillar 🔄 |
-| `wall_reacquired` | Finding wall after pillar 🔄 |
-| `wall_following_fail` | Failed behavior ❌ |
+## Results (final: lidar + total speed, noisy Popper)
 
----
+Recall and precision on the hidden run (leave-one-run-out):
 
-## Repository Structure
+| Phase | QTA rule | Recall | Precision | RAW rule | Recall | Precision |
+|---|---|---|---|---|---|---|
+| approaching_wall | L dec | 0.93 | 1.00 | L dec | 1.00 | 1.00 |
+| wall_following | speed const | 1.00 | 1.00 | L no jump + R const | 0.80 | 1.00 |
+| obstacle_detected | L jump↓ + speed jump↓ + speed dec | 0.86 | 1.00 | L const + L jump↓ | 0.86 | 0.75 |
+| obstacle_avoidance | L inc + FR no jump | 1.00 | 1.00 | L inc | 1.00 | 1.00 |
+| wall_reacquired | L jump↑ | 1.00 | 1.00 | L jump↑ | 1.00 | 0.88 |
+| **Average** | | **0.96** | **1.00** | | **0.93** | **0.93** |
 
-| Folder/File | Description |
-|-------------|-------------|
-| `src/robile_wall_follower/` | Plain wall ROS 2 package |
-| `src/robile_pillar_follower/` | Pillar wall ROS 2 package |
-| `data/` | Plain wall CSV files (15 runs) |
-| `data_pillar/` | Pillar wall CSV files (10 runs) |
-| `data_cleaned/` | Event-detected clean CSV files |
-| `plots/` | Raw signal visualizations |
-| `plots_qta/` | QTA visualization graphs |
-| `qta_results/` | QTA JSON output files |
-| `dataset_labels.json` | Good/bad run classification |
-| `README.md` | This file |
----
+L = left lidar, R = right lidar, FR = front-right lidar, speed = total speed.
 
-## Dataset
+- **Second environment:** rules learned on the pillar runs, applied unchanged to the plain-wall runs: 10/10 recognised, 0 false positives. Rules using the turning rate failed (wall following 0/10) and were rejected.
+- **Popper settings:** training recall is 1.00 only in strict mode (guaranteed by construction). On hidden runs, results are stable from 2 conditions per clause upward, and the core conditions appear in every setting.
 
-| Scenario | Good Runs | Bad Runs | Total |
-|----------|-----------|----------|-------|
-| Plain wall | 11 | 4 | 15 |
-| Pillar wall | 7 | 3 | 10 |
-| **Total** | **18** | **7** | **25** |
+## Repository structure
 
-**Sampling rate:** 10 Hz (every 0.1 seconds)  
-**Sensors recorded:** LIDAR, Odometry, IMU, Wheel speeds, Commands
+| Path | Content |
+|---|---|
+| `src/robile_wall_follower/` | ROS 2 package: plain-wall controller and data logger |
+| `src/robile_wall_follower/signal_processing/pipeline/` | all analysis scripts and final results (`README.txt` = run order) |
+| `.../pipeline/multisensor_results/` | final rules, leave-one-run-out, transfer and settings results |
+| `src/robile_pillar_follower/` | ROS 2 package: pillar controller and data logger |
+| `data/`, `data_pillar/` | raw CSV recordings |
+| `data_cleaned/`, `data_cleaned_odom/` | cleaned and odometry-enriched runs |
+| `phase_plots/` | figures (signals per phase, rule validation) |
 
----
+## Reproduction (main steps)
 
-## Pipeline
-Step 1: Data Collection
-Raw sensor data → CSV files with action labels
+Requires Python 3 (pandas, numpy, matplotlib) and Popper 4.x with SWI-Prolog (here in `~/popper_env`). Run inside `src/robile_wall_follower/signal_processing/pipeline`:
 
-Step 2: Event Detection
-CSV files → Identify useful sensors at event boundaries
-→ Remove useless sensors (wheel speeds = 0, cmd_angular_z = 0)
+| Step | Command |
+|---|---|
+| odometry signals | `python3 add_odometry.py` |
+| total speed | `python3 add_total_speed.py` |
+| learn + evaluate | `SETS="lidar+speed" POPPER_ARGS="--noisy" ~/popper_env/bin/python -u ilp_multisensor.py` |
+| recall/precision per rule | `python3 recall_precision.py` |
+| Popper settings table | `python3 settings_table.py` |
+| one run end to end | `python3 check_one_run.py pill_good_02` |
 
-Step 3: QTA Visualization
-Cleaned CSV → Apply QTA per action window
-→ is_constant / is_decreasing / is_increasing / is_oscillating / is_zero
-→ Colored graphs (like PLA visualization)
+`ilp_multisensor.py` options (environment variables): `SETS`, `POPPER_ARGS`, `MAX_BODY`, `MAX_CLAUSES`. Earlier lidar-only steps are listed in `pipeline/README.txt`.
 
-Step 4: Prolog Generation (In Progress)
-QTA results → Prolog facts
-→ signal_shape(run_id, action_window, sensor, shape).
+## Limitations and future work
 
-Step 5: Popper ILP (Coming Soon)
-Prolog facts → Learn interpretable rules
-→ wall_following(Run) :- signal_shape(Run, wall_following, lidar_left, is_constant).
-
-Step 6: Evaluation (Coming Soon)
-→ Precision and Recall measurement
----
-
-## Key Technical Findings
-
-### Event Detection Results
-Sensors ranked by usefulness across all 25 runs:
-
-| Sensor | Kept in | Frequency |
-|--------|---------|-----------|
-| `imu_accel_x` | 25/25 | 100% |
-| `imu_accel_y` | 25/25 | 100% |
-| `imu_angular_z` | 25/25 | 100% |
-| `lidar_left` | 24/25 | 96% |
-| `lidar_right` | 24/25 | 96% |
-| `lidar_front_right` | 24/25 | 96% |
-| `wheel_speed_0-3` | 0/25 | 0% ❌ |
-| `cmd_angular_z` | 1/25 | 4% ❌ |
-
-### QTA Results — Plain Wall Good Runs
-| Action Window | lidar_left QTA shape |
-|--------------|---------------------|
-| approaching_wall | is_decreasing |
-| wall_following | **is_constant** ✅ |
-| idle | is_constant |
-
-### QTA Results — Pillar Wall Good Runs
-| Action Window | lidar_left QTA shape |
-|--------------|---------------------|
-| approaching_wall | is_decreasing |
-| wall_following | **is_constant** ✅ |
-| obstacle_detected | is_constant |
-| obstacle_avoidance | **is_increasing** ✅ |
-| wall_reacquired | is_decreasing |
-| wall_following | **is_constant** ✅ |
-
----
-
-## Visualization Examples
-
-### Plain Wall — QTA Analysis (lidar_left)
-- **RED line** = `is_decreasing` (approaching wall)
-- **BLUE line** = `is_constant` (wall following at 0.5m)
-
-### Pillar Wall — QTA Analysis (lidar_left)
-- **RED line** = `is_decreasing` (approaching)
-- **BLUE line** = `is_constant` (stable following)
-- **GREEN line** = `is_increasing` (avoiding pillar!)
-- **RED line** = `is_decreasing` (returning to wall)
-- **BLUE line** = `is_constant` (resumed following)
-
----
-
-## How To Run
-
-### Prerequisites
-```bash
-# ROS 2 Humble
-source /opt/ros/humble/setup.bash
-source ~/rnd_ws/install/setup.bash
-export ROS_DOMAIN_ID=3
-```
-
-### Connect To Robot
-```bash
-ssh -x studentkelo@192.168.0.104
-tmux new -s drivers
-source ~/ros2ws/install/setup.bash
-ros2 launch robile_bringup robot.launch.py
-# Ctrl+B then D to detach
-```
-
-### Run Plain Wall Follower
-```bash
-ros2 launch robile_wall_follower wall_follower.launch.py
-```
-
-### Run Pillar Wall Follower
-```bash
-ros2 launch robile_pillar_follower pillar_follower.launch.py
-```
-
-### Run Signal Processing Pipeline
-```bash
-cd ~/rnd_ws/src/robile_wall_follower/signal_processing
-
-# Step 1: Event Detection
-python3 signal_processor.py
-
-# Step 2: QTA Visualization
-python3 qta_visualizer.py
-
-# Step 3: Prolog Generation (coming soon)
-python3 prolog_generator.py
-```
-
----
-
-## Technical Notes
-
-**Why holonomic control?**  
-The Robile uses omnidirectional wheels. Using sideways motion (`cmd.linear.y`) instead of rotation produces smoother signal patterns — cleaner data for ILP learning.
-
-**Why timer-based stop for pillar wall?**  
-Odometry underestimates distance when using holonomic sideways movement. A 75-second timer provides more reliable stopping.
-
-**Why lidar_left for pillar detection?**  
-The front-left LIDAR beam missed the 17cm pillar. The left beam reliably detects the pillar as a sudden drop from 0.5m to 0.33m.
-
-**Why IMU sensors ranked highest?**  
-IMU acceleration sensors capture ALL movement including sideways holonomic motion, making them more informative than odometry at event boundaries.
-
----
-
-## Status
-
-| Work Package | Status |
-|-------------|--------|
-| WP2: Data Collection | ✅ Complete |
-| WP3: Signal Processing (Event Detection) | ✅ Complete |
-| WP3: QTA Visualization | ✅ Complete |
-| WP4: Prolog Generation | 🔄 In Progress |
-| WP4: Popper ILP | ❌ Not Started |
-| WP5: Evaluation | ❌ Not Started |
-| WP6: Documentation | 🔄 In Progress |
+- Labels come from the controller; three phases end on timers.
+- 7 pillar runs, one room, one pillar; several obstacles not yet tested.
+- The CSV logger stored only selected signals (no rosbag): no sideways velocity, no wheel speeds, 4 lidar beams. Speed was reconstructed from odometry.
+- Next: label permutation test, runs with several pillars (recorded or simulated), rosbag recording, rules over phase sequences for faulty runs.

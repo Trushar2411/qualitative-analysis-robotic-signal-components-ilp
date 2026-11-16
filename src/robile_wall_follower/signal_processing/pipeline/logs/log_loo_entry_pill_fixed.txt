@@ -1,0 +1,83 @@
+pill RAW held-out pill_good_01  approaching_wall    rule: lidar_decreasing
+pill RAW held-out pill_good_01  wall_following      rule: lidar_no_jump+lidar_constant OR lidar_r_jump_up+lidar_constant
+pill RAW held-out pill_good_01  obstacle_detected   rule: lidar_fr_constant+lidar_r_jump_down OR lidar_r_no_jump+lidar_jump_down
+pill RAW held-out pill_good_01  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_01  wall_reacquired     rule: lidar_jump_up
+pill RAW held-out pill_good_02  approaching_wall    rule: lidar_decreasing
+pill RAW held-out pill_good_02  wall_following      rule: lidar_r_jump_up+lidar_constant OR lidar_no_jump+lidar_r_constant
+pill RAW held-out pill_good_02  obstacle_detected   rule: lidar_r_no_jump+lidar_jump_down OR lidar_constant+lidar_r_jump_down
+pill RAW held-out pill_good_02  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_02  wall_reacquired     rule: lidar_jump_up
+pill RAW held-out pill_good_03  approaching_wall    rule: lidar_decreasing
+pill RAW held-out pill_good_03  wall_following      rule: lidar_r_constant+lidar_no_jump OR lidar_r_jump_up+lidar_constant
+pill RAW held-out pill_good_03  obstacle_detected   rule: lidar_r_decreasing+lidar_constant OR lidar_r_no_jump+lidar_jump_down
+pill RAW held-out pill_good_03  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_03  wall_reacquired     rule: lidar_jump_up
+pill RAW held-out pill_good_04  approaching_wall    rule: lidar_decreasing
+pill RAW held-out pill_good_04  wall_following      rule: lidar_no_jump+lidar_r_constant OR lidar_r_jump_up+lidar_constant
+pill RAW held-out pill_good_04  obstacle_detected   rule: lidar_r_no_jump+lidar_jump_down OR lidar_r_jump_down+lidar_constant
+pill RAW held-out pill_good_04  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_04  wall_reacquired     rule: lidar_r_oscillating
+pill RAW held-out pill_good_05  approaching_wall    rule: lidar_decreasing
+pill RAW held-out pill_good_05  wall_following      rule: lidar_r_jump_up+lidar_constant OR lidar_r_constant+lidar_no_jump
+pill RAW held-out pill_good_05  obstacle_detected   rule: lidar_r_no_jump+lidar_jump_down OR lidar_constant+lidar_r_jump_down
+pill RAW held-out pill_good_05  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_05  wall_reacquired     rule: lidar_jump_up
+pill RAW held-out pill_good_06  approaching_wall    rule: lidar_r_increasing
+pill RAW held-out pill_good_06  wall_following      rule: lidar_r_jump_up+lidar_constant OR lidar_no_jump+lidar_r_constant
+pill RAW held-out pill_good_06  obstacle_detected   rule: lidar_constant+lidar_r_jump_down OR lidar_r_no_jump+lidar_jump_down
+pill RAW held-out pill_good_06  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_06  wall_reacquired     rule: lidar_jump_up
+pill RAW held-out pill_good_07  approaching_wall    rule: lidar_decreasing
+pill RAW held-out pill_good_07  wall_following      rule: lidar_r_jump_up+lidar_constant OR lidar_no_jump+lidar_r_constant
+pill RAW held-out pill_good_07  obstacle_detected   rule: lidar_jump_down+lidar_r_no_jump OR lidar_r_jump_down+lidar_constant
+pill RAW held-out pill_good_07  obstacle_avoidance  rule: lidar_increasing
+pill RAW held-out pill_good_07  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_01  approaching_wall    rule: lidar_decreasing
+pill QTA held-out pill_good_01  wall_following      rule: lidar_fr_oscillating OR lidar_constant+lidar_no_jump
+pill QTA held-out pill_good_01  obstacle_detected   rule: lidar_jump_down+lidar_fr_constant+lidar_constant
+pill QTA held-out pill_good_01  obstacle_avoidance  rule: lidar_increasing+lidar_fr_no_jump
+pill QTA held-out pill_good_01  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_02  approaching_wall    rule: lidar_decreasing OR lidar_fr_decreasing+lidar_fr_jump_down
+pill QTA held-out pill_good_02  wall_following      rule: lidar_fr_oscillating OR lidar_no_jump+lidar_fr_constant+lidar_constant
+pill QTA held-out pill_good_02  obstacle_detected   rule: lidar_fr_constant+lidar_jump_down+lidar_fr_no_jump
+pill QTA held-out pill_good_02  obstacle_avoidance  rule: lidar_increasing+lidar_fr_no_jump
+pill QTA held-out pill_good_02  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_03  approaching_wall    rule: lidar_decreasing OR lidar_fr_decreasing+lidar_fr_jump_down
+pill QTA held-out pill_good_03  wall_following      rule: lidar_fr_oscillating OR lidar_no_jump+lidar_constant+lidar_fr_constant
+pill QTA held-out pill_good_03  obstacle_detected   rule: lidar_jump_down+lidar_fr_constant+lidar_fr_no_jump
+pill QTA held-out pill_good_03  obstacle_avoidance  rule: lidar_no_jump+lidar_increasing
+pill QTA held-out pill_good_03  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_04  approaching_wall    rule: lidar_decreasing OR lidar_fr_jump_down+lidar_fr_decreasing
+pill QTA held-out pill_good_04  wall_following      rule: lidar_fr_oscillating OR lidar_no_jump+lidar_r_constant+lidar_fr_constant
+pill QTA held-out pill_good_04  obstacle_detected   rule: lidar_fr_no_jump+lidar_fr_constant+lidar_jump_down
+pill QTA held-out pill_good_04  obstacle_avoidance  rule: lidar_increasing+lidar_no_jump
+pill QTA held-out pill_good_04  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_05  approaching_wall    rule: lidar_decreasing OR lidar_f_decreasing+lidar_fr_decreasing
+pill QTA held-out pill_good_05  wall_following      rule: lidar_fr_oscillating OR lidar_no_jump+lidar_fr_constant+lidar_constant
+pill QTA held-out pill_good_05  obstacle_detected   rule: lidar_fr_no_jump+lidar_jump_down+lidar_fr_constant
+pill QTA held-out pill_good_05  obstacle_avoidance  rule: lidar_increasing+lidar_fr_no_jump
+pill QTA held-out pill_good_05  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_06  approaching_wall    rule: lidar_decreasing OR lidar_fr_jump_down+lidar_fr_decreasing
+pill QTA held-out pill_good_06  wall_following      rule: lidar_fr_oscillating OR lidar_constant+lidar_no_jump+lidar_fr_constant
+pill QTA held-out pill_good_06  obstacle_detected   rule: lidar_fr_constant+lidar_constant+lidar_jump_down
+pill QTA held-out pill_good_06  obstacle_avoidance  rule: lidar_increasing+lidar_fr_no_jump
+pill QTA held-out pill_good_06  wall_reacquired     rule: lidar_jump_up
+pill QTA held-out pill_good_07  approaching_wall    rule: lidar_decreasing OR lidar_fr_decreasing+lidar_fr_jump_down
+pill QTA held-out pill_good_07  wall_following      rule: lidar_fr_oscillating OR lidar_constant+lidar_no_jump+lidar_fr_constant
+pill QTA held-out pill_good_07  obstacle_detected   rule: lidar_jump_down+lidar_fr_constant+lidar_constant
+pill QTA held-out pill_good_07  obstacle_avoidance  rule: lidar_increasing+lidar_fr_no_jump
+pill QTA held-out pill_good_07  wall_reacquired     rule: lidar_jump_up
+
+=== LEAVE-ONE-RUN-OUT · task=pill ===
+                   recognised        false_alarms      
+method                    QTA    RAW          QTA   RAW
+phase                                                  
+approaching_wall        14/15  14/15         1/36  0/36
+wall_following          14/15  14/15         1/36  0/36
+obstacle_detected         7/7    5/7         0/44  0/44
+obstacle_avoidance        7/7    7/7         0/44  0/44
+wall_reacquired           7/7    7/7         0/44  1/44
+average held-out recall: QTA 0.97  RAW 0.91
+
+Saved: loo_results/loo_folds.csv and loo_results/loo_summary.csv

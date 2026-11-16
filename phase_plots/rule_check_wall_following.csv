@@ -1,0 +1,26 @@
+run,phase,piece,rows,RAW_L,RAW_R,RAW_FR,RAW_fits,QTA_L,QTA_R,QTA_FR,QTA_fits
+pill_good_01,wall_following,1,196,const+jump_down,const+jump_up,const+no_jump,part 2,const+jump_down,const+jump_up,no_jump+osc,part 1
+pill_good_01,wall_following,2,5,no_jump+osc,const+no_jump,const+no_jump,part 1,const+no_jump,const+no_jump,const+no_jump,part 2
+pill_good_01,wall_following,3,454,const+no_jump,const+no_jump,const+jump_down,part 1,const+no_jump,no_jump+osc,jump_down+osc,part 1
+pill_good_02,wall_following,1,153,const+no_jump,const+jump_up,dec+no_jump,part 1 & part 2,const+no_jump,const+jump_up,no_jump+osc,part 1
+pill_good_02,wall_following,2,499,const+no_jump,const+no_jump,const+no_jump,part 1,const+no_jump,no_jump+osc,no_jump+osc,part 1
+pill_good_03,wall_following,1,167,const+no_jump,const+no_jump,const+no_jump,part 1,const+no_jump,const+no_jump,no_jump+osc,part 1
+pill_good_03,wall_following,2,491,const+no_jump,const+jump_up,const+no_jump,part 1 & part 2,const+no_jump,jump_up+osc,no_jump+osc,part 1
+pill_good_04,wall_following,1,172,const+no_jump,const+no_jump,jump_down+osc,part 1,const+no_jump,no_jump+osc,const+jump_down,part 2
+pill_good_04,wall_following,2,485,const+no_jump,const+no_jump,const+no_jump,part 1,const+no_jump,no_jump+osc,no_jump+osc,part 1
+pill_good_05,wall_following,1,153,const+no_jump,const+jump_up,const+no_jump,part 1 & part 2,const+no_jump,const+jump_up,no_jump+osc,part 1
+pill_good_05,wall_following,2,501,const+no_jump,const+jump_up,const+no_jump,part 1 & part 2,const+no_jump,jump_up+osc,no_jump+osc,part 1
+pill_good_06,wall_following,1,156,const+no_jump,const+no_jump,const+jump_up,part 1,const+no_jump,const+no_jump,const+jump_up,part 2
+pill_good_06,wall_following,2,499,const+no_jump,const+no_jump,const+no_jump,part 1,const+no_jump,no_jump+osc,no_jump+osc,part 1
+pill_good_07,wall_following,1,200,const+jump_down,const+jump_up,const+no_jump,part 2,const+jump_down,const+jump_up,no_jump+osc,part 1
+pill_good_07,wall_following,2,440,const+no_jump,const+no_jump,const+no_jump,part 1,const+no_jump,no_jump+osc,no_jump+osc,part 1
+pw_good_01,wall_following,1,381,const+no_jump,const+jump_up,const+jump_up,part 1 & part 2,const+no_jump,jump_up+osc,jump_up+osc,part 1
+pw_good_02,wall_following,1,390,const+no_jump,const+jump_up,const+jump_up,part 1 & part 2,const+no_jump,jump_up+osc,jump_up+osc,part 1
+pw_good_03,wall_following,1,396,const+no_jump,const+jump_up,const+jump_down,part 1 & part 2,const+no_jump,jump_up+osc,jump_down+osc,part 1
+pw_good_04,wall_following,1,399,const+no_jump,const+no_jump,const+jump_down,part 1,const+no_jump,no_jump+osc,jump_down+osc,part 1
+pw_good_05,wall_following,1,390,const+no_jump,const+jump_up,const+jump_up,part 1 & part 2,const+no_jump,jump_up+osc,jump_up+osc,part 1
+pw_good_06,wall_following,1,393,const+no_jump,const+jump_up,const+jump_up,part 1 & part 2,const+no_jump,jump_up+osc,jump_up+osc,part 1
+pw_good_07,wall_following,1,391,const+no_jump,const+jump_up,const+jump_down,part 1 & part 2,const+no_jump,jump_up+osc,jump_down+osc,part 1
+pw_good_08,wall_following,1,389,const+no_jump,const+no_jump,const+no_jump,part 1,const+no_jump,no_jump+osc,no_jump+osc,part 1
+pw_good_09,wall_following,1,393,const+no_jump,const+jump_up,const+jump_down,part 1 & part 2,const+no_jump,jump_up+osc,jump_down+osc,part 1
+pw_good_10,wall_following,1,318,const+no_jump,const+no_jump,const+jump_up,part 1,const+no_jump,no_jump+osc,jump_up+osc,part 1

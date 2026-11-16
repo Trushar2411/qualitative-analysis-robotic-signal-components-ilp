@@ -1,0 +1,26 @@
+run,piece,rows,L_trend,FR_trend,FR_jump,FR_before,FR_after,part1_L_dec,part2_FR,covered_by
+pill_good_01,1,27,decreasing,increasing,none (start of run),,2.9,True,False,part 1
+pill_good_01,2,17,decreasing,increasing,jump_up,3.28,3.7,True,False,part 1
+pill_good_01,3,6,constant,decreasing,jump_down,10.0,7.58,False,True,part 2
+pill_good_02,1,28,decreasing,decreasing,none (start of run),,3.39,True,False,part 1
+pill_good_02,2,26,decreasing,constant,jump_down,3.94,3.59,True,False,part 1
+pill_good_03,1,26,decreasing,decreasing,none (start of run),,2.95,True,False,part 1
+pill_good_03,2,22,decreasing,increasing,jump_up,3.23,3.57,True,False,part 1
+pill_good_04,1,27,decreasing,increasing,none (start of run),,3.25,True,False,part 1
+pill_good_04,2,21,decreasing,increasing,jump_up,3.82,4.12,True,False,part 1
+pill_good_05,1,26,decreasing,decreasing,none (start of run),,2.92,True,False,part 1
+pill_good_05,2,25,decreasing,increasing,jump_down,3.66,3.31,True,False,part 1
+pill_good_06,1,29,decreasing,decreasing,none (start of run),,3.22,True,False,part 1
+pill_good_06,2,22,decreasing,constant,jump_up,3.27,3.84,True,False,part 1
+pill_good_07,1,41,decreasing,increasing,none (start of run),,2.1,True,False,part 1
+pill_good_07,2,25,decreasing,increasing,jump_up,3.24,3.89,True,False,part 1
+pw_good_01,1,28,decreasing,increasing,none (start of run),,3.02,True,False,part 1
+pw_good_02,1,26,decreasing,increasing,none (start of run),,3.13,True,False,part 1
+pw_good_03,1,26,decreasing,increasing,none (start of run),,3.29,True,False,part 1
+pw_good_04,1,25,decreasing,increasing,none (start of run),,3.28,True,False,part 1
+pw_good_05,1,28,decreasing,increasing,none (start of run),,2.52,True,False,part 1
+pw_good_06,1,26,decreasing,increasing,none (start of run),,3.18,True,False,part 1
+pw_good_07,1,26,decreasing,increasing,none (start of run),,2.59,True,False,part 1
+pw_good_08,1,29,decreasing,increasing,none (start of run),,1.89,True,False,part 1
+pw_good_09,1,25,decreasing,increasing,none (start of run),,3.26,True,False,part 1
+pw_good_10,1,47,decreasing,increasing,none (start of run),,2.09,True,False,part 1

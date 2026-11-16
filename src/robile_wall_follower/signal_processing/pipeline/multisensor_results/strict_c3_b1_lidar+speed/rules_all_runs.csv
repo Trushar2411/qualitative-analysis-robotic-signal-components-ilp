@@ -1,0 +1,11 @@
+set,method,phase,rule,recall,wrong_fires,uses_odometry,timeout
+lidar+speed,RAW,approaching_wall,L dec,1.0,0,False,False
+lidar+speed,RAW,wall_following,SPEED const,0.4,0,False,False
+lidar+speed,RAW,obstacle_detected,NO SOLUTION,0.0,0,False,False
+lidar+speed,RAW,obstacle_avoidance,L inc,1.0,0,False,False
+lidar+speed,RAW,wall_reacquired,L jump↑,1.0,0,False,False
+lidar+speed,QTA,approaching_wall,L dec,0.93,0,False,False
+lidar+speed,QTA,wall_following,SPEED const,1.0,0,False,False
+lidar+speed,QTA,obstacle_detected,NO SOLUTION,0.0,0,False,False
+lidar+speed,QTA,obstacle_avoidance,NO SOLUTION,0.0,0,False,False
+lidar+speed,QTA,wall_reacquired,L jump↑,1.0,0,False,False

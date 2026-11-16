@@ -1,0 +1,45 @@
+7 pillar runs from /home/alisha/rnd_ws/data_cleaned_odom
+odometry scales (95th-5th percentile): side_speed 0.204, turn_rate_odom 0.018
+  -> jump limits: side_speed 0.020, turn_rate_odom 0.002
+
+===== lidar · RAW · rules learned on all 7 runs =====
+  approaching_wall    L dec   · recall 1.00
+  wall_following      (L const + R jump↑) OR (L no jump + R const)   · recall 1.00
+  obstacle_detected   (L jump↓ + R no jump) OR (L const + R jump↓)   · recall 1.00
+  obstacle_avoidance  L inc   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar · RAW)
+
+===== lidar · QTA · rules learned on all 7 runs =====
+  approaching_wall    (L dec) OR (FR dec + FR jump↓)   · recall 1.00
+  wall_following      (FR osc) OR (L const + FR const + L no jump)   · recall 1.00
+  obstacle_detected   L jump↓ + L const + FR const   · recall 1.00
+  obstacle_avoidance  L inc + FR no jump   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar · QTA)
+
+===== lidar+odom · RAW · rules learned on all 7 runs =====
+  approaching_wall    L dec   · recall 1.00
+  wall_following      TURN jump↓ + R const   · recall 1.00
+  obstacle_detected   L jump↓ + SIDE no jump   · recall 1.00
+  obstacle_avoidance  L inc   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar+odom · RAW)
+
+===== lidar+odom · QTA · rules learned on all 7 runs =====
+  approaching_wall    (L dec) OR (SIDE inc + SIDE no jump)   · recall 1.00
+  wall_following      TURN jump↓ + L const   · recall 1.00
+  obstacle_detected   L jump↓ + SIDE no jump   · recall 1.00
+  obstacle_avoidance  SIDE dec + L inc   · recall 1.00
+  wall_reacquired     L jump↑   · recall 1.00
+  (leave-one-run-out done for lidar+odom · QTA)
+
+===== LEAVE-ONE-RUN-OUT (pillar task): lidar only vs lidar + odometry =====
+                  recognised false_alarms phases_using_odometry
+set        method                                              
+lidar      QTA         49/51        2/204                   0/5
+           RAW         48/51        2/204                   0/5
+lidar+odom QTA         47/51        3/204                   4/5
+           RAW         48/51        3/204                   2/5
+
+Saved in multisensor_results/: rules_all_runs.csv, loo_folds.csv, loo_summary.csv
